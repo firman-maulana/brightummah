@@ -6,7 +6,7 @@ use App\Http\Controllers\ProgramsController;
 
 Route::get('/', function () {
     return view('pages.home');
-});
+})->name('home');
 
 Route::resource('detailprogram', ProgramsController::class);
 

@@ -1,4 +1,10 @@
 @import 'tailwindcss';
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "font-awesome/css/all.min.css";
+@import "animate.css/animate.min.css";
+@import "owl.carousel/dist/assets/owl.carousel.min.css";
+@import "owl.carousel/dist/assets/owl.theme.default.min.css";
+
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
