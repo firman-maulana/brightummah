@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\jenjang;
+use App\Models\Program;
 use Illuminate\Http\Request;
 
-class JenjangController extends Controller
+class ProgramController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $jenjangs = jenjang::all();
-        return view('pages.programs', compact('jenjangs'));
+         $programs = Program::all();
+    return view('pages.programs', compact('programs'));
     }
 
     /**
@@ -35,16 +35,21 @@ class JenjangController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Program $program)
     {
-        $jenjang = jenjang::findOrFail($id);
-        return view('pages.detailprogram', compact('jenjang'));
+        
     }
+
+    public function detail()
+{
+    return view('pages.detailprogram');
+}
+
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(jenjang $jenjang)
+    public function edit(Program $program)
     {
         //
     }
@@ -52,7 +57,7 @@ class JenjangController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, jenjang $jenjang)
+    public function update(Request $request, Program $program)
     {
         //
     }
@@ -60,7 +65,7 @@ class JenjangController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(jenjang $jenjang)
+    public function destroy(Program $program)
     {
         //
     }

@@ -22,7 +22,7 @@
                               <a href="{{ route('programs.index') }}">Program</a>
                            </li>
                            <li>
-                              <a href="#tentang">Tentang</a>
+                              <a href="{{ route('about.index') }}">About</a>
                            </li>
                            <li>
                               <a href="#kontak">Kontak</a>

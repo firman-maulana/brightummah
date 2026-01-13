@@ -116,17 +116,19 @@
    <div class="body-overlay"></div>
    <!-- it-offcanvus-area-end -->
 
-   @include('layouts.header')
+   @include('layouts.header2')
 
    <main>
       @yield('content')
    </main>
 
+<footer>
+      
    <!-- footer-area-start -->
-   <section class="it-footer-wrap gray-bg it-footer-style-2 fix">
+   <section class="it-footer-wrap it-footer-style-3 fix">
       <div class="it-footer-area z-index-1 pt-200 pb-50" data-background="{{ asset('assets/img/bgprimary.jpeg') }}">
-         <img class="it-footer-shape-1" src="{{ asset('assets/img/hero-1-2.png') }}" alt="">
-         <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/kotakhijau.png') }}" alt="">
+         <img class="it-footer-shape-1" src="{{ asset('assets/img/footer-1-1.png') }}" alt="">
+         <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/blog-1-1.png') }}" alt="">
          <div class="it-footer-border"><span></span></div>
          <div class="container">
             <div class="row">
@@ -134,13 +136,13 @@
                   data-wow-delay=".3s">
                   <div class="it-footer-widget it-footer-col-1-1">
                      <div class="it-footer-widget-logo mb-30">
-                        <a href="index.html"><img src="{{ asset('assets/img/logo/logo-black.png') }}" alt=""></a>
+                        <a href="index.html"><img src="assets/img/logo/logo-black.png" alt=""></a>
                      </div>
                      <div class="it-footer-widget-text">
                         <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
                      </div>
                      <div class="it-footer-widget-btn">
-                        <a href="contact-us.html" class="it-btn-yellow theme-bg">
+                        <a href="contact-us.html" class="it-btn-yellow theme-bg border-radius-100">
                            <span>
                               <span class="text-1">Contact Us</span>
                               <span class="text-2">Contact Us</span>
@@ -192,7 +194,7 @@
                         <div class="it-footer-widget-contact mb-25">
                            <ul>
                               <li><span>Phone:</span><a href="tel:+91123456789">(+91) 123-456-789</a></li>
-                              <li><span>Email:</span><a href="mailto:info@example.com">info@example.com</a></li>
+                              <li><span>Email:</span><a href="mailto:educeet@gmail.com">educeet@gmail.com</a></li>
                               <li><span>Location:</span><a target="_blank" href="https://www.google.com/maps/dir///@24.4503253,17.1644279,4.17z?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">North America, USA</a></li>
                            </ul>
                         </div>
@@ -231,11 +233,11 @@
       </div>
 
       <!-- copyright-area-start -->
-      <div class="it-copyright-area it-copyright-ptb it-copyright-bg z-index-1 black-bg">
+      <div class="it-copyright-area it-copyright-ptb it-copyright-bg z-index-1 theme-bg">
          <div class="container">
             <div class="row align-items-center">
                <div class="col-12">
-                  <div class="it-copyright-left text-center">
+                  <div class="it-copyright-left style-2 text-center">
                      <p class="mb-0">Copyright © 2025 <a href="#">Ordianit</a> All Rights Reserved</p>
                   </div>
                </div>
@@ -247,9 +249,9 @@
    </section>
    <!-- footer-area-end -->
 
-   </footer>
+   </footer>  
 
-    <!-- JS Here -->
+ <!-- JS Here -->
     <script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/vendor/waypoints.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
@@ -264,6 +266,7 @@
     <script src="{{ asset('assets/js/parallax.js') }}"></script>
     <script src="{{ asset('assets/js/slider.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
 
 </body>
 
