@@ -36,8 +36,6 @@
     </div>
 </div>
 
-
-<!-- Recent Programs -->
 <div class="card">
     <div class="card-header bg-transparent d-flex justify-content-between align-items-center">
         <span class="fw-medium">Recent Programs</span>
@@ -83,8 +81,6 @@
     </div>
 </div>
 
-
-<!-- Quick Actions -->
 <div class="row g-3 mt-4">
     <div class="col-md-6">
         <div class="card p-4 text-center">

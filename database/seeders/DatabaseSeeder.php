@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Create default admin
+
         User::create([
             'name' => 'Admin',
             'email' => 'admin@brightummah.com',
@@ -21,7 +21,6 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
         ]);
 
-        // Create sample users
         User::create([
             'name' => 'Firman',
             'email' => 'firman@gmail.com',

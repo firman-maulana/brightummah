@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
-            $table->string('category'); // Kategori program
-            $table->string('name'); // Nama program
-            $table->enum('mode', ['Online', 'Onsite', 'Hybrid'])->default('Online'); // Online/Onsite/Hybrid
-            $table->string('duration'); // Durasi (contoh: "3 Bulan", "6 Minggu")
-            $table->enum('level', ['Beginner', 'Intermediate', 'Advanced'])->default('Beginner'); // Level
+            $table->string('category');
+            $table->string('name'); 
+            $table->enum('mode', ['Online', 'Onsite', 'Hybrid'])->default('Online');
+            $table->string('duration');
+            $table->enum('level', ['Beginner', 'Intermediate', 'Advanced'])->default('Beginner');
             $table->timestamps();
         });
     }
