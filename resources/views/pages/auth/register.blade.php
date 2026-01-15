@@ -42,58 +42,43 @@
          <div class="row justify-content-center">
             <div class="col-xxl-8 col-xl-10 col-lg-11">
                <div class="it-signup-wrap">
-                  <h4 class="it-signup-title">Hi Welcome Back!</h4>                    
-                  <form action="#">
+                  <h4 class="it-signup-title">Create Your Account</h4>
+                  @if($errors->any())
+                     <div class="alert alert-danger mb-3">
+                        <ul class="mb-0">
+                           @foreach($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                           @endforeach
+                        </ul>
+                     </div>
+                  @endif
+                  <form action="{{ route('register') }}" method="POST">
+                     @csrf
                      <div class="it-signup-input-wrap">
                         <div class="row">
-                           <div class="col-md-6">
+                           <div class="col-12">
                               <div class="it-signup-input mb-20">
-                                 <label>First Name</label>
-                                 <input type="text" placeholder="First name">
+                                 <label>Full Name</label>
+                                 <input type="text" name="name" placeholder="full name" value="{{ old('name') }}" required style="text-transform: none;">
                               </div>
                            </div>
-                           <div class="col-md-6">
+                           <div class="col-12">
                               <div class="it-signup-input mb-20">
-                                 <label>Last Nme</label>
-                                 <input type="text" placeholder="Last name">
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="it-signup-input mb-20">
-                                 <label>User name</label>
-                                 <input type="email" placeholder="Email">
-                              </div>
-                           </div>
-                           <div class="col-md-6">
-                              <div class="it-signup-input mb-20">
-                                 <label>Subject</label>
-                                 <div class="contact__select">
-                                    <select>
-                                       <option>Subject</option>
-                                       <option>Computer Science & Engineering</option>
-                                       <option>Electrical & Electronic Engineering</option>
-                                       <option>Textile Engineering</option>
-                                       <option>Pharmacy</option>
-                                       <option>Architecture</option>
-                                       <option>Law</option>
-                                       <option>Economics</option>
-                                       <option>English</option>
-                                       <option>Psychology</option>
-                                    </select>
-                                 </div>
+                                 <label>Email</label>
+                                 <input type="email" name="email" placeholder="email" value="{{ old('email') }}" required style="text-transform: none;">
                               </div>
                            </div>
                         </div>
                         <div class="col-12">
                            <div class="it-signup-input mb-20">
                               <label>Password</label>
-                              <input type="password" placeholder="Password">
+                              <input type="password" name="password" placeholder="password" required style="text-transform: none;">
                            </div>
                         </div>
                         <div class="col-12">
                            <div class="it-signup-input mb-25">
                               <label>Confirm Password</label>
-                              <input type="password" placeholder="Confirm Password">
+                              <input type="password" name="password_confirmation" placeholder="confirm password" required style="text-transform: none;">
                            </div>
                         </div>
                      </div>
@@ -109,7 +94,7 @@
                         </div>
                      </div>
                      <div class="it-signup-btn mb-25">
-                        <button class="it-btn-yellow theme-bg w-100">
+                        <button type="submit" class="it-btn-yellow theme-bg w-100">
                            <span>
                               <span class="text-1">Register Now</span>
                               <span class="text-2">Register Now</span>
@@ -117,7 +102,7 @@
                         </button>
                      </div>
                      <div class="it-signup-text text-center mb-30">
-                        <span>Already Have an account?<a href="#"> Sign In</a></span>
+                        <span>Already Have an account?<a href="{{ route('login') }}"> Sign In</a></span>
                      </div>
                      <div class="it-signup-border text-center">
                         <span>or</span>
@@ -126,7 +111,7 @@
                      <div class="row gx-35">
                         <div class="col-md-6 col-sm-6">
                            <div>
-                              <a href="#">
+                              <a href="{{ route('auth.google') }}">
                                  <div class="it-signup-continue-item d-flex align-items-center justify-content-center">
                                     <img src="assets/img/google.png" alt="">
                                     <span>Sign Up with Google</span>

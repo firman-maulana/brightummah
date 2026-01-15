@@ -22,10 +22,10 @@
                               <a href="{{ route('programs.index') }}">Program</a>
                            </li>
                            <li>
-                              <a href="{{ route('about.index') }}">About</a>
+                              <a href="{{ route('about') }}">About</a>
                            </li>
                            <li>
-                              <a href="#kontak">Kontak</a>
+                              <a href="{{ route('contact') }}">Kontak</a>
                            </li>
                         </ul>
                      </nav>
@@ -42,9 +42,15 @@
                         </button>
                      </div>
                      <div class="it-header-login d-none d-xxl-block">
-                        <a href="#masuk">Masuk</a>
-                        <span>/</span>
-                        <a href="#daftar">Daftar</a>
+                        @auth('web')
+                            <span class="me-2">{{ auth('web')->user()->name }}</span>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header').submit();">Logout</a>
+                            <form id="logout-form-header" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+                        @else
+                            <a href="{{ route('login') }}">Masuk</a>
+                            <span>/</span>
+                            <a href="{{ route('register') }}">Daftar</a>
+                        @endauth
                      </div>
                      <a href="{{ route('programs.index') }}" class="it-btn-yellow d-none d-xl-flex">
                         <span>

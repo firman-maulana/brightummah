@@ -142,7 +142,7 @@
                         <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
                      </div>
                      <div class="it-footer-widget-btn">
-                        <a href="contact-us.html" class="it-btn-yellow theme-bg border-radius-100">
+                        <a href="{{ route('contact') }}" class="it-btn-yellow theme-bg border-radius-100">
                            <span>
                               <span class="text-1">Contact Us</span>
                               <span class="text-2">Contact Us</span>
@@ -162,11 +162,8 @@
                      <h4 class="it-footer-widget-title">Useful Links</h4>
                      <div class="it-footer-widget-menu">
                         <ul>
-                           <li><a href="#">Marketplace</a></li>
-                           <li><a href="#">kindergarten</a></li>
-                           <li><a href="#">University</a></li>
-                           <li><a href="#">GYM Coaching</a></li>
-                           <li><a href="#">Cooking</a></li>
+                           <li><a href="{{ route('faqs') }}">FAQs</a></li>
+                           <li><a href="#">Detail Program</a></li>
                         </ul>
                      </div>
                   </div>
@@ -177,9 +174,8 @@
                      <h4 class="it-footer-widget-title">Our Company</h4>
                      <div class="it-footer-widget-menu">
                         <ul>
-                           <li><a href="#">Contact Us</a></li>
-                           <li><a href="#">Become Teacher</a></li>
-                           <li><a href="#">Blog</a></li>
+                           <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                           <li><a href="{{ route('programs.index') }}">Programs</a></li>
                            <li><a href="#">Instructor</a></li>
                            <li><a href="#">Events</a></li>
                         </ul>

@@ -39,22 +39,22 @@
    <div class="it-career-area pt-130 pb-95">
       <div class="container">
          <div class="row gx-35">
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".3s">
+            @forelse($programs as $program)
+            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Featured Jobs</h4>
+                  <span>{{ $program->category }}</span>
+                  <h4 class="title">{{ $program->name }}</h4>
                   <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
+                     <span>{{ $program->mode }}</span>
+                     <span>{{ $program->duration }}</span>
+                     <span>{{ $program->level }}</span>
                   </div>
-                  <div class="d-sm-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="{{ route('programs.detail') }}" class="it-btn-yellow">
+                  <div class="d-sm-flex align-items-center justify-content-between">
+                     <span class="it-career-price">{{ $program->created_at->format('d M Y') }}</span>
+                     <a href="{{ route('programs.show', $program) }}" class="it-btn-yellow">
                         <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
+                           <span class="text-1">See Details</span>
+                           <span class="text-2">See Details</span>
                         </span>
                         <i>
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,295 +65,29 @@
                   </div>
                </div>
             </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".5s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Latest Job Openings</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
+            @empty
+            <div class="col-12">
+               <div class="text-center py-5">
+                  <div style="font-size: 64px; color: #e5e7eb; margin-bottom: 20px;">
+                     <i class="fa fa-inbox"></i>
                   </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
+                  <h4 class="text-muted">Belum Ada Program</h4>
+                  <p class="text-muted">Program akan segera ditambahkan. Silakan cek kembali nanti.</p>
                </div>
             </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".9s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Explore Opportunitie</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".3s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Find Your Next Role</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".5s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Current Vacancies</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".7s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Discover Design Positions</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".3s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Join Our Creative Team</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".5s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Hot Jobs in Design</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".7s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Now Hiring: Design Roles</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".3s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Open Positions</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".5s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Build Your Career with Us</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".7s">
-               <div class="it-career-item mb-35">
-                  <span>Design</span>
-                  <h4 class="title">Design Your Future Here</h4>
-                  <div class="it-career-meta">
-                     <span>Onsite</span>
-                     <span>Full Time</span>
-                     <span>Mid Level</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">70k - 100k USD/Month</span>
-                     <a href="#" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
+            @endforelse
+         </div>
+         
+         @if($programs->count() > 0)
+         <div class="row">
+            <div class="col-12">
+               <div class="d-flex justify-content-center mt-4">
+                  {{ $programs->links() }}
                </div>
             </div>
          </div>
+         @endif
       </div>
-   </div> 
    <!-- career-area-end -->
 
    <!-- newsletter-area-start -->

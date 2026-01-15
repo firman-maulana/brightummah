@@ -33,9 +33,15 @@
                <div class="col-xl-8 col-lg-7 col-md-8 col-sm-7 d-none d-sm-block">
                   <div class="it-header-top-right-action d-flex align-items-center justify-content-end">
                      <div class="it-header-top-login-box d-none d-sm-block">
-                        <a href="#">Login</a>
-                        <span>/</span>
-                        <a href="#">Register</a>
+                        @auth('web')
+                            <span class="me-2">{{ auth('web')->user()->name }}</span>
+                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header2').submit();">Logout</a>
+                            <form id="logout-form-header2" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
+                        @else
+                            <a href="{{ route('login') }}">Login</a>
+                            <span>/</span>
+                            <a href="{{ route('register') }}">Register</a>
+                        @endauth
                      </div>
                      <div class="it-header-top-social-box align-items-center d-none d-md-flex">
                         <span>Follow On:</span>
@@ -95,10 +101,10 @@
                               <a href="{{ route('programs.index') }}">Program</a>
                            </li>
                            <li>
-                              <a href="{{ route('about.index') }}">About</a>
+                              <a href="{{ route('about') }}">About</a>
                            </li>
                            <li>
-                              <a href="#kontak">Kontak</a>
+                              <a href="{{ route('contact') }}">Kontak</a>
                            </li>
                         </ul>
                      </nav>

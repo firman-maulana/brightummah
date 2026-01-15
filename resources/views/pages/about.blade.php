@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- breadcrumb-area-start -->
-   <div class="it-breadcrumb-area fix z-index-1" data-background="assets/img/about-1-bg.png">
+   <div class="it-breadcrumb-area fix z-index-1">
       <img class="it-breadcrumb-shape-1" src="assets/img/breadcrumb-1-1.png" alt="">
       <div class="container">
          <div class="row align-items-center">

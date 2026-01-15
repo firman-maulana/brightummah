@@ -12,8 +12,8 @@ class ProgramController extends Controller
      */
     public function index()
     {
-         $programs = Program::all();
-    return view('pages.programs', compact('programs'));
+        $programs = Program::latest()->paginate(9);
+        return view('pages.programs', compact('programs'));
     }
 
     /**
@@ -37,14 +37,8 @@ class ProgramController extends Controller
      */
     public function show(Program $program)
     {
-        
+        return view('pages.program-detail', compact('program'));
     }
-
-    public function detail()
-{
-    return view('pages.detailprogram');
-}
-
 
     /**
      * Show the form for editing the specified resource.
