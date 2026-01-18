@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bright Ummah - Educational Platform</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap_min.css">
+    
+    <!-- Font Awesome 6 CDN - SOLUSI UNTUK IKON TIDAK MUNCUL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <style>
+        /* Font fallback jika Google Fonts gagal load */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Urbanist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+
 <header class="it-header-height">
    <!-- header-area-start -->
    <div id="header-sticky" class="it-header-area it-header-transparent">
@@ -7,7 +42,7 @@
                <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-5 col-6">
                   <div class="it-header-logo">
                      <a href="{{ route('home') }}">
-                        <div class="text-2xl font-bold text-green-600 tracking-tight">Bright Ummah</div>
+                        <img src="assets/img/logo/logo-black.png" alt="Bright Ummah Logo">
                      </a>
                   </div>
                </div>
@@ -64,17 +99,12 @@
                         </i>
                      </a>
                      <div class="it-header-bar d-xl-none">
-                        <button class="it-menu-bar">
-                           <span>
-                              <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M10 18.3333C10 17.4128 10.7462 16.6667 11.6667 16.6667H21.6667C22.5872 16.6667 23.3333 17.4128 23.3333 18.3333C23.3333 19.2538 22.5872 20 21.6667 20H11.6667C10.7462 20 10 19.2538 10 18.3333ZM0 1.66667C0 0.746183 0.746183 0 1.66667 0H21.6667C22.5872 0 23.3333 0.746183 23.3333 1.66667C23.3333 2.58713 22.5872 3.33333 21.6667 3.33333H1.66667C0.746183 3.33333 0 2.58713 0 1.66667ZM0 10C0 9.07953 0.746183 8.33333 1.66667 8.33333H21.6667C22.5872 8.33333 23.3333 9.07953 23.3333 10C23.3333 10.9205 22.5872 11.6667 21.6667 11.6667H1.66667C0.746183 11.6667 0 10.9205 0 10Z"
-                                    fill="currentcolor" />
-                              </svg>
-                           </span>
-                        </button>
-                     </div>
+                            <button class="it-menu-bar" aria-label="Toggle Menu">
+                                <span>
+                                    <i class="fa-solid fa-bars"></i>
+                                </span>
+                            </button>
+                        </div>
                   </div>
                </div>
             </div>
@@ -83,3 +113,16 @@
    </div>
    <!-- header-area-end -->
 </header>
+
+<!-- jQuery (harus load pertama) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap Bundle -->
+<script src="assets/js/bootstrap_bundle_min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/countdown.js"></script>
+
+</body>
+</html>
