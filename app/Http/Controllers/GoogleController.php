@@ -9,7 +9,6 @@ use Exception;
 
 class GoogleController extends Controller
 {
-
     public function redirect()
     {
         return Socialite::driver('google')->redirect();
@@ -19,37 +18,26 @@ class GoogleController extends Controller
     {
         try {
             $googleUser = Socialite::driver('google')->user();
-            
-            $user = User::where('google_id', $googleUser->id)->first();
-            
-            if ($user) {
-                Auth::login($user);
-                return redirect()->intended(route('home'));
-            } else {
-                $existingUser = User::where('email', $googleUser->email)->first();
-                
-                if ($existingUser) {
-                    $existingUser->update([
-                        'google_id' => $googleUser->id,
-                        'avatar' => $googleUser->avatar,
-                    ]);
-                    Auth::login($existingUser);
-                    return redirect()->intended(route('home'));
-                } else {
-                    $newUser = User::create([
-                        'name' => $googleUser->name,
-                        'email' => $googleUser->email,
-                        'google_id' => $googleUser->id,
-                        'avatar' => $googleUser->avatar,
-                        'password' => bcrypt('google_password_' . uniqid()),
-                        'role' => 'user',
-                    ]);
-                    Auth::login($newUser);
-                    return redirect()->intended(route('home'));
-                }
+
+            // IDENTITAS TUNGGAL: EMAIL
+            $user = User::where('email', $googleUser->email)->first();
+
+            if (!$user) {
+                $user = User::create([
+                    'name' => $googleUser->name,
+                    'email' => $googleUser->email,
+                    'password' => bcrypt(uniqid()), // dummy
+                    'role' => 'user',
+                ]);
             }
+
+            Auth::login($user);
+
+            return redirect()->route('home');
+
         } catch (Exception $e) {
-            return redirect(route('login'))->with('error', 'Gagal login dengan Google: ' . $e->getMessage());
+            return redirect()->route('login')
+                ->with('error', 'Gagal login dengan Google');
         }
     }
 }

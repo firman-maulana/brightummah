@@ -25928,14 +25928,10 @@ input[type=radio] {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
-
 .it-header svg {
     color: #6C757D;
 }
 
-
-/* Custom: Equal height cards for Today Top Free Live Courses */
 .it-testimonial-style-2 .it-testimonial-active .swiper-slide {
   height: auto;
 }
@@ -25981,3 +25977,50 @@ input[type=radio] {
     min-height: 200px;
   }
 }
+
+.it-loading-logo-text {
+   text-align: center;
+}
+
+.it-loading-logo-text .logo-top {
+   display: block;
+   font-size: 27px;
+   font-weight: 400;
+   letter-spacing: 2px;
+   color: #000000;
+   line-height: 1.2;
+}
+
+.it-loading-logo-text .logo-bottom {
+   display: block;
+   margin-top: 6px;
+   font-size: 22px;
+   font-weight: 700;
+   letter-spacing: 16px; 
+   padding-left: 10px; 
+   color: #03594e;
+}
+
+.whatsapp-float {
+   position: fixed;
+   right: 20px;
+   bottom: 20px;
+   width: 50px;
+   height: 50px;
+   background-color: #25D366;
+   color: #fff;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 24px;
+   z-index: 999;
+   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+   transform: scale(1.08);
+   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+

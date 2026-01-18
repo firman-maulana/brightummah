@@ -31,7 +31,10 @@
       <div id="it-loading-center">
          <div id="it-loading-absolute">
             <div class="it-loading-content">
-               <img class="it-loading-logo" src="{{ asset('assets/img/logo/pencil-upper.png') }}" alt="">
+               <div class="it-loading-logo-text">
+                  <span class="logo-top">BRIGHT UMMAH</span>
+                  <span class="logo-bottom">LEARNING</span>
+               </div>
                <div class="it-loading-stroke">
                   <img class="it-loading-icon" src="{{ asset('assets/img/logo/pencil.png') }}" alt="">
                </div>
@@ -42,11 +45,15 @@
    </div>
    <!-- pre loader area end -->
 
-   <!-- back-to-top-start  -->
-   <button class="scroll-top scroll-to-target" data-target="html">
-      <i class="fa-solid fa-angle-up"></i>
-   </button>
-   <!-- back-to-top-end  -->
+   <a 
+   href="https://wa.me/6281292458877"
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="Chat WhatsApp"
+>
+   <i class="fa-brands fa-whatsapp"></i>
+</a>
+
 
    <!-- search popup start -->
    <div class="search-popup">
