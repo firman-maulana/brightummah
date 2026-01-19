@@ -24,6 +24,7 @@
         "@dnd-kit/modifiers": "^9.0.0",
         "@dnd-kit/sortable": "^10.0.0",
         "@dnd-kit/utilities": "^3.2.2",
+        "@fortawesome/fontawesome-free": "^7.1.0",
         "@hookform/resolvers": "^5.2.2",
         "@inertiajs/react": "^2.3.8",
         "@radix-ui/react-alert-dialog": "^1.1.15",
