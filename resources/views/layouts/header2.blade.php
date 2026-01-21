@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bright Ummah - Educational Platform</title>
+    <title>Bright Ummah Academy - Educational Platform</title>
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap_min.css">
@@ -117,7 +117,7 @@
                 <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-5 col-6">
                     <div class="it-header-logo">
                         <a href="{{ route('home') }}">
-                            <img src="assets/img/logo/logo-black.png" alt="Bright Ummah Logo">
+                            <img src="assets/img/logo/logo.png" alt="Bright Ummah Academy">
                         </a>
                     </div>
                 </div>

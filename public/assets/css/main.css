@@ -26024,3 +26024,10 @@ input[type=radio] {
    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
 }
 
+.it-header-area .it-header-logo img {
+    height: 80px; 
+    width: auto;
+    object-fit: contain;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}

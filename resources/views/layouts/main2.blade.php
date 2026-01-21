@@ -4,13 +4,12 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>@yield('title', 'Bright Ummah - Platform Pendidikan Islami Modern')</title>
+   <title>@yield('title', 'Bright Ummah Academy - Platform Pendidikan Islami Modern')</title>
    <meta name="description" content="@yield('description', 'Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam')">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}" media="(prefers-color-scheme: light)">
-   <link rel="shortcut icon" type="image/png" href="{{ asset('favicon-dark.png') }}" media="(prefers-color-scheme: dark)"> 
+   <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
 
    <!-- CSS Here -->
    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">        
@@ -34,7 +33,7 @@
             <div class="it-loading-content">
                <div class="it-loading-logo-text">
                   <span class="logo-top">BRIGHT UMMAH</span>
-                  <span class="logo-bottom">LEARNING</span>
+                  <span class="logo-bottom">ACADEMY</span>
                </div>
                <div class="it-loading-stroke">
                   <img class="it-loading-icon" src="{{ asset('assets/img/logo/pencil.png') }}" alt="">
@@ -75,7 +74,7 @@
          </div>
         <div class="itoffcanvas__logo">
             <a href="{{ route('home') }}">
-               <img src="assets/img/logo/logo-black.png" alt="Bright Ummah Logo">
+               <img src="assets/img/logo/logo.png" alt="Bright Ummah Academy">
             </a>
          </div>
          <div class="itoffcanvas__text">
@@ -143,7 +142,7 @@
                   data-wow-delay=".3s">
                   <div class="it-footer-widget it-footer-col-1-1">
                      <div class="it-footer-widget-logo mb-30">
-                        <a href="index.html"><img src="assets/img/logo/logo-black.png" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="assets/img/logo/logo.png" alt=""></a>
                      </div>
                      <div class="it-footer-widget-text">
                         <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>

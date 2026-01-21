@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>@yield('title', 'Bright Ummah - Platform Pendidikan Islami Modern')</title>
+   <title>@yield('title', 'Bright Ummah Academy - Platform Pendidikan Islami Modern')</title>
    <meta name="description" content="@yield('description', 'Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam')">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -71,7 +71,7 @@
          </div>
         <div class="itoffcanvas__logo">
             <a href="{{ route('home') }}">
-               <div class="text-2xl font-bold text-green-600 tracking-tight">Bright Ummah</div>
+               <div class="text-2xl font-bold text-green-600 tracking-tight">Bright Ummah Academy</div>
             </a>
          </div>
          <div class="itoffcanvas__text">
@@ -136,7 +136,7 @@
                   <div class="it-footer-widget it-footer-col-1 footer-col-1-gap">
                      <div class="it-footer-logo pb-20">
                         <a href="{{ route('home') }}">
-                           <div class="text-2xl font-bold text-white">Bright Ummah</div>
+                           <div class="text-2xl font-bold text-white">Bright Ummah Academy</div>
                         </a>
                      </div>
                      <div class="it-footer-text pb-5">
@@ -231,7 +231,7 @@
             <div class="row align-items-center">
                <div class="col-12">
                   <div class="it-copyright-left text-center">
-                     <p class="mb-0">Copyright © 2025 <a href="#">Bright Ummah</a> All Rights Reserved</p>
+                     <p class="mb-0">Copyright © 2025 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
                   </div>
                </div>
             </div>
