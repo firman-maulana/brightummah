@@ -19,7 +19,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -35,7 +35,7 @@
    </div>      
    <!-- breadcrumb-area-end -->
 
-   <!-- career-area-start -->
+<!-- career-area-start -->
    <div class="it-career-area pt-130 pb-95">
       <div class="container">
          <div class="row gx-35">
@@ -46,12 +46,11 @@
                   <h4 class="title">{{ $program->name }}</h4>
                   <div class="it-career-meta">
                      <span>{{ $program->mode }}</span>
-                     <span>{{ $program->duration }}</span>
                      <span>{{ $program->level }}</span>
                   </div>
                   <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">{{ $program->created_at->format('d M Y') }}</span>
-                     <a href="{{ route('programs.show', $program) }}" class="it-btn-yellow">
+                     <span class="it-career-price">Rp {{ number_format($program->price, 0, ',', '.') }} / {{ str_replace('Per ', '', $program->price_period) }}</span>
+                     <a href="{{ route('detailprogram.show', $program) }}" class="it-btn-yellow">
                         <span>
                            <span class="text-1">See Details</span>
                            <span class="text-2">See Details</span>
@@ -77,17 +76,8 @@
             </div>
             @endforelse
          </div>
-         
-         @if($programs->count() > 0)
-         <div class="row">
-            <div class="col-12">
-               <div class="d-flex justify-content-center mt-4">
-                  {{ $programs->links() }}
-               </div>
-            </div>
-         </div>
-         @endif
       </div>
+   </div>
    <!-- career-area-end -->
 
    <!-- newsletter-area-start -->

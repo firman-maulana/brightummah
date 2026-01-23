@@ -10,7 +10,13 @@ class Program extends Model
         'category',
         'name',
         'mode',
-        'duration',
         'level',
+        'price',
+        'price_period',
+        'image',
+        'teacher',
+        'tujuan_program',
+        'fokus_pembelajaran',
+        'manfaat_program',
     ];
 }

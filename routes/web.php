@@ -8,12 +8,12 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\Admin\AdminController;
 
 Route::get('/', fn() => view('pages.home'))->name('home');
-Route::resource('programs', ProgramController::class)->only(['index', 'show']);
+Route::resource('programs', ProgramController::class)->only(['index']);
 Route::get('/about', fn() => view('pages.about'))->name('about');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
 Route::get('/error', fn() => view('pages.error.error'))->name('error');
-Route::get('/detailprogram', fn() => view('pages.detailprogram'));
+Route::resource('detailprogram', ProgramController::class)->only(['show']);
 Route::get('/menarik', fn() => view('pages.menarik'));
 Route::get('/menarik1', fn() => view('pages.menarik1'));
 

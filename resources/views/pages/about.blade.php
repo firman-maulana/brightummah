@@ -20,7 +20,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -90,7 +90,7 @@
                      </span> Anytime</h4>                
                   </div>
                   <div class="it-about-text">
-                    <p class="mb-45">Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+                    <p class="mb-45">BUA Bright Ummah Academy hadir sebagai mitra terpercaya dalam perjalanan pendidikan anak Anda. Kami menyediakan layanan bimbingan belajar privat yang dirancang untuk memenuhi kebutuhan setiap anak baik secara akademik maupun pengembangan karakter. Kami berkomitmen menciptakan pengalaman belajar yang menyenangkan, efektif, dan bermakna. BUA melayani berbagai jenjang mulai dari PAUD hingga Sekolah Dasar, dengan program yang dapat disesuaikan dengan kebutuhan keluarga Anda.</p>
                   </div>
                   <div class="row">
                      <div class="col-md-6 col-sm-6">
@@ -138,17 +138,6 @@
                         </div>   
                      </div>
                   </div>
-                  <a href="about-us-v1.html" class="it-btn-yellow theme-bg">
-                     <span>
-                        <span class="text-1">More About US </span>
-                        <span class="text-2">More About US</span>
-                     </span>
-                     <i>
-                        <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <path d="M15.0544 8.1364C15.4058 7.78492 15.4058 7.21508 15.0544 6.8636L9.3268 1.13604C8.97533 0.784567 8.40548 0.784567 8.05401 1.13604C7.70254 1.48751 7.70254 2.05736 8.05401 2.40883L13.1452 7.5L8.05401 12.5912C7.70254 12.9426 7.70254 13.5125 8.05401 13.864C8.40548 14.2154 8.97533 14.2154 9.3268 13.864L15.0544 8.1364ZM0.417969 7.5V8.4H14.418V7.5V6.6H0.417969V7.5Z" fill="currentcolor" />
-                        </svg>
-                     </i>
-                  </a>
                </div>
             </div>
          </div>
@@ -288,8 +277,8 @@
                      </span>
                   </div>
                   <div class="it-choose-2-content">
-                     <h6 class="it-choose-2-title">Grammar Base</h6>
-                     <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+                     <h6 class="it-choose-2-title">Flexible Program Options</h6>
+                     <p>Program akademik, keagamaan, bahasa, dan keterampilan yang disesuaikan dengan kebutuhan keluarga Anda.</p>
                   </div>
                </div>
             </div>
@@ -317,8 +306,8 @@
                      </span>
                   </div>
                   <div class="it-choose-2-content">
-                     <h6 class="it-choose-2-title">World's Best Tutor</h6>
-                     <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+                     <h6 class="it-choose-2-title">Qualified Tutors</h6>
+                     <p>Tim tutor profesional yang dibina secara rutin, kompeten secara akademik, dan peduli perkembangan karakter anak.</p>
                   </div>
                </div>
             </div>
@@ -346,8 +335,8 @@
                      </span>
                   </div>
                   <div class="it-choose-2-content">
-                     <h6 class="it-choose-2-title">Classified Certificate</h6>
-                     <p>World-class training and development programs developed by top teachers Habitant duis voluptate.</p>
+                     <h6 class="it-choose-2-title">Character Education</h6>
+                     <p>Setiap sesi pembelajaran menanamkan nilai positif dan kebiasaan baik untuk membentuk karakter anak yang kuat.</p>
                   </div>
                </div>
             </div>
@@ -961,7 +950,7 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="sign-in.html" class="it-btn-yellow white-bg">
+                     <a href="{{ route('login') }}" class="it-btn-yellow white-bg">
                         <span>
                            <span class="text-1">Start Learning Now</span>
                            <span class="text-2">Start Learning Now</span>

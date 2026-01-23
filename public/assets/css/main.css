@@ -26031,3 +26031,36 @@ input[type=radio] {
     padding-top: 7px;
     padding-bottom: 7px;
 }
+
+.itoffcanvas__auth {
+    margin-top: 25px;
+}
+
+.mobile-auth-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-auth-menu li {
+    margin-bottom: 12px;
+}
+
+.mobile-auth-menu a {
+    display: block;
+    text-align: center;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.mobile-auth-menu .btn-login {
+    border: 1px solid #03594e;
+    color: #03594e;
+}
+
+.mobile-auth-menu .btn-register {
+    background: #03594e;
+    color: #fff;
+}

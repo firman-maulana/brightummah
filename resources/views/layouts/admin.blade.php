@@ -597,7 +597,6 @@
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{{ route('admin.dashboard') }}" class="sidebar-brand">
-                <i class="bi bi-brightness-high-fill"></i>
                 <span>Bright Ummah Academy</span>
             </a>
             <button class="sidebar-toggle" id="sidebarToggle" title="Minimize">

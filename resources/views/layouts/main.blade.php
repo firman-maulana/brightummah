@@ -90,39 +90,19 @@
             </a>
          </div>
          <div class="itoffcanvas__text">
-            <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam untuk membentuk generasi yang berkarakter.</p>
+            <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam.</p>
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
-         <div class="itoffcanvas__info">
-            <h3 class="offcanva-title">Hubungi Kami</h3>
-            <div class="it-info-wrapper mb-20 d-flex align-items-center">
-               <div class="itoffcanvas__info-icon">
-                  <a href="#"><i class="fa-solid fa-envelope"></i></a>
-               </div>
-               <div class="itoffcanvas__info-address">
-                  <span>Email</span>
-                  <a href="mailto:info@brightummah.com">info@brightummah.com</a>
-               </div>
-            </div>
-            <div class="it-info-wrapper mb-20 d-flex align-items-center">
-               <div class="itoffcanvas__info-icon">
-                  <a href="#"><i class="fa-solid fa-phone"></i></a>
-               </div>
-               <div class="itoffcanvas__info-address">
-                  <span>Telepon</span>
-                  <a href="tel:+6281234567890">+62 812 3456 7890</a>
-               </div>
-            </div>
-            <div class="it-info-wrapper mb-20 d-flex align-items-center">
-               <div class="itoffcanvas__info-icon">
-                  <a href="#"><i class="fas fa-map-marker-alt"></i></a>
-               </div>
-               <div class="itoffcanvas__info-address">
-                  <span>Alamat</span>
-                  <a href="#">Jakarta, Indonesia</a>
-               </div>
-            </div>
-         </div>
+         <div class="itoffcanvas__auth d-xl-none">
+    <ul class="mobile-auth-menu">
+        <li>
+            <a href="{{ route('login') }}" class="btn-login">Login</a>
+        </li>
+        <li>
+            <a href="{{ route('register') }}" class="btn-register">Register</a>
+        </li>
+    </ul>
+</div>
          <div class="itoffcanvas__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -155,7 +135,7 @@
                         <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" alt=""></a>
                      </div>
                      <div class="it-footer-widget-text">
-                        <p>Access expert-led courses designed to help you succeed in your career, all from the comfort of your home.</p>
+                        <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam.</p>
                      </div>
                      <div class="it-footer-widget-btn">
                         <a href="{{ route('contact') }}" class="it-btn-yellow theme-bg">
@@ -179,8 +159,6 @@
                      <div class="it-footer-widget-menu">
                         <ul>
                            <li><a href="{{ route('faqs') }}">FAQs</a></li>
-                           <li><a href="#">Detail Program</a></li>
-
                         </ul>
                      </div>
                   </div>
@@ -193,8 +171,6 @@
                         <ul>
                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
                            <li><a href="{{ route('programs.index') }}">Programs</a></li>
-                           <li><a href="#">Instructor</a></li>
-                           <li><a href="#">Events</a></li>
                         </ul>
                      </div>
                   </div>
@@ -207,8 +183,8 @@
                         <div class="it-footer-widget-contact mb-25">
                            <ul>
                               <li><span>Phone:</span><a href="tel:+91123456789">(+91) 123-456-789</a></li>
-                              <li><span>Email:</span><a href="mailto:info@example.com">info@example.com</a></li>
-                              <li><span>Location:</span><a target="_blank" href="https://www.google.com/maps/dir///@24.4503253,17.1644279,4.17z?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">North America, USA</a></li>
+                              <li><span>Email:</span><a href="mailto:brightummah@gmail.com">brightummah@gmail.com</a></li>
+                              <li><span>Location:</span><a target="_blank" href="https://www.google.com/maps/dir///@24.4503253,17.1644279,4.17z?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">Surabaya, Jawa Timur</a></li>
                            </ul>
                         </div>
                         <div class="it-footer-widget-social">
@@ -251,7 +227,7 @@
             <div class="row align-items-center">
                <div class="col-12">
                   <div class="it-copyright-left text-center">
-                     <p class="mb-0">Copyright © 2025 <a href="#">Ordianit</a> All Rights Reserved</p>
+                     <p class="mb-0">Copyright © 2025 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
                   </div>
                </div>
             </div>

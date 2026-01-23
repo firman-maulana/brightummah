@@ -29,7 +29,7 @@
             <div class="col-xl-9 col-lg-10">
                <div class="it-hero-2-content text-center">
                   <h1 class="it-hero-title text-black wow itfadeUp" data-wow-duration=".9s"
-                  data-wow-delay=".3s">Unlock Your Potential with <br> Expert Online 
+                  data-wow-delay=".3s">Nurturing Excellence Through <br> Personalized 
                      <span class="z-index-1">
                         Learning
                         <span class="it-title-shape">
@@ -42,7 +42,7 @@
                   </h1>
                   <div class="it-hero-text wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".5s">
-                     <p>Join Educeet to explore high-quality online courses, gain real-world skills, and achieve your goals with guidance from expert instructors—anytime, anywhere, at your pace.</p>
+                     <p>Bright Ummah Academy menyediakan bimbingan belajar privat berkualitas dengan pendampingan personal dan fleksibel untuk meningkatkan prestasi dan karakter positif anak.</p>
                   </div>
                   <div class="it-hero-btn wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".7s">

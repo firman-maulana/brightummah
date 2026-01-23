@@ -2,33 +2,33 @@
 @section('content')
 
 <!-- breadcrumb-area-start -->
-   <div class="it-breadcrumb-area it-breadcrumb-course-details-3-style fix z-index-1" data-background="assets/img/bgprograms.jpeg">
-      <img class="it-breadcrumb-shape-1" src="assets/img/breadcrumb-1-1.png" alt="">
+   <div class="it-breadcrumb-area it-breadcrumb-course-details-3-style fix z-index-1" data-background="{{ asset('assets/img/bgprograms.jpeg') }}">
+      <img class="it-breadcrumb-shape-1" src="{{ asset('assets/img/breadcrumb-1-1.png') }}" alt="">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
                <div class="it-breadcrumb-content text-center z-index-1">
                   <div class="it-breadcrumb-list-wrap">
-                     <span class="it-breadcrumb-subtitle">Design</span>
+                     <span class="it-breadcrumb-subtitle">{{ $program->category }}</span>
                   </div>
                   <div class="it-breadcrumb-title-box mb-20">
                      <h3 class="it-section-title text-white">
-                        UI/UX Designer
+                        {{ $program->name }}
                      </h3>
                   </div>
                   <div class="it-breadcrumb-author-wrapper">
                      <div class="border-style d-flex align-items-center mb-20">
                         <div class="it-breadcrumb-author">
-                           <img src="assets/img/avatar-1-8.png" alt="">
+                           <img src="{{ asset('assets/img/avatar-1-8.png') }}" alt="">
                         </div>
                         <div class="it-breadcrumb-author-info">
                            <span>Teacher</span>
-                           <span class="name">Roboth smith</span>
+                           <span class="name">{{ $program->teacher ?? 'TBA' }}</span>
                         </div>
                      </div>
                      <div class="it-breadcrumb-author-info border-style mb-20">
-                        <span>Last Updated</span>
-                        <span>June 08,2026</span>
+                        <span>Level</span>
+                        <span>{{ $program->level }}</span>
                      </div>
                      <div class="it-breadcrumb-author-info mb-20">
                         <span>Review</span>
@@ -53,7 +53,7 @@
          <div class="row">
             <div class="col-12">
                <div class="it-course-sidebar-thumb">
-                  <img src="assets/img/career-details.jpg" alt="">
+                  <img src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->name }}">
                </div>
             </div>
          </div>
@@ -155,135 +155,60 @@
             <div class="col-lg-7">
                <div class="it-career-details-right">
                   <div class="postbox-dsc">
-                     <p class="mb-40">At ordianit, we are looking for a <span>highly creative, visually strong UI Designer</span> who has a great understanding of modern UI design. The core objective is to design modern web layouts, creating full-fledged templates with trendy interactions in mind. If you’re passionate about clean, user-centric, and visually engaging design, we want to hear from you.</p>
+                     <p class="mb-40" style="word-break: break-word">{!! nl2br(e($program->tujuan_program)) !!}</p>
                   </div>
-                  <h4 class="it-details-title">What You’ll Do:</h4>
+                  <h4 class="it-details-title">Fokus Pembelajaran:</h4>
                   <div class="it-details-list mb-50">
-                     <ul>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     @if($program->fokus_pembelajaran)
+<ul>
+    @foreach (explode("\n", $program->fokus_pembelajaran) as $item)
+        @if(trim($item) !== '')
+        <li>
+            <span style="
+      word-break: break-word;
+   ">
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                              Design complete web templates with a focus on modern layout and user experience
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Create intuitive and visually appealing interfaces based on current design trends
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                              Apply strong visual hierarchy, typography, spacing, and color theory
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Collaborate with product managers, developers, and other designers
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Ensure design consistency and usability across all components
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Stay current with the latest UI/UX trends and best practices
-                           </span>
-                        </li>
-                     </ul>
+                {{ $item }}
+            </span>
+        </li>
+        @endif
+    @endforeach
+</ul>
+@endif
+
                   </div>
-                  <h4 class="it-details-title">What We’re Looking For:</h4>
+                  <h4 class="it-details-title">Manfaat untuk Siswa:</h4>
                   <div class="it-details-list mb-50">
-                     <ul>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     @if($program->manfaat_program)
+<ul>
+    @foreach (explode("\n", $program->manfaat_program) as $item)
+        @if(trim($item) !== '')
+        <li>
+            <span style="
+   word-break: break-word;
+">
+
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                              A strong portfolio showcasing modern UI designs, especially web layouts
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Excellent understanding of <b>color, shapes, white space, and visual hierarchy</b>
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                              Apply strong visual hierarchy, typography, spacing, and color theory
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Proficiency in <b>Figma</b>, or similar design tools
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Deep understanding of <b>typography</b>, layout systems, and <b>UX principles</b>
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Experience designing responsive, scalable design systems
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Team player with strong communication and collaboration skills
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             <b>Bonus: </b> Experience with CMS platforms or web template ecosystems
-                           </span>
-                        </li>
-                     </ul>
+                {{ $item }}
+            </span>
+        </li>
+        @endif
+    @endforeach
+</ul>
+@endif
+
                   </div>
                   <h4 class="it-details-title">Why Join Ollyo:</h4>
                   <div class="it-details-list mb-65">
                      <ul>
                         <li>
-                           <span>
+                           <span style="
+      word-break: break-word;
+   ">
                               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
@@ -331,7 +256,7 @@
       <div class="container">
          <div class="it-newsletter-wrap theme-bg z-index-2 wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".3s">
-            <img class="it-newsletter-shape-1" src="assets/img/brg.png" alt="">
+            <img class="it-newsletter-shape-1" src="{{ asset('assets/img/brg.png') }}" alt="">
             <div class="row align-items-center">
                <div class="col-lg-6">
                   <div class="it-newsletter-2-left">

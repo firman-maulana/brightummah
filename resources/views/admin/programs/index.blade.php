@@ -16,14 +16,14 @@
             <a href="{{ route('admin.programs.create') }}" class="btn btn-primary btn-sm px-3">
                 +
             </a>
-        </div>
+</div>
 
         @if($programs->count())
             <div class="table-responsive">
                 <table class="table align-middle mb-0">
                     <thead class="table-light">
                         <tr>
-                            <th class="text-muted fw-normal">#</th>
+                            <th class="text-muted fw-normal">No</th>
                             <th class="text-muted fw-normal">Program</th>
                             <th class="text-muted fw-normal">Category</th>
                             <th class="text-muted fw-normal">Mode</th>
@@ -36,7 +36,7 @@
                         @foreach($programs as $index => $program)
                         <tr>
                             <td class="text-muted">
-                                {{ $programs->firstItem() + $index }}
+                                {{ $loop->iteration }}
                             </td>
 
                             <td>
@@ -89,9 +89,6 @@
                 </table>
             </div>
 
-            <div class="mt-4">
-                {{ $programs->links() }}
-            </div>
         @else
             {{-- Empty State --}}
             <div class="text-center py-5">

@@ -51,7 +51,7 @@
                      <nav class="it-menu-content">
                         <ul>
                            <li>
-                              <a href="{{ route('home') }}">Beranda</a>
+                              <a href="{{ route('home') }}">Home</a>
                            </li>
                            <li>
                               <a href="{{ route('programs.index') }}">Program</a>

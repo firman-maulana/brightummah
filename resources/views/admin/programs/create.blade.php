@@ -15,8 +15,13 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Category <span class="text-danger">*</span></label>
-                            <input type="text" name="category" class="form-control @error('category') is-invalid @enderror" 
-                                   value="{{ old('category') }}" placeholder="e.g., Design, Programming" required>
+                            <select name="category" class="form-select @error('category') is-invalid @enderror" required>
+                                <option value="">Select Category</option>
+                                <option value="Academic & School Program" {{ old('category') == 'Academic & School Program' ? 'selected' : '' }}>Academic & School Program</option>
+                                <option value="Quran & Islamic Studies Program" {{ old('category') == 'Quran & Islamic Studies Program' ? 'selected' : '' }}>Quran & Islamic Studies Program</option>
+                                <option value="Language & Skill Program" {{ old('category') == 'Language & Skill Program' ? 'selected' : '' }}>Language & Skill Program</option>
+                                <option value="Program Options" {{ old('category') == 'Program Options' ? 'selected' : '' }}>Program Options</option>
+                            </select>
                             @error('category')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -33,39 +38,168 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-6 mb-3">
                             <label class="form-label">Mode <span class="text-danger">*</span></label>
                             <select name="mode" class="form-select @error('mode') is-invalid @enderror" required>
+                                <option value="">Select Mode</option>
+                                <option value="Online & Offline" {{ old('mode') == 'Online & Offline' ? 'selected' : '' }}>Online & Offline</option>
                                 <option value="Online" {{ old('mode') == 'Online' ? 'selected' : '' }}>Online</option>
-                                <option value="Onsite" {{ old('mode') == 'Onsite' ? 'selected' : '' }}>Onsite</option>
-                                <option value="Hybrid" {{ old('mode') == 'Hybrid' ? 'selected' : '' }}>Hybrid</option>
+                                <option value="Offline" {{ old('mode') == 'Offline' ? 'selected' : '' }}>Offline</option>
                             </select>
                             @error('mode')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <div class="col-md-4 mb-3">
-                            <label class="form-label">Duration <span class="text-danger">*</span></label>
-                            <input type="text" name="duration" class="form-control @error('duration') is-invalid @enderror" 
-                                   value="{{ old('duration') }}" placeholder="e.g., 3 Months" required>
-                            @error('duration')
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Level <span class="text-danger">*</span></label>
+
+<input
+    type="text"
+    name="level"
+    class="form-control @error('level') is-invalid @enderror"
+    value="{{ old('level') }}"
+    list="level-options"
+    placeholder="Contoh: Beginner, Intermediate, Advanced, SMP, SMA"
+    required
+>
+
+<datalist id="level-options">
+    @foreach ($levels as $level)
+        <option value="{{ $level }}"></option>
+    @endforeach
+</datalist>
+
+@error('level')
+    <div class="invalid-feedback">{{ $message }}</div>
+@enderror
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-3">
+                            <label class="form-label">Price (Rp) <span class="text-danger">*</span></label>
+                            <input type="number" name="price" class="form-control @error('price') is-invalid @enderror" 
+                                   value="{{ old('price') }}" placeholder="e.g., 5000000" min="0" step="0.01" required>
+                            @error('price')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
+                            <small class="text-muted">Enter amount without dots or commas (e.g., 5000000)</small>
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <label class="form-label">Level <span class="text-danger">*</span></label>
-                            <select name="level" class="form-select @error('level') is-invalid @enderror" required>
-                                <option value="Beginner" {{ old('level') == 'Beginner' ? 'selected' : '' }}>Beginner</option>
-                                <option value="Intermediate" {{ old('level') == 'Intermediate' ? 'selected' : '' }}>Intermediate</option>
-                                <option value="Advanced" {{ old('level') == 'Advanced' ? 'selected' : '' }}>Advanced</option>
+                            <label class="form-label">Price Period <span class="text-danger">*</span></label>
+                            <select name="price_period" class="form-select @error('price_period') is-invalid @enderror" required>
+                                <option value="">Select Period</option>
+                                <option value="Per Day" {{ old('price_period') == 'Per Day' ? 'selected' : '' }}>Per Day</option>
+                                <option value="Per Week" {{ old('price_period') == 'Per Week' ? 'selected' : '' }}>Per Week</option>
+                                <option value="Per Month" {{ old('price_period') == 'Per Month' ? 'selected' : '' }}>Per Month</option>
+                                <option value="Per Year" {{ old('price_period') == 'Per Year' ? 'selected' : '' }}>Per Year</option>
                             </select>
-                            @error('level')
+                            @error('price_period')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Teacher</label>
+                        <input type="text" name="teacher" class="form-control @error('teacher') is-invalid @enderror" 
+                               value="{{ old('teacher') }}" placeholder="e.g., John Doe" required>
+                        @error('teacher')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Tujuan Program</label>
+                        <textarea name="tujuan_program" class="form-control @error('tujuan_program') is-invalid @enderror" 
+                                  rows="4" placeholder="Masukkan tujuan program..." required>{{ old('tujuan_program') }}</textarea>
+                        @error('tujuan_program')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Fokus Pembelajaran</label>
+                        <textarea name="fokus_pembelajaran" class="form-control @error('fokus_pembelajaran') is-invalid @enderror" 
+                                  rows="4" placeholder="Masukkan fokus pembelajaran..." required>{{ old('fokus_pembelajaran') }}</textarea>
+                        @error('fokus_pembelajaran')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Manfaat Program</label>
+                        <textarea name="manfaat_program" class="form-control @error('manfaat_program') is-invalid @enderror" 
+                                  rows="4" placeholder="Masukkan manfaat program..." required>{{ old('manfaat_program') }}</textarea>
+                        @error('manfaat_program')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="mb-3">
+    <label class="form-label">Program Image</label>
+
+    {{-- FILE INPUT --}}
+    <input
+        type="file"
+        name="image"
+        id="imageInput"
+        class="form-control @error('image') is-invalid @enderror"
+        accept="image/*"
+        onchange="handleImageUpload(event)"
+        required
+    >
+
+    <small class="text-muted">
+        JPG, PNG, JPEG. Maksimal 10 MB.
+    </small>
+
+    {{-- IMAGE PREVIEW --}}
+    <div id="imageWrapper" class="mt-3 d-none">
+        <div class="position-relative d-inline-block">
+            <img
+                id="imagePreview"
+                src=""
+                class="img-thumbnail"
+                style="max-width:300px; max-height:200px; cursor:pointer;"
+                onclick="openImageModal()"
+            >
+
+            {{-- REMOVE --}}
+            <button
+                type="button"
+                class="btn btn-danger btn-sm position-absolute top-0 end-0"
+                style="border-radius:50%; padding:4px 7px;"
+                onclick="removeImage()"
+            >
+                <i class="bi bi-x-lg"></i>
+            </button>
+
+            {{-- ZOOM --}}
+            <button
+                type="button"
+                class="btn btn-dark btn-sm position-absolute bottom-0 end-0"
+                style="padding:4px 7px;"
+                onclick="openImageModal()"
+            >
+                <i class="bi bi-zoom-in"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="imageModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
 
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary">
@@ -84,13 +218,68 @@
             <div class="card-body">
                 <ul style="font-size: 12px; line-height: 1.8; padding-left: 20px; margin: 0;">
                     <li>Fill all required fields (*)</li>
-                    <li>Category: Program type/field</li>
-                    <li>Mode: Online/Onsite/Hybrid</li>
-                    <li>Duration: e.g., "3 Months", "6 Weeks"</li>
-                    <li>Level: Beginner/Intermediate/Advanced</li>
+                    <li><strong>Category:</strong> Select from 4 options</li>
+                    <li><strong>Mode:</strong> Online & Offline/Online/Offline</li>
+                    <li><strong>Level:</strong> Beginner/Intermediate/Advanced</li>
+                    <li><strong>Price:</strong> Enter numbers only without formatting</li>
+                    <li><strong>Price Period:</strong> Choose billing cycle</li>
+                    <li><strong>Teacher:</strong> Optional, nama pengajar</li>
+                    <li><strong>Tujuan Program:</strong> Optional, tujuan dari program</li>
+                    <li><strong>Fokus Pembelajaran:</strong> Optional, fokus materi pembelajaran</li>
+                    <li><strong>Manfaat Program:</strong> Optional, manfaat yang didapat</li>
+                    <li><strong>Image:</strong> Optional, but recommended for better presentation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header">Category Guide</div>
+            <div class="card-body">
+                <ul style="font-size: 12px; line-height: 1.8; padding-left: 20px; margin: 0;">
+                    <li><strong>Academic & School Program:</strong> HTML, CSS, JavaScript, PHP, Laravel, React</li>
+                    <li><strong>Quran & Islamic Studies Program:</strong> Flutter, React Native, iOS, Android</li>
+                    <li><strong>Language & Skill Program:</strong> Python, Machine Learning, AI, Analytics</li>
+                    <li><strong>Program Options:</strong> Figma, Adobe XD, User Research</li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+function handleImageUpload(event) {
+    const file = event.target.files[0];
+
+    if (!file) return;
+
+    if (file.size > 10 * 1024 * 1024) {
+        alert('Ukuran gambar maksimal 10 MB');
+        event.target.value = '';
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        document.getElementById('imagePreview').src = e.target.result;
+        document.getElementById('modalImage').src = e.target.result;
+
+        document.getElementById('imageWrapper').classList.remove('d-none');
+        document.getElementById('imageInput').classList.add('d-none');
+    };
+    reader.readAsDataURL(file);
+}
+
+function removeImage() {
+    document.getElementById('imageInput').value = '';
+    document.getElementById('imageInput').classList.remove('d-none');
+    document.getElementById('imageWrapper').classList.add('d-none');
+}
+
+function openImageModal() {
+    const src = document.getElementById('imagePreview').src;
+    document.getElementById('modalImage').src = src;
+    new bootstrap.Modal(document.getElementById('imageModal')).show();
+}
+</script>
+
 @endsection

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('category');
             $table->string('name'); 
-            $table->enum('mode', ['Online', 'Onsite', 'Hybrid'])->default('Online');
+            $table->enum('mode', ['Online & Offline', 'Online', 'Onsite'])->default('Online & Offline');
             $table->string('duration');
             $table->enum('level', ['Beginner', 'Intermediate', 'Advanced'])->default('Beginner');
             $table->timestamps();
