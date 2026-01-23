@@ -12,6 +12,8 @@
                 <form action="{{ route('admin.programs.update', $program) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
+
+                    <input type="hidden" name="remove_image" id="removeImageFlag" value="0">
                     
                     <div class="row">
                         <div class="col-md-6 mb-3">
@@ -144,20 +146,31 @@
     <label class="form-label">Program Image</label>
 
     {{-- FILE INPUT --}}
-    <input
-        type="file"
-        name="image"
-        id="imageInput"
-        class="form-control @error('image') is-invalid @enderror {{ $program->image ? 'd-none' : '' }}"
-        accept="image/*"
-        onchange="handleImageUpload(event)"
-    >
-    <small class="text-muted">
-        JPG, JPEG, PNG, GIF (Max: 10MB). Recommended size: 1280x720px.
-    </small>
+<input
+    type="file"
+    name="image"
+    id="imageInput"
+    class="form-control @error('image') is-invalid @enderror
+        {{ ($program->image && old('remove_image') != 1) ? 'd-none' : '' }}"
+    accept="image/*"
+    onchange="handleImageUpload(event)"
+>
+
+{{-- PERINGATAN WAJIB UPLOAD GAMBAR --}}
+<div
+    id="imageWarning"
+    class="text-danger mt-1
+        {{ old('remove_image') == 1 ? '' : 'd-none' }}"
+    style="font-size: 13px;">
+    Gambar program wajib diupload.
+</div>
 
     {{-- IMAGE WRAPPER --}}
-    <div id="imageWrapper" class="mt-3 {{ $program->image ? '' : 'd-none' }}">
+    <div
+    id="imageWrapper"
+    class="mt-3
+        {{ ($program->image && old('remove_image') != 1) ? '' : 'd-none' }}"
+>
         <div class="position-relative d-inline-block">
             <img
                 id="imagePreview"
@@ -254,14 +267,7 @@
 <script>
 function handleImageUpload(event) {
     const file = event.target.files[0];
-
     if (!file) return;
-
-    if (file.size > 10 * 1024 * 1024) {
-        alert('Ukuran gambar maksimal 10 MB');
-        event.target.value = '';
-        return;
-    }
 
     const reader = new FileReader();
     reader.onload = function (e) {
@@ -270,6 +276,9 @@ function handleImageUpload(event) {
 
         document.getElementById('imageWrapper').classList.remove('d-none');
         document.getElementById('imageInput').classList.add('d-none');
+        document.getElementById('imageWarning').classList.add('d-none');
+
+        document.getElementById('removeImageFlag').value = 0;
     };
     reader.readAsDataURL(file);
 }
@@ -277,7 +286,11 @@ function handleImageUpload(event) {
 function removeImage() {
     document.getElementById('imageInput').value = '';
     document.getElementById('imageInput').classList.remove('d-none');
+
     document.getElementById('imageWrapper').classList.add('d-none');
+    document.getElementById('imageWarning').classList.remove('d-none');
+
+    document.getElementById('removeImageFlag').value = 1;
 }
 
 function openImageModal() {

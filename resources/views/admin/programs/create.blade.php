@@ -30,7 +30,7 @@
                         <div class="col-md-6 mb-3">
                             <label class="form-label">Program Name <span class="text-danger">*</span></label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" 
-                                   value="{{ old('name') }}" placeholder="e.g., Web Development Bootcamp" required>
+                                   value="{{ old('name') }}" placeholder="Masukkan nama program" required>
                             @error('name')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -60,7 +60,7 @@
     class="form-control @error('level') is-invalid @enderror"
     value="{{ old('level') }}"
     list="level-options"
-    placeholder="Contoh: Beginner, Intermediate, Advanced, SMP, SMA"
+    placeholder="Contoh: PAUD, SD"
     required
 >
 
@@ -81,7 +81,7 @@
                         <div class="col-md-8 mb-3">
                             <label class="form-label">Price (Rp) <span class="text-danger">*</span></label>
                             <input type="number" name="price" class="form-control @error('price') is-invalid @enderror" 
-                                   value="{{ old('price') }}" placeholder="e.g., 5000000" min="0" step="0.01" required>
+                                   value="{{ old('price') }}" placeholder="Masukkan harga" min="0" step="0.01" required>
                             @error('price')
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
@@ -106,7 +106,7 @@
                     <div class="mb-3">
                         <label class="form-label">Teacher</label>
                         <input type="text" name="teacher" class="form-control @error('teacher') is-invalid @enderror" 
-                               value="{{ old('teacher') }}" placeholder="e.g., John Doe" required>
+                               value="{{ old('teacher') }}" placeholder="Contoh: Abdul Rakhman" required>
                         @error('teacher')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
