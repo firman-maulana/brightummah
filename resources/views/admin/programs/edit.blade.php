@@ -146,64 +146,64 @@
     <label class="form-label">Program Image</label>
 
     {{-- FILE INPUT --}}
-<input
-    type="file"
-    name="image"
-    id="imageInput"
-    class="form-control @error('image') is-invalid @enderror
-        {{ ($program->image && old('remove_image') != 1) ? 'd-none' : '' }}"
-    accept="image/*"
-    onchange="handleImageUpload(event)"
->
+    <input
+        type="file"
+        name="image"
+        id="imageInput"
+        class="form-control @error('image') is-invalid @enderror
+            {{ ($program->image && old('remove_image') != 1) ? 'd-none' : '' }}"
+        accept="image/*"
+        onchange="handleImageUpload(event)"
+    >
 
-{{-- PERINGATAN WAJIB UPLOAD GAMBAR --}}
-<div
-    id="imageWarning"
-    class="text-danger mt-1
-        {{ old('remove_image') == 1 ? '' : 'd-none' }}"
-    style="font-size: 13px;">
-    Gambar program wajib diupload.
-</div>
+    {{-- FLAG REMOVE IMAGE --}}
+    <input type="hidden" name="remove_image" id="removeImageInput" value="0">
 
-    {{-- IMAGE WRAPPER --}}
+    {{-- WARNING --}}
     <div
-    id="imageWrapper"
-    class="mt-3
-        {{ ($program->image && old('remove_image') != 1) ? '' : 'd-none' }}"
->
+        id="imageWarning"
+        class="text-danger mt-1 {{ old('remove_image') == 1 ? '' : 'd-none' }}"
+        style="font-size:13px">
+        Gambar program wajib diupload.
+    </div>
+
+    {{-- IMAGE PREVIEW --}}
+    <div
+        id="imageWrapper"
+        class="mt-3 {{ ($program->image && old('remove_image') != 1) ? '' : 'd-none' }}"
+    >
         <div class="position-relative d-inline-block">
             <img
                 id="imagePreview"
-                src="{{ $program->image ? asset('storage/'.$program->image) : '' }}"
+                src="{{ $program->image }}"
                 class="img-thumbnail"
-                style="max-width: 300px; max-height: 200px; cursor: pointer;"
+                style="max-width:300px; max-height:200px; cursor:pointer"
                 onclick="openImageModal()"
             >
 
-            {{-- REMOVE ICON --}}
+            {{-- REMOVE --}}
             <button
                 type="button"
                 class="btn btn-danger btn-sm position-absolute top-0 end-0"
-                style="border-radius:50%; padding:4px 7px;"
+                style="border-radius:50%; padding:4px 7px"
                 onclick="removeImage()"
-                title="Remove image"
             >
                 <i class="bi bi-x-lg"></i>
             </button>
 
-            {{-- ZOOM ICON --}}
+            {{-- ZOOM --}}
             <button
                 type="button"
                 class="btn btn-dark btn-sm position-absolute bottom-0 end-0"
-                style="padding:4px 7px;"
+                style="padding:4px 7px"
                 onclick="openImageModal()"
-                title="View image"
             >
                 <i class="bi bi-zoom-in"></i>
             </button>
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="imageModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">

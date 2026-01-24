@@ -53,7 +53,7 @@
          <div class="row">
             <div class="col-12">
                <div class="it-course-sidebar-thumb">
-                  <img src="{{ asset('storage/' . $program->image) }}" alt="{{ $program->name }}">
+                  <img src="{{ $program->image }}" alt="{{ $program->name }}">
                </div>
             </div>
          </div>

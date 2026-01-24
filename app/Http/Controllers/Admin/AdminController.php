@@ -7,6 +7,7 @@ use App\Models\Program;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Cloudinary\Cloudinary;
 
 class AdminController extends Controller
 {
@@ -38,31 +39,47 @@ class AdminController extends Controller
     }
 
     public function storeProgram(Request $request)
-    {
-        $validated = $request->validate([
-            'category' => 'required|in:Academic & School Program,Quran & Islamic Studies Program,Language & Skill Program,Program Options',
-            'name' => 'required|string|max:255',
-            'mode' => 'required|in:Online & Offline,Online,Offline',
-            'level' => 'required|string|max:100',
-            'price' => 'required|numeric|min:0',
-            'price_period' => 'required|in:Per Day,Per Week,Per Month,Per Year',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
-            'teacher' => 'required|string|max:255',
-            'tujuan_program' => 'required|string',
-            'fokus_pembelajaran' => 'required|string',
-            'manfaat_program' => 'required|string'
-        ]);
+{
+    $validated = $request->validate([
+        'category' => 'required',
+        'name' => 'required|string|max:255',
+        'mode' => 'required',
+        'level' => 'required|string|max:100',
+        'price' => 'required|numeric|min:0',
+        'price_period' => 'required',
+        'image' => 'required|image|max:10240',
+        'teacher' => 'required|string|max:255',
+        'tujuan_program' => 'required|string',
+        'fokus_pembelajaran' => 'required|string',
+        'manfaat_program' => 'required|string',
+    ]);
 
-        // Handle image upload
-        if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('programs', 'public');
-        }
+    // ✅ INIT CLOUDINARY SDK
+    $cloudinary = new Cloudinary([
+        'cloud' => [
+            'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+            'api_key'    => env('CLOUDINARY_API_KEY'),
+            'api_secret' => env('CLOUDINARY_API_SECRET'),
+        ],
+    ]);
 
-        Program::create($validated);
+    // ✅ UPLOAD
+    $upload = $cloudinary->uploadApi()->upload(
+        $request->file('image')->getRealPath(),
+        [
+            'folder' => 'programs'
+        ]
+    );
 
-        return redirect()->route('admin.programs')
-            ->with('success', 'Program created successfully!');
-    }
+    // ✅ SIMPAN URL
+    $validated['image'] = $upload['secure_url'];
+
+    Program::create($validated);
+
+    return redirect()->route('admin.programs')
+        ->with('success', 'Program created successfully!');
+}
+
 
     public function editProgram(Program $program)
     {
@@ -75,48 +92,55 @@ class AdminController extends Controller
     }
 
     public function updateProgram(Request $request, Program $program)
-{
-    $rules = [
-        'category' => 'required|in:Academic & School Program,Quran & Islamic Studies Program,Language & Skill Program,Program Options',
-        'name' => 'required|string|max:255',
-        'mode' => 'required|in:Online & Offline,Online,Offline',
-        'level' => 'required|string|max:100',
-        'price' => 'required|numeric|min:0',
-        'price_period' => 'required|in:Per Day,Per Week,Per Month,Per Year',
-        'teacher' => 'required|string|max:255',
-        'tujuan_program' => 'required|string',
-        'fokus_pembelajaran' => 'required|string',
-        'manfaat_program' => 'required|string',
-    ];
+    {
+        $rules = [
+            'category' => 'required|in:Academic & School Program,Quran & Islamic Studies Program,Language & Skill Program,Program Options',
+            'name' => 'required|string|max:255',
+            'mode' => 'required|in:Online & Offline,Online,Offline',
+            'level' => 'required|string|max:100',
+            'price' => 'required|numeric|min:0',
+            'price_period' => 'required|in:Per Day,Per Week,Per Month,Per Year',
+            'teacher' => 'required|string|max:255',
+            'tujuan_program' => 'required|string',
+            'fokus_pembelajaran' => 'required|string',
+            'manfaat_program' => 'required|string',
+        ];
 
-    if ($request->remove_image == 1) {
-        $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif|max:10240';
-    } else {
-        $rules['image'] = 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240';
-    }
-
-    $validated = $request->validate($rules);
-
-    if ($request->hasFile('image')) {
-        if ($program->image) {
-            Storage::disk('public')->delete($program->image);
+        if ($request->remove_image == 1) {
+            $rules['image'] = 'required|image|mimes:jpeg,png,jpg,gif|max:10240';
+        } else {
+            $rules['image'] = 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240';
         }
-        $validated['image'] = $request->file('image')->store('programs', 'public');
-    }
 
-    $program->update($validated);
+        $validated = $request->validate($rules);
 
-    return redirect()->route('admin.programs')
-        ->with('success', 'Program updated successfully!');
+        if ($request->hasFile('image')) {
+
+    $cloudinary = new Cloudinary([
+        'cloud' => [
+            'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+            'api_key'    => env('CLOUDINARY_API_KEY'),
+            'api_secret' => env('CLOUDINARY_API_SECRET'),
+        ],
+    ]);
+
+    $upload = $cloudinary->uploadApi()->upload(
+        $request->file('image')->getRealPath(),
+        ['folder' => 'programs']
+    );
+
+    $validated['image'] = $upload['secure_url'];
 }
+
+
+        $program->update($validated);
+
+        return redirect()->route('admin.programs')
+            ->with('success', 'Program updated successfully!');
+    }
 
     public function destroyProgram(Program $program)
     {
-        // Delete image if exists
-        if ($program->image) {
-            Storage::disk('public')->delete($program->image);
-        }
-
         $program->delete();
 
         return redirect()->route('admin.programs')
