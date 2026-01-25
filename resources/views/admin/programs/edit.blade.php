@@ -9,7 +9,7 @@
         <div class="card">
             <div class="card-header">Edit Program Information</div>
             <div class="card-body">
-                <form action="{{ route('admin.programs.update', $program) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.programs.update', $program) }}" method="POST" enctype="multipart/form-data" id="programForm" onsubmit="return validateForm()">
                     @csrf
                     @method('PUT')
 
@@ -145,7 +145,6 @@
                     <div class="mb-3">
     <label class="form-label">Program Image</label>
 
-    {{-- FILE INPUT --}}
     <input
         type="file"
         name="image"
@@ -156,10 +155,8 @@
         onchange="handleImageUpload(event)"
     >
 
-    {{-- FLAG REMOVE IMAGE --}}
-    <input type="hidden" name="remove_image" id="removeImageInput" value="0">
+    <input type="hidden" name="remove_image" id="removeImageFlag" value="0">
 
-    {{-- WARNING --}}
     <div
         id="imageWarning"
         class="text-danger mt-1 {{ old('remove_image') == 1 ? '' : 'd-none' }}"
@@ -167,7 +164,6 @@
         Gambar program wajib diupload.
     </div>
 
-    {{-- IMAGE PREVIEW --}}
     <div
         id="imageWrapper"
         class="mt-3 {{ ($program->image && old('remove_image') != 1) ? '' : 'd-none' }}"
@@ -181,7 +177,6 @@
                 onclick="openImageModal()"
             >
 
-            {{-- REMOVE --}}
             <button
                 type="button"
                 class="btn btn-danger btn-sm position-absolute top-0 end-0"
@@ -191,7 +186,6 @@
                 <i class="bi bi-x-lg"></i>
             </button>
 
-            {{-- ZOOM --}}
             <button
                 type="button"
                 class="btn btn-dark btn-sm position-absolute bottom-0 end-0"
@@ -214,7 +208,6 @@
     </div>
 </div>
 
-
                     <div class="d-flex gap-2">
                         <button type="submit" class="btn btn-primary">
                             <i>Update</i>
@@ -233,11 +226,11 @@
                 <table class="table table-sm mb-0">
                     <tr>
                         <td style="font-size: 12px; color: #999;">Created</td>
-                        <td style="font-size: 12px;">{{ $program->created_at->format('d M Y H:i') }}</td>
+                        <td style="font-size: 12px;">{{ $program->created_at->timezone('Asia/Jakarta')->format('d M Y H:i') }}</td>
                     </tr>
                     <tr>
                         <td style="font-size: 12px; color: #999;">Updated</td>
-                        <td style="font-size: 12px;">{{ $program->updated_at->format('d M Y H:i') }}</td>
+                        <td style="font-size: 12px;">{{ $program->updated_at->timezone('Asia/Jakarta')->format('d M Y H:i') }}</td>
                     </tr>
                     <tr>
                         <td style="font-size: 12px; color: #999;">Current Price</td>
@@ -265,6 +258,22 @@
 </div>
 
 <script>
+function validateForm() {
+    const removeImageFlag = document.getElementById('removeImageFlag').value;
+    const imageInput = document.getElementById('imageInput');
+    
+    if (removeImageFlag == 1 && !imageInput.files.length) {
+        imageInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        const warning = document.getElementById('imageWarning');
+        warning.classList.remove('d-none');
+        
+        return false;
+    }
+    
+    return true;
+}
+
 function handleImageUpload(event) {
     const file = event.target.files[0];
     if (!file) return;

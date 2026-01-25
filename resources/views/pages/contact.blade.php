@@ -127,7 +127,7 @@
                            <div class="row">
                               <div class="col-md-6">
                                  <div class="it-signup-input mb-40">
-                                    <label>First Name</label>
+                                    <label>Name</label>
                                     <input type="text" placeholder="Name">
                                  </div>
                               </div>
