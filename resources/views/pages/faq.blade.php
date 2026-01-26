@@ -20,7 +20,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -63,15 +63,13 @@
                                        <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
                                           data-bs-target="#collapseOne2" aria-expanded="true"
                                           aria-controls="collapseOne2">
-                                         What is this theme designed for?                         
+                                         Apa itu Bright Ummah Academy?                       
                                        </button>
                                     </h4>
                                     <div id="collapseOne2" class="accordion-collapse collapse show"
                                        aria-labelledby="headingOne2" data-bs-parent="#accordionExample">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Bright Ummah Academy adalah lembaga bimbingan belajar privat berbasis akademik dan karakter. Pembelajaran dirancang secara personal untuk setiap siswa.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -80,15 +78,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseTwo3" aria-expanded="false"
                                           aria-controls="collapseTwo3">
-                                        Is this theme compatible with Elementor?                         
+                                        Jenjang pendidikan apa saja yang tersedia di BUA?                         
                                        </button>
                                     </h4>
                                     <div id="collapseTwo3" class="accordion-collapse collapse"
                                        aria-labelledby="headingTwo3" data-bs-parent="#accordionExample">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Bright Ummah Academy melayani siswa dari jenjang PAUD hingga Sekolah Dasar. Setiap program disesuaikan dengan usia, kebutuhan belajar, dan kemampuan masing-masing anak.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -97,15 +93,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseFour4"
                                           aria-expanded="false" aria-controls="collapseFour4">
-                                         Why do we need to use LMS plugins?                      
+                                         Apa Keunggulan Bright Ummah Academy?
                                        </button>
                                     </h4>
                                     <div id="collapseFour4" class="accordion-collapse collapse"
                                        aria-labelledby="headingFour4" data-bs-parent="#accordionExample">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Bright Ummah Academy menggabungkan akademik berkualitas dengan pendekatan personal dan nilai karakter. Proses belajar dibuat fleksibel dan nyaman.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -114,15 +108,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseFour5"
                                           aria-expanded="false" aria-controls="collapseFour4">
-                                         Do you offer a free trial for Educeet Theme?                       
+                                         Apa bedanya General dan Islamic Integrated Program
                                        </button>
                                     </h4>
                                     <div id="collapseFour5" class="accordion-collapse collapse"
                                        aria-labelledby="headingFour5" data-bs-parent="#accordionExample">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">General Program berfokus pada akademik dan nilai karakter universal. Islamic Integrated Program menambahkan doa, refleksi Al-Qur’an, dan pembinaan nilai Islami dalam setiap sesi belajar.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -138,15 +130,13 @@
                                        <button class="accordion-buttons " type="button" data-bs-toggle="collapse"
                                           data-bs-target="#collapseOne22" aria-expanded="true"
                                           aria-controls="collapseOne22">
-                                         Do you provide theme updates?                         
+                                         Program apa saja yang tersedia di Bright Ummah Academy?                         
                                        </button>
                                     </h4>
                                     <div id="collapseOne22" class="accordion-collapse collapse show"
                                        aria-labelledby="headingOne22" data-bs-parent="#accordionExample2">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Bright Ummah Academy menyediakan program akademik, Qur’an & studi Islam, serta bahasa dan keterampilan. Program disusun terstruktur dan menyenangkan.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -155,15 +145,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseTwo33" aria-expanded="false"
                                           aria-controls="collapseTwo33">
-                                          Is this theme compatible with Elementor?                          
+                                          Apakah metode belajar disesuaikan dengan kebutuhan anak?                          
                                        </button>
                                     </h4>
                                     <div id="collapseTwo33" class="accordion-collapse collapse"
                                        aria-labelledby="headingTwo33" data-bs-parent="#accordionExample2">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Ya, Bright Ummah Academy menerapkan personalized learning sesuai gaya dan kemampuan belajar siswa. Pendekatan ini membantu anak belajar lebih efektif dan percaya diri.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -172,15 +160,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseFour44"
                                           aria-expanded="false" aria-controls="collapseFour44">
-                                        Do you provide theme updates?                          
+                                        Bagaimana cara mendaftar di Bright Ummah Academy?                          
                                        </button>
                                     </h4>
                                     <div id="collapseFour44" class="accordion-collapse collapse"
                                        aria-labelledby="headingFour44" data-bs-parent="#accordionExample2">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Orang tua dapat menghubungi tim Bright Ummah Academy melalui WhatsApp atau email. Kami siap membantu konsultasi dan pemilihan program yang paling sesuai untuk anak.</p>
                                        </div>
                                     </div>
                                  </div>
@@ -189,15 +175,13 @@
                                        <button class="accordion-buttons collapsed" type="button"
                                           data-bs-toggle="collapse" data-bs-target="#collapseFour55"
                                           aria-expanded="false" aria-controls="collapseFour4">
-                                          Are your services available globally?                      
+                                          Bagaimana kualitas tutor di BUA?
                                        </button>
                                     </h4>
                                     <div id="collapseFour55" class="accordion-collapse collapse"
                                        aria-labelledby="headingFour55" data-bs-parent="#accordionExample2">
                                        <div class="accordion-body">
-                                          <p class="mb-0">This theme is specifically designed for educational institutions, online 
-                                          courses, schools, universities, and e-learning platforms. If you want to
-                                          build a Education or E-learning website Educeet is a perfect theme.</p>
+                                          <p class="mb-0">Tutor di Bright Ummah Academy merupakan pendidik yang berpengalaman dan kompeten di bidangnya. Mereka dibina secara rutin untuk menjaga kualitas pembelajaran yang tepat bagi setiap siswa.</p>
                                        </div>
                                     </div>
                                  </div>
