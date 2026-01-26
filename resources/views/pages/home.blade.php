@@ -328,7 +328,7 @@
    <!-- course-area-start -->
    <section class="it-course-area it-course-style-2 z-index-1 gray-bg pt-130 pb-130">
       <img class="it-course-shape-2 d-none d-xl-block" data-parallax='{"x": 200, "smoothness": 30}' src="{{ asset('assets/img/course-2-1.png') }}" alt="">
-      <img class="it-course-shape-4" data-parallax='{"y": -100, "smoothness": 50}' src="{{ asset('assets/img/kotakhijau.png') }}" alt="">
+      <!-- <img class="it-course-shape-4" data-parallax='{"y": -100, "smoothness": 50}' src="{{ asset('assets/img/kotakhijau.png') }}" alt=""> -->
       <div class="container">
          <div class="mb-65">
             <div class="row align-items-center">
