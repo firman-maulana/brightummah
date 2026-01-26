@@ -18,6 +18,7 @@
             --sidebar-width: 250px;
             --sidebar-width-min: 70px;
             --topbar-height: 56px;
+            --bottombar-height: 64px;
             --border-color: #e5e7eb;
             --bg-light: #f9fafb;
             --text-primary: #111827;
@@ -37,7 +38,7 @@
             color: var(--text-primary);
         }
 
-        /* Sidebar */
+        /* Sidebar - Desktop */
         .sidebar {
             position: fixed;
             top: 0;
@@ -186,6 +187,61 @@
             display: none;
         }
 
+        /* Bottom Navigation - Mobile */
+        .bottombar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: var(--bottombar-height);
+            background: #fff;
+            border-top: 1px solid var(--border-color);
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .bottombar-nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            padding: 0 8px;
+        }
+
+        .bottombar-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            padding: 8px 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s;
+            border-radius: 8px;
+            min-width: 64px;
+        }
+
+        .bottombar-nav a:hover {
+            background: #f0f9ff;
+            color: var(--primary);
+        }
+
+        .bottombar-nav a.active {
+            color: var(--primary);
+            background: #f0fdf4;
+        }
+
+        .bottombar-nav a i {
+            font-size: 22px;
+        }
+
+        .bottombar-nav a span {
+            font-size: 11px;
+            font-weight: 500;
+        }
+
         /* Main Content */
         .main-content {
             margin-left: var(--sidebar-width);
@@ -296,9 +352,10 @@
             align-items: center;
             justify-content: center;
             font-size: 24px;
+            flex-shrink: 0;
         }
 
-        .stat-card .icon.green {
+        .stat-card .icon.primary {
             background: #f0fdf4;
             color: var(--primary);
         }
@@ -308,78 +365,59 @@
             color: #3b82f6;
         }
 
-        .stat-card .content h3 {
+        .stat-card .icon.yellow {
+            background: #fffbeb;
+            color: #f59e0b;
+        }
+
+        .stat-card .icon.red {
+            background: #fef2f2;
+            color: #ef4444;
+        }
+
+        .stat-card .info {
+            flex: 1;
+        }
+
+        .stat-card .label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .stat-card .value {
             font-size: 24px;
             font-weight: 700;
             color: var(--text-primary);
-            margin: 0;
         }
 
-        .stat-card .content p {
-            font-size: 13px;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        /* Buttons */
-        .btn-primary {
-            background: var(--primary);
-            border: none;
+        /* Button */
+        .btn {
+            border-radius: 6px;
             padding: 8px 16px;
             font-size: 14px;
             font-weight: 500;
-            border-radius: 6px;
             transition: all 0.2s;
-            color: #fff;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            border: none;
         }
 
         .btn-primary:hover {
             background: var(--primary-dark);
-            color: #fff;
         }
 
-        .btn-secondary {
-            background: var(--bg-light);
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            font-size: 14px;
-            font-weight: 500;
-            border-radius: 6px;
-            transition: all 0.2s;
+        .btn-outline-primary {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
         }
 
-        .btn-secondary:hover {
-            background: #e5e7eb;
-            color: var(--text-primary);
-        }
-
-        .btn-warning {
-            background: #f59e0b;
-            border: none;
-            color: #fff;
-            padding: 6px 10px;
-            border-radius: 4px;
-            transition: all 0.2s;
-            font-size: 13px;
-        }
-
-        .btn-warning:hover {
-            background: #d97706;
-        }
-
-        .btn-danger {
-            background: #ef4444;
-            border: none;
-            color: #fff;
-            padding: 6px 10px;
-            border-radius: 4px;
-            transition: all 0.2s;
-            font-size: 13px;
-        }
-
-        .btn-danger:hover {
-            background: #dc2626;
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
         }
 
         .btn-sm {
@@ -387,14 +425,22 @@
             font-size: 13px;
         }
 
+        .btn-danger {
+            background: #ef4444;
+            border: none;
+        }
+
+        .btn-danger:hover {
+            background: #dc2626;
+        }
+
         /* Table */
         .table {
-            font-size: 13px;
-            margin-bottom: 0;
+            font-size: 14px;
         }
 
         .table thead th {
-            background: var(--bg-light);
+            background: #f9fafb;
             border-bottom: 1px solid var(--border-color);
             font-weight: 600;
             color: var(--text-primary);
@@ -525,27 +571,59 @@
             border-color: #ef4444 !important;
         }
 
-        /* Responsive */
+        /* Responsive - Tablet & Mobile */
         @media (max-width: 768px) {
+            /* Hide sidebar on mobile */
             .sidebar {
-                transform: translateX(-100%);
-                box-shadow: 2px 0 8px rgba(0,0,0,0.1);
-            }
-            
-            .sidebar.show {
-                transform: translateX(0);
+                display: none;
             }
 
+            /* Show bottombar on mobile */
+            .bottombar {
+                display: block;
+            }
+
+            /* Adjust main content for mobile */
             .main-content {
+                margin-left: 0;
+                margin-bottom: var(--bottombar-height);
+            }
+
+            .main-content.expanded {
                 margin-left: 0;
             }
 
+            /* Reduce padding on mobile */
             .content-area {
                 padding: 16px;
+                padding-bottom: calc(16px + var(--bottombar-height));
+            }
+
+            .topbar {
+                padding: 0 16px;
             }
 
             .topbar-title {
                 font-size: 14px;
+            }
+
+            /* Stat cards stack on mobile */
+            .stat-card {
+                padding: 16px;
+            }
+
+            .stat-card .value {
+                font-size: 20px;
+            }
+
+            /* Table responsiveness */
+            .table-responsive {
+                overflow-x: auto;
+            }
+
+            /* Card adjustments */
+            .card-body {
+                padding: 16px;
             }
         }
 
@@ -591,7 +669,7 @@
     @stack('styles')
 </head>
 <body>
-    <!-- Sidebar -->
+    <!-- Sidebar - Desktop Only -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <a href="{{ route('admin.dashboard') }}" class="sidebar-brand">
@@ -636,6 +714,31 @@
         </div>
     </div>
 
+    <!-- Bottom Navigation - Mobile Only -->
+    <div class="bottombar">
+        <nav class="bottombar-nav">
+            <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
+                <i class="bi bi-grid-1x2"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="{{ route('admin.programs') }}" class="{{ request()->routeIs('admin.programs*') ? 'active' : '' }}">
+                <i class="bi bi-book"></i>
+                <span>Programs</span>
+            </a>
+            <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users*') ? 'active' : '' }}">
+                <i class="bi bi-people"></i>
+                <span>Users</span>
+            </a>
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-mobile').submit();">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+        <form id="logout-form-mobile" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+    </div>
+
     <!-- Main Content -->
     <div class="main-content" id="mainContent">
         <!-- Topbar -->
@@ -675,16 +778,37 @@
         const mainContent = document.getElementById('mainContent');
         const toggleBtn = document.getElementById('sidebarToggle');
 
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('minimized');
-            mainContent.classList.toggle('expanded');
-            localStorage.setItem('sidebarMinimized', sidebar.classList.contains('minimized'));
-        });
-
-        if (localStorage.getItem('sidebarMinimized') === 'true') {
-            sidebar.classList.add('minimized');
-            mainContent.classList.add('expanded');
+        // Sidebar toggle untuk desktop
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                sidebar.classList.toggle('minimized');
+                mainContent.classList.toggle('expanded');
+                localStorage.setItem('sidebarMinimized', sidebar.classList.contains('minimized'));
+            });
         }
+
+        // Load saved sidebar state (hanya untuk desktop)
+        if (window.innerWidth > 768) {
+            if (localStorage.getItem('sidebarMinimized') === 'true') {
+                sidebar.classList.add('minimized');
+                mainContent.classList.add('expanded');
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth <= 768) {
+                // Mobile view - pastikan sidebar classes di-reset
+                sidebar.classList.remove('minimized');
+                mainContent.classList.remove('expanded');
+            } else {
+                // Desktop view - restore saved state
+                if (localStorage.getItem('sidebarMinimized') === 'true') {
+                    sidebar.classList.add('minimized');
+                    mainContent.classList.add('expanded');
+                }
+            }
+        });
     </script>
     
     @stack('scripts')
