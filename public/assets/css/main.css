@@ -26028,8 +26028,8 @@ input[type=radio] {
     height: 80px; 
     width: auto;
     object-fit: contain;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .itoffcanvas__auth {
