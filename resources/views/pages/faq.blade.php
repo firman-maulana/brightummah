@@ -304,7 +304,7 @@
       <div class="container">
          <div class="it-newsletter-wrap theme-bg z-index-2 wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".3s">
-            <img class="it-newsletter-shape-1" src="assets/img/shape/newsletter-2-1.png" alt="">
+            <img class="it-newsletter-shape-1" src="{{ asset('assets/img/brg.png') }}" alt="">
             <div class="row align-items-center">
                <div class="col-lg-6">
                   <div class="it-newsletter-2-left">
