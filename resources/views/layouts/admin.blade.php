@@ -333,7 +333,6 @@
             padding: 20px;
         }
 
-        /* Stats Card */
         .stat-card {
             background: #fff;
             border: 1px solid var(--border-color);
@@ -607,7 +606,6 @@
                 font-size: 14px;
             }
 
-            /* Stat cards stack on mobile */
             .stat-card {
                 padding: 16px;
             }
@@ -695,6 +693,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.programs') }}" class="{{ request()->routeIs('admin.programs*') ? 'active' : '' }}" title="Messages">
+                        <i class="bi bi-book"></i>
+                        <span>Messages</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users*') ? 'active' : '' }}" title="Users">
                         <i class="bi bi-people"></i>
                         <span>Users</span>
@@ -724,6 +728,10 @@
             <a href="{{ route('admin.programs') }}" class="{{ request()->routeIs('admin.programs*') ? 'active' : '' }}">
                 <i class="bi bi-book"></i>
                 <span>Programs</span>
+            </a>
+            <a href="{{ route('admin.programs') }}" class="{{ request()->routeIs('admin.programs*') ? 'active' : '' }}">
+                <i class="bi bi-book"></i>
+                <span>Messages</span>
             </a>
             <a href="{{ route('admin.users') }}" class="{{ request()->routeIs('admin.users*') ? 'active' : '' }}">
                 <i class="bi bi-people"></i>

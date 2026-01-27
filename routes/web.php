@@ -42,3 +42,10 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     
     Route::get('/users', [AdminController::class, 'users'])->name('users');
 });
+
+Route::get('/dashboard/analytics', fn() => view('coba.dashboard.analytics'))->name('analytics');
+Route::get('/dashboard', fn() => view('coba.dashboard.dashboard'))->name('dashboard');
+Route::get('/dashboard/fintech', fn() => view('coba.dashboard.fintech'))->name('fintech');
+Route::get('/dashboard/user', fn() => view('coba.user'))->name('user');
+Route::get('/dashboard/program', fn() => view('coba.program.index'))->name('program');
+Route::get('/dashboard/detailprogram', fn() => view('coba.program.detail'))->name('detailprogram');

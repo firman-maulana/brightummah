@@ -81,24 +81,4 @@
     </div>
 </div>
 
-<div class="row g-3 mt-4">
-    <div class="col-md-6">
-        <div class="card p-4 text-center">
-            <p class="mb-2 fw-medium">Add New Program</p>
-            <a href="{{ route('admin.programs.create') }}" class="btn btn-sm btn-outline-green">
-                Create Program
-            </a>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="card p-4 text-center">
-            <p class="mb-2 fw-medium">Manage Users</p>
-            <a href="{{ route('admin.users') }}" class="btn btn-sm btn-outline-green">
-                View Users
-            </a>
-        </div>
-    </div>
-</div>
-
 @endsection
