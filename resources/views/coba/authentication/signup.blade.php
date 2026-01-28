@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <title>Mosaic HTML Demo - Sign up</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="{{ asset('assets/admin/css/flatpickr.min.css') }}" rel="stylesheet">              
     <link href="{{ asset('assets/admin/css/style.css') }}" rel="stylesheet">
     <script>

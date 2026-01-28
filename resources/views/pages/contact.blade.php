@@ -33,7 +33,7 @@
             <div class="col-xxl-7 col-xl-6 col-lg-6 col-md-6">
                <div class="it-breadcrumb-thumb z-index-1 text-end">
                   <img src="assets/img/contact.jpg" alt="">
-                  <<img class="it-breadcrumb-shape-2" src="assets/img/hero-1-5.png" alt="">
+                  <img class="it-breadcrumb-shape-2" src="assets/img/hero-1-5.png" alt="">
                </div>
             </div>
          </div>
