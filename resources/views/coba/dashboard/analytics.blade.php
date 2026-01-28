@@ -809,5 +809,7 @@
                     </div>
 
                 </div>
+                @endsection
+                @section('page-scripts')
 <script src="{{ asset('assets/admin/js/analytics-charts.js') }}"></script>
 @endsection

@@ -734,3 +734,6 @@
 
                 </div>
 @endsection              
+@section('page-scripts')
+<script src="{{ asset('assets/admin/js/dashboard-charts.js') }}"></script>
+@endsection
