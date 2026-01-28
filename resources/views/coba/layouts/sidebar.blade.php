@@ -48,7 +48,7 @@
                         </svg>
                     </button>
                     <!-- Logo -->
-                    <a class="block" href="index.html">
+                    <a class="block" href="{{ route('dashboard') }}">
                         <svg class="cwjz0" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
                             <path d="M31.956 14.8C31.372 6.92 25.08.628 17.2.044V5.76a9.04 9.04 0 0 0 9.04 9.04h5.716ZM14.8 26.24v5.716C6.92 31.372.63 25.08.044 17.2H5.76a9.04 9.04 0 0 1 9.04 9.04Zm11.44-9.04h5.716c-.584 7.88-6.876 14.172-14.756 14.756V26.24a9.04 9.04 0 0 1 9.04-9.04ZM.044 14.8C.63 6.92 6.92.628 14.8.044V5.76a9.04 9.04 0 0 1-9.04 9.04H.044Z"></path>
                         </svg>
@@ -351,7 +351,7 @@
                             </li>
                             <!-- Messages -->
                             <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="messages.html">
+                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('messages') }}">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center cbw8w">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
@@ -369,7 +369,7 @@
                             </li>
                             <!-- Inbox -->
                             <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="inbox.html">
+                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('inbox') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z"></path>
@@ -380,7 +380,7 @@
                             </li>
                             <!-- Calendar -->
                             <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="calendar.html">
+                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('calendar') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"></path>
@@ -422,12 +422,12 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="settings.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('account') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Account</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="notifications.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('notifications') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Notifications</span>
                                             </a>
                                         </li>
@@ -447,7 +447,7 @@
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="feedback.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('feedback') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Give Feedback</span>
                                             </a>
                                         </li>
@@ -476,7 +476,7 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="changelog.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('changelog') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Changelog</span>
                                             </a>
                                         </li>
@@ -533,12 +533,12 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="signin.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('signin') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign In</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="signup.html">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('signup') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign up</span>
                                             </a>
                                         </li>
@@ -982,6 +982,219 @@
     <script src="{{ asset('assets/admin/js/flatpickr-init.js') }}"></script>
     <script src="{{ asset('assets/admin/js/analytics-charts.js') }}"></script>
 
-<script>console.log("%cImportant!", "color: blue; font-size: x-large");console.log("%cThe page you are viewing is for demo purposes only. CSS and HTML have been minified and class names have been shortened to improve the page load time. Download our templates from https://cruip.com/ 😉", "font-size: large");</script><script>const pagesList = [{"name":"Dashboard","url":"https://preview.cruip.com/mosaic/index.html","active":true},{"name":"Analytics","url":"https://preview.cruip.com/mosaic/analytics.html","active":false},{"name":"Fintech","url":"https://preview.cruip.com/mosaic/fintech.html","active":false},{"name":"Customers","url":"https://preview.cruip.com/mosaic/customers.html","active":false},{"name":"Orders","url":"https://preview.cruip.com/mosaic/orders.html","active":false},{"name":"Invoices","url":"https://preview.cruip.com/mosaic/invoices.html","active":false},{"name":"Shop","url":"https://preview.cruip.com/mosaic/shop.html","active":false},{"name":"Shop 2","url":"https://preview.cruip.com/mosaic/shop-2.html","active":false},{"name":"Single Product","url":"https://preview.cruip.com/mosaic/product.html","active":false},{"name":"Cart","url":"https://preview.cruip.com/mosaic/cart.html","active":false},{"name":"Cart 2","url":"https://preview.cruip.com/mosaic/cart-2.html","active":false},{"name":"Cart 3","url":"https://preview.cruip.com/mosaic/cart-3.html","active":false},{"name":"Pay","url":"https://preview.cruip.com/mosaic/pay.html","active":false},{"name":"Campaigns","url":"https://preview.cruip.com/mosaic/campaigns.html","active":false},{"name":"Users Tabs","url":"https://preview.cruip.com/mosaic/users-tabs.html","active":false},{"name":"Users Tiles","url":"https://preview.cruip.com/mosaic/users-tiles.html","active":false},{"name":"Profile","url":"https://preview.cruip.com/mosaic/profile.html","active":false},{"name":"Feed","url":"https://preview.cruip.com/mosaic/feed.html","active":false},{"name":"Forum","url":"https://preview.cruip.com/mosaic/forum.html","active":false},{"name":"Forum Post","url":"https://preview.cruip.com/mosaic/forum-post.html","active":false},{"name":"Meetups","url":"https://preview.cruip.com/mosaic/meetups.html","active":false},{"name":"Meetups Post","url":"https://preview.cruip.com/mosaic/meetups-post.html","active":false},{"name":"Cards","url":"https://preview.cruip.com/mosaic/credit-cards.html","active":false},{"name":"Transactions","url":"https://preview.cruip.com/mosaic/transactions.html","active":false},{"name":"Transaction Details","url":"https://preview.cruip.com/mosaic/transaction-details.html","active":false},{"name":"Jobs Listing","url":"https://preview.cruip.com/mosaic/job-listing.html","active":false},{"name":"Jobs Post","url":"https://preview.cruip.com/mosaic/job-post.html","active":false},{"name":"Company Profile","url":"https://preview.cruip.com/mosaic/company-profile.html","active":false},{"name":"Kanban","url":"https://preview.cruip.com/mosaic/tasks-kanban.html","active":false},{"name":"Tasks List","url":"https://preview.cruip.com/mosaic/tasks-list.html","active":false},{"name":"Messages","url":"https://preview.cruip.com/mosaic/messages.html","active":false},{"name":"Inbox","url":"https://preview.cruip.com/mosaic/inbox.html","active":false},{"name":"Calendar","url":"https://preview.cruip.com/mosaic/calendar.html","active":false},{"name":"Applications","url":"https://preview.cruip.com/mosaic/applications.html","active":false},{"name":"My Account","url":"https://preview.cruip.com/mosaic/settings.html","active":false},{"name":"My Notifications","url":"https://preview.cruip.com/mosaic/notifications.html","active":false},{"name":"Connected Apps","url":"https://preview.cruip.com/mosaic/connected-apps.html","active":false},{"name":"Plans","url":"https://preview.cruip.com/mosaic/plans.html","active":false},{"name":"Billing & Invoices","url":"https://preview.cruip.com/mosaic/billing.html","active":false},{"name":"Give Feedback","url":"https://preview.cruip.com/mosaic/feedback.html","active":false},{"name":"Changelog","url":"https://preview.cruip.com/mosaic/changelog.html","active":false},{"name":"Roadmap","url":"https://preview.cruip.com/mosaic/roadmap.html","active":false},{"name":"FAQs","url":"https://preview.cruip.com/mosaic/faqs.html","active":false},{"name":"Empty State","url":"https://preview.cruip.com/mosaic/empty-state.html","active":false},{"name":"Page Not Found","url":"https://preview.cruip.com/mosaic/404.html","active":false},{"name":"Knowledge Base","url":"https://preview.cruip.com/mosaic/knowledge-base.html","active":false},{"name":"Sign in","url":"https://preview.cruip.com/mosaic/signin.html","active":false},{"name":"Sign up","url":"https://preview.cruip.com/mosaic/signup.html","active":false},{"name":"Reset password","url":"https://preview.cruip.com/mosaic/reset-password.html","active":false},{"name":"Onboarding 1","url":"https://preview.cruip.com/mosaic/onboarding-01.html","active":false},{"name":"Onboarding 2","url":"https://preview.cruip.com/mosaic/onboarding-02.html","active":false},{"name":"Onboarding 3","url":"https://preview.cruip.com/mosaic/onboarding-03.html","active":false},{"name":"Onboarding 4","url":"https://preview.cruip.com/mosaic/onboarding-04.html","active":false},{"name":"Button","url":"https://preview.cruip.com/mosaic/component-button.html","active":false},{"name":"Input Form","url":"https://preview.cruip.com/mosaic/component-form.html","active":false},{"name":"Dropdown","url":"https://preview.cruip.com/mosaic/component-dropdown.html","active":false},{"name":"Alert & Banner","url":"https://preview.cruip.com/mosaic/component-alert.html","active":false},{"name":"Modal","url":"https://preview.cruip.com/mosaic/component-modal.html","active":false},{"name":"Pagination","url":"https://preview.cruip.com/mosaic/component-pagination.html","active":false},{"name":"Tabs","url":"https://preview.cruip.com/mosaic/component-tabs.html","active":false},{"name":"Breadcrumb","url":"https://preview.cruip.com/mosaic/component-breadcrumb.html","active":false},{"name":"Badge","url":"https://preview.cruip.com/mosaic/component-badge.html","active":false},{"name":"Avatar","url":"https://preview.cruip.com/mosaic/component-avatar.html","active":false},{"name":"Tooltip","url":"https://preview.cruip.com/mosaic/component-tooltip.html","active":false},{"name":"Accordion","url":"https://preview.cruip.com/mosaic/component-accordion.html","active":false},{"name":"Icons","url":"https://preview.cruip.com/mosaic/component-icons.html","active":false}];if(window != top){window.parent.postMessage(pagesList, "https://cruip.com")};</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"59cc17d45d734f9ba118c63036ab1b84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>console.log("%cImportant!", "color: blue; font-size: x-large");console.log("%cThe page you are viewing is for demo purposes only. CSS and HTML have been minified and class names have been shortened to improve the page load time. Download our templates from https://cruip.com/ 😉", "font-size: large");</script><script>const pagesList = [{"name":"Dashboard","url":"https://preview.cruip.com/mosaic/{{ route('dashboard') }}","active":true},{"name":"Analytics","url":"https://preview.cruip.com/mosaic/analytics.html","active":false},{"name":"Fintech","url":"https://preview.cruip.com/mosaic/fintech.html","active":false},{"name":"Customers","url":"https://preview.cruip.com/mosaic/customers.html","active":false},{"name":"Orders","url":"https://preview.cruip.com/mosaic/orders.html","active":false},{"name":"Invoices","url":"https://preview.cruip.com/mosaic/invoices.html","active":false},{"name":"Shop","url":"https://preview.cruip.com/mosaic/shop.html","active":false},{"name":"Shop 2","url":"https://preview.cruip.com/mosaic/shop-2.html","active":false},{"name":"Single Product","url":"https://preview.cruip.com/mosaic/product.html","active":false},{"name":"Cart","url":"https://preview.cruip.com/mosaic/cart.html","active":false},{"name":"Cart 2","url":"https://preview.cruip.com/mosaic/cart-2.html","active":false},{"name":"Cart 3","url":"https://preview.cruip.com/mosaic/cart-3.html","active":false},{"name":"Pay","url":"https://preview.cruip.com/mosaic/pay.html","active":false},{"name":"Campaigns","url":"https://preview.cruip.com/mosaic/campaigns.html","active":false},{"name":"Users Tabs","url":"https://preview.cruip.com/mosaic/users-tabs.html","active":false},{"name":"Users Tiles","url":"https://preview.cruip.com/mosaic/users-tiles.html","active":false},{"name":"Profile","url":"https://preview.cruip.com/mosaic/profile.html","active":false},{"name":"Feed","url":"https://preview.cruip.com/mosaic/feed.html","active":false},{"name":"Forum","url":"https://preview.cruip.com/mosaic/forum.html","active":false},{"name":"Forum Post","url":"https://preview.cruip.com/mosaic/forum-post.html","active":false},{"name":"Meetups","url":"https://preview.cruip.com/mosaic/meetups.html","active":false},{"name":"Meetups Post","url":"https://preview.cruip.com/mosaic/meetups-post.html","active":false},{"name":"Cards","url":"https://preview.cruip.com/mosaic/credit-cards.html","active":false},{"name":"Transactions","url":"https://preview.cruip.com/mosaic/transactions.html","active":false},{"name":"Transaction Details","url":"https://preview.cruip.com/mosaic/transaction-details.html","active":false},{"name":"Jobs Listing","url":"https://preview.cruip.com/mosaic/job-listing.html","active":false},{"name":"Jobs Post","url":"https://preview.cruip.com/mosaic/job-post.html","active":false},{"name":"Company Profile","url":"https://preview.cruip.com/mosaic/company-profile.html","active":false},{"name":"Kanban","url":"https://preview.cruip.com/mosaic/tasks-kanban.html","active":false},{"name":"Tasks List","url":"https://preview.cruip.com/mosaic/tasks-list.html","active":false},{"name":"Messages","url":"https://preview.cruip.com/mosaic/messages.html","active":false},{"name":"Inbox","url":"https://preview.cruip.com/mosaic/inbox.html","active":false},{"name":"Calendar","url":"https://preview.cruip.com/mosaic/calendar.html","active":false},{"name":"Applications","url":"https://preview.cruip.com/mosaic/applications.html","active":false},{"name":"My Account","url":"https://preview.cruip.com/mosaic/settings.html","active":false},{"name":"My Notifications","url":"https://preview.cruip.com/mosaic/notifications.html","active":false},{"name":"Connected Apps","url":"https://preview.cruip.com/mosaic/connected-apps.html","active":false},{"name":"Plans","url":"https://preview.cruip.com/mosaic/plans.html","active":false},{"name":"Billing & Invoices","url":"https://preview.cruip.com/mosaic/billing.html","active":false},{"name":"Give Feedback","url":"https://preview.cruip.com/mosaic/feedback.html","active":false},{"name":"Changelog","url":"https://preview.cruip.com/mosaic/changelog.html","active":false},{"name":"Roadmap","url":"https://preview.cruip.com/mosaic/roadmap.html","active":false},{"name":"FAQs","url":"https://preview.cruip.com/mosaic/faqs.html","active":false},{"name":"Empty State","url":"https://preview.cruip.com/mosaic/empty-state.html","active":false},{"name":"Page Not Found","url":"https://preview.cruip.com/mosaic/404.html","active":false},{"name":"Knowledge Base","url":"https://preview.cruip.com/mosaic/knowledge-base.html","active":false},{"name":"Sign in","url":"https://preview.cruip.com/mosaic/signin.html","active":false},{"name":"Sign up","url":"https://preview.cruip.com/mosaic/signup.html","active":false},{"name":"Reset password","url":"https://preview.cruip.com/mosaic/reset-password.html","active":false},{"name":"Onboarding 1","url":"https://preview.cruip.com/mosaic/onboarding-01.html","active":false},{"name":"Onboarding 2","url":"https://preview.cruip.com/mosaic/onboarding-02.html","active":false},{"name":"Onboarding 3","url":"https://preview.cruip.com/mosaic/onboarding-03.html","active":false},{"name":"Onboarding 4","url":"https://preview.cruip.com/mosaic/onboarding-04.html","active":false},{"name":"Button","url":"https://preview.cruip.com/mosaic/component-button.html","active":false},{"name":"Input Form","url":"https://preview.cruip.com/mosaic/component-form.html","active":false},{"name":"Dropdown","url":"https://preview.cruip.com/mosaic/component-dropdown.html","active":false},{"name":"Alert & Banner","url":"https://preview.cruip.com/mosaic/component-alert.html","active":false},{"name":"Modal","url":"https://preview.cruip.com/mosaic/component-modal.html","active":false},{"name":"Pagination","url":"https://preview.cruip.com/mosaic/component-pagination.html","active":false},{"name":"Tabs","url":"https://preview.cruip.com/mosaic/component-tabs.html","active":false},{"name":"Breadcrumb","url":"https://preview.cruip.com/mosaic/component-breadcrumb.html","active":false},{"name":"Badge","url":"https://preview.cruip.com/mosaic/component-badge.html","active":false},{"name":"Avatar","url":"https://preview.cruip.com/mosaic/component-avatar.html","active":false},{"name":"Tooltip","url":"https://preview.cruip.com/mosaic/component-tooltip.html","active":false},{"name":"Accordion","url":"https://preview.cruip.com/mosaic/component-accordion.html","active":false},{"name":"Icons","url":"https://preview.cruip.com/mosaic/component-icons.html","active":false}];if(window != top){window.parent.postMessage(pagesList, "https://cruip.com")};</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"59cc17d45d734f9ba118c63036ab1b84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('calendar', () => ({
+                month: null,
+                year: null,
+                daysInMonth: [],
+                startingBlankDays: [],
+                endingBlankDays: [],
+                monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                events: [
+                    // Previous month
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() - 1, 8, 3),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() - 1, 8, 7),
+                        eventName: '⛱️ Relax for 2 at Marienbad',
+                        eventColor: 'indigo'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() - 1, 12, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 12, 11),
+                        eventName: 'Team Catch-up',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() - 1, 18, 2),
+                        eventEnd: '',
+                        eventName: '✍️ New Project (2)',
+                        eventColor: 'yellow'
+                    },                    
+                    // Current month
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 1, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 1, 11),
+                        eventName: 'Meeting w/ Patrick Lin',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 1, 19),
+                        eventEnd: '',
+                        eventName: 'Reservation at La Ginestre',
+                        eventColor: 'indigo'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 3, 9),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 3, 10),
+                        eventName: '✍️ New Project',
+                        eventColor: 'yellow'
+                    }, 
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 7, 21),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 7, 22),
+                        eventName: '⚽ 2024 - Semi-final',
+                        eventColor: 'red'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 11),
+                        eventName: 'Meeting w/Carolyn',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 13),
+                        eventEnd: '',
+                        eventName: 'Pick up Marta at school',
+                        eventColor: 'green'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 14),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 15),
+                        eventName: 'Meeting w/ Patrick Lin',
+                        eventColor: 'green'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 9, 19),
+                        eventEnd: '',
+                        eventName: 'Reservation at La Ginestre',
+                        eventColor: 'indigo'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 11, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 11, 11),
+                        eventName: '⛱️ Relax for 2 at Marienbad',
+                        eventColor: 'indigo'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 11, 19),
+                        eventEnd: '',
+                        eventName: '⚽ 2024 - Semi-final',
+                        eventColor: 'red'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 14, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 14, 11),
+                        eventName: 'Team Catch-up',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 21, 2),
+                        eventEnd: '',
+                        eventName: 'Pick up Marta at school',
+                        eventColor: 'green'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 21, 3),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 21, 7),
+                        eventName: '✍️ New Project (2)',
+                        eventColor: 'yellow'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 22, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 22, 11),
+                        eventName: 'Team Catch-up',
+                        eventColor: 'sky'
+                    },                     
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 22, 19),
+                        eventEnd: '',
+                        eventName: '⚽ 2024 - Semi-final',
+                        eventColor: 'red'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 23, 0),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 23, 23),
+                        eventName: 'You stay at Meridiana B&B',
+                        eventColor: 'indigo'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 25, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 25, 11),
+                        eventName: 'Meeting w/ Kylie Joh',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth(), 29, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 29, 11),
+                        eventName: 'Call Request ->',
+                        eventColor: 'sky'
+                    },
+                    // Next month
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 2, 3),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 2, 7),
+                        eventName: '✍️ New Project (2)',
+                        eventColor: 'yellow'
+                    },                    
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 14, 10),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth(), 14, 11),
+                        eventName: 'Team Catch-up',
+                        eventColor: 'sky'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 25, 2),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 25, 3),
+                        eventName: 'Pick up Marta at school',
+                        eventColor: 'green'
+                    },
+                    {
+                        eventStart: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 27, 21),
+                        eventEnd: new Date(new Date().getFullYear(), new Date().getMonth() + 1, 27, 22),
+                        eventName: '⚽ 2024 - Semi-final',
+                        eventColor: 'red'
+                    },                    
+                ],
+
+                initCalendar() {
+                    const today = new Date();
+                    this.month = today.getMonth();
+                    this.year = today.getFullYear();
+                    this.getDays();
+                },
+
+                isToday(date) {
+                    const today = new Date();
+                    const day = new Date(this.year, this.month, date);
+                    return today.toDateString() === day.toDateString() ? true : false;
+                },
+
+                getEvents(date) {
+                    return this.events.filter(e => new Date(e.eventStart).toDateString() === new Date(this.year, this.month, date).toDateString());
+                },
+
+                getDays() {
+                    const daysInMonth = new Date(this.year, this.month + 1, 0).getDate();
+
+                    // starting empty cells (previous month)
+                    const startingDayOfWeek = new Date(this.year, this.month).getDay();
+                    let startingBlankDaysArray = [];
+                    for (let i = 1; i <= startingDayOfWeek; i++) {
+                        startingBlankDaysArray.push(i);
+                    }
+
+                    // ending empty cells (next month)
+                    const endingDayOfWeek = new Date(this.year, this.month + 1, 0).getDay();
+                    let endingBlankDaysArray = [];
+                    for (let i = 1; i < 7 - endingDayOfWeek; i++) {
+                        endingBlankDaysArray.push(i);
+                    }                    
+
+                    // current month cells
+                    let daysArray = [];
+                    for (let i = 1; i <= daysInMonth; i++) {
+                        daysArray.push(i);
+                    }
+
+                    this.startingBlankDays = startingBlankDaysArray;
+                    this.endingBlankDays = endingBlankDaysArray;
+                    this.daysInMonth = daysArray;
+                }
+            }))
+        })
+	</script> 
 </body>
 </html>
