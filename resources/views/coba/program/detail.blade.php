@@ -13,7 +13,7 @@
                                     <svg class="mr-2 cmpw7 cdqku cbm9w" width="7" height="12" viewBox="0 0 7 12">
                                         <path d="M5.4.6 6.8 2l-4 4 4 4-1.4 1.4L0 6z"></path>
                                     </svg>
-                                    <span>Back To Meetups</span>
+                                    <span>Back To Program</span>
                                 </a>
                             </div>
                             <div class="text-sm text-violet-500 cgulq c0ef0 c6f83">Mon 27 Dec, 2024 - 9:00 PM -&gt; 10:00 PM</div>
@@ -30,7 +30,7 @@
                                     <a class="block mr-2 coqgc" href="#0">
                                         <img class="rounded-full" src="{{ asset('assets/admin/img/user-32-07.jpg') }}" width="32" height="32" alt="User 04">
                                     </a>
-                                    <div class="text-sm cq84g">Hosted by <a class="text-gray-800 dark:text-gray-100 cgulq" href="#0">Monica Fishkin</a></div>
+                                    <div class="text-sm cq84g">Teacher by <a class="text-gray-800 dark:text-gray-100 cgulq" href="#0">Monica Fishkin</a></div>
                                 </div>
                                 <!-- Right side -->
                                 <div class="flex flex-wrap items-center c51uw ch3kz">
@@ -52,7 +52,7 @@
 
                             <!-- Post content -->
                             <div>
-                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Meetup Details</h2>
+                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Program Details</h2>
                                 <p class="cai6b">In the world of AI, behavioural predictions are leading the charge to better machine learning.</p>
                                 <p class="cai6b">There is so much happening in the AI space. Advances in the economic sectors have seen automated business practices rapidly increasing economic value. While the realm of the human sciences has used the power afforded by computational capabilities to solve many human based dilemmas. Even the art scene has adopted carefully selected ML applications to usher in the technological movement.</p>
                                 <p class="cai6b">Join us every second Wednesday as we host an open discussion about the amazing things happening in the world of AI and machine learning. Feel free to share your experiences, ask questions, ponder the possibilities, or just listen as we explore new topics and revisit old ones.</p>
@@ -119,7 +119,7 @@
 
                             <!-- Similar Meetups -->
                             <div>
-                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Similar Meetups</h2>
+                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Other Programs</h2>
                                 <div class="ccr53 cvsuf cifdz cf7n6">
                                     <!-- Related item -->
                                     <article class="flex bg-white c2vpa cxe43 c1hly c5vqk">
@@ -181,13 +181,13 @@
                                         <svg class="cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="m2.457 8.516.969-.99 2.516 2.481 5.324-5.304.985.989-6.309 6.284z"></path>
                                         </svg>
-                                        <span class="cpts2">Attending</span>
+                                        <span class="cpts2">Update</span>
                                     </button>
                                     <button class="btn border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c6btv">
                                         <svg class="cvqus coqgc" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M14.682 2.318A4.485 4.485 0 0 0 11.5 1 4.377 4.377 0 0 0 8 2.707 4.383 4.383 0 0 0 4.5 1a4.5 4.5 0 0 0-3.182 7.682L8 15l6.682-6.318a4.5 4.5 0 0 0 0-6.364Zm-1.4 4.933L8 12.247l-5.285-5A2.5 2.5 0 0 1 4.5 3c1.437 0 2.312.681 3.5 2.625C9.187 3.681 10.062 3 11.5 3a2.5 2.5 0 0 1 1.785 4.251h-.003Z"></path>
                                         </svg>
-                                        <span class="c8bkw">Favorite</span>
+                                        <span class="c8bkw">Delete</span>
                                     </button>
                                 </div>
                             </div>

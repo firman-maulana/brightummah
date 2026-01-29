@@ -48,7 +48,6 @@ Route::get('/dashboard', fn() => view('coba.dashboard.dashboard'))->name('dashbo
 Route::get('/dashboard/fintech', fn() => view('coba.dashboard.fintech'))->name('fintech');
 Route::get('/dashboard/user', fn() => view('coba.user'))->name('user');
 Route::get('/dashboard/program', fn() => view('coba.program.index'))->name('program');
-Route::get('/dashboard/detailprogram', fn() => view('coba.program.detail'))->name('detailprogram');
 Route::get('/dashboard/inbox', fn() => view('coba.inbox'))->name('inbox');
 Route::get('/dashboard/messages', fn() => view('coba.messages'))->name('messages');
 Route::get('/dashboard/calendar', fn() => view('coba.calendar'))->name('calendar');

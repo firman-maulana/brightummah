@@ -8,7 +8,7 @@
 
                         <!-- Left: Title -->
                         <div class="c2rn6 cdiog">
-                            <h1 class="text-gray-800 dark:text-gray-100 font-bold c459m cbtcb">Discover Meetups</h1>
+                            <h1 class="text-gray-800 dark:text-gray-100 font-bold c459m cbtcb">Discover Program</h1>
                         </div>
 
                         <!-- Right: Actions -->
@@ -31,7 +31,7 @@
                                 <svg class="cbm9w cbmv0 coqgc" width="16" height="16" viewBox="0 0 16 16">
                                     <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
                                 </svg>
-                                <span class="cyga5">Add Meetup</span>
+                                <span class="cyga5">Add Program</span>
                             </button>
 
                         </div>
@@ -61,7 +61,7 @@
                             </li>
                         </ul>                    
                     </div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400 caf78 cdiog">289 Meetups</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400 caf78 cdiog">289 Program</div>
 
                     <!-- Content -->
                     <div class="cfjlj ckn6o cgd7w c4sak">

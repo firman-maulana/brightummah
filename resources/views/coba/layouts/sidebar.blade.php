@@ -66,8 +66,8 @@
                         </h3>
                         <ul class="c7gr8">
                             <!-- Dashboard -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: true }">
-                                <a class="block text-gray-800 dark:text-gray-100 cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="text-violet-500 cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -87,17 +87,17 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block text-violet-500 cxxol c941w" href="{{ route('dashboard') }}">
+                                            <a class="block {{ request()->routeIs('dashboard') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('dashboard') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Main</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('analytics') }}">
+                                            <a class="block {{ request()->routeIs('analytics') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('analytics') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Analytics</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('fintech') }}">
+                                            <a class="block {{ request()->routeIs('fintech') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('fintech') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Fintech</span>
                                             </a>
                                         </li>
@@ -105,8 +105,8 @@
                                 </div>
                             </li>
                             <!-- E-Commerce -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('user') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('user') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -125,8 +125,8 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('user') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Customers</span>
+                                            <a class="block {{ request()->routeIs('user') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('user') }}">
+                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">User</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
@@ -178,8 +178,8 @@
                                 </div>
                             </li>
                             <!-- Community -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('program') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('program') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -228,13 +228,8 @@
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('program') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Meetups</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('detailprogram') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Meetups - Post</span>
+                                            <a class="block {{ request()->routeIs('program') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('program') }}">
+                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Program</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -351,8 +346,8 @@
                                 </div>
                             </li>
                             <!-- Messages -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('messages') }}">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('messages') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('messages') }}">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center cbw8w">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
@@ -369,8 +364,8 @@
                                 </a>
                             </li>
                             <!-- Inbox -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('inbox') }}">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('inbox') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('inbox') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z"></path>
@@ -380,8 +375,8 @@
                                 </a>
                             </li>
                             <!-- Calendar -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="{{ route('calendar') }}">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('calendar') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('calendar') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"></path>
@@ -403,8 +398,8 @@
                                 </a>
                             </li>
                             <!-- Settings -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('account') || request()->routeIs('notifications') || request()->routeIs('feedback') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('account') || request()->routeIs('notifications') || request()->routeIs('feedback') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -423,12 +418,12 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('account') }}">
+                                            <a class="block {{ request()->routeIs('account') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('account') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Account</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('notifications') }}">
+                                            <a class="block {{ request()->routeIs('notifications') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('notifications') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Notifications</span>
                                             </a>
                                         </li>
@@ -448,7 +443,7 @@
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('feedback') }}">
+                                            <a class="block {{ request()->routeIs('feedback') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('feedback') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Give Feedback</span>
                                             </a>
                                         </li>
@@ -456,8 +451,8 @@
                                 </div>
                             </li>
                             <!-- Utility -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('changelog') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('changelog') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">                                        
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -477,7 +472,7 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('changelog') }}">
+                                            <a class="block {{ request()->routeIs('changelog') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('changelog') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Changelog</span>
                                             </a>
                                         </li>
@@ -514,8 +509,8 @@
                         </h3>
                         <ul class="c7gr8">
                             <!-- Authentication -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol" :class="open &amp;&amp; 'c7wl6'" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('signin') || request()->routeIs('signup') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('signin') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">                                            
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
