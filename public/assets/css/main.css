@@ -26025,11 +26025,8 @@ input[type=radio] {
 }
 
 .it-header-area .it-header-logo img {
-    height: 80px; 
     width: auto;
     object-fit: contain;
-    padding-top: 4px;
-    padding-bottom: 3px;
 }
 
 .itoffcanvas__auth {
