@@ -63,315 +63,40 @@
                             <span class="2xl:block c185y cmt20 c2y99">Menu</span>
                         </h3>
                         <ul class="c7gr8">
-                            <!-- Dashboard -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="text-violet-500 cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M5.936.278A7.983 7.983 0 0 1 8 0a8 8 0 1 1-8 8c0-.722.104-1.413.278-2.064a1 1 0 1 1 1.932.516A5.99 5.99 0 0 0 2 8a6 6 0 1 0 6-6c-.53 0-1.045.076-1.548.21A1 1 0 1 1 5.936.278Z"></path>
-                                                <path d="M6.068 7.482A2.003 2.003 0 0 0 8 10a2 2 0 1 0-.518-3.932L3.707 2.293a1 1 0 0 0-1.414 1.414l3.775 3.775Z"></path>
-                                            </svg> 
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Dashboard</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.dashboard') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.dashboard') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Main</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('analytics') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.analytics') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Analytics</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('fintech') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.fintech') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Fintech</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- E-Commerce -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.user') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('user') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M9 6.855A3.502 3.502 0 0 0 8 0a3.5 3.5 0 0 0-1 6.855v1.656L5.534 9.65a3.5 3.5 0 1 0 1.229 1.578L8 10.267l1.238.962a3.5 3.5 0 1 0 1.229-1.578L9 8.511V6.855ZM6.5 3.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm4.803 8.095c.005-.005.01-.01.013-.016l.012-.016a1.5 1.5 0 1 1-.025.032ZM3.5 11c.474 0 .897.22 1.171.563l.013.016.013.017A1.5 1.5 0 1 1 3.5 11Z"></path>
-                                            </svg>                                            
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">E-Commerce</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.users') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.users') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">User</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="orders.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Orders</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="invoices.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Invoices</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="shop.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Shop</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="shop-2.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Shop 2</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="product.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Single Product</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="cart.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Cart</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="cart-2.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Cart 2</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="cart-3.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Cart 3</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="pay.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Pay</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Community -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.programs*') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.programs*') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z"></path>
-                                            </svg>                                            
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Community</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="users-tabs.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Users - Tabs</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="users-tiles.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Users - Tiles</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="profile.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Profile</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="feed.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Feed</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="forum.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Forum</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="forum-post.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Forum - Post</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.programs*') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.programs') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Program</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Finance -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M6 0a6 6 0 0 0-6 6c0 1.077.304 2.062.78 2.912a1 1 0 1 0 1.745-.976A3.945 3.945 0 0 1 2 6a4 4 0 0 1 4-4c.693 0 1.344.194 1.936.525A1 1 0 1 0 8.912.779 5.944 5.944 0 0 0 6 0Z"></path>
-                                                <path d="M10 4a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm-4 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"></path>
-                                            </svg>                                            
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Finance</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="credit-cards.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Cards</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="transactions.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Transactions</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="transaction-details.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Transaction Details</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Job Board -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">                                            
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M6.753 2.659a1 1 0 0 0-1.506-1.317L2.451 4.537l-.744-.744A1 1 0 1 0 .293 5.207l1.5 1.5a1 1 0 0 0 1.46-.048l3.5-4ZM6.753 10.659a1 1 0 1 0-1.506-1.317l-2.796 3.195-.744-.744a1 1 0 0 0-1.414 1.414l1.5 1.5a1 1 0 0 0 1.46-.049l3.5-4ZM8 4.5a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1ZM9 11.5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"></path>
-                                            </svg>
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Job Board</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="job-listing.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Listing</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="job-post.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Job Post</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="company-profile.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Company Profile</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Tasks -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M7.586 9H1a1 1 0 1 1 0-2h6.586L6.293 5.707a1 1 0 0 1 1.414-1.414l3 3a1 1 0 0 1 0 1.414l-3 3a1 1 0 1 1-1.414-1.414L7.586 9ZM3.075 4.572a1 1 0 1 1-1.64-1.144 8 8 0 1 1 0 9.144 1 1 0 0 1 1.64-1.144 6 6 0 1 0 0-6.856Z"></path>
-                                            </svg>
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Tasks</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="tasks-kanban.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Kanban</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="tasks-list.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">List</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <!-- Messages -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.messages') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.messages') }}">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center cbw8w">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M13.95.879a3 3 0 0 0-4.243 0L1.293 9.293a1 1 0 0 0-.274.51l-1 5a1 1 0 0 0 1.177 1.177l5-1a1 1 0 0 0 .511-.273l8.414-8.414a3 3 0 0 0 0-4.242L13.95.879ZM11.12 2.293a1 1 0 0 1 1.414 0l1.172 1.172a1 1 0 0 1 0 1.414l-8.2 8.2-3.232.646.646-3.232 8.2-8.2Z"></path>
-                                                <path d="M10 14a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Z"></path>
-                                            </svg>                                             
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Messages</span>
-                                        </div>
-                                        <!-- Badge -->
-                                        <div class="flex cai12 c8bkw">
-                                            <span class="inline-flex items-center justify-center rounded cb63n c1k3n cpcyu c1iho c9hxi cf3id">4</span>
-                                        </div>
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.users') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.users') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg"
+     width="16" height="16" viewBox="0 0 24 24" fill="none"
+     stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+    <circle cx="9" cy="7" r="4"/>
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+</svg>
+
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Users</span>
                                     </div>
                                 </a>
                             </li>
-                            <!-- Inbox -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.inbox') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.inbox') }}">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.programs') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.programs') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z"></path>
-                                        </svg>
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Inbox</span>
+                                                <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z"></path>
+                                        </svg> 
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Programs</span>
                                     </div>
                                 </a>
                             </li>
+                            <!-- E-Commerce -->
+                            <!-- Community -->
+                            <!-- Finance -->
+                            <!-- Job Board -->
+                            <!-- Tasks -->
+                            <!-- Messages -->
+                            <!-- Inbox -->
                             <!-- Calendar -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.calendar') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.calendar') }}">
@@ -385,208 +110,49 @@
                                 </a>
                             </li>
                             <!-- Campaigns -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol c941w" href="campaigns.html">
-                                    <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M6.649 1.018a1 1 0 0 1 .793 1.171L6.997 4.5h3.464l.517-2.689a1 1 0 1 1 1.964.378L12.498 4.5h2.422a1 1 0 0 1 0 2h-2.807l-.77 4h2.117a1 1 0 1 1 0 2h-2.501l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H5.46l-.517 2.689a1 1 0 1 1-1.964-.378l.444-2.311H1a1 1 0 1 1 0-2h2.807l.77-4H2.46a1 1 0 0 1 0-2h2.5l.518-2.689a1 1 0 0 1 1.17-.793ZM9.307 10.5l.77-4H6.612l-.77 4h3.464Z"></path>
-                                        </svg>                                        
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Campaigns</span>
-                                    </div>
-                                </a>
-                            </li>
                             <!-- Settings -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.account') || request()->routeIs('admin.notifications') || request()->routeIs('admin.feedback') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.account') || request()->routeIs('admin.notifications') || request()->routeIs('admin.feedback') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M10.5 1a3.502 3.502 0 0 1 3.355 2.5H15a1 1 0 1 1 0 2h-1.145a3.502 3.502 0 0 1-6.71 0H1a1 1 0 0 1 0-2h6.145A3.502 3.502 0 0 1 10.5 1ZM9 4.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM5.5 9a3.502 3.502 0 0 1 3.355 2.5H15a1 1 0 1 1 0 2H8.855a3.502 3.502 0 0 1-6.71 0H1a1 1 0 1 1 0-2h1.145A3.502 3.502 0 0 1 5.5 9ZM4 12.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" fill-rule="evenodd"></path>
-                                            </svg>
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Settings</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.account') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.account') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Account</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.notifications') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.notifications') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Notifications</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="connected-apps.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Connected Apps</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="plans.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Plans</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="billing.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Billing &amp; Invoices</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.feedback') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.feedback') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Give Feedback</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                             <!-- Utility -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.changelog') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.changelog') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">                                        
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M14.75 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM14.75 16a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM2.5 14.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM1.25 2.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"></path>
-                                                <path d="M8 2a6 6 0 1 0 0 12A6 6 0 0 0 8 2ZM4 8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"></path>
-                                            </svg>
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Utility</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.changelog') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Changelog</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="roadmap.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Roadmap</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="faqs.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">FAQs</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="empty-state.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Empty State</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="404.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">404</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                     <!-- More group -->
                     <div>
                         <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
                             <span class="hidden 2xl:hidden cs2n8 cbbia cydwr cv9uc cg8so" aria-hidden="true">•••</span>
-                            <span class="2xl:block c185y cmt20 c2y99">More</span>
+                            <span class="2xl:block c185y cmt20 c2y99">Settings</span>
                         </h3>
                         <ul class="c7gr8">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.account') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.account') }}">
+                                    <div class="flex items-center">
+                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
+                                                    <path d="M8 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm-5.143 7.91a1 1 0 1 1-1.714-1.033A7.996 7.996 0 0 1 8 10a7.996 7.996 0 0 1 6.857 3.877 1 1 0 1 1-1.714 1.032A5.996 5.996 0 0 0 8 12a5.996 5.996 0 0 0-5.143 2.91Z"></path>
+                                                </svg>                                        
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Account</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.notifications') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.notifications') }}">
+                                    <div class="flex items-center">
+                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
+                                                    <path d="m9 12.614 4.806 1.374a.15.15 0 0 0 .174-.21L8.133 2.082a.15.15 0 0 0-.268 0L2.02 13.777a.149.149 0 0 0 .174.21L7 12.614V9a1 1 0 1 1 2 0v3.614Zm-1 1.794-5.257 1.503c-1.798.514-3.35-1.355-2.513-3.028L6.076 1.188c.791-1.584 3.052-1.584 3.845 0l5.848 11.695c.836 1.672-.714 3.54-2.512 3.028L8 14.408Z"></path>
+                                                </svg>                                       
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Notifications</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.feedback') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.feedback') }}">
+                                    <div class="flex items-center">
+                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
+                                                    <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8zM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1z"></path>
+                                                </svg>                                      
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Feedback</span>
+                                    </div>
+                                </a>
+                            </li>
                             <!-- Authentication -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.signin') || request()->routeIs('admin.signup') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.signin') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">                                            
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M11.442 4.576a1 1 0 1 0-1.634-1.152L4.22 11.35 1.773 8.366A1 1 0 1 0 .227 9.634l3.281 4a1 1 0 0 0 1.59-.058l6.344-9ZM15.817 4.576a1 1 0 1 0-1.634-1.152l-5.609 7.957a1 1 0 0 0-1.347 1.453l.656.8a1 1 0 0 0 1.59-.058l6.344-9Z"></path>
-                                            </svg>
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Authentication</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('admin.signin') }}">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign In</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('logout') }}" action="{{ route('logout') }}" method="POST">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign up</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="reset-password.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Reset Password</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                             <!-- Onboarding -->
-                            <li class="cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: false }">
-                                <a class="block text-gray-800 dark:text-gray-100 cigpx c4t3r cxxol" :class="open &amp;&amp; 'c7wl6'" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
-                                    <div class="flex items-center cm3rx">
-                                        <div class="flex items-center">
-                                            <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                                <path d="M6.668.714a1 1 0 0 1-.673 1.244 6.014 6.014 0 0 0-4.037 4.037 1 1 0 1 1-1.916-.571A8.014 8.014 0 0 1 5.425.041a1 1 0 0 1 1.243.673ZM7.71 4.709a3 3 0 1 0 0 6 3 3 0 0 0 0-6ZM9.995.04a1 1 0 1 0-.57 1.918 6.014 6.014 0 0 1 4.036 4.037 1 1 0 0 0 1.917-.571A8.014 8.014 0 0 0 9.995.041ZM14.705 8.75a1 1 0 0 1 .673 1.244 8.014 8.014 0 0 1-5.383 5.384 1 1 0 0 1-.57-1.917 6.014 6.014 0 0 0 4.036-4.037 1 1 0 0 1 1.244-.673ZM1.958 9.424a1 1 0 0 0-1.916.57 8.014 8.014 0 0 0 5.383 5.384 1 1 0 0 0 .57-1.917 6.014 6.014 0 0 1-4.037-4.037Z"></path>
-                                            </svg>                                            
-                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Onboarding</span>
-                                        </div>
-                                        <!-- Icon -->
-                                        <div class="flex 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq coqgc c8bkw">
-                                            <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" :class="open ? 'cbjxm' : 'c74tr'" viewBox="0 0 12 12">
-                                                <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </a>
-                                <div class="2xl:block c185y cmt20 c2y99">
-                                    <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="onboarding-01.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Step 1</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="onboarding-02.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Step 2</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="onboarding-03.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Step 3</span>
-                                            </a>
-                                        </li>
-                                        <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="onboarding-04.html">
-                                                <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Step 4</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -742,80 +308,8 @@
                             </div>
 
                             <!-- Notifications button -->
-                            <div class="inline-flex cm84d" x-data="{ open: false }">
-                                <button class="flex items-center justify-center rounded-full cukve cvdqj cw5z1 c76um cue4z cmwfi" :class="{ 'cvwbh c2vpa': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
-                                    <span class="cn8jz">Notifications</span>
-                                    <svg class="cp14x ch0mp cbm9w" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 0a7 7 0 0 0-7 7c0 1.202.308 2.33.84 3.316l-.789 2.368a1 1 0 0 0 1.265 1.265l2.595-.865a1 1 0 0 0-.632-1.898l-.698.233.3-.9a1 1 0 0 0-.104-.85A4.97 4.97 0 0 1 2 7a5 5 0 0 1 5-5 4.99 4.99 0 0 1 4.093 2.135 1 1 0 1 0 1.638-1.148A6.99 6.99 0 0 0 7 0Z"></path>
-                                        <path d="M11 6a5 5 0 0 0 0 10c.807 0 1.567-.194 2.24-.533l1.444.482a1 1 0 0 0 1.265-1.265l-.482-1.444A4.962 4.962 0 0 0 16 11a5 5 0 0 0-5-5Zm-3 5a3 3 0 0 1 6 0c0 .588-.171 1.134-.466 1.6a1 1 0 0 0-.115.82 1 1 0 0 0-.82.114A2.973 2.973 0 0 1 11 14a3 3 0 0 1-3-3Z"></path>                                        
-                                    </svg>
-                                    <div class="rounded-full cdnc2 cbv37 cg902 cqdkw ct7xr cgky2 cf894 cych8 cli41"></div>
-                                </button>
-                                <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cyh17 ctj0o cgky2 cbxoy cdqsh cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
-                                    <div class="cmpw7 cgulq cdqku c0ef0 c1yoz c1iho clbq0 cif3q">Notifications</div>
-                                    <ul>
-                                        <li class="border-gray-200 cghq3 cmtlz ctv3r">
-                                            <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <span class="block text-sm c6f83">📣 <span class="text-gray-800 dark:text-gray-100 c1k3n">Edit your information in a swipe</span> Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</span>
-                                                <span class="block cmpw7 cdqku c1k3n c1iho">Feb 12, 2024</span>
-                                            </a>
-                                        </li>
-                                        <li class="border-gray-200 cghq3 cmtlz ctv3r">
-                                            <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <span class="block text-sm c6f83">📣 <span class="text-gray-800 dark:text-gray-100 c1k3n">Edit your information in a swipe</span> Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</span>
-                                                <span class="block cmpw7 cdqku c1k3n c1iho">Feb 9, 2024</span>
-                                            </a>
-                                        </li>
-                                        <li class="border-gray-200 cghq3 cmtlz ctv3r">
-                                            <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <span class="block text-sm c6f83">🚀<span class="text-gray-800 dark:text-gray-100 c1k3n">Say goodbye to paper receipts!</span> Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.</span>
-                                                <span class="block cmpw7 cdqku c1k3n c1iho">Jan 24, 2024</span>
-                                            </a>
-                                        </li>
-                                    </ul>                
-                                </div>
-                            </div>
 
                             <!-- Info button -->
-                            <div class="inline-flex cm84d" x-data="{ open: false }">
-                                <button class="flex items-center justify-center rounded-full cukve cvdqj cw5z1 c76um cue4z cmwfi" :class="{ 'cvwbh c2vpa': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
-                                    <span class="cn8jz">Info</span>
-                                    <svg class="cp14x ch0mp cbm9w" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9 7.5a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
-                                        <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"></path>
-                                    </svg>
-                                </button>
-                                <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 c45yg cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
-                                    <div class="cmpw7 cgulq cdqku c0ef0 c1yoz c1iho cb2br cif3q">Need help?</div>
-                                    <ul>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
-                                                    <rect y="3" width="12" height="9" rx="1"></rect>
-                                                    <path d="M2 0h8v2H2z"></path>
-                                                </svg>
-                                                <span>Documentation</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
-                                                    <path d="M10.5 0h-9A1.5 1.5 0 000 1.5v9A1.5 1.5 0 001.5 12h9a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0010.5 0zM10 7L8.207 5.207l-3 3-1.414-1.414 3-3L5 2h5v5z"></path>
-                                                </svg>
-                                                <span>Support Site</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
-                                                <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
-                                                    <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"></path>
-                                                </svg>
-                                                <span>Contact us</span>
-                                            </a>
-                                        </li>
-                                    </ul>                
-                                </div>
-                            </div>
 
                             <!-- Dark mode toggle -->
                             <div>

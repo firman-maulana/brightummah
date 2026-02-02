@@ -37,30 +37,6 @@
                                                 <span class="text-sm text-violet-500 csvw7 c1k3n">My Notifications</span>
                                             </a>
                                         </li>
-                                        <li class="cved1 cri0s ce4il">
-                                            <a class="flex items-center cq84g cb8zv ch4gv cuvgf" href="connected-apps.html">
-                                                <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M8 3.414V6a1 1 0 1 1-2 0V1a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2H9.414l6.293 6.293a1 1 0 1 1-1.414 1.414L8 3.414Zm0 9.172V10a1 1 0 1 1 2 0v5a1 1 0 0 1-1 1H4a1 1 0 0 1 0-2h2.586L.293 7.707a1 1 0 0 1 1.414-1.414L8 12.586Z"></path>
-                                                </svg>
-                                                <span class="text-sm c196r c18od c0zkc c1ukq c1k3n">Connected Apps</span>
-                                            </a>
-                                        </li>
-                                        <li class="cved1 cri0s ce4il">
-                                            <a class="flex items-center cq84g cb8zv ch4gv cuvgf" href="plans.html">
-                                                <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M5 9a1 1 0 1 1 0-2h6a1 1 0 0 1 0 2H5ZM1 4a1 1 0 1 1 0-2h14a1 1 0 0 1 0 2H1Zm0 10a1 1 0 0 1 0-2h14a1 1 0 0 1 0 2H1Z"></path>
-                                                </svg>
-                                                <span class="text-sm c196r c18od c0zkc c1ukq c1k3n">Plans</span>
-                                            </a>
-                                        </li>
-                                        <li class="cved1 cri0s ce4il">
-                                            <a class="flex items-center cq84g cb8zv ch4gv cuvgf" href="billing.html">
-                                                <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4Zm2 0v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Zm9 1a1 1 0 0 1 0 2H5a1 1 0 1 1 0-2h6Zm0 4a1 1 0 0 1 0 2H5a1 1 0 1 1 0-2h6Z"></path>
-                                                </svg>
-                                                <span class="text-sm c196r c18od c0zkc c1ukq c1k3n">Billing &amp; Invoices</span>
-                                            </a>
-                                        </li>
                                     </ul>
                                 </div>
                                 <!-- Group 2 -->
