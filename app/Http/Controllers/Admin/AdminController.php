@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Cloudinary\Cloudinary;
+use Carbon\Carbon;
 
 class AdminController extends Controller
 {
@@ -17,16 +18,47 @@ class AdminController extends Controller
         $totalUsers = User::count();
         $recentPrograms = Program::latest()->take(5)->get();
 
-        return view('admin.dashboard', compact('totalPrograms', 'totalUsers', 'recentPrograms'));
+        return view('admin.dashboard.dashboard', compact('totalPrograms', 'totalUsers', 'recentPrograms'));
     }
 
     // Programs Management
-    public function programs()
-{
-    $programs = Program::latest()->get();
-    return view('admin.programs.index', compact('programs'));
-}
+    public function programs(Request $request)
+    {
+        $query = Program::query();
+        
+        // Filter by category
+        if ($request->has('category') && $request->category != '') {
+            $query->where('category', $request->category);
+        }
+        
+        // Search by name or tujuan_program
+        if ($request->has('search') && $request->search != '') {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                  ->orWhere('tujuan_program', 'like', '%' . $search . '%');
+            });
+        }
+        
+        $programs = $query->latest()->paginate(8);
+        
+        // Get all unique categories for filter buttons
+        $categories = ['Academic & School Program', 'Quran & Islamic Studies Program', 'Language & Skill Program', 'Program Options'];
 
+        $totalPrograms = Program::count();
+        
+        return view('admin.programs.index', compact('programs', 'categories', 'totalPrograms'));
+    }
+
+    public function showProgram(Program $program)
+    {
+        // Get 1 random program excluding the current one
+        $otherProgram = Program::where('id', '!=', $program->id)
+            ->inRandomOrder()
+            ->first();
+        
+        return view('admin.programs.detail', compact('program', 'otherProgram'));
+    }
 
     public function createProgram()
     {
@@ -148,9 +180,46 @@ class AdminController extends Controller
     }
 
     // Users Management
-    public function users()
+     public function users(Request $request)
     {
-        $users = User::latest()->paginate(10);
+        $filter = $request->get('filter', 2); // Default: Last Month (2)
+        
+        $query = User::query();
+        
+        // Apply time-based filter
+        switch ($filter) {
+            case 0: // Today
+                $query->whereDate('created_at', Carbon::today());
+                break;
+            case 1: // Last 7 Days
+                $query->where('created_at', '>=', Carbon::now()->subDays(7));
+                break;
+            case 2: // Last Month
+                $query->where('created_at', '>=', Carbon::now()->subMonth());
+                break;
+            case 3: // Last 12 Months
+                $query->where('created_at', '>=', Carbon::now()->subYear());
+                break;
+            case 4: // All Time
+                // No filter needed
+                break;
+        }
+        
+        // Paginate with 10 items per page
+        $users = $query->latest()->paginate(10);
+        
         return view('admin.users.index', compact('users'));
     }
+
+    public function bulkDestroy(Request $request)
+{
+    $request->validate([
+        'user_ids' => 'required|array',
+        'user_ids.*' => 'exists:users,id'
+    ]);
+
+    User::whereIn('id', $request->user_ids)->delete();
+
+    return redirect()->back()->with('success', 'User berhasil dihapus');
+}
 }

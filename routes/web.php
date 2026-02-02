@@ -36,25 +36,24 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::get('/programs', [AdminController::class, 'programs'])->name('programs');
     Route::get('/programs/create', [AdminController::class, 'createProgram'])->name('programs.create');
     Route::post('/programs', [AdminController::class, 'storeProgram'])->name('programs.store');
+    Route::get('/programs/{program}', [AdminController::class, 'showProgram'])->name('programs.show');
     Route::get('/programs/{program}/edit', [AdminController::class, 'editProgram'])->name('programs.edit');
     Route::put('/programs/{program}', [AdminController::class, 'updateProgram'])->name('programs.update');
     Route::delete('/programs/{program}', [AdminController::class, 'destroyProgram'])->name('programs.destroy');
     
     Route::get('/users', [AdminController::class, 'users'])->name('users');
-});
+Route::delete('/users/bulk-delete', [AdminController::class, 'bulkDestroy'])
+    ->name('users.bulk-destroy');
 
-Route::get('/dashboard/analytics', fn() => view('coba.dashboard.analytics'))->name('analytics');
-Route::get('/dashboard', fn() => view('coba.dashboard.dashboard'))->name('dashboard');
-Route::get('/dashboard/fintech', fn() => view('coba.dashboard.fintech'))->name('fintech');
-Route::get('/dashboard/user', fn() => view('coba.user'))->name('user');
-Route::get('/dashboard/program', fn() => view('coba.programs.index'))->name('program');
-Route::get('/dashboard/detailprogram', fn() => view('coba.programs.detail'))->name('detailprogram');
-Route::get('/dashboard/inbox', fn() => view('coba.inbox'))->name('inbox');
-Route::get('/dashboard/messages', fn() => view('coba.messages'))->name('messages');
-Route::get('/dashboard/calendar', fn() => view('coba.calendar'))->name('calendar');
-Route::get('/dashboard/myaccount', fn() => view('coba.settings.account'))->name('account');
-Route::get('/dashboard/notifications', fn() => view('coba.settings.notifications'))->name('notifications');
-Route::get('/dashboard/feedback', fn() => view('coba.settings.feedback'))->name('feedback');
-Route::get('/dashboard/changelog', fn() => view('coba.changelog'))->name('changelog');
-Route::get('/dashboard/authentication/signin', fn() => view('coba.authentication.signin'))->name('signin');
-Route::get('/dashboard/authentication/signup', fn() => view('coba.authentication.signup'))->name('signup');
+    Route::get('/analytics', fn() => view('admin.dashboard.analytics'))->name('analytics');
+    Route::get('/fintech', fn() => view('admin.dashboard.fintech'))->name('fintech');
+    Route::get('/inbox', fn() => view('admin.inbox'))->name('inbox');
+    Route::get('/messages', fn() => view('admin.messages'))->name('messages');
+    Route::get('/calendar', fn() => view('admin.calendar'))->name('calendar');
+    Route::get('/myaccount', fn() => view('admin.settings.account'))->name('account');
+    Route::get('/notifications', fn() => view('admin.settings.notifications'))->name('notifications');
+    Route::get('/feedback', fn() => view('admin.settings.feedback'))->name('feedback');
+    Route::get('/changelog', fn() => view('admin.changelog'))->name('changelog');
+    Route::get('/authentication/signin', fn() => view('admin.authentication.signin'))->name('signin');
+    Route::get('/authentication/signup', fn() => view('admin.authentication.signup'))->name('signup');
+});

@@ -1,4 +1,4 @@
-@extends('coba.layouts.sidebar')
+@extends('admin.layouts.sidebar')
 @section('content')
 
 <div class="ch3yp cnbwt cs7xl clu2m c6btv clbq0 cxsfz">

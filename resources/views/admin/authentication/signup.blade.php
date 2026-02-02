@@ -88,7 +88,7 @@
                         <!-- Footer -->
                         <div class="cghq3 cbv37 cr4kg cgndh cfkjc">
                             <div class="text-sm">
-                                Have an account? <a class="text-violet-500 c5ylh ceetm c1k3n" href="{{ route('signin') }}">Sign In</a>
+                                Have an account? <a class="text-violet-500 c5ylh ceetm c1k3n" href="{{ route('admin.signin') }}">Sign In</a>
                             </div>
                         </div>
         

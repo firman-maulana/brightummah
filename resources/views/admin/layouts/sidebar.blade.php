@@ -49,10 +49,8 @@
                         </svg>
                     </button>
                     <!-- Logo -->
-                    <a class="block" href="{{ route('dashboard') }}">
-                        <svg class="cwjz0" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
-                            <path d="M31.956 14.8C31.372 6.92 25.08.628 17.2.044V5.76a9.04 9.04 0 0 0 9.04 9.04h5.716ZM14.8 26.24v5.716C6.92 31.372.63 25.08.044 17.2H5.76a9.04 9.04 0 0 1 9.04 9.04Zm11.44-9.04h5.716c-.584 7.88-6.876 14.172-14.756 14.756V26.24a9.04 9.04 0 0 1 9.04-9.04ZM.044 14.8C.63 6.92 6.92.628 14.8.044V5.76a9.04 9.04 0 0 1-9.04 9.04H.044Z"></path>
-                        </svg>
+                    <a class="block" href="{{ route('admin.dashboard') }}">
+                        <img src="{{ asset('assets/img/logo/logo.png') }}" class="cwjz0" width="64" height="64">
                     </a>
                 </div>
 
@@ -62,12 +60,12 @@
                     <div>
                         <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
                             <span class="hidden 2xl:hidden cs2n8 cbbia cydwr cv9uc cg8so" aria-hidden="true">•••</span>
-                            <span class="2xl:block c185y cmt20 c2y99">Pages</span>
+                            <span class="2xl:block c185y cmt20 c2y99">Menu</span>
                         </h3>
                         <ul class="c7gr8">
                             <!-- Dashboard -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.dashboard') || request()->routeIs('analytics') || request()->routeIs('fintech') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="text-violet-500 cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -87,17 +85,17 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('dashboard') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('dashboard') }}">
+                                            <a class="block {{ request()->routeIs('admin.dashboard') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.dashboard') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Main</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('analytics') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('analytics') }}">
+                                            <a class="block {{ request()->routeIs('analytics') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.analytics') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Analytics</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('fintech') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('fintech') }}">
+                                            <a class="block {{ request()->routeIs('fintech') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.fintech') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Fintech</span>
                                             </a>
                                         </li>
@@ -105,7 +103,7 @@
                                 </div>
                             </li>
                             <!-- E-Commerce -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('user') ? 'true' : 'false' }} }">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.user') ? 'true' : 'false' }} }">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('user') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
@@ -125,7 +123,7 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('user') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('user') }}">
+                                            <a class="block {{ request()->routeIs('admin.users') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.users') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">User</span>
                                             </a>
                                         </li>
@@ -178,8 +176,8 @@
                                 </div>
                             </li>
                             <!-- Community -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('program') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('program') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.programs*') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.programs*') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -228,7 +226,7 @@
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('program') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('program') }}">
+                                            <a class="block {{ request()->routeIs('admin.programs*') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.programs') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Program</span>
                                             </a>
                                         </li>
@@ -347,7 +345,7 @@
                             </li>
                             <!-- Messages -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('messages') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('messages') }}">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.messages') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.messages') }}">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center cbw8w">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
@@ -365,7 +363,7 @@
                             </li>
                             <!-- Inbox -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('inbox') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('inbox') }}">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.inbox') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.inbox') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M11.92 6.851c.044-.027.09-.05.137-.07.481-.275.758-.68.908-1.256.126-.55.169-.81.357-2.058.075-.498.144-.91.217-1.264-4.122.75-7.087 2.984-9.12 6.284a18.087 18.087 0 0 0-1.985 4.585 17.07 17.07 0 0 0-.354 1.506c-.05.265-.076.448-.086.535a1 1 0 0 1-1.988-.226c.056-.49.209-1.312.502-2.357a20.063 20.063 0 0 1 2.208-5.09C5.31 3.226 9.306.494 14.913.004a1 1 0 0 1 .954 1.494c-.237.414-.375.993-.567 2.267-.197 1.306-.244 1.586-.392 2.235-.285 1.094-.789 1.853-1.552 2.363-.748 3.816-3.976 5.06-8.515 4.326a1 1 0 0 1 .318-1.974c2.954.477 4.918.025 5.808-1.556-.628.085-1.335.121-2.127.121a1 1 0 1 1 0-2c1.458 0 2.434-.116 3.08-.429Z"></path>
@@ -376,7 +374,7 @@
                             </li>
                             <!-- Calendar -->
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('calendar') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('calendar') }}">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.calendar') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.calendar') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"></path>
@@ -398,8 +396,8 @@
                                 </a>
                             </li>
                             <!-- Settings -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('account') || request()->routeIs('notifications') || request()->routeIs('feedback') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('account') || request()->routeIs('notifications') || request()->routeIs('feedback') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.account') || request()->routeIs('admin.notifications') || request()->routeIs('admin.feedback') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.account') || request()->routeIs('admin.notifications') || request()->routeIs('admin.feedback') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -418,12 +416,12 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('account') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('account') }}">
+                                            <a class="block {{ request()->routeIs('admin.account') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.account') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Account</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('notifications') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('notifications') }}">
+                                            <a class="block {{ request()->routeIs('admin.notifications') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.notifications') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">My Notifications</span>
                                             </a>
                                         </li>
@@ -443,7 +441,7 @@
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('feedback') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('feedback') }}">
+                                            <a class="block {{ request()->routeIs('admin.feedback') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.feedback') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Give Feedback</span>
                                             </a>
                                         </li>
@@ -451,8 +449,8 @@
                                 </div>
                             </li>
                             <!-- Utility -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('changelog') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('changelog') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.changelog') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.changelog') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">                                        
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -472,7 +470,7 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block {{ request()->routeIs('changelog') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('changelog') }}">
+                                            <a class="block {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : 'dark:text-gray-400 c196r c18od cwwmd' }} cxxol c941w" href="{{ route('admin.changelog') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Changelog</span>
                                             </a>
                                         </li>
@@ -509,8 +507,8 @@
                         </h3>
                         <ul class="c7gr8">
                             <!-- Authentication -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('signin') || request()->routeIs('signup') ? 'true' : 'false' }} }">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('signin') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1" x-data="{ open: {{ request()->routeIs('admin.signin') || request()->routeIs('admin.signup') ? 'true' : 'false' }} }">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.signin') ? '' : 'cigpx c4t3r' }} cxxol c941w" href="#0" @click.prevent="open = !open; sidebarExpanded = true">
                                     <div class="flex items-center cm3rx">
                                         <div class="flex items-center">                                            
                                             <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
@@ -529,12 +527,12 @@
                                 <div class="2xl:block c185y cmt20 c2y99">
                                     <ul class="hidden ccwg3 cwbdk" :class="open ? 'cnyeh' : 'hidden'">
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('signin') }}">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('admin.signin') }}">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign In</span>
                                             </a>
                                         </li>
                                         <li class="c5w78 cu6vl">
-                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('signup') }}">
+                                            <a class="block dark:text-gray-400 c196r c18od cwwmd cxxol c941w" href="{{ route('logout') }}" action="{{ route('logout') }}" method="POST">
                                                 <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n">Sign up</span>
                                             </a>
                                         </li>
@@ -932,7 +930,7 @@
                                 <button class="inline-flex justify-center items-center cqogy" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
                                     <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="32" height="32" alt="User">
                                     <div class="flex items-center c941w">
-                                        <span class="text-sm dark:text-gray-100 croon ccuo4 c1ukq c1k3n c941w c8bkw">Acme Inc.</span>
+                                        <span class="text-sm dark:text-gray-100 croon ccuo4 c1ukq c1k3n c941w c8bkw">Bright Ummah</span>
                                         <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" viewBox="0 0 12 12">
                                             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
                                         </svg>
@@ -940,16 +938,27 @@
                                 </button>
                                 <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 c45yg cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
                                     <div class="border-gray-200 cghq3 ctv3r c8asz cu6vl cb2br cif3q">
-                                        <div class="text-gray-800 dark:text-gray-100 c1k3n">Acme Inc.</div>
+                                        <div class="text-gray-800 dark:text-gray-100 c1k3n">Bright Ummah</div>
                                         <div class="text-gray-500 dark:text-gray-400 c1iho caf78">Administrator</div>
                                     </div>
                                     <ul>
                                         <li>
                                             <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="settings.html" @click="open = false" @focus="open = true" @focusout="open = false">Settings</a>
                                         </li>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="signin.html" @click="open = false" @focus="open = true" @focusout="open = false">Sign Out</a>
-                                        </li>
+<li>
+    <form id="logout-form" method="POST" action="{{ route('logout') }}" class="hidden">
+        @csrf
+    </form>
+
+    <a href="#"
+       class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v"
+       @click.prevent="
+            open = false;
+            document.getElementById('logout-form').submit();
+       ">
+       Sign Out
+    </a>
+</li>
                                     </ul>                
                                 </div>
                             </div>
@@ -978,7 +987,7 @@
     <script src="{{ asset('assets/admin/js/flatpickr.js') }}"></script>
     <script src="{{ asset('assets/admin/js/flatpickr-init.js') }}"></script>
 
-<script>console.log("%cImportant!", "color: blue; font-size: x-large");console.log("%cThe page you are viewing is for demo purposes only. CSS and HTML have been minified and class names have been shortened to improve the page load time. Download our templates from https://cruip.com/ 😉", "font-size: large");</script><script>const pagesList = [{"name":"Dashboard","url":"https://preview.cruip.com/mosaic/{{ route('dashboard') }}","active":true},{"name":"Analytics","url":"https://preview.cruip.com/mosaic/analytics.html","active":false},{"name":"Fintech","url":"https://preview.cruip.com/mosaic/fintech.html","active":false},{"name":"Customers","url":"https://preview.cruip.com/mosaic/customers.html","active":false},{"name":"Orders","url":"https://preview.cruip.com/mosaic/orders.html","active":false},{"name":"Invoices","url":"https://preview.cruip.com/mosaic/invoices.html","active":false},{"name":"Shop","url":"https://preview.cruip.com/mosaic/shop.html","active":false},{"name":"Shop 2","url":"https://preview.cruip.com/mosaic/shop-2.html","active":false},{"name":"Single Product","url":"https://preview.cruip.com/mosaic/product.html","active":false},{"name":"Cart","url":"https://preview.cruip.com/mosaic/cart.html","active":false},{"name":"Cart 2","url":"https://preview.cruip.com/mosaic/cart-2.html","active":false},{"name":"Cart 3","url":"https://preview.cruip.com/mosaic/cart-3.html","active":false},{"name":"Pay","url":"https://preview.cruip.com/mosaic/pay.html","active":false},{"name":"Campaigns","url":"https://preview.cruip.com/mosaic/campaigns.html","active":false},{"name":"Users Tabs","url":"https://preview.cruip.com/mosaic/users-tabs.html","active":false},{"name":"Users Tiles","url":"https://preview.cruip.com/mosaic/users-tiles.html","active":false},{"name":"Profile","url":"https://preview.cruip.com/mosaic/profile.html","active":false},{"name":"Feed","url":"https://preview.cruip.com/mosaic/feed.html","active":false},{"name":"Forum","url":"https://preview.cruip.com/mosaic/forum.html","active":false},{"name":"Forum Post","url":"https://preview.cruip.com/mosaic/forum-post.html","active":false},{"name":"Meetups","url":"https://preview.cruip.com/mosaic/meetups.html","active":false},{"name":"Meetups Post","url":"https://preview.cruip.com/mosaic/meetups-post.html","active":false},{"name":"Cards","url":"https://preview.cruip.com/mosaic/credit-cards.html","active":false},{"name":"Transactions","url":"https://preview.cruip.com/mosaic/transactions.html","active":false},{"name":"Transaction Details","url":"https://preview.cruip.com/mosaic/transaction-details.html","active":false},{"name":"Jobs Listing","url":"https://preview.cruip.com/mosaic/job-listing.html","active":false},{"name":"Jobs Post","url":"https://preview.cruip.com/mosaic/job-post.html","active":false},{"name":"Company Profile","url":"https://preview.cruip.com/mosaic/company-profile.html","active":false},{"name":"Kanban","url":"https://preview.cruip.com/mosaic/tasks-kanban.html","active":false},{"name":"Tasks List","url":"https://preview.cruip.com/mosaic/tasks-list.html","active":false},{"name":"Messages","url":"https://preview.cruip.com/mosaic/messages.html","active":false},{"name":"Inbox","url":"https://preview.cruip.com/mosaic/inbox.html","active":false},{"name":"Calendar","url":"https://preview.cruip.com/mosaic/calendar.html","active":false},{"name":"Applications","url":"https://preview.cruip.com/mosaic/applications.html","active":false},{"name":"My Account","url":"https://preview.cruip.com/mosaic/settings.html","active":false},{"name":"My Notifications","url":"https://preview.cruip.com/mosaic/notifications.html","active":false},{"name":"Connected Apps","url":"https://preview.cruip.com/mosaic/connected-apps.html","active":false},{"name":"Plans","url":"https://preview.cruip.com/mosaic/plans.html","active":false},{"name":"Billing & Invoices","url":"https://preview.cruip.com/mosaic/billing.html","active":false},{"name":"Give Feedback","url":"https://preview.cruip.com/mosaic/feedback.html","active":false},{"name":"Changelog","url":"https://preview.cruip.com/mosaic/changelog.html","active":false},{"name":"Roadmap","url":"https://preview.cruip.com/mosaic/roadmap.html","active":false},{"name":"FAQs","url":"https://preview.cruip.com/mosaic/faqs.html","active":false},{"name":"Empty State","url":"https://preview.cruip.com/mosaic/empty-state.html","active":false},{"name":"Page Not Found","url":"https://preview.cruip.com/mosaic/404.html","active":false},{"name":"Knowledge Base","url":"https://preview.cruip.com/mosaic/knowledge-base.html","active":false},{"name":"Sign in","url":"https://preview.cruip.com/mosaic/signin.html","active":false},{"name":"Sign up","url":"https://preview.cruip.com/mosaic/signup.html","active":false},{"name":"Reset password","url":"https://preview.cruip.com/mosaic/reset-password.html","active":false},{"name":"Onboarding 1","url":"https://preview.cruip.com/mosaic/onboarding-01.html","active":false},{"name":"Onboarding 2","url":"https://preview.cruip.com/mosaic/onboarding-02.html","active":false},{"name":"Onboarding 3","url":"https://preview.cruip.com/mosaic/onboarding-03.html","active":false},{"name":"Onboarding 4","url":"https://preview.cruip.com/mosaic/onboarding-04.html","active":false},{"name":"Button","url":"https://preview.cruip.com/mosaic/component-button.html","active":false},{"name":"Input Form","url":"https://preview.cruip.com/mosaic/component-form.html","active":false},{"name":"Dropdown","url":"https://preview.cruip.com/mosaic/component-dropdown.html","active":false},{"name":"Alert & Banner","url":"https://preview.cruip.com/mosaic/component-alert.html","active":false},{"name":"Modal","url":"https://preview.cruip.com/mosaic/component-modal.html","active":false},{"name":"Pagination","url":"https://preview.cruip.com/mosaic/component-pagination.html","active":false},{"name":"Tabs","url":"https://preview.cruip.com/mosaic/component-tabs.html","active":false},{"name":"Breadcrumb","url":"https://preview.cruip.com/mosaic/component-breadcrumb.html","active":false},{"name":"Badge","url":"https://preview.cruip.com/mosaic/component-badge.html","active":false},{"name":"Avatar","url":"https://preview.cruip.com/mosaic/component-avatar.html","active":false},{"name":"Tooltip","url":"https://preview.cruip.com/mosaic/component-tooltip.html","active":false},{"name":"Accordion","url":"https://preview.cruip.com/mosaic/component-accordion.html","active":false},{"name":"Icons","url":"https://preview.cruip.com/mosaic/component-icons.html","active":false}];if(window != top){window.parent.postMessage(pagesList, "https://cruip.com")};</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"59cc17d45d734f9ba118c63036ab1b84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script>console.log("%cImportant!", "color: blue; font-size: x-large");console.log("%cThe page you are viewing is for demo purposes only. CSS and HTML have been minified and class names have been shortened to improve the page load time. Download our templates from https://cruip.com/ 😉", "font-size: large");</script><script>const pagesList = [{"name":"Dashboard","url":"https://preview.cruip.com/mosaic/{{ route('admin.dashboard') }}","active":true},{"name":"Analytics","url":"https://preview.cruip.com/mosaic/analytics.html","active":false},{"name":"Fintech","url":"https://preview.cruip.com/mosaic/fintech.html","active":false},{"name":"Customers","url":"https://preview.cruip.com/mosaic/customers.html","active":false},{"name":"Orders","url":"https://preview.cruip.com/mosaic/orders.html","active":false},{"name":"Invoices","url":"https://preview.cruip.com/mosaic/invoices.html","active":false},{"name":"Shop","url":"https://preview.cruip.com/mosaic/shop.html","active":false},{"name":"Shop 2","url":"https://preview.cruip.com/mosaic/shop-2.html","active":false},{"name":"Single Product","url":"https://preview.cruip.com/mosaic/product.html","active":false},{"name":"Cart","url":"https://preview.cruip.com/mosaic/cart.html","active":false},{"name":"Cart 2","url":"https://preview.cruip.com/mosaic/cart-2.html","active":false},{"name":"Cart 3","url":"https://preview.cruip.com/mosaic/cart-3.html","active":false},{"name":"Pay","url":"https://preview.cruip.com/mosaic/pay.html","active":false},{"name":"Campaigns","url":"https://preview.cruip.com/mosaic/campaigns.html","active":false},{"name":"Users Tabs","url":"https://preview.cruip.com/mosaic/users-tabs.html","active":false},{"name":"Users Tiles","url":"https://preview.cruip.com/mosaic/users-tiles.html","active":false},{"name":"Profile","url":"https://preview.cruip.com/mosaic/profile.html","active":false},{"name":"Feed","url":"https://preview.cruip.com/mosaic/feed.html","active":false},{"name":"Forum","url":"https://preview.cruip.com/mosaic/forum.html","active":false},{"name":"Forum Post","url":"https://preview.cruip.com/mosaic/forum-post.html","active":false},{"name":"Meetups","url":"https://preview.cruip.com/mosaic/meetups.html","active":false},{"name":"Meetups Post","url":"https://preview.cruip.com/mosaic/meetups-post.html","active":false},{"name":"Cards","url":"https://preview.cruip.com/mosaic/credit-cards.html","active":false},{"name":"Transactions","url":"https://preview.cruip.com/mosaic/transactions.html","active":false},{"name":"Transaction Details","url":"https://preview.cruip.com/mosaic/transaction-details.html","active":false},{"name":"Jobs Listing","url":"https://preview.cruip.com/mosaic/job-listing.html","active":false},{"name":"Jobs Post","url":"https://preview.cruip.com/mosaic/job-post.html","active":false},{"name":"Company Profile","url":"https://preview.cruip.com/mosaic/company-profile.html","active":false},{"name":"Kanban","url":"https://preview.cruip.com/mosaic/tasks-kanban.html","active":false},{"name":"Tasks List","url":"https://preview.cruip.com/mosaic/tasks-list.html","active":false},{"name":"Messages","url":"https://preview.cruip.com/mosaic/messages.html","active":false},{"name":"Inbox","url":"https://preview.cruip.com/mosaic/inbox.html","active":false},{"name":"Calendar","url":"https://preview.cruip.com/mosaic/calendar.html","active":false},{"name":"Applications","url":"https://preview.cruip.com/mosaic/applications.html","active":false},{"name":"My Account","url":"https://preview.cruip.com/mosaic/settings.html","active":false},{"name":"My Notifications","url":"https://preview.cruip.com/mosaic/notifications.html","active":false},{"name":"Connected Apps","url":"https://preview.cruip.com/mosaic/connected-apps.html","active":false},{"name":"Plans","url":"https://preview.cruip.com/mosaic/plans.html","active":false},{"name":"Billing & Invoices","url":"https://preview.cruip.com/mosaic/billing.html","active":false},{"name":"Give Feedback","url":"https://preview.cruip.com/mosaic/feedback.html","active":false},{"name":"Changelog","url":"https://preview.cruip.com/mosaic/changelog.html","active":false},{"name":"Roadmap","url":"https://preview.cruip.com/mosaic/roadmap.html","active":false},{"name":"FAQs","url":"https://preview.cruip.com/mosaic/faqs.html","active":false},{"name":"Empty State","url":"https://preview.cruip.com/mosaic/empty-state.html","active":false},{"name":"Page Not Found","url":"https://preview.cruip.com/mosaic/404.html","active":false},{"name":"Knowledge Base","url":"https://preview.cruip.com/mosaic/knowledge-base.html","active":false},{"name":"Sign in","url":"https://preview.cruip.com/mosaic/signin.html","active":false},{"name":"Sign up","url":"https://preview.cruip.com/mosaic/signup.html","active":false},{"name":"Reset password","url":"https://preview.cruip.com/mosaic/reset-password.html","active":false},{"name":"Onboarding 1","url":"https://preview.cruip.com/mosaic/onboarding-01.html","active":false},{"name":"Onboarding 2","url":"https://preview.cruip.com/mosaic/onboarding-02.html","active":false},{"name":"Onboarding 3","url":"https://preview.cruip.com/mosaic/onboarding-03.html","active":false},{"name":"Onboarding 4","url":"https://preview.cruip.com/mosaic/onboarding-04.html","active":false},{"name":"Button","url":"https://preview.cruip.com/mosaic/component-button.html","active":false},{"name":"Input Form","url":"https://preview.cruip.com/mosaic/component-form.html","active":false},{"name":"Dropdown","url":"https://preview.cruip.com/mosaic/component-dropdown.html","active":false},{"name":"Alert & Banner","url":"https://preview.cruip.com/mosaic/component-alert.html","active":false},{"name":"Modal","url":"https://preview.cruip.com/mosaic/component-modal.html","active":false},{"name":"Pagination","url":"https://preview.cruip.com/mosaic/component-pagination.html","active":false},{"name":"Tabs","url":"https://preview.cruip.com/mosaic/component-tabs.html","active":false},{"name":"Breadcrumb","url":"https://preview.cruip.com/mosaic/component-breadcrumb.html","active":false},{"name":"Badge","url":"https://preview.cruip.com/mosaic/component-badge.html","active":false},{"name":"Avatar","url":"https://preview.cruip.com/mosaic/component-avatar.html","active":false},{"name":"Tooltip","url":"https://preview.cruip.com/mosaic/component-tooltip.html","active":false},{"name":"Accordion","url":"https://preview.cruip.com/mosaic/component-accordion.html","active":false},{"name":"Icons","url":"https://preview.cruip.com/mosaic/component-icons.html","active":false}];if(window != top){window.parent.postMessage(pagesList, "https://cruip.com")};</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"59cc17d45d734f9ba118c63036ab1b84","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script>
         document.addEventListener('alpine:init', () => {
             Alpine.data('calendar', () => ({

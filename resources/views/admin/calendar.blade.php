@@ -1,4 +1,4 @@
-@extends('coba.layouts.sidebar')
+@extends('admin.layouts.sidebar')
 
 @section('content')
 

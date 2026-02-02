@@ -73,7 +73,7 @@
                         <!-- Footer -->
                         <div class="cghq3 cbv37 cr4kg cgndh cfkjc">
                             <div class="text-sm">
-                                Don’t you have an account? <a class="text-violet-500 c5ylh ceetm c1k3n" href="{{ route('signup') }}">Sign Up</a>
+                                Don’t you have an account? <a class="text-violet-500 c5ylh ceetm c1k3n" href="{{ route('admin.signup') }}">Sign Up</a>
                             </div>
                             <!-- Warning -->
                             <div class="cv2no">
