@@ -115,12 +115,12 @@
                         </ul>
                     </div>
                     <!-- More group -->
-                    <div>
-                        <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
+                    <!-- <div> -->
+                        <!-- <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
                             <span class="hidden 2xl:hidden cs2n8 cbbia cydwr cv9uc cg8so" aria-hidden="true">•••</span>
                             <span class="2xl:block c185y cmt20 c2y99">Settings</span>
-                        </h3>
-                        <ul class="c7gr8">
+                        </h3> -->
+                        <!-- <ul class="c7gr8">
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.account') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.account') }}">
                                     <div class="flex items-center">
@@ -130,8 +130,8 @@
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Account</span>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                            </li> -->
+                            <!-- <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.notifications') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.notifications') }}">
                                     <div class="flex items-center">
                                         <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
@@ -140,8 +140,8 @@
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Notifications</span>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                            </li> -->
+                            <!-- <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.feedback') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.feedback') }}">
                                     <div class="flex items-center">
                                         <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
@@ -150,11 +150,11 @@
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Feedback</span>
                                     </div>
                                 </a>
-                            </li>
+                            </li> -->
                             <!-- Authentication -->
                             <!-- Onboarding -->
-                        </ul>
-                    </div>
+                        <!-- </ul> -->
+                    <!-- </div> -->
                 </div>
 
                 <!-- Expand / collapse button -->
