@@ -57,3 +57,5 @@ Route::delete('/users/bulk-delete', [AdminController::class, 'bulkDestroy'])
     Route::get('/authentication/signin', fn() => view('admin.authentication.signin'))->name('signin');
     Route::get('/authentication/signup', fn() => view('admin.authentication.signup'))->name('signup');
 });
+
+Route::get('/force-logout', function () { Auth::logout(); request()->session()->invalidate(); request()->session()->regenerateToken(); return redirect('/login'); })->name('force.logout');

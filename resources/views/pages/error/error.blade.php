@@ -21,7 +21,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -50,7 +50,7 @@
                   <div class="it-error-content text-center">
                      <h5 class="it-error-title  mb-5">404 - Page Not Found</h5>
                      <p class="mb-60">The page you are looking for does not exist.</p>
-                     <a href="index.html" class="it-btn-yellow theme-bg">
+                     <a href="{{ route('home') }}" class="it-btn-yellow theme-bg">
                         <i>
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M0.262041 7.26396C-0.0894308 6.91249 -0.0894308 6.34264 0.262041 5.99117L5.98961 0.263603C6.34108 -0.0878692 6.91093 -0.0878692 7.2624 0.263603C7.61387 0.615075 7.61387 1.18492 7.2624 1.53639L2.17123 6.62756L7.2624 11.7187C7.61387 12.0702 7.61387 12.6401 7.2624 12.9915C6.91093 13.343 6.34108 13.343 5.98961 12.9915L0.262041 7.26396ZM14.8984 6.62756V7.52756H0.898438V6.62756V5.72756H14.8984V6.62756Z" fill="white" />
