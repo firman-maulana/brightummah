@@ -1,9 +1,10 @@
 @extends('layouts.main2')
 @section('content')
 
-<div class="it-breadcrumb-area fix it-breadcrumb-style-2 z-index-1">
-      <img class="it-breadcrumb-shape-1" src="assets/img/breadcrumb-1-1.png" alt="">
-      <img class="it-breadcrumb-shape-3" src="assets/img/hero-1-5.png" alt="">
+   <!-- breadcrumb-area-start -->
+   <div class="it-breadcrumb-area it-breadcrumb-style-2 fix z-index-1">
+      <img class="it-breadcrumb-shape-1" src="{{ asset('assets/img/breadcrumb-1-1.png') }}" alt="">
+      <img class="it-breadcrumb-shape-3" src="{{ asset('assets/img/hero-1-5.png') }}" alt="">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
@@ -38,13 +39,13 @@
 
    <!-- error-area-start -->
    <div class="it-error-area z-index-2 pt-130 pb-130">
-      <img class="it-error-shape-1" src="assets/img/error.png" alt="">
+      <img class="it-error-shape-1" src="{{ asset('assets/img/arrowerror.png') }}" alt="">
       <div class="container">
          <div class="row justify-content-center">
             <div class="col-xxl-12 col-xl-7 col-lg-7 col-md-10 col-12 col-sm-11">
                <div class="it-error-wrap">
                   <div class="it-error-thumb text-center mb-125">
-                     <img src="assets/img/contact/error.png" alt="">
+                     <img src="{{ asset('assets/img/error.png') }}" alt="">
                   </div>
                   <div class="it-error-content text-center">
                      <h5 class="it-error-title  mb-5">404 - Page Not Found</h5>
@@ -73,7 +74,7 @@
       <div class="container">
          <div class="it-newsletter-wrap theme-bg z-index-2 wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".3s">
-            <img class="it-newsletter-shape-1" src="assets/img/brg.png" alt="">
+            <img class="it-newsletter-shape-1" src="{{ asset('assets/img/brg.png') }}" alt="">
             <div class="row align-items-center">
                <div class="col-lg-6">
                   <div class="it-newsletter-2-left">
@@ -96,5 +97,6 @@
          </div>
       </div>
    </div>
+   <!-- newsletter-area-end -->
 
 @endsection
