@@ -74,7 +74,7 @@
          </div>
         <div class="itoffcanvas__logo">
             <a href="{{ route('home') }}">
-               <img src="{{ asset('assets/img/logo/logo.png') }}" alt="Bright Ummah Academy">
+               <img src="{{ asset('assets/img/logo/logo.png') }}" style="height:55px; width:auto;" alt="Bright Ummah Academy">
             </a>
          </div>
          <div class="itoffcanvas__text">

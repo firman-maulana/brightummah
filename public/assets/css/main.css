@@ -26024,11 +26024,6 @@ input[type=radio] {
    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
 }
 
-.it-header-area .it-header-logo img {
-    width: auto;
-    object-fit: contain;
-}
-
 .itoffcanvas__auth {
     margin-top: 25px;
 }

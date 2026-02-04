@@ -42,7 +42,7 @@
                <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-5 col-6">
                   <div class="it-header-logo">
                      <a href="{{ route('home') }}">
-                        <img src="assets/img/logo/logo.png" style="width:90px; height:90px;" alt="Bright Ummah Academy">
+                        <img src="{{ asset('assets/img/logo/logo.png') }}" style="height:55px;" alt="Bright Ummah Academy">
                      </a>
                   </div>
                </div>
