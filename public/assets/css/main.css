@@ -139,12 +139,14 @@
   --it-gray-3: #F5F7F9;
   --it-gray-4: #FFF8F4;
   --it-text-body: #6C757D;
-  --it-theme-1: #03594E;
-  --it-theme-2: #F8C62F;
+  --it-theme-1: #000000;
+  --it-theme-2: #fae089;
   --it-theme-3: #1AB69D;
   --it-theme-4: #618269;
   --it-theme-5: #FE8235;
   --it-theme-6: #CD935A;
+  --it-theme-7: #fae089;
+  --it-theme-8: #000000;
 }
 
 @media (min-width: 1400px) {
@@ -610,7 +612,7 @@ input[type=color] {
   justify-content: center;
   color: var(--it-common-white);
   font-family: var(--it-ff-jost);
-  background-color: var(--it-theme-2);
+  background-color: var(--it-theme-7);
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .it-btn-yellow {
@@ -10554,7 +10556,7 @@ input[type=radio] {
   height: 80%;
   z-index: -2;
   border-radius: 10px;
-  background-color: var(--it-theme-1);
+  background-color: var(--it-theme-8);
   right: 0;
   text-align: center;
   margin: 0 auto;
@@ -14004,7 +14006,7 @@ input[type=radio] {
   width: 0;
   height: 2px;
   transition: 0.4s;
-  background: linear-gradient(90deg, #03594e 0%, rgba(3, 89, 78, 0) 100%);
+  background: linear-gradient(90deg, #000000 0%, rgba(3, 89, 78, 0) 100%);
 }
 .it-hero-10-social a:hover::after {
   width: 100%;
@@ -25998,7 +26000,7 @@ input[type=radio] {
    font-weight: 700;
    letter-spacing: 16px; 
    padding-left: 10px; 
-   color: #03594e;
+   color: #000000;
 }
 
 .whatsapp-float {
@@ -26048,11 +26050,11 @@ input[type=radio] {
 }
 
 .mobile-auth-menu .btn-login {
-    border: 1px solid #03594e;
-    color: #03594e;
+    border: 1px solid #000000;
+    color: #000000;
 }
 
 .mobile-auth-menu .btn-register {
-    background: #03594e;
+    background: #000000;
     color: #fff;
 }

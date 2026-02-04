@@ -124,7 +124,7 @@
    <section class="it-footer-wrap gray-bg it-footer-style-2 fix">
       <div class="it-footer-area z-index-1 pt-200 pb-50" data-background="{{ asset('assets/img/bgprimary.jpeg') }}">
          <img class="it-footer-shape-1" src="{{ asset('assets/img/hero-1-2.png') }}" alt="">
-         <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/kotakhijau.png') }}" alt="">
+         <!-- <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/kotakhijau.png') }}" alt=""> -->
          <div class="it-footer-border"><span></span></div>
          <div class="container">
             <div class="row">

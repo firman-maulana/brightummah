@@ -3,8 +3,8 @@
 
    <!-- hero-area-start -->
    <section class="it-hero-2-area p-relative z-index-1 scene" data-background="{{ asset('assets/img/bgprimary.jpeg') }}">
-      <img class="it-hero-2-shape-1 d-none d-xxl-block" src="{{ asset('assets/img/cta-1-1.png') }}" alt="">
-      <img class="it-hero-2-shape-2 d-none d-xxl-block" src="{{ asset('assets/img/blog-1-2.png') }}" alt="">
+      <!-- <img class="it-hero-2-shape-1 d-none d-xxl-block" src="{{ asset('assets/img/cta-1-1.png') }}" alt=""> -->
+      <!-- <img class="it-hero-2-shape-2 d-none d-xxl-block" src="{{ asset('assets/img/blog-1-2.png') }}" alt=""> -->
 
       <div class="it-hero-2-avatar-1 d-none d-lg-block">
          <img class="layer" data-depth="0.2" src="{{ asset('assets/img/avatar-1-1.png') }}" alt="">
@@ -167,7 +167,7 @@
    <!-- categories-area-start -->
    <section class="it-categories-area it-categories-style-2 z-index-1 pt-130 pb-130">
       <img class="it-categories-shape-1" src="{{ asset('assets/img/bg-explore.png') }}" alt="">
-      <img class="it-categories-shape-2 d-none d-lg-block" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/kotakkuning.png') }}" alt="">
+      <!-- <img class="it-categories-shape-2 d-none d-lg-block" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/kotakkuning.png') }}" alt=""> -->
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
@@ -1727,7 +1727,7 @@
    <!-- brand-area-start -->
    <div class="it-brand-2-area theme-bg z-index-1 pt-90 pb-90">
       <img class="it-brand-2-shape-1 d-none d-xl-block" src="{{ asset('assets/img/hero-1-3.png') }}" alt="">
-      <img class="it-brand-2-shape-2 d-none d-xl-block" src="{{ asset('assets/img/cta-1-1.png') }}" alt="">
+      <!-- <img class="it-brand-2-shape-2 d-none d-xl-block" src="{{ asset('assets/img/cta-1-1.png') }}" alt=""> -->
       <img class="it-brand-2-shape-3 d-none d-xl-block" src="{{ asset('assets/img/brg.png') }}" alt="">
       <div class="container">
          <div class="row">
