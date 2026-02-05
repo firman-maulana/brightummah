@@ -26058,3 +26058,32 @@ input[type=radio] {
     background: #000000;
     color: #fff;
 }
+
+   .it-custom-accordion .accordion-buttons {
+    position: relative;
+    padding-right: 50px;
+}
+
+.it-custom-accordion .accordion-buttons::after {
+    content: "\f107";
+    font-family: "Font Awesome 6 Pro";
+    font-weight: 900;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+}
+
+.it-custom-accordion .accordion-buttons:not(.collapsed)::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Accordion pertama tidak bisa ditutup dan tanpa icon */
+.vision-statement .accordion-buttons {
+    pointer-events: none;
+}
+
+.vision-statement .accordion-buttons::after {
+    display: none;
+}
