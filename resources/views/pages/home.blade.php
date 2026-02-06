@@ -2,7 +2,7 @@
 @section('content')
 
    <!-- hero-area-start -->
-   <section class="it-hero-2-area p-relative z-index-1 scene" data-background="{{ asset('assets/img/bgprimary.jpeg') }}">
+   <section class="it-hero-2-area p-relative z-index-1 scene" data-background="{{ asset('assets/img/background.png') }}">
       <!-- <img class="it-hero-2-shape-1 d-none d-xxl-block" src="{{ asset('assets/img/cta-1-1.png') }}" alt=""> -->
       <!-- <img class="it-hero-2-shape-2 d-none d-xxl-block" src="{{ asset('assets/img/blog-1-2.png') }}" alt=""> -->
 
@@ -201,7 +201,7 @@
                      </span> Anytime</h4>                
                   </div>
                   <div class="it-about-text">
-                    <p class="mb-45">BUA Bright Ummah Academy hadir sebagai mitra terpercaya dalam perjalanan pendidikan anak Anda. Kami menyediakan layanan bimbingan belajar privat yang dirancang untuk memenuhi kebutuhan setiap anak baik secara akademik maupun pengembangan karakter. Kami berkomitmen menciptakan pengalaman belajar yang menyenangkan, efektif, dan bermakna. BUA melayani berbagai jenjang mulai dari PAUD hingga Sekolah Dasar, dengan program yang dapat disesuaikan dengan kebutuhan keluarga Anda.</p>
+                    <p class="mb-45">Bright Ummah Academy hadir sebagai mitra terpercaya dalam perjalanan pendidikan anak Anda. Kami menyediakan layanan bimbingan belajar privat yang dirancang untuk memenuhi kebutuhan setiap anak baik secara akademik maupun pengembangan karakter. Kami berkomitmen menciptakan pengalaman belajar yang menyenangkan, efektif, dan bermakna. BUA melayani berbagai jenjang mulai dari PAUD hingga Sekolah Dasar, dengan program yang dapat disesuaikan dengan kebutuhan keluarga Anda.</p>
                   </div>
                   <div class="row">
                      <div class="col-md-6 col-sm-6">
@@ -650,15 +650,153 @@
    </section> 
    <!-- choose-area-end -->
 
-   <!-- categories-area-start -->
+      <!-- learning-system-area-start -->
+   <section class="it-price-area it-price-inner-style z-index-1 pb-95">
+      <div class="container">
+         <div class="row">
+            <div class="col-12">
+               <div class="text-center">
+                  <div class="it-price-section-title-box text-center mb-65">
+                     <span class="it-section-subtitle style-4">Learning System</span>
+                     <div class="it-about-text">
+                    <p class="mb-45">Kedua metode pembelajaran dirancang untuk memberikan pengalaman belajar yang efektif dan menyenangkan.</p>
+                  </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-6 col-md-6">
+               <div class="it-price-item mb-35">
+                  <div class="it-price-head z-index-1">
+                     <h4 class="it-price-title">Online</h4>
+                  </div>
+                  <div class="it-price-value">
+                     <span class="it-price-subtitle">Pembelajaran dilakukan secara virtual melalui platform video conference yang interaktif dan mudah digunakan. Siswa dan tutor dapat berinteraksi secara real-time dari mana saja.</span>
+                  </div>
+                  <div class="it-price-value">
+                     <span class="it-price-subtitle">     
+                  <div class="it-price-features">                                      
+                     <ul>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Belajar dari rumah, saat traveling, atau bahkan dari luar negeri
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Tidak perlu persiapan menyambut tutor atau menyesuaikan ruang belajar
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Menggunakan tools digital seperti whiteboard virtual, sharing screen, dan materi multimedia
+                        </li>
+                        <li class="inactive">
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                         Cocok untuk siswa WNI di luar negeri atau keluarga dengan mobilitas tinggi
+                        </li>
+                        <li class="inactive">
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Pembelajaran tetap efektif dengan metode yang telah disesuaikan untuk format online
+                        </li>
+                     </ul>
+                  </div>
+                  </span>
+                  </div>
+                  Siswa yang sudah terbiasa dengan teknologi, keluarga dengan jadwal padat, atau siswa yang berada di luar kota/negeri.
+               </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6">
+               <div class="it-price-item active mb-35">
+                  <div class="it-price-head z-index-1">
+                     <h4 class="it-price-title">Offline (Kota Surabaya)</h4>
+                  </div>
+                  <div class="it-price-value">
+                     <span>Tutor kami datang langsung ke rumah Anda pada jadwal yang telah disepakati untuk memberikan bimbingan belajar secara tatap muka.</span>                  
+                  </div>
+                  <div class="it-price-value">
+                     <span>     
+                  <div class="it-price-features">                                      
+                     <ul>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Tutor dapat memantau perkembangan siswa secara lebih dekat dan memberikan feedback langsung
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Belajar di rumah menciptakan suasana yang familiar dan nyaman bagi anak
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Tidak ada distraksi dari lingkungan luar, anak dapat lebih fokus pada pembelajaran
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                         Orang tua dapat mengawasi jalannya sesi pembelajaran dengan mudah
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.14076 14.6147C5.0277 14.6147 4.93347 14.5398 4.89578 14.4461C4.87697 14.4086 3.2562 10.2486 0.749721 8.67448C0.259726 8.37467 -0.117111 8.05609 0.0336234 7.34399C0.184358 6.65065 0.655538 6.25713 1.50356 6.06973C3.01117 5.75115 4.63189 8.0748 5.23499 9.03053C7.34565 5.97608 11.5671 1.17885 17.7108 0.616686C18.0072 0.582138 18.1167 1.01897 17.8427 1.14138C17.7484 1.17885 8.96632 5.17033 5.40454 14.4649C5.34804 14.5585 5.25381 14.6147 5.14076 14.6147Z" fill="currentcolor" />
+                              </svg>
+                           </span>
+                          Jadwal dapat disesuaikan dengan rutinitas keluarga
+                        </li>
+                     </ul>
+                  </div>
+                  </span>
+                  </div>
+                  Siswa yang membutuhkan pendampingan intensif, anak usia dini (PAUD–SD awal), atau keluarga yang lebih nyaman dengan pembelajaran tatap muka.
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>  
+   <!-- learning-system-area-end -->
+
+<!-- categories-area-start -->
    <section class="it-categories-area it-categories-style-2 z-index-1 pb-95">
-      <img class="it-categories-shape-1" src="{{ asset('assets/img/bg-explore.png') }}" alt="">
-      <!-- <img class="it-categories-shape-2 d-none d-lg-block" data-parallax='{"y": -200, "smoothness": 30}' src="assets/img/shape/categori-2-2.png" alt=""> -->
+      <!-- <img class="it-categories-shape-1 mt-80" src="{{ asset('assets/img/bg-explore.png') }}" alt=""> -->
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
-                <div class="it-categories-section-title-box text-center mb-35">
-                  <span class="it-section-subtitle">Categories</span>
+                <div class="it-categories-section-title-box text-center mb-65">
+                  <span class="it-section-subtitle">categories</span>
                   <h4 class="it-section-title">Explore Top Courses <span class="z-index-1">Categories
                      <span class="it-title-shape">
                         <svg width="205" height="20" viewBox="0 0 205 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -671,7 +809,7 @@
             </div>
          </div>
          <div class="it-categories-wrap">
-            <div class="row gx-0 row-cols-xxl-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-sm-2 row-cols-1">
+            <div class="row gx-0 row-cols-xxl-3 row-cols-xl-3 row-cols-lg-3 row-cols-md-3 row-cols-sm-1 row-cols-1">
                <div class="col">
                   <div class="it-categories-item item-style-1 text-center">
                      <span>
@@ -684,7 +822,7 @@
                            <path d="M31.7209 10.3313H70.8113C71.2237 10.3313 71.6192 10.1675 71.9108 9.87592C72.2024 9.58432 72.3662 9.18882 72.3662 8.77643C72.3662 8.36405 72.2024 7.96855 71.9108 7.67695C71.6192 7.38535 71.2237 7.22153 70.8113 7.22153H31.7209C31.3085 7.22153 30.913 7.38535 30.6214 7.67695C30.3298 7.96855 30.166 8.36405 30.166 8.77643C30.166 9.18882 30.3298 9.58432 30.6214 9.87592C30.913 10.1675 31.3085 10.3313 31.7209 10.3313Z" fill="currentcolor" />
                         </svg>
                      </span>
-                     <h6 class="mb-0">Business Management</h6>
+                     <h6 class="mb-0">Academic & School Program</h6>
                   </div>
                </div>
                <div class="col">
@@ -706,7 +844,7 @@
                            </defs>
                         </svg>
                      </span>
-                     <h6 class="mb-0">Arts & Design</h6>
+                     <h6 class="mb-0">Qur'an & Islamic Studies Program</h6>
                   </div>
                </div>
                <div class="col">
@@ -730,7 +868,7 @@
                         </defs>
                      </svg>
                      </span>
-                     <h6 class="mb-0">Personal Development</h6>
+                     <h6 class="mb-0">Language & Skill Program</h6>
                   </div>
                </div>
             </div>
@@ -738,6 +876,7 @@
       </div>
    </section> 
    <!-- categories-area-end -->
+
 
    <!-- course-area-start -->
    <section class="it-course-area it-course-style-2 z-index-1 gray-bg pt-130 pb-130">
