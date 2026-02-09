@@ -25,7 +25,7 @@
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
                            </svg>
                         </span>
-                        <span>Jobs</span>
+                        <span>Programs</span>
                      </div>
                   </div>
                </div>
@@ -35,50 +35,68 @@
    </div>      
    <!-- breadcrumb-area-end -->
 
-<!-- career-area-start -->
-   <div class="it-career-area pt-130 pb-95">
+      <!-- course-area-start -->
+   <section class="it-course-area it-course-style-2 z-index-1 pt-130 pb-95">
       <div class="container">
-         <div class="row gx-35">
-            @forelse($programs as $program)
-            <div class="col-xxl-4 col-xl-6 col-lg-6 col-md-12 wow itfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-               <div class="it-career-item mb-35">
-                  <span>{{ $program->category }}</span>
-                  <h4 class="title">{{ $program->name }}</h4>
-                  <div class="it-career-meta">
-                     <span>{{ $program->mode }}</span>
-                     <span>{{ $program->level }}</span>
-                  </div>
-                  <div class="d-sm-flex align-items-center justify-content-between">
-                     <span class="it-career-price">Rp {{ number_format($program->price, 0, ',', '.') }} / {{ str_replace('Per ', '', $program->price_period) }}</span>
-                     <a href="{{ route('detailprogram.show', $program) }}" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">See Details</span>
-                           <span class="text-2">See Details</span>
-                        </span>
-                        <i>
-                           <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M14.6364 7.26396C14.9879 6.91249 14.9879 6.34264 14.6364 5.99117L8.90883 0.263603C8.55736 -0.0878692 7.98751 -0.0878692 7.63604 0.263603C7.28457 0.615075 7.28457 1.18492 7.63604 1.53639L12.7272 6.62756L7.63604 11.7187C7.28457 12.0702 7.28457 12.6401 7.63604 12.9915C7.98751 13.343 8.55736 13.343 8.90883 12.9915L14.6364 7.26396ZM0 6.62756V7.52756H14V6.62756V5.72756H0V6.62756Z" fill="#1F2432" />
-                           </svg>
-                        </i>
-                     </a>
+         <div class="it-course-tab-content mb-45">
+            <div class="tab-content" id="myTabContent">
+               <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
+                  <div class="row gx-35">
+                     @forelse($programs as $program)
+                     <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="it-course-item mb-35">
+                           <div class="row gx-0">
+                              <div class="col-xl-5 col-lg-12 col-md-12 col-sm-5">
+                                 <div class="it-course-thumb z-index-1 border-radius-20">
+                                    <a href="{{ route('detailprogram.show', $program->id) }}">
+                                       <img class="w-100" src="{{ $program->image }}" alt="{{ $program->name }}" style="height: 200px; object-fit: cover;">
+                                    </a>
+                                 </div>                                 
+                              </div>
+                              <div class="col-xl-7 col-lg-12 col-md-12 col-sm-7">
+                                 <div class="it-course-content p-relative">
+                                    <div class="d-flex justify-content-between align-items-center mb-20">
+                                       <div class="it-course-author">
+                                          <span>{{ $program->category }}</span>
+                                       </div>
+                                    </div>
+                                    <h5 class="it-course-title mb-20">
+                                       <a class="border-line" href="{{ route('detailprogram.show', $program->id) }}">
+                                          {{ $program->name }}
+                                       </a>
+                                    </h5>
+                                    <div class="it-course-rating mb-10">
+                                       <div>
+                                          <span>{{ $program->mode }}</span>
+                                       </div>
+                                    </div>
+                                    <div class="it-course-meta d-flex justify-content-between">
+                                       <span>
+                                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM6.66667 17.6367V17.5C6.66667 15.6617 8.16167 14.1667 10 14.1667C11.8383 14.1667 13.3333 15.6617 13.3333 17.5V17.6367C12.3117 18.0842 11.185 18.3333 10 18.3333C8.815 18.3333 7.68833 18.0842 6.66667 17.6367ZM14.9375 16.7092C14.5575 14.3267 12.4883 12.5 10 12.5C7.51167 12.5 5.44333 14.3267 5.0625 16.7092C3.00417 15.19 1.66667 12.7483 1.66667 10C1.66667 5.405 5.405 1.66667 10 1.66667C14.595 1.66667 18.3333 5.405 18.3333 10C18.3333 12.7483 16.9958 15.19 14.9375 16.7092ZM10 4.16667C8.16167 4.16667 6.66667 5.66167 6.66667 7.5C6.66667 9.33833 8.16167 10.8333 10 10.8333C11.8383 10.8333 13.3333 9.33833 13.3333 7.5C13.3333 5.66167 11.8383 4.16667 10 4.16667ZM10 9.16667C9.08083 9.16667 8.33333 8.41917 8.33333 7.5C8.33333 6.58083 9.08083 5.83333 10 5.83333C10.9192 5.83333 11.6667 6.58083 11.6667 7.5C11.6667 8.41917 10.9192 9.16667 10 9.16667Z" fill="#6C757D" />
+                                          </svg>
+                                          {{ $program->level }}
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     @empty
+                     <div class="col-12">
+                        <div class="text-center py-5">
+                           <p>No programs available at the moment.</p>
+                        </div>
+                     </div>
+                     @endforelse
                   </div>
                </div>
             </div>
-            @empty
-            <div class="col-12">
-               <div class="text-center py-5">
-                  <div style="font-size: 64px; color: #e5e7eb; margin-bottom: 20px;">
-                     <i class="fa fa-inbox"></i>
-                  </div>
-                  <h4 class="text-muted">Belum Ada Program</h4>
-                  <p class="text-muted">Program akan segera ditambahkan. Silakan cek kembali nanti.</p>
-               </div>
-            </div>
-            @endforelse
          </div>
       </div>
-   </div>
-   <!-- career-area-end -->
+   </section> 
+   <!-- course-area-end -->
 
    <!-- newsletter-area-start -->
  <div class="it-newsletter-area">

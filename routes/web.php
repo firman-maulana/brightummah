@@ -6,8 +6,9 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\HomeController;
 
-Route::get('/', fn() => view('pages.home'))->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::resource('programs', ProgramController::class)->only(['index']);
 Route::get('/about', fn() => view('pages.about'))->name('about');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');

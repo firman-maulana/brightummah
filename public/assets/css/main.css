@@ -16296,7 +16296,6 @@ input[type=radio] {
 }
 .it-course-meta span:first-child {
   padding-right: 60px;
-  border-right: 1px solid var(--it-text-body);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .it-course-meta span:first-child {
@@ -18163,17 +18162,6 @@ input[type=radio] {
   height: 100%;
   width: 100%;
   border-radius: 20px;
-  background-color: rgba(31, 36, 50, 0.4);
-  -webkit-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
-  -ms-transform: perspective(400px) rotateX(90deg) scaleY(0.5);
-  transform: perspective(400px) rotateX(90deg) scaleY(0.5);
-  -webkit-transform-origin: center;
-  -ms-transform-origin: center;
-  transform-origin: center;
-  transition-delay: 0.3s;
-  transition-timing-function: ease-in-out;
-  transition: 0.6s;
-  transition-property: all;
 }
 .it-team-social {
   position: absolute;
