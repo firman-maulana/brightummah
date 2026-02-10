@@ -46,7 +46,7 @@
                   </div>
                   <div class="it-hero-btn wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".7s">
-                     <a href="courses-with-filter.html" class="it-btn-yellow theme-bg mr-25">
+                     <a href="{{ route('programs.index') }}" class="it-btn-yellow theme-bg mr-25">
                         <span>
                            <span class="text-1">Find Courses</span>
                            <span class="text-2">Find Courses</span>

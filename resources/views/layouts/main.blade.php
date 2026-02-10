@@ -46,7 +46,7 @@
    <!-- pre loader area end -->
 
    <a 
-   href="https://wa.me/6281292458877"
+   href="https://wa.me/62895378059606"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat WhatsApp"
