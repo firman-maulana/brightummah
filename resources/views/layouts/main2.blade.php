@@ -81,16 +81,16 @@
             <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam.</p>
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
-         <div class="itoffcanvas__auth d-xl-none">
-    <ul class="mobile-auth-menu">
-        <li>
-            <a href="{{ route('login') }}" class="btn-login">Login</a>
-        </li>
-        <li>
-            <a href="{{ route('register') }}" class="btn-register">Register</a>
-        </li>
-    </ul>
-</div>
+         <!-- <div class="itoffcanvas__auth d-xl-none">
+            <ul class="mobile-auth-menu">
+               <li>
+                  <a href="{{ route('login') }}" class="btn-login">Login</a>
+               </li>
+               <li>
+                  <a href="{{ route('register') }}" class="btn-register">Register</a>
+               </li>
+            </ul>
+         </div> -->
          <div class="itoffcanvas__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
@@ -113,8 +113,8 @@
    <!-- footer-area-start -->
    <section class="it-footer-wrap it-footer-style-3 fix">
       <div class="it-footer-area z-index-1 pt-200 pb-50" data-background="{{ asset('assets/img/bgprimary.jpeg') }}">
-         <img class="it-footer-shape-1" src="{{ asset('assets/img/footer-1-1.png') }}" alt="">
-         <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/blog-1-1.png') }}" alt="">
+         <!-- <img class="it-footer-shape-1" src="{{ asset('assets/img/footer-1-1.png') }}" alt=""> -->
+         <!-- <img class="it-footer-shape-2" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/blog-1-1.png') }}" alt=""> -->
          <div class="it-footer-border"><span></span></div>
          <div class="container">
             <div class="row">
@@ -122,23 +122,10 @@
                   data-wow-delay=".3s">
                   <div class="it-footer-widget it-footer-col-1-1">
                      <div class="it-footer-widget-logo mb-30">
-                        <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" alt=""></a>
+                        <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" style="height:90px;" alt=""></a>
                      </div>
                      <div class="it-footer-widget-text">
                         <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam.</p>
-                     </div>
-                     <div class="it-footer-widget-btn">
-                        <a href="{{ route('contact') }}" class="it-btn-yellow theme-bg border-radius-100">
-                           <span>
-                              <span class="text-1">Contact Us</span>
-                              <span class="text-2">Contact Us</span>
-                           </span>
-                           <i>
-                              <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="M15.0544 8.1364C15.4058 7.78492 15.4058 7.21508 15.0544 6.8636L9.3268 1.13604C8.97533 0.784567 8.40548 0.784567 8.05401 1.13604C7.70254 1.48751 7.70254 2.05736 8.05401 2.40883L13.1452 7.5L8.05401 12.5912C7.70254 12.9426 7.70254 13.5125 8.05401 13.864C8.40548 14.2154 8.97533 14.2154 9.3268 13.864L15.0544 8.1364ZM0.417969 7.5V8.4H14.418V7.5V6.6H0.417969V7.5Z" fill="currentcolor" />
-                              </svg>
-                           </i>
-                        </a>
                      </div>
                   </div>
                </div>
@@ -160,7 +147,7 @@
                      <div class="it-footer-widget-menu">
                         <ul>
                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                           <li><a href="{{ route('programs.index') }}">Programs</a></li>
+                           <li><a href="{{ route('programs.index') }}">Courses</a></li>
                         </ul>
                      </div>
                   </div>
@@ -217,7 +204,7 @@
             <div class="row align-items-center">
                <div class="col-12">
                   <div class="it-copyright-left style-2 text-center">
-                     <p class="mb-0">Copyright © 2025 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
+                     <p class="mb-0">Copyright © 2026 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
                   </div>
                </div>
             </div>

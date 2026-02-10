@@ -86,7 +86,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
-                  <a href="mailto:info@brightummah.com">info@brightummah.com</a>
+                  <a href="mailto:info@brightummah.com">brightummah@gmail.com</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -104,7 +104,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Alamat</span>
-                  <a href="#">Jakarta, Indonesia</a>
+                  <a href="#">Surabaya, Indonesia</a>
                </div>
             </div>
          </div>
@@ -166,9 +166,8 @@
                      <h4 class="it-footer-widget-title">Program Kami</h4>
                      <div class="it-footer-widget-menu">
                         <ul>
-                           <li><a href="#">SD Islam</a></li>
-                           <li><a href="#">SMP Islam</a></li>
-                           <li><a href="#">SMA Islam</a></li>
+                           <li><a href="#">PAUD</a></li>
+                           <li><a href="#">SD</a></li>
                            <li><a href="#">Tahfidz Quran</a></li>
                            <li><a href="#">Bimbingan Belajar</a></li>
                         </ul>
@@ -198,8 +197,8 @@
                         <div class="it-footer-widget-contact mb-25">
                            <ul>
                               <li><span>Telepon:</span><a href="tel:+6281234567890">+62 812 3456 7890</a></li>
-                              <li><span>Email:</span><a href="mailto:info@brightummah.com">info@brightummah.com</a></li>
-                              <li><span>Lokasi:</span><a href="#">Jakarta, Indonesia</a></li>
+                              <li><span>Email:</span><a href="mailto:info@brightummah.com">brightummah@gmail.com</a></li>
+                              <li><span>Lokasi:</span><a href="#">Surabaya, Indonesia</a></li>
                            </ul>
                         </div>
                         <div class="it-footer-widget-social">
@@ -231,7 +230,7 @@
             <div class="row align-items-center">
                <div class="col-12">
                   <div class="it-copyright-left text-center">
-                     <p class="mb-0">Copyright © 2025 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
+                     <p class="mb-0">Copyright © 2026 <a href="#">Bright Ummah Academy</a> All Rights Reserved</p>
                   </div>
                </div>
             </div>
