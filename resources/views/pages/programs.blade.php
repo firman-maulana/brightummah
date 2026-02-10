@@ -38,6 +38,206 @@
       <!-- course-area-start -->
    <section class="it-course-area it-course-style-2 z-index-1 pt-130">
       <div class="container">
+         <div class="p-relative">
+            <div class="row">
+               <div class="col-xl-6 col-lg-7">
+                  <div class="it-course-filter-top-right d-flex align-items-center">
+                     <div class="it-course-filter-result">
+                        <span>We Found <b>25</b> Courses Available For you</span>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-5">
+                  <div class="it-course-filter-top-right d-flex justify-content-lg-end align-items-center">
+                     <div class="it-course-filter-search p-relative">
+                        <form action="#">
+                           <input type="text" placeholder="Search keywords">
+                           <button class="icon" type="submit">
+                              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="M17.0287 15.9398L13.7295 12.6593C14.6152 11.4885 15.087 9.90002 15.1238 7.91252C15.045 3.34127 12.4935 0.807771 7.93275 0.777771C3.31725 0.807021 0.75 3.48677 0.75 7.91177C0.75 12.558 3.3195 15.0458 7.94175 15.0728C9.9135 15.0608 11.496 14.6033 12.669 13.719L15.9713 17.0033C16.3597 17.3723 16.8195 17.2215 17.0317 17.0003C17.319 16.7018 17.3228 16.2315 17.0287 15.9398ZM2.25 7.92527C2.32275 4.14902 4.18425 2.30102 7.932 2.27777C11.6438 2.30177 13.5593 4.20602 13.6238 7.91177C13.5533 11.7518 11.745 13.5503 7.94175 13.5728C4.134 13.5503 2.325 11.7563 2.25 7.92527Z" fill="#03594E" />
+                              </svg>
+                           </button>
+                        </form>
+                     </div>
+                     <div class="it-course-filter-button">
+                        <span>
+                           <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0.65625 3.48016H11.3414C11.6361 4.67101 12.7133 5.55666 13.994 5.55666C15.2746 5.55666 16.3518 4.67101 16.6466 3.48016H20.3438C20.7062 3.48016 21 3.18633 21 2.82391C21 2.4615 20.7062 2.16766 20.3438 2.16766H16.6465C16.3518 0.976817 15.2746 0.0911255 13.9939 0.0911255C12.7132 0.0911255 11.636 0.976817 11.3413 2.16766H0.65625C0.293836 2.16766 0 2.4615 0 2.82391C0 3.18633 0.293836 3.48016 0.65625 3.48016ZM13.994 1.40363C14.7771 1.40363 15.4142 2.04076 15.4142 2.82387C15.4142 3.60703 14.7771 4.24416 13.994 4.24416C13.2108 4.24416 12.5737 3.60703 12.5737 2.82387C12.5737 2.04076 13.2108 1.40363 13.994 1.40363ZM0.65625 9.15623H4.35348C4.64822 10.3471 5.72541 11.2327 7.00608 11.2327C8.28676 11.2327 9.36395 10.3471 9.65869 9.15623H20.3438C20.7062 9.15623 21 8.8624 21 8.49998C21 8.13757 20.7062 7.84373 20.3438 7.84373H9.65865C9.36391 6.65289 8.28671 5.7672 7.00604 5.7672C5.72537 5.7672 4.64818 6.65289 4.35344 7.84373H0.65625C0.293836 7.84373 0 8.13757 0 8.49998C0 8.8624 0.293795 9.15623 0.65625 9.15623ZM7.00604 7.0797C7.7892 7.0797 8.42633 7.71683 8.42633 8.49998C8.42633 9.2831 7.7892 9.92023 7.00604 9.92023C6.22289 9.92023 5.58575 9.2831 5.58575 8.49998C5.58575 7.71683 6.22289 7.0797 7.00604 7.0797ZM20.3438 13.5198H16.6465C16.3518 12.329 15.2746 11.4433 13.9939 11.4433C12.7132 11.4433 11.6361 12.329 11.3413 13.5198H0.65625C0.293836 13.5198 0 13.8136 0 14.1761C0 14.5385 0.293836 14.8323 0.65625 14.8323H11.3414C11.6361 16.0232 12.7133 16.9088 13.994 16.9088C15.2746 16.9088 16.3518 16.0232 16.6466 14.8323H20.3438C20.7062 14.8323 21 14.5385 21 14.1761C21 13.8136 20.7062 13.5198 20.3438 13.5198ZM13.994 15.5963C13.2108 15.5963 12.5737 14.9592 12.5737 14.1761C12.5737 13.3929 13.2108 12.7558 13.994 12.7558C14.7771 12.7558 15.4142 13.3929 15.4142 14.1761C15.4142 14.9592 14.7771 15.5963 13.994 15.5963Z" fill="#1F2432" />
+                           </svg>
+                        </span>
+                        Filter
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="it-course-filter-dropdown-area it-course-filter-dropdown-wrapper">
+               <div class="row mb-25 gx-0">
+                  <div class="col-12">
+                     <div class="d-flex-wrap d-md-flex">
+                        <div class="filter-group sort-group mr-20">
+                           <h4 class="filter-title">Sort by</h4>
+                           <div class="sort-options">
+                              <label>
+                                 <input type="checkbox" name="sort" value="latest">
+                                 <span>Latest</span>
+                              </label>
+                              <label class="sort-option">
+                                 <input type="checkbox" name="sort" value="trending">
+                                 <span>Trending</span>
+                              </label>
+
+                              <label class="sort-option">
+                                 <input type="checkbox" name="sort" value="popularity">
+                                 <span>Popularity</span>
+                              </label>
+
+                              <label class="sort-option">
+                                 <input type="checkbox" name="sort" value="price-low-high">
+                                 <span>Price: Low to High</span>
+                              </label>
+
+                              <label class="sort-option">
+                                 <input type="checkbox" name="sort" value="price-high-low">
+                                 <span>Price: High to Low</span>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="filter-group language-group">
+                           <h4 class="filter-title">Language</h4>
+                           <div class="filter-tags sort-options">
+                              <label class="language-option">
+                                 <input type="checkbox" name="language" value="english">
+                                 <span>🇬🇧 English <i class="count">(21)</i></span>
+                              </label>
+
+                              <label class="language-option">
+                                 <input type="checkbox" name="language" value="russian">
+                                 <span>🇷🇺 Russian <i class="count">(1)</i></span>
+                              </label>
+
+                              <label class="language-option">
+                                 <input type="checkbox" name="language" value="german">
+                                 <span>🇩🇪 German <i class="count">(5)</i></span>
+                              </label>
+
+                              <label class="language-option">
+                                 <input type="checkbox" name="language" value="italian">
+                                 <span>🇮🇹 Italian <i class="count">(6)</i></span>
+                              </label>
+                           </div>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="row mb-25">
+                  <div class="col-12">
+                     <div class="filter-group categories-group">
+                        <h4 class="filter-title">Categories</h4>
+                        <div class="filter-tags sort-options">
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="design">
+                              <span>Design <i class="count">(9)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="business">
+                              <span>Business <i class="count">(12)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="development">
+                              <span>Development <i class="count">(10)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="music">
+                              <span>Music <i class="count">(8)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="marketing">
+                              <span>Marketing <i class="count">(8)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="data-science">
+                              <span>Data Science <i class="count">(8)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="lifestyle">
+                              <span>Lifestyle <i class="count">(9)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="development-2">
+                              <span>Development <i class="count">(10)</i></span>
+                           </label>
+
+                           <label class="category-option">
+                              <input type="checkbox" name="category" value="business-2">
+                              <span>Business <i class="count">(12)</i></span>
+                           </label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row gx-0">
+                  <div class="col-12">
+                     <div class="d-flex-wrap d-md-flex">
+                        <div class="filter-group price-group">
+                           <h4 class="filter-title">Price</h4>
+                           <div class="filter-tags sort-options">
+                              <label class="price-option">
+                                 <input type="checkbox" name="price" value="all">
+                                 <span>All <i class="count">(20)</i></span>
+                              </label>
+
+                              <label class="price-option">
+                                 <input type="checkbox" name="price" value="free">
+                                 <span>Free <i class="count">(2)</i></span>
+                              </label>
+
+                              <label class="price-option">
+                                 <input type="checkbox" name="price" value="paid">
+                                 <span>Paid <i class="count">(18)</i></span>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="filter-group instructors-group">
+                           <h4 class="filter-title">Instructors</h4>
+                           <div class="filter-tags sort-options">
+                              <label class="instructor-option">
+                                 <input type="checkbox" name="instructor" value="madison-clark">
+                                 <span>Madison Clark <i class="count">(9)</i></span>
+                              </label>
+
+                              <label class="instructor-option">
+                                 <input type="checkbox" name="instructor" value="emilee-logand">
+                                 <span>Emilee Logand <i class="count">(6)</i></span>
+                              </label>
+
+                              <label class="instructor-option">
+                                 <input type="checkbox" name="instructor" value="michael-johnson">
+                                 <span>Michael Johnson <i class="count">(7)</i></span>
+                              </label>
+
+                              <label class="instructor-option">
+                                 <input type="checkbox" name="instructor" value="james-anderson">
+                                 <span>James Anderson <i class="count">(8)</i></span>
+                              </label>
+
+                              <label class="instructor-option">
+                                 <input type="checkbox" name="instructor" value="benjamin-miller">
+                                 <span>Benjamin Miller <i class="count">(9)</i></span>
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
          <div class="it-course-tab-content mb-45">
             <div class="tab-content" id="myTabContent">
                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
@@ -135,5 +335,14 @@
       </div>
    </section>
    <!-- cta-area-end -->
+
+   <script>
+$(document).ready(function() {
+    $('.it-course-filter-button').on('click', function() {
+        $('.it-course-filter-dropdown-area').slideToggle(300);
+        $(this).toggleClass('active');
+    });
+});
+</script>
 
 @endsection
