@@ -109,15 +109,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Add Users button -->
-                            <button class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a">
-                                <svg class="cbm9w cbmv0 coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                    <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
-                                </svg>
-                                <span class="cyga5">Add Users</span>
-                            </button>                            
-                            
                         </div>
 
                     </div>
