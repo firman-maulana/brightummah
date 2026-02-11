@@ -154,7 +154,7 @@
    <!-- funfact-area-end -->
 
    <!-- about-area-start -->
-   <section class="it-about-area scene z-index-1 pt-130 pb-130" id="about">
+   <section class="it-about-area scene z-index-1 pt-130 pb-95" id="about">
    <img class="it-about-shape-2" src="assets/img/about-1-2.png" alt="">
       <div class="container">
          <div class="row align-items-center">
@@ -241,7 +241,7 @@
    <!-- about-area-end -->
 
    <!-- visi misi-area-start -->
-<div class="it-faq-area it-faq-inner-style it-faq-style-2 pb-95" id="visimisi">
+<div class="it-faq-area it-faq-inner-style it-faq-style-2 pt-130 pb-95" id="visimisi">
       <div class="container">
          <div class="row">
             <div class="col-12">
@@ -378,7 +378,7 @@
    <!-- visi misi -area-end -->
 
       <!-- choose-area-start -->
-   <section class="it-choose-2-area z-index-1 pb-95" id="whychoose">
+   <section class="it-choose-2-area z-index-1 pt-130 pb-95" id="whychoose">
       <img class="it-choose-2-shape-1" src="assets/img/shape/choose-5-1.png" alt="">
       <div class="container">
          <div class="row">
@@ -651,7 +651,7 @@
    <!-- choose-area-end -->
 
       <!-- learning-system-area-start -->
-   <section class="it-price-area it-price-inner-style z-index-1 pb-95" id="learningsystem">
+   <section class="it-price-area it-price-inner-style z-index-1 pt-130 pb-95" id="learningsystem">
       <div class="container">
          <div class="row">
             <div class="col-12">
@@ -790,7 +790,7 @@
    <!-- learning-system-area-end -->
 
 <!-- categories-area-start -->
-   <section class="it-categories-area it-categories-style-2 z-index-1 pb-95" id="categories">
+   <section class="it-categories-area it-categories-style-2 z-index-1 pt-130 pb-95" id="categories">
       <!-- <img class="it-categories-shape-1 mt-80" src="{{ asset('assets/img/bg-explore.png') }}" alt=""> -->
       <div class="container">
          <div class="row align-items-center">
@@ -1508,7 +1508,7 @@
    <!-- testimonial-area-end -->
 
       <!-- contact-area-start -->
-   <div class="it-contact-3-area it-contact-3-style-2 pb-95" id="contact">
+   <div class="it-contact-3-area it-contact-3-style-2 pt-130 pb-95" id="contact">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 order-1 order-lg-0">
