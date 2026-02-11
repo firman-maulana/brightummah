@@ -240,7 +240,7 @@
          <div class="it-cta-4-wrap theme-bg z-index-1">
             <img class="it-cta-4-shape-1" src="assets/img/newsletter-5-1.png" alt="">
             <div class="it-cta-4-thumb">
-               <img src="assets/img/cta-5-1.png" alt="">
+               <img src="{{ asset('assets/img/cta-5-1.png') }}" alt="">
             </div>
             <div class="row">
                <div class="col-xl-6">
