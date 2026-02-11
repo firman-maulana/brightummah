@@ -58,7 +58,7 @@
                                     <li><a href="#whychoose">Why Choose BUA</a></li>
                                     <li><a href="#learningsystem">Learning System</a></li>
                                     <li><a href="#categories">Categories</a></li>
-                                    <li><a href="#courses">Courses</a></li>
+                                    <li><a href="#courses">Latest Courses</a></li>
                                     <li><a href="#teacher">Teachers</a></li>
                                     <li><a href="#articles">Articles</a></li>
                                     <li><a href="#testimonial">Testimonial</a></li>
@@ -69,7 +69,7 @@
                               <a href="{{ route('programs.index') }}">Courses</a>
                            </li>
                            <li>
-                              <a href="{{ route('programs.index') }}">Value Based Routine</a>
+                              <a href="{{ route('valuebasedroutine') }}">Value Based Routine</a>
                            </li>
                         </ul>
                      </nav>

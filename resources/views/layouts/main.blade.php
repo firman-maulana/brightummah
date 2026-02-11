@@ -75,7 +75,6 @@
       </div>
    </form>
 </div>
-
    <!-- search popup end -->
 
    <!-- it-offcanvus-area-start -->

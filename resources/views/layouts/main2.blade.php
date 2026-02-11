@@ -56,14 +56,24 @@
 
    <!-- search popup start -->
    <div class="search-popup">
-        <button class="close-search"><span class="flaticon-multiply"><i class="fal fa-times"></i></span></button>
-        <form method="post" action="#">
-            <div class="form-group">
-                <input type="search" name="search-field" value="" placeholder="Cari di sini" required="">
-                <button type="submit"><i class="fal fa-search"></i></button>
-            </div>
-        </form>
-   </div>
+   <button class="close-search" type="button" aria-label="Tutup pencarian">
+      <i class="fa-solid fa-xmark"></i>
+   </button>
+
+   <form method="post" action="#">
+      <div class="form-group">
+         <input
+            type="search"
+            name="search-field"
+            placeholder="Cari di sini"
+            required
+         >
+         <button type="submit" aria-label="Cari">
+            <i class="fa-solid fa-magnifying-glass"></i>
+         </button>
+      </div>
+   </form>
+</div>
    <!-- search popup end -->
 
    <!-- it-offcanvus-area-start -->
