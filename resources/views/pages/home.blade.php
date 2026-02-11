@@ -154,7 +154,7 @@
    <!-- funfact-area-end -->
 
    <!-- about-area-start -->
-   <section class="it-about-area scene z-index-1 pt-130 pb-130">
+   <section class="it-about-area scene z-index-1 pt-130 pb-130" id="about">
    <img class="it-about-shape-2" src="assets/img/about-1-2.png" alt="">
       <div class="container">
          <div class="row align-items-center">
@@ -241,7 +241,7 @@
    <!-- about-area-end -->
 
    <!-- visi misi-area-start -->
-<div class="it-faq-area it-faq-inner-style it-faq-style-2 pb-95">
+<div class="it-faq-area it-faq-inner-style it-faq-style-2 pb-95" id="visimisi">
       <div class="container">
          <div class="row">
             <div class="col-12">
@@ -378,7 +378,7 @@
    <!-- visi misi -area-end -->
 
       <!-- choose-area-start -->
-   <section class="it-choose-2-area z-index-1 pb-95">
+   <section class="it-choose-2-area z-index-1 pb-95" id="whychoose">
       <img class="it-choose-2-shape-1" src="assets/img/shape/choose-5-1.png" alt="">
       <div class="container">
          <div class="row">
@@ -651,7 +651,7 @@
    <!-- choose-area-end -->
 
       <!-- learning-system-area-start -->
-   <section class="it-price-area it-price-inner-style z-index-1 pb-95">
+   <section class="it-price-area it-price-inner-style z-index-1 pb-95" id="learningsystem">
       <div class="container">
          <div class="row">
             <div class="col-12">
@@ -790,7 +790,7 @@
    <!-- learning-system-area-end -->
 
 <!-- categories-area-start -->
-   <section class="it-categories-area it-categories-style-2 z-index-1 pb-95">
+   <section class="it-categories-area it-categories-style-2 z-index-1 pb-95" id="categories">
       <!-- <img class="it-categories-shape-1 mt-80" src="{{ asset('assets/img/bg-explore.png') }}" alt=""> -->
       <div class="container">
          <div class="row align-items-center">
@@ -878,7 +878,7 @@
    <!-- categories-area-end -->
 
    <!-- course-area-start -->
-   <section class="it-course-area it-course-style-2 z-index-1 gray-bg pt-130 pb-130">
+   <section class="it-course-area it-course-style-2 z-index-1 gray-bg pt-130 pb-130" id="courses">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
@@ -973,7 +973,7 @@
    <!-- course-area-end -->
 
    <!-- team-area-start -->
-   <section class="it-team-area it-team-style-2 fix z-index-1 pt-130 pb-130">
+   <section class="it-team-area it-team-style-2 fix z-index-1 pt-130 pb-130" id="teacher">
       <img class="it-team-shape-3" src="{{ asset('assets/img/bg-team.png') }}" alt="">
       <!-- <img class="it-team-shape-7" data-parallax='{"y": -200, "smoothness": 30}' src="{{ asset('assets/img/about-1-1.png') }}" alt=""> -->
       <div class="container">
@@ -1090,7 +1090,7 @@
    <!-- team-area-end -->
 
    <!-- blog-area-start -->
-   <section class="it-blog-area it-blog-style-2 white-bg z-index-1 pt-130 pb-95">
+   <section class="it-blog-area it-blog-style-2 white-bg z-index-1 pt-130 pb-95" id="articles">
       <!-- <img class="it-blog-shape-1 d-none d-lg-block" src="{{ asset('assets/img/blog-1-1.png') }}" alt=""> -->
       <!-- <img class="it-blog-shape-2 d-none d-lg-block" data-parallax='{"x": 200, "smoothness": 30}' src="{{ asset('assets/img/blog-1-2.png') }}" alt=""> -->
       <div class="container">
@@ -1272,7 +1272,7 @@
    <!-- blog-area-end -->
 
       <!-- testimonial-area-start -->
-   <section class="it-testimonial-area z-index-1 pt-130 pb-95">
+   <section class="it-testimonial-area z-index-1 pt-130 pb-95" id="testimonial">
       <img class="it-testimonial-shape-3" src="assets/img/testimonial-1-1.png" alt="">
       <div class="container">
          <div class="row">
@@ -1508,7 +1508,7 @@
    <!-- testimonial-area-end -->
 
       <!-- contact-area-start -->
-   <div class="it-contact-3-area it-contact-3-style-2 pb-95">
+   <div class="it-contact-3-area it-contact-3-style-2 pb-95" id="contact">
       <div class="container">
          <div class="row">
             <div class="col-lg-6 order-1 order-lg-0">
@@ -1676,7 +1676,7 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="{{ route('login') }}" class="it-btn-yellow white-bg">
+                     <a href="https://wa.me/62895378059606" class="it-btn-yellow white-bg">
                         <span>
                            <span class="text-1">Start Learning Now</span>
                            <span class="text-2">Start Learning Now</span>
