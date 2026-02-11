@@ -128,16 +128,16 @@
                                 <li class="has-dropdown">
                                  <a href="{{ route('home') }}">Home</a>
                                  <ul class="it-submenu submenu">
-                                    <li><a href="contact-us.html">About</a></li>
-                                    <li><a href="contact-me.html">Vission & Mission</a></li>
-                                    <li><a href="contact-me.html">Why Choose BUA</a></li>
-                                    <li><a href="contact-me.html">Learning System</a></li>
-                                    <li><a href="contact-me.html">Categories</a></li>
-                                    <li><a href="contact-me.html">Courses</a></li>
-                                    <li><a href="contact-me.html">Teachers</a></li>
-                                    <li><a href="contact-me.html">Articles</a></li>
-                                    <li><a href="contact-me.html">Testimonial</a></li>
-                                    <li><a href="contact-me.html">Contact</a></li>
+                                    <li><a href="{{ route('home') }}#about">About</a></li>
+                                    <li><a href="{{ route('home') }}#visimisi">Vission & Mission</a></li>
+                                    <li><a href="{{ route('home') }}#whychoose">Why Choose BUA</a></li>
+                                    <li><a href="{{ route('home') }}#learningsystem">Learning System</a></li>
+                                    <li><a href="{{ route('home') }}#categories">Categories</a></li>
+                                    <li><a href="{{ route('home') }}#courses">Courses</a></li>
+                                    <li><a href="{{ route('home') }}#teacher">Teachers</a></li>
+                                    <li><a href="{{ route('home') }}#articles">Articles</a></li>
+                                    <li><a href="{{ route('home') }}#testimonial">Testimonial</a></li>
+                                    <li><a href="{{ route('home') }}#contact">Contact</a></li>
                                  </ul>
                               </li>
                                 <li>
