@@ -17224,8 +17224,7 @@ input[type=radio] {
   transform: translateY(-50%);
 }
 .it-course-filter-result {
-  margin-left: 25px;
-  margin-bottom: 30px;
+  line-height: 40px;
 }
 @media (max-width: 767px) {
   .it-course-filter-result {
@@ -17234,7 +17233,7 @@ input[type=radio] {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .it-course-filter-result {
-    margin-left: 25px;
+    line-height: 40px;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
