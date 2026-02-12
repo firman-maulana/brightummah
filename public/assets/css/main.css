@@ -26040,3 +26040,15 @@ input[type=radio] {
 .capitalize-input::placeholder {
   text-transform: none;
 }
+
+.it-details-list .sub-list {
+   list-style: none;
+   padding-left: 30px;
+   margin-top: 8px;
+}
+
+.it-details-list .sub-list li {
+   position: relative;
+   padding-left: 0;
+   color: var(--it-common-black);
+}

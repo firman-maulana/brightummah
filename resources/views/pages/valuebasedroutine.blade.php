@@ -21,7 +21,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -45,8 +45,8 @@
                <div class="it-policy-content">
                   <div class="postbox-dsc mb-55">
                      <p class="mb-10">Di BUA Bright Ummah Academy, kami percaya bahwa pendidikan tidak hanya soal akademik, tetapi juga tentang pembentukan karakter yang kuat. Oleh karena itu, setiap sesi pembelajaran dimulai dengan Value-Based Routine yang dirancang untuk menanamkan nilai-nilai positif kepada siswa.</p>
-                     <span>Durasi: ±15 menit di setiap awal pertemuan</span>
-                     <span>Tujuan: Membangun kebiasaan refleksi diri, kesadaran spiritual, dan karakter positif yang menjadi fondasi kesuksesan jangka panjang</span>
+                     <p class="mb-2">Durasi: ±15 menit di setiap awal pertemuan</p>
+                     <p class="mb-2">Tujuan: Membangun kebiasaan refleksi diri, kesadaran spiritual, dan karakter positif yang menjadi fondasi kesuksesan jangka panjang</p>
                     </div>
                   <h4 class="it-details-title-sm mb-20">General Program: Refleksi Diri & Mindfulness</h4>
                   <div class="it-details-list mb-60">
@@ -56,7 +56,7 @@
                               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                           Personal Information: Name, email address, contact details.
+                           Refleksi Diri: Mengevaluasi perjalanan belajar, perasaan, dan pencapaian pribadi
                            </span>
                         </li>
                         <li>
@@ -64,7 +64,7 @@
                               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                              Billing Information: Payment card details, billing address.
+                              Mindfulness: Melatih kesadaran penuh (present moment awareness) untuk meningkatkan fokus dan ketenangan
                            </span>
                         </li>
                         <li>
@@ -72,16 +72,42 @@
                               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                              Usage Data: Information about how you use our website.
+                              Nilai-Nilai Positif Universal: Penanaman karakter seperti: 
                            </span>
+                           <ul class="sub-list">
+                              <li>Kejujuran dan integritas</li>
+                              <li>Tanggung jawab dan disiplin</li>
+                              <li>Empati dan kepedulian terhadap sesama</li>
+                              <li>Rasa syukur dan apresiasi</li>
+                              <li>Kerja keras dan ketekunan</li>
+                           </ul>
                         </li>
                         <li>
                            <span>
                               <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
                               </svg>
-                              Cookies and Tracking Data: Data collected through cookies, web beacons, and similar technologies.
+                              Bentuk Aktivitas:
                            </span>
+                           <ul class="sub-list">
+                              <li>Refleksi singkat tentang tujuan belajar hari ini</li>
+                              <li>Latihan pernapasan atau mindfulness ringan</li>
+                              <li>Motivasi dan afirmasi positif</li>
+                              <li>Rasa syukur dan apresiasi</li>
+                              <li>Diskusi ringan tentang nilai-nilai kehidupan</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                              Manfaat:
+                           </span>
+                           <ul class="sub-list">
+                              <li>Membantu siswa memulai sesi dengan pikiran yang jernih dan fokus</li>
+                              <li>Membangun kesadaran emosional dan kontrol diri</li>
+                              <li>Menanamkan karakter positif yang relevan dalam kehidupan sehari-hari</li>                        
                         </li>
                      </ul>
                   </div>
