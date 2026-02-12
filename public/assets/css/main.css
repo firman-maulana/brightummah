@@ -2602,10 +2602,10 @@ input[type=color] {
 .it-custom-accordion .accordion-buttons::after {
   position: absolute;
   content: "\f106";
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Free";
   top: 50%;
   right: 30px;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 16px;
   height: 25px;
   width: 25px;
@@ -2698,10 +2698,10 @@ input[type=color] {
 .it-custom-accordion-2 .accordion-buttons::after {
   position: absolute;
   content: "\f106";
-  font-family: "Font Awesome 5 Pro";
+  font-family: "Font Awesome 6 Free";
   top: 50%;
   left: 30px;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 16px;
   height: 25px;
   width: 25px;
@@ -10973,10 +10973,10 @@ input[type=radio] {
 }
 .it-header-menu nav ul li.has-dropdown > a::after {
   content: "\f107";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   display: inline-block;
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 900;
   transition: 0.3s;
   color: var(--it-common-black);
   margin-left: 5px;
