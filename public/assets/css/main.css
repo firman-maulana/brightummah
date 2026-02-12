@@ -2659,13 +2659,13 @@ input[type=color] {
   border-radius: 20px;
   background-color: var(--it-common-white);
 }
-.it-custom-accordion-2 .accordion-items:first-child .accordion-buttons.collapsed {
+.it-custom-accordion-2 .accordion-items:first-child .accordion-button.collapsed {
   border-radius: 20px 20px 0 0;
 }
-.it-custom-accordion-2 .accordion-items:first-child .accordion-buttons:not(.collapsed) {
+.it-custom-accordion-2 .accordion-items:first-child .accordion-button:not(.collapsed) {
   border-radius: 20px 20px 0 0;
 }
-.it-custom-accordion-2 .accordion-items:last-child .accordion-buttons.collapsed {
+.it-custom-accordion-2 .accordion-items:last-child .accordion-button.collapsed {
   border-radius: 0 0 20px 20px;
 }
 .it-custom-accordion-2 .accordion-buttons {
@@ -2689,13 +2689,13 @@ input[type=color] {
     padding-left: 40px;
   }
 }
-.it-custom-accordion-2 .accordion-buttons span {
+.it-custom-accordion-2 .accordion-button span {
   line-height: 1;
 }
-.it-custom-accordion-2 .accordion-buttons span:last-child {
+.it-custom-accordion-2 .accordion-button span:last-child {
   font-family: var(--it-ff-spartan-medium);
 }
-.it-custom-accordion-2 .accordion-buttons::after {
+.it-custom-accordion-2 .accordion-button::after {
   position: absolute;
   content: "\f106";
   font-family: "Font Awesome 6 Free";
@@ -2715,18 +2715,18 @@ input[type=color] {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 767px) {
-  .it-custom-accordion-2 .accordion-buttons::after {
+  .it-custom-accordion-2 .accordion-button::after {
     left: 8px;
   }
 }
-.it-custom-accordion-2 .accordion-buttons.collapsed::after {
+.it-custom-accordion-2 .accordion-button.collapsed::after {
   content: "\f107";
 }
-.it-custom-accordion-2 .accordion-buttons:not(.collapsed) {
+.it-custom-accordion-2 .accordion-button:not(.collapsed) {
   padding-bottom: 17px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
-  .it-custom-accordion-2 .accordion-buttons:not(.collapsed) {
+  .it-custom-accordion-2 .accordion-button:not(.collapsed) {
     padding-bottom: 12px;
   }
 }
@@ -26011,7 +26011,7 @@ input[type=radio] {
 
 .it-custom-accordion .accordion-buttons::after {
     content: "\f107";
-    font-family: "Font Awesome 6 Pro";
+    font-family: "Font Awesome 6 Free";
     font-weight: 900;
     position: absolute;
     right: 25px;
