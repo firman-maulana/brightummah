@@ -47,7 +47,7 @@
 
    <!-- back-to-top-start  -->
    <button class="scroll-top scroll-to-target" data-target="html">
-      <i class="far fa-angle-double-up"></i>
+      <i class="fa-solid fa-angles-up"></i>
    </button>
    <!-- back-to-top-end  -->
 
@@ -57,7 +57,7 @@
         <form method="post" action="#">
             <div class="form-group">
                 <input type="search" name="search-field" value="" placeholder="Cari di sini" required="">
-                <button type="submit"><i class="fal fa-search"></i></button>
+                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
         </form>
    </div>
@@ -67,7 +67,7 @@
    <div class="it-offcanvas-area">
       <div class="itoffcanvas">
          <div class="itoffcanvas__close-btn">
-            <button class="close-btn"><i class="fal fa-times"></i></button>
+            <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
          </div>
         <div class="itoffcanvas__logo">
             <a href="{{ route('home') }}">
@@ -82,7 +82,7 @@
             <h3 class="offcanva-title">Hubungi Kami</h3>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
                <div class="itoffcanvas__info-icon">
-                  <a href="#"><i class="fal fa-envelope"></i></a>
+                  <a href="#"><i class="fa-solid fa-envelope"></i></a>
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
@@ -91,7 +91,7 @@
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
                <div class="itoffcanvas__info-icon">
-                  <a href="#"><i class="fal fa-phone-alt"></i></a>
+                  <a href="#"><i class="fa-solid fa-phone"></i></a>
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Telepon</span>
