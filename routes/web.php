@@ -19,18 +19,13 @@ Route::resource('detailprogram', ProgramController::class)->only(['show']);
 Route::get('/menarik', fn() => view('pages.menarik'));
 Route::get('/menarik1', fn() => view('pages.menarik1'));
 
+// Admin Authentication Routes
 Route::middleware('guest')->group(function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/login', [LoginController::class, 'login'])->name('login.post');
-    Route::get('/register', [RegisterController::class, 'index'])->name('register');
-    Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
+    Route::get('/admin/login', [LoginController::class, 'showAdminLogin'])->name('admin.login');
+    Route::post('/admin/login', [LoginController::class, 'adminLogin'])->name('admin.login.post');
 });
 
-Route::get('/auth/google', [GoogleController::class, 'redirect'])->name('auth.google');
-Route::get('/auth/google/callback', [GoogleController::class, 'callback'])->name('auth.google.callback');
-
-
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
+Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
@@ -43,21 +38,17 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::put('/programs/{program}', [AdminController::class, 'updateProgram'])->name('programs.update');
     Route::delete('/programs/{program}', [AdminController::class, 'destroyProgram'])->name('programs.destroy');
     
-    Route::get('/users', [AdminController::class, 'users'])->name('users');
-Route::delete('/users/bulk-delete', [AdminController::class, 'bulkDestroy'])
-    ->name('users.bulk-destroy');
+    // Admin Management (Only for Superadmin)
+    Route::middleware('superadmin')->group(function () {
+        Route::get('/admins', [AdminController::class, 'admins'])->name('admins');
+        Route::get('/admins/create', [AdminController::class, 'createAdmin'])->name('admins.create');
+        Route::post('/admins', [AdminController::class, 'storeAdmin'])->name('admins.store');
+        Route::get('/admins/{user}/edit', [AdminController::class, 'editAdmin'])->name('admins.edit');
+        Route::put('/admins/{user}', [AdminController::class, 'updateAdmin'])->name('admins.update');
+        Route::delete('/admins/{user}', [AdminController::class, 'destroyAdmin'])->name('admins.destroy');
+    });
 
-    Route::get('/analytics', fn() => view('admin.dashboard.analytics'))->name('analytics');
-    Route::get('/fintech', fn() => view('admin.dashboard.fintech'))->name('fintech');
-    Route::get('/inbox', fn() => view('admin.inbox'))->name('inbox');
-    Route::get('/messages', fn() => view('admin.messages'))->name('messages');
     Route::get('/calendar', fn() => view('admin.calendar'))->name('calendar');
-    Route::get('/myaccount', fn() => view('admin.settings.account'))->name('account');
-    Route::get('/notifications', fn() => view('admin.settings.notifications'))->name('notifications');
-    Route::get('/feedback', fn() => view('admin.settings.feedback'))->name('feedback');
-    Route::get('/changelog', fn() => view('admin.changelog'))->name('changelog');
-    Route::get('/authentication/signin', fn() => view('admin.authentication.signin'))->name('signin');
-    Route::get('/authentication/signup', fn() => view('admin.authentication.signup'))->name('signup');
 });
 
 Route::get('/force-logout', function () { Auth::logout(); request()->session()->invalidate(); request()->session()->regenerateToken(); return redirect('/login'); })->name('force.logout');

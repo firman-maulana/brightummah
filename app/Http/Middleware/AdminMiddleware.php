@@ -15,8 +15,8 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->check() || auth()->user()->role !== 'admin') {
-            return redirect()->route('login')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
+        if (!auth()->check() || !in_array(auth()->user()->role, ['superadmin', 'admin'])) {
+            return redirect()->route('admin.login')->with('error', 'Anda tidak memiliki akses ke halaman ini.');
         }
 
         return $next($request);

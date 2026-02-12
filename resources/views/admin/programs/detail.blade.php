@@ -41,7 +41,6 @@
                                         </svg>
                                         <span>{{ $program->mode }}</span>
                                     </div>
-                                    <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n c0ef0 ch4gv c1iho cwn3v">Rp {{ number_format($program->price, 0, ',', '.') }} / {{ $program->price_period }}</div>
                                 </div>
                             </div>
 
@@ -59,63 +58,6 @@
                                 <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Program Details</h2>
                                 <p class="cai6b">{{ $program->manfaat_program }}</p>
                                 <p class="cai6b">{{ $program->fokus_pembelajaran }}</p>
-                            </div>
-
-                            <hr class="cghq3 cbv37 cr4kg cf7n6">
-
-                            <!-- Photos -->
-                            <div>
-                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Photos (3)</h2>
-                                <div class="cdj80 cemhh cf7n6 c4sak">
-                                    <a class="block" href="#0">
-                                        <img class="rounded-sm c6btv" src="{{ asset('assets/admin/img/meetup-photo-01.jpg') }}" width="203" height="152" alt="Meetup photo 01">
-                                    </a>
-                                    <a class="block" href="#0">
-                                        <img class="rounded-sm c6btv" src="{{ asset('assets/admin/img/meetup-photo-02.jpg') }}" width="203" height="152" alt="Meetup photo 02">
-                                    </a>
-                                    <a class="block" href="#0">
-                                        <img class="rounded-sm c6btv" src="{{ asset('assets/admin/img/meetup-photo-03.jpg') }}" width="203" height="152" alt="Meetup photo 03">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <hr class="cghq3 cbv37 cr4kg cf7n6">
-
-                            <!-- Comments -->
-                            <div>
-                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Comments (3)</h2>
-                                <ul class="cvw0d cf7n6">
-                                    <!-- Comment -->
-                                    <li class="flex ce4zk">
-                                        <a class="block coqgc chfzq" href="#0">
-                                            <img class="rounded-full" src="{{ asset('assets/admin/img/user-32-07.jpg') }}" width="32" height="32" alt="User 07">
-                                        </a>
-                                        <div class="cbw8w">
-                                            <div class="text-sm text-gray-800 dark:text-gray-100 cgulq c6f83">Taylor Nieman</div>
-                                            <div class="caf78">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</div>
-                                        </div>
-                                    </li>
-                                    <!-- Comment -->
-                                    <li class="flex ce4zk">
-                                        <a class="block coqgc chfzq" href="#0">
-                                            <img class="rounded-full" src="{{ asset('assets/admin/img/user-32-08.jpg') }}" width="32" height="32" alt="User 08">
-                                        </a>
-                                        <div class="cbw8w">
-                                            <div class="text-sm text-gray-800 dark:text-gray-100 cgulq c6f83">Meagan Loyst</div>
-                                            <div class="caf78">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</div>
-                                        </div>
-                                    </li>
-                                    <!-- Comment -->
-                                    <li class="flex ce4zk">
-                                        <a class="block coqgc chfzq" href="#0">
-                                            <img class="rounded-full" src="{{ asset('assets/admin/img/user-32-02.jpg') }}" width="32" height="32" alt="User 02">
-                                        </a>
-                                        <div class="cbw8w">
-                                            <div class="text-sm text-gray-800 dark:text-gray-100 cgulq c6f83">Frank Malik</div>
-                                            <div class="caf78">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
 
                             <hr class="cghq3 cbv37 cr4kg cf7n6">
@@ -203,97 +145,6 @@
                                     </button>
                                 </div>
                             </div>
-
-                            <!-- 2nd block -->
-                            <div class="bg-white c2vpa c1hly c5vqk cl6wk ch0sq csusu">
-                                <div class="flex cm3rx cqkjy c6r0l">
-                                    <div class="text-sm text-gray-800 dark:text-gray-100 cgulq">Attendees (127)</div>
-                                    <a class="text-sm text-violet-500 c5ylh ceetm c1k3n" href="#0">View All</a>
-                                </div>
-                                <ul class="cjav5">
-                                    <li>
-                                        <div class="flex cm3rx">
-                                            <div class="flex items-center cbw8w">
-                                                <div class="cm84d chfzq">
-                                                    <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-32-08.jpg') }}" width="32" height="32" alt="User 08">
-                                                </div>
-                                                <div class="c941w">
-                                                    <span class="text-sm text-gray-800 dark:text-gray-100 c1k3n">Carolyn McNeail</span>
-                                                </div>
-                                            </div>
-                                            <button class="rounded-full c3e4j cg12x cmpw7 cdqku">
-                                                <span class="cn8jz">Menu</span>
-                                                <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                                    <circle cx="16" cy="16" r="2"></circle>
-                                                    <circle cx="10" cy="16" r="2"></circle>
-                                                    <circle cx="22" cy="16" r="2"></circle>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex cm3rx">
-                                            <div class="flex items-center cbw8w">
-                                                <div class="cm84d chfzq">
-                                                    <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-32-01.jpg') }}" width="32" height="32" alt="User 01">
-                                                </div>
-                                                <div class="c941w">
-                                                    <span class="text-sm text-gray-800 dark:text-gray-100 c1k3n">Dominik Lamakani</span>
-                                                </div>
-                                            </div>
-                                            <button class="rounded-full c3e4j cg12x cmpw7 cdqku">
-                                                <span class="cn8jz">Menu</span>
-                                                <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                                    <circle cx="16" cy="16" r="2"></circle>
-                                                    <circle cx="10" cy="16" r="2"></circle>
-                                                    <circle cx="22" cy="16" r="2"></circle>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex cm3rx">
-                                            <div class="flex items-center cbw8w">
-                                                <div class="cm84d chfzq">
-                                                    <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-32-03.jpg') }}" width="32" height="32" alt="User 03">
-                                                </div>
-                                                <div class="c941w">
-                                                    <span class="text-sm text-gray-800 dark:text-gray-100 c1k3n">Ivan Mesaros</span>
-                                                </div>
-                                            </div>
-                                            <button class="rounded-full c3e4j cg12x cmpw7 cdqku">
-                                                <span class="cn8jz">Menu</span>
-                                                <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                                    <circle cx="16" cy="16" r="2"></circle>
-                                                    <circle cx="10" cy="16" r="2"></circle>
-                                                    <circle cx="22" cy="16" r="2"></circle>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="flex cm3rx">
-                                            <div class="flex items-center cbw8w">
-                                                <div class="cm84d chfzq">
-                                                    <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-32-05.jpg') }}" width="32" height="32" alt="User 05">
-                                                </div>
-                                                <div class="c941w">
-                                                    <span class="text-sm text-gray-800 dark:text-gray-100 c1k3n">Maria Martinez</span>
-                                                </div>
-                                            </div>
-                                            <button class="rounded-full c3e4j cg12x cmpw7 cdqku">
-                                                <span class="cn8jz">Menu</span>
-                                                <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                                    <circle cx="16" cy="16" r="2"></circle>
-                                                    <circle cx="10" cy="16" r="2"></circle>
-                                                    <circle cx="22" cy="16" r="2"></circle>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
                         </div>
 
                     </div>

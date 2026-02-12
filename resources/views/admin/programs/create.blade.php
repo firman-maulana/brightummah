@@ -80,34 +80,6 @@
                                     
                                     <div>
                                         <!-- Start -->
-                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="price">Price (Rp)</label>
-                                            <input name="price" id="price" class="caqf9 c6btv @error('price') is-invalid @enderror" type="number" value="{{ old('price') }}" placeholder="Masukkan harga" min="0" step="0.01" required>
-                                            @error('price')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
-                                        <!-- End -->
-                                    </div>
-                                    
-                                    <div>
-                                        <!-- Start -->
-                                        <label class="block text-sm c1k3n cu6vl" for="price_period">Price Period</label>
-                                        <select name="price_period" id="price_period" class="caqf9 c6btv @error('price_period') is-invalid @enderror" required>
-                                            <option value="">Select Period</option>
-                                            <option value="Per Day" {{ old('price_period') == 'Per Day' ? 'selected' : '' }}>Per Day</option>
-                                            <option value="Per Week" {{ old('price_period') == 'Per Week' ? 'selected' : '' }}>Per Week</option>
-                                            <option value="Per Month" {{ old('price_period') == 'Per Month' ? 'selected' : '' }}>Per Month</option>
-                                            <option value="Per Year" {{ old('price_period') == 'Per Year' ? 'selected' : '' }}>Per Year</option>
-                                        </select>
-                                        @error('price_period')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
-                                        <!-- End -->
-                                    </div>
-                                    
-                                    <div>
-                                        <!-- Start -->
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl" for="manfaat_program">Manfaat Program</label>
                                             <textarea name="manfaat_program" id="manfaat_program" class="caqf9 c6btv @error('manfaat_program') is-invalid @enderror" rows="4" placeholder="Masukkan manfaat program..." required>{{ old('manfaat_program') }}</textarea>

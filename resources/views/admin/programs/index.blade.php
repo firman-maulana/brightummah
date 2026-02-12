@@ -15,7 +15,7 @@
                         <div class="cm3b7 c51uw ccww4 csdex cbe1i c4sak">
 
                             <!-- Search form -->
-                            <form method="GET" action="{{ route('admin.programs') }}" class="cm84d">
+                            <form method="GET" action="{{ route('admin.programs') }}" class="cm84d" id="searchFormPrograms">
                                 <label for="action-search" class="cn8jz">Search</label>
                                 <input id="action-search" name="search" class="bg-white c2vpa caqf9 ct9oo" type="search" placeholder="Search programs..." value="{{ request('search') }}">
                                 <input type="hidden" name="category" value="{{ request('category') }}">
@@ -26,6 +26,12 @@
                                     </svg>
                                 </button>
                             </form>
+
+                            <script>
+                            document.getElementById('action-search').addEventListener('input', function() {
+                                document.getElementById('searchFormPrograms').submit();
+                            });
+                            </script>
 
                             <!-- Add meetup button -->
                             <a class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a" href="{{ route('admin.programs.create') }}">
@@ -68,15 +74,6 @@
                                 @else
                                     <img class="ccrfs cfwu1 cqdkw cav8x c6btv" src="{{ asset('assets/admin/img/meetups-thumb-01.jpg') }}" width="220" height="236" alt="{{ $program->name }}">
                                 @endif
-                                <!-- Like button -->
-                                <button class="mr-4 cqdkw cgky2 cli41 cfo3t">
-                                    <div class="bg-gray-900 rounded-full cxnba cyn7a">
-                                        <span class="cn8jz">Like</span>
-                                        <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                            <path d="M22.682 11.318A4.485 4.485 0 0019.5 10a4.377 4.377 0 00-3.5 1.707A4.383 4.383 0 0012.5 10a4.5 4.5 0 00-3.182 7.682L16 24l6.682-6.318a4.5 4.5 0 000-6.364zm-1.4 4.933L16 21.247l-5.285-5A2.5 2.5 0 0112.5 12c1.437 0 2.312.681 3.5 2.625C17.187 12.681 18.062 12 19.5 12a2.5 2.5 0 011.785 4.251h-.003z"></path>
-                                        </svg>
-                                    </div>
-                                </button>
                             </a>
                             <!-- Content -->
                             <div class="flex cetff cbw8w csusu">
@@ -95,15 +92,6 @@
                                             <path d="m16 2-4 2.4V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7.6l4 2.4V2ZM2 10V2h8v8H2Z"></path>
                                         </svg>
                                         <span>{{ $program->mode }}</span>
-                                    </div>
-                                    <!-- Avatars -->
-                                    <div class="flex items-center ch3kz">
-                                        <div class="flex cjgpi c45a5">
-                                            <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-02.jpg') }}" width="28" height="28" alt="User 02">
-                                            <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-01.jpg') }}" width="28" height="28" alt="User 01">
-                                            <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-03.jpg') }}" width="28" height="28" alt="User 03">
-                                        </div>
-                                        <div class="cmpw7 cdqku c1k3n c1iho caf78">+34</div>
                                     </div>
                                 </div>
                             </div>

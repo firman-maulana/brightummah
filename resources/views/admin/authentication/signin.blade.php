@@ -50,40 +50,47 @@
     
                     <div class="c91aq clu2m c6btv clbq0 cxsfz">
         
-                        <h1 class="text-3xl text-gray-800 dark:text-gray-100 font-bold cai6b">Welcome back!</h1>
+                        <h1 class="text-3xl text-gray-800 dark:text-gray-100 font-bold cai6b">Login</h1>
+                        
+                        @if ($errors->any())
+                            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <!-- Form -->
-                        <form>
+                        <form method="POST" action="{{ route('admin.login.post') }}">
+                            @csrf
                             <div class="cr78y">
                                 <div>
                                     <label class="block text-sm c1k3n cu6vl" for="email">Email Address</label>
-                                    <input id="email" class="caqf9 c6btv" type="email">
+                                    <input id="email" name="email" class="caqf9 c6btv" type="email" value="{{ old('email') }}" required>
                                 </div>
                                 <div>
                                     <label class="block text-sm c1k3n cu6vl" for="password">Password</label>
-                                    <input id="password" class="caqf9 c6btv" type="password" autocomplete="on">
+                                    <input id="password" name="password" class="caqf9 c6btv" type="password" required>
                                 </div>
                             </div>
                             <div class="flex items-center cm3rx cgndh">
-                                <div class="mr-1">
-                                    <a class="text-sm crtk5 celj7" href="reset-password.html">Forgot Password?</a>
+                                <div class="mr-1 flex items-center">
+                                    <input type="checkbox" id="remember" name="remember" class="mr-2">
+                                    <label for="remember" class="text-sm">Remember Me</label>
                                 </div>
-                                <a class="btn bg-gray-900 ml-3 cdj8c cg0jr ch8z9 cilvw cyn7a" href="index.html">Sign In</a>
+                                <button type="submit" class="btn bg-gray-900 ml-3 cdj8c cg0jr ch8z9 cilvw cyn7a">Sign In</button>
                             </div>
-                        </form>
-                        <!-- Footer -->
-                        <div class="cghq3 cbv37 cr4kg cgndh cfkjc">
                             <!-- Warning -->
                             <div class="cv2no">
                                 <div class="cfts0 c5px7 cb8zv cb2br cuvgf">
-                                    <svg class="inline w-3 h-3 cbm9w coqgc" viewBox="0 0 12 12">
-                                        <path d="M10.28 1.28L3.989 7.575 1.695 5.28A1 1 0 00.28 6.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28 1.28z"></path>
-                                    </svg>
                                     <span class="text-sm">
-                                        To support you during the pandemic super pro features are free until March 31st.
+                                        Masukkan username dan password Anda dengan benar. Jika terjadi kendala login, silahkan hubungi superadmin
                                     </span>
                                 </div>
                             </div>
-                        </div>
+                        </form>
         
                     </div>
 

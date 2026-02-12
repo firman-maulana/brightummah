@@ -85,17 +85,6 @@
                            </svg>
                         </button>
                      </div>
-                     <!-- <div class="it-header-login d-none d-xxl-block">
-                        @auth('web')
-                            <span class="me-2">{{ auth('web')->user()->name }}</span>
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form-header').submit();">Logout</a>
-                            <form id="logout-form-header" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
-                        @else
-                            <a href="{{ route('login') }}">Masuk</a>
-                            <span>/</span>
-                            <a href="{{ route('register') }}">Daftar</a>
-                        @endauth
-                     </div> -->
                      <a href="{{ route('programs.index') }}" class="it-btn-yellow d-none d-xl-flex">
                         <span>
                            <span class="text-1">Apply Now</span>

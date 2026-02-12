@@ -7,12 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function index()
+    public function showAdminLogin()
     {
-        return view('pages.auth.login');
+        return view('admin.authentication.signin');
     }
 
-    public function login(Request $request)
+    public function adminLogin(Request $request)
     {
         $credentials = $request->validate([
             'email' => 'required|email',
@@ -22,11 +22,14 @@ class LoginController extends Controller
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
 
-            if (Auth::user()->role === 'admin') {
+            if (in_array(Auth::user()->role, ['superadmin', 'admin'])) {
                 return redirect()->intended(route('admin.dashboard'));
             }
 
-            return redirect()->intended(route('home'));
+            Auth::logout();
+            return back()->withErrors([
+                'email' => 'Anda tidak memiliki akses ke halaman admin.',
+            ])->onlyInput('email');
         }
 
         return back()->withErrors([
@@ -41,6 +44,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('login');
+        return redirect()->route('admin.login');
     }
 }

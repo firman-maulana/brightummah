@@ -63,8 +63,9 @@
                             <span class="2xl:block c185y cmt20 c2y99">Menu</span>
                         </h3>
                         <ul class="c7gr8">
+                            @if(auth()->user()->role === 'superadmin')
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.users') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.users') }}">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.admins') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.admins') }}">
                                     <div class="flex items-center">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg"
      width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -76,10 +77,11 @@
     <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
 </svg>
 
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Users</span>
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Management Admin</span>
                                     </div>
                                 </a>
                             </li>
+                            @endif
                             <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
                                 <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.programs') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.programs') }}">
                                     <div class="flex items-center">
@@ -114,47 +116,7 @@
                             <!-- Utility -->
                         </ul>
                     </div>
-                    <!-- More group -->
-                    <!-- <div> -->
-                        <!-- <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
-                            <span class="hidden 2xl:hidden cs2n8 cbbia cydwr cv9uc cg8so" aria-hidden="true">•••</span>
-                            <span class="2xl:block c185y cmt20 c2y99">Settings</span>
-                        </h3> -->
-                        <!-- <ul class="c7gr8">
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.account') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.account') }}">
-                                    <div class="flex items-center">
-                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M8 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm-5.143 7.91a1 1 0 1 1-1.714-1.033A7.996 7.996 0 0 1 8 10a7.996 7.996 0 0 1 6.857 3.877 1 1 0 1 1-1.714 1.032A5.996 5.996 0 0 0 8 12a5.996 5.996 0 0 0-5.143 2.91Z"></path>
-                                                </svg>                                        
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Account</span>
-                                    </div>
-                                </a>
-                            </li> -->
-                            <!-- <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.notifications') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.notifications') }}">
-                                    <div class="flex items-center">
-                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="m9 12.614 4.806 1.374a.15.15 0 0 0 .174-.21L8.133 2.082a.15.15 0 0 0-.268 0L2.02 13.777a.149.149 0 0 0 .174.21L7 12.614V9a1 1 0 1 1 2 0v3.614Zm-1 1.794-5.257 1.503c-1.798.514-3.35-1.355-2.513-3.028L6.076 1.188c.791-1.584 3.052-1.584 3.845 0l5.848 11.695c.836 1.672-.714 3.54-2.512 3.028L8 14.408Z"></path>
-                                                </svg>                                       
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">My Notifications</span>
-                                    </div>
-                                </a>
-                            </li> -->
-                            <!-- <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.feedback') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.feedback') }}">
-                                    <div class="flex items-center">
-                                        <svg class="mr-2 cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                    <path d="M14.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-8 8c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l8-8zM15 7c.6 0 1 .4 1 1 0 4.4-3.6 8-8 8s-8-3.6-8-8 3.6-8 8-8c.6 0 1 .4 1 1s-.4 1-1 1C4.7 2 2 4.7 2 8s2.7 6 6 6 6-2.7 6-6c0-.6.4-1 1-1z"></path>
-                                                </svg>                                      
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Feedback</span>
-                                    </div>
-                                </a>
-                            </li> -->
-                            <!-- Authentication -->
-                            <!-- Onboarding -->
-                        <!-- </ul> -->
-                    <!-- </div> -->
+
                 </div>
 
                 <!-- Expand / collapse button -->
@@ -336,7 +298,7 @@
                                 <button class="inline-flex justify-center items-center cqogy" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
                                     <img class="rounded-full cue4z cmwfi" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="32" height="32" alt="User">
                                     <div class="flex items-center c941w">
-                                        <span class="text-sm dark:text-gray-100 croon ccuo4 c1ukq c1k3n c941w c8bkw">Bright Ummah</span>
+                                        <span class="text-sm dark:text-gray-100 croon ccuo4 c1ukq c1k3n c941w c8bkw">{{ auth()->user()->name }}</span>
                                         <svg class="w-3 h-3 cmpw7 cdqku cbm9w coqgc cpts2" viewBox="0 0 12 12">
                                             <path d="M5.9 11.4L.5 6l1.4-1.4 4 4 4-4L11.3 6z"></path>
                                         </svg>
@@ -344,8 +306,8 @@
                                 </button>
                                 <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 c45yg cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
                                     <div class="border-gray-200 cghq3 ctv3r c8asz cu6vl cb2br cif3q">
-                                        <div class="text-gray-800 dark:text-gray-100 c1k3n">Bright Ummah</div>
-                                        <div class="text-gray-500 dark:text-gray-400 c1iho caf78">Administrator</div>
+                                        <div class="text-gray-800 dark:text-gray-100 c1k3n">{{ auth()->user()->name }}</div>
+                                        <div class="text-gray-500 dark:text-gray-400 c1iho caf78">{{ ucfirst(auth()->user()->role) }}</div>
                                     </div>
                                     <ul>
                                         <li>

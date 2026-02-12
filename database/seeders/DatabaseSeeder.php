@@ -13,19 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
+        // Create Superadmin
         User::create([
-            'name' => 'Admin',
-            'email' => 'admin@brightummah.com',
-            'password' => Hash::make('12345678'),
-            'role' => 'admin',
+            'name' => 'BUA Dev',
+            'email' => 'superadmin@brightummah.com',
+            'password' => Hash::make('password'),
+            'role' => 'superadmin',
         ]);
 
+        // Create Admin
         User::create([
-            'name' => 'Firman',
-            'email' => 'firman@gmail.com',
-            'password' => Hash::make('12345678'),
-            'role' => 'user',
+            'name' => 'Bright Ummah Academy',
+            'email' => 'admin1@brightummah.com',
+            'password' => Hash::make('password'),
+            'role' => 'admin',
         ]);
     }
 }

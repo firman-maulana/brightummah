@@ -92,16 +92,6 @@
             <p>Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam.</p>
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
-         <!-- <div class="itoffcanvas__auth d-xl-none">
-            <ul class="mobile-auth-menu">
-               <li>
-                  <a href="{{ route('login') }}" class="btn-login">Login</a>
-               </li>
-               <li>
-                  <a href="{{ route('register') }}" class="btn-register">Register</a>
-               </li>
-            </ul>
-         </div> -->
          <div class="itoffcanvas__social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>

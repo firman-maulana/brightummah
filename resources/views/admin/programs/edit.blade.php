@@ -77,32 +77,6 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="price">Price</label>
-                                                <input id="price" name="price" class="caqf9 c6btv" type="number" step="0.01" placeholder="Price..." value="{{ old('price', $program->price) }}" required>
-                                                @error('price')
-                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                                @enderror
-                                            </div>
-                                            <!-- End -->
-                                        </div>
-                                        
-                                        <div>
-                                            <!-- Start -->
-                                            <label class="block text-sm c1k3n cu6vl" for="price_period">Price Period</label>
-                                            <select id="price_period" name="price_period" class="caqf9 c6btv" required>
-                                                @foreach($pricePeriods as $period)
-                                                    <option value="{{ $period }}" {{ $program->price_period == $period ? 'selected' : '' }}>{{ $period }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('price_period')
-                                                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                            @enderror
-                                            <!-- End -->
-                                        </div>
-                                        
-                                        <div>
-                                            <!-- Start -->
-                                            <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="manfaat_program">Manfaat Program</label>
                                                 <textarea id="manfaat_program" name="manfaat_program" class="caqf9 c6btv" rows="3" placeholder="Program benefits..." required>{{ old('manfaat_program', $program->manfaat_program) }}</textarea>
                                                 @error('manfaat_program')

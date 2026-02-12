@@ -1,0 +1,27 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        // Update existing users with 'user' role to 'admin'
+        DB::table('users')->where('role', 'user')->update(['role' => 'admin']);
+        
+        // Now change the column type
+        Schema::table('users', function (Blueprint $table) {
+            $table->enum('role', ['superadmin', 'admin'])->default('admin')->change();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('role')->default('user')->change();
+        });
+    }
+};
