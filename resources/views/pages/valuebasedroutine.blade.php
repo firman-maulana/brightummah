@@ -2,15 +2,14 @@
 @section('content')
 
  <!-- breadcrumb-area-start -->
-   <div class="it-breadcrumb-area fix it-breadcrumb-style-2 z-index-1" data-background="assets/img/shape/breadcrumb-1-bg.png">
-      <img class="it-breadcrumb-shape-1" src="assets/img/shape/breadcrumb-1-1.png" alt="">
-      <img class="it-breadcrumb-shape-3" src="assets/img/shape/breadcrumb-1-2.png" alt="">
+<div class="it-breadcrumb-area fix it-breadcrumb-course-details-4-style z-index-1" data-background="assets/img/bgprograms.jpeg">
+      <img class="it-breadcrumb-shape-1" src="assets/img/breadcrumb-1-1.png" alt="">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
                <div class="it-breadcrumb-content text-center z-index-1">
                   <div class="it-breadcrumb-title-box">
-                     <h3 class="it-breadcrumb-title style-2">
+                     <h3 class="it-breadcrumb-title text-white style-2">
                        Value Based Routine
                         <span class="title-shape">
                            <svg width="346" height="26" viewBox="0 0 346 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,8 +111,75 @@
                      </ul>
                   </div>
                   <h4 class="it-details-title-sm mb-20">Islamic Integrated Program: Doa & Refleksi Qur'an</h4>
-                  <div class="postbox-dsc mb-55">
-                     <p class="mb-10">A privacy policy is a legal document that explains how a website, app, or business collects, uses, shares, and protects personal information provided by its users or customers. It is a crucial aspect of data privacy and user trust, as it informs individuals about the types of data collected, the purposes for which the data is used, and the rights users have regarding their personal information.</p>
+                  <div class="it-details-list mb-60">
+                  <p class="mb-10">Jika anak Anda memiliki target hafalan Al-Qur'an di sekolah (misalnya sekolah Islam atau pesantren), kami dapat menyesuaikan sesi murajaah/tasmi' dengan target tersebut agar hafalan anak tetap terjaga dan terus bertambah, tidak ada tumpang tindih atau kebingungan metode, dan mendukung pencapaian target sekolah secara optimal.</p>
+                     <ul>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                           Doa Pembuka: Memohon kemudahan dan keberkahan dalam proses belajar
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                           Refleksi Al-Qur'an: Membaca dan merenungkan ayat atau hadits singkat yang relevan dengan kehidupan
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                          Murajaah/Tasmi' : Mengulang hafalan Al-Qur'an atau menyetor hafalan baru sesuai kemampuan siswa
+                           </span>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                              Nilai-Nilai Positif Universal: Penanaman karakter seperti: 
+                           </span>
+                           <ul class="sub-list">
+                              <li>Shiddiq (jujur)</li>
+                              <li>Amanah (dapat dipercaya)</li>
+                              <li>Tabligh (menyampaikan kebaikan)</li>
+                              <li>Fathonah (cerdas)</li>
+                              <li>Sabar, syukur, dan tawakal</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                              Bentuk Aktivitas:
+                           </span>
+                           <ul class="sub-list">
+                              <li>•	Doa sebelum belajar</li>
+                              <li>•	Membaca ayat Al-Qur'an singkat dan refleksi maknanya</li>
+                              <li>•	Murajaah hafalan atau tasmi' (disesuaikan dengan target sekolah)</li>
+                              <li>•	Motivasi berbasis nilai-nilai Islam</li>
+                           </ul>
+                        </li>
+                        <li>
+                           <span>
+                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
+                              </svg>
+                              Manfaat:
+                           </span>
+                           <ul class="sub-list">
+                              <li>Membangun kedekatan spiritual dengan Allah SWT</li>
+                              <li>Memperkuat hafalan Al-Qur'an secara konsisten</li>
+                              <li>Menanamkan akhlak Islami dalam setiap aktivitas</li>                        
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
