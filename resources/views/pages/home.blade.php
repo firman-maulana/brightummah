@@ -1001,9 +1001,9 @@
                <div class="it-team-item text-center p-relative mb-35">
                   <div class="it-team-thumb p-relative border-radius-20">
                      @if($teacher->photo_url)
-                        <img class="w-100" src="{{ $teacher->photo_url }}" alt="{{ $teacher->name }}" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;">
+                        <img class="w-100" src="{{ $teacher->photo_url }}" alt="{{ $teacher->name }}" style="aspect-ratio: 1 / 1; object-fit: cover;">
                      @else
-                        <img class="w-100" src="{{ asset('assets/img/team-1-1.jpg') }}" alt="{{ $teacher->name }}" style="border-radius: 50%; aspect-ratio: 1 / 1; object-fit: cover;">
+                        <img class="w-100" src="{{ asset('assets/img/team-1-1.jpg') }}" alt="{{ $teacher->name }}" style="aspect-ratio: 1 / 1; object-fit: cover;">
                      @endif
                   </div>
                   <div class="it-team-content">

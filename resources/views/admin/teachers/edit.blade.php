@@ -73,8 +73,8 @@
                                                             <img 
                                                                 src="{{ $teacher->photo_url }}" 
                                                                 alt="{{ $teacher->name }}" 
-                                                                class="rounded-full shadow-md"
-                                                                style="width:120px; height:120px; object-fit: cover;"
+                                                                class="shadow-md"
+                                                                style="max-width: 240px; height: auto;"
                                                             >
                                                             
                                                             {{-- REMOVE BUTTON WITH SVG X ICON --}}
@@ -98,6 +98,7 @@
                                                     name="photo" 
                                                     type="file" 
                                                     accept="image/*" 
+                                                    required
                                                     class="caqf9 c6btv {{ $teacher->photo_url ? 'hidden' : '' }}"
                                                     onchange="handleImageUpload(event)"
                                                 >
@@ -110,8 +111,8 @@
                                                         <img
                                                             id="imagePreview"
                                                             src=""
-                                                            class="rounded-full shadow-md"
-                                                            style="width:120px; height:120px; object-fit: cover;"
+                                                            class="shadow-md"
+                                                            style="max-width: 240px; height: auto;"
                                                         >
                                                         
                                                         {{-- REMOVE BUTTON WITH SVG X ICON --}}

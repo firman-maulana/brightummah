@@ -32,7 +32,7 @@ class TeacherController extends Controller
             'name' => 'required|string|max:255',
             'categories' => 'required|in:General Program,Islamic Integrated Program',
             'institusi' => 'required|string|max:255',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
         ]);
 
         if ($request->hasFile('photo')) {
@@ -55,7 +55,7 @@ class TeacherController extends Controller
             'name' => 'required|string|max:255',
             'categories' => 'required|in:General Program,Islamic Integrated Program',
             'institusi' => 'required|string|max:255',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
             'remove_photo' => 'nullable|in:0,1',
         ]);
 

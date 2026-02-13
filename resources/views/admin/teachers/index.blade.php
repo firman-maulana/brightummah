@@ -16,12 +16,16 @@
 
                             <!-- Delete button -->
                             <!-- Add customer button -->
-                            <a class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a {{ ($teachersCount ?? $teachers->count()) >= 4 ? 'opacity-50 pointer-events-none' : '' }}" href="{{ route('admin.teachers.create') }}" {{ ($teachersCount ?? $teachers->count()) >= 4 ? 'aria-disabled=true' : '' }}>
-                                <svg class="cbm9w cbmv0 coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                    <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
-                                </svg>
-                                <span class="cyga5">Add Teachers</span>
-                            </a>
+                            @if(($teachersCount ?? $teachers->count()) >= 4)
+                                <button class="btn bg-gray-900 cpqp6 cv9uq c14v6 cha85 cbnll cqvjc cdj8c cg0jr ch8z9 cat76 cilvw cyn7a c6btv" disabled>Add Teachers</button>
+                            @else
+                                <a class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a" href="{{ route('admin.teachers.create') }}">
+                                    <svg class="cbm9w cbmv0 coqgc" width="16" height="16" viewBox="0 0 16 16">
+                                        <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
+                                    </svg>
+                                    <span class="cyga5">Add Teachers</span>
+                                </a>
+                            @endif
                             
                         </div>
 
@@ -81,12 +85,21 @@
                                             <td class="cq84g cyjcc cgn91 c9hxi c72q5">
                                                 <div class="flex items-center">
                                                     <div class="mr-2 coqgc czvpl cr0m4 c59cs">
-                                                        @if($teacher->photo_url)
-                                                            <img class="rounded-full" src="{{ $teacher->photo_url }}" width="40" height="40" alt="{{ $teacher->name }}">
-                                                        @else
-                                                            <img class="rounded-full" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="40" height="40" alt="{{ $teacher->name }}">
-                                                        @endif
-                                                    </div>
+    @if($teacher->photo_url)
+        <img class="rounded-full"
+             src="{{ $teacher->photo_url }}"
+             width="40"
+             height="40"
+             alt="{{ $teacher->name }}">
+    @else
+        <img class="rounded-full"
+             src="{{ asset('assets/admin/img/user-avatar-32.png') }}"
+             width="40"
+             height="40"
+             alt="{{ $teacher->name }}">
+    @endif
+</div>
+
                                                     <div class="text-gray-800 dark:text-gray-100 c1k3n">{{ $teacher->name }}</div>
                                                 </div>
                                             </td>
