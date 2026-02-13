@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -38,6 +39,9 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::get('/programs/{program}/edit', [AdminController::class, 'editProgram'])->name('programs.edit');
     Route::put('/programs/{program}', [AdminController::class, 'updateProgram'])->name('programs.update');
     Route::delete('/programs/{program}', [AdminController::class, 'destroyProgram'])->name('programs.destroy');
+
+    Route::delete('/teachers/bulk-destroy', [TeacherController::class, 'bulkDestroy'])->name('teachers.bulk-destroy');
+    Route::resource('teachers', TeacherController::class);
     
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {

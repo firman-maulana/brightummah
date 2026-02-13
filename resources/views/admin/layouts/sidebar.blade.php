@@ -92,6 +92,17 @@
                                     </div>
                                 </a>
                             </li>
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.teachers.*') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.teachers.index') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                            <circle cx="12" cy="7" r="4" />
+                                        </svg>
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Teachers</span>
+                                    </div>
+                                </a>
+                            </li>
                             <!-- E-Commerce -->
                             <!-- Community -->
                             <!-- Finance -->
