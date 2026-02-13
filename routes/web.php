@@ -13,16 +13,18 @@ Route::get('/valuebasedroutine', fn() => view('pages.valuebasedroutine'))->name(
 Route::get('/about', fn() => view('pages.about'))->name('about');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
-Route::get('/error', fn() => view('pages.error.error'))->name('error');
 Route::resource('detailprogram', ProgramController::class)->only(['show']);
-Route::get('/menarik', fn() => view('pages.menarik'));
-Route::get('/menarik1', fn() => view('pages.menarik1'));
 
 // Admin Authentication Routes
 Route::middleware('guest')->group(function () {
     Route::get('/admin/login', [LoginController::class, 'showAdminLogin'])->name('admin.login');
     Route::post('/admin/login', [LoginController::class, 'adminLogin'])->name('admin.login.post');
 });
+
+// Default login route redirect to admin login (for Laravel's auth system)
+Route::get('/login', function () {
+    return redirect()->route('admin.login');
+})->name('login');
 
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 

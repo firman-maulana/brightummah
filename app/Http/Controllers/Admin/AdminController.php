@@ -70,8 +70,6 @@ class AdminController extends Controller
             'name' => 'required|string|max:255',
             'mode' => 'required',
             'level' => 'required|string|max:100',
-            'price' => 'required|numeric|min:0',
-            'price_period' => 'required',
             'image' => 'required|image|max:10240',
             'teacher' => 'required|string|max:255',
             'tujuan_program' => 'required|string',

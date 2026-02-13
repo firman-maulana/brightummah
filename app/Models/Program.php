@@ -11,8 +11,6 @@ class Program extends Model
         'name',
         'mode',
         'level',
-        'price',
-        'price_period',
         'image',
         'teacher',
         'tujuan_program',

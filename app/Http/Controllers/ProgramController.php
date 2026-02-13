@@ -11,12 +11,60 @@ class ProgramController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-{
-    $programs = Program::latest()->get();
+    public function index(Request $request)
+    {
+        $query = Program::query();
+        
+        // Handle search
+        if ($request->has('search') && $request->search != '') {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('name', 'like', '%' . $search . '%')
+                  ->orWhere('tujuan_program', 'like', '%' . $search . '%')
+                  ->orWhere('teacher', 'like', '%' . $search . '%');
+            });
+        }
+        
+        // Handle category filter
+        if ($request->has('categories') && !empty($request->categories)) {
+            $query->whereIn('category', $request->categories);
+        }
+        
+        // Handle level filter
+        if ($request->has('levels') && !empty($request->levels)) {
+            $levels = $request->levels;
+            $query->where(function($q) use ($levels) {
+                foreach ($levels as $level) {
+                    $q->orWhere('level', 'like', '%' . $level . '%');
+                }
+            });
+        }
+        
+        $programs = $query->latest()->get();
+        
+        // Get counts for filters
+        $categoryCounts = [
+            'Academic & School Program' => Program::where('category', 'Academic & School Program')->count(),
+            'Quran & Islamic Studies Program' => Program::where('category', 'Quran & Islamic Studies Program')->count(),
+            'Language & Skill Program' => Program::where('category', 'Language & Skill Program')->count(),
+            'Program Options' => Program::where('category', 'Program Options')->count(),
+        ];
+        
+        $levelCounts = [
+            'PAUD' => Program::where('level', 'like', '%PAUD%')->count(),
+            'SD Kelas 1–3' => Program::where('level', 'like', '%SD Kelas 1–3%')->count(),
+            'SD Kelas 4–6' => Program::where('level', 'like', '%SD Kelas 4–6%')->count(),
+            'Beginner' => Program::where('level', 'like', '%Beginner%')->count(),
+            'Medium' => Program::where('level', 'like', '%Medium%')->count(),
+            'Jilid 1–4' => Program::where('level', 'like', '%Jilid 1–4%')->count(),
+            'Jilid 5–Al-Qur\'an' => Program::where('level', 'like', '%Jilid 5–Al-Qur\'an%')->count(),
+            'Juz 1, 2, dst' => Program::where('level', 'like', '%Juz 1, 2, dst%')->count(),
+            'Juz 30, 29' => Program::where('level', 'like', '%Juz 30, 29%')->count(),
+            'WNI di Luar Negeri' => Program::where('level', 'like', '%WNI di Luar Negeri%')->count(),
+        ];
 
-    return view('pages.programs', compact('programs'));
-}
+        return view('pages.programs', compact('programs', 'categoryCounts', 'levelCounts'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -36,8 +84,6 @@ class ProgramController extends Controller
             'name' => 'required|string|max:255',
             'mode' => 'required|string',
             'level' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
-            'price_period' => 'required|string',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:10240',
             'teacher' => 'required|string|max:255',
             'tujuan_program' => 'required|string',
@@ -84,8 +130,6 @@ class ProgramController extends Controller
             'name' => 'required|string|max:255',
             'mode' => 'required|string',
             'level' => 'required|string|max:255',
-            'price' => 'required|numeric|min:0',
-            'price_period' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:10240',
             'teacher' => 'required|string|max:255',
             'tujuan_program' => 'required|string',

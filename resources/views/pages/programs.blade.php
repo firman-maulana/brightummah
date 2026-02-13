@@ -43,15 +43,15 @@
                <div class="col-xl-6 col-lg-7">
                   <div class="it-course-filter-top-right d-flex align-items-center">
                      <div class="it-course-filter-result">
-                        <span>We Found <b>25</b> Courses Available For you</span>
+                        <span>We Found <b id="courseCount">{{ $programs->count() }}</b> Courses Available For you</span>
                      </div>
                   </div>
                </div>
                <div class="col-xl-6 col-lg-5">
                   <div class="it-course-filter-top-right d-flex justify-content-lg-end align-items-center">
                      <div class="it-course-filter-search p-relative">
-                        <form action="#">
-                           <input type="text" placeholder="Search keywords">
+                        <form id="searchForm">
+                           <input type="text" id="searchInput" placeholder="Search keywords" autocomplete="off">
                            <button class="icon" type="submit">
                               <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M17.0287 15.9398L13.7295 12.6593C14.6152 11.4885 15.087 9.90002 15.1238 7.91252C15.045 3.34127 12.4935 0.807771 7.93275 0.777771C3.31725 0.807021 0.75 3.48677 0.75 7.91177C0.75 12.558 3.3195 15.0458 7.94175 15.0728C9.9135 15.0608 11.496 14.6033 12.669 13.719L15.9713 17.0033C16.3597 17.3723 16.8195 17.2215 17.0317 17.0003C17.319 16.7018 17.3228 16.2315 17.0287 15.9398ZM2.25 7.92527C2.32275 4.14902 4.18425 2.30102 7.932 2.27777C11.6438 2.30177 13.5593 4.20602 13.6238 7.91177C13.5533 11.7518 11.745 13.5503 7.94175 13.5728C4.134 13.5503 2.325 11.7563 2.25 7.92527Z" fill="#03594E" />
@@ -77,23 +77,23 @@
                         <h4 class="filter-title">Categories</h4>
                         <div class="filter-tags sort-options">
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="design">
-                              <span>Academic & School Program <i class="count">(9)</i></span>
+                              <input type="checkbox" name="category" value="Academic & School Program" class="category-filter">
+                              <span>Academic & School Program <i class="count">({{ $categoryCounts['Academic & School Program'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="business">
-                              <span>Quran & Islamic Studies Program <i class="count">(12)</i></span>
+                              <input type="checkbox" name="category" value="Quran & Islamic Studies Program" class="category-filter">
+                              <span>Quran & Islamic Studies Program <i class="count">({{ $categoryCounts['Quran & Islamic Studies Program'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="development">
-                              <span>Language & Skill Program <i class="count">(10)</i></span>
+                              <input type="checkbox" name="category" value="Language & Skill Program" class="category-filter">
+                              <span>Language & Skill Program <i class="count">({{ $categoryCounts['Language & Skill Program'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="music">
-                              <span>Program Options <i class="count">(8)</i></span>
+                              <input type="checkbox" name="category" value="Program Options" class="category-filter">
+                              <span>Program Options <i class="count">({{ $categoryCounts['Program Options'] ?? 0 }})</i></span>
                            </label>
                         </div>
                      </div>
@@ -105,53 +105,53 @@
                         <h4 class="filter-title">Level</h4>
                         <div class="filter-tags sort-options">
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="design">
-                              <span>PAUD <i class="count">(9)</i></span>
+                              <input type="checkbox" name="level" value="PAUD" class="level-filter">
+                              <span>PAUD <i class="count">({{ $levelCounts['PAUD'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="business">
-                              <span>SD Kelas 1–3 <i class="count">(12)</i></span>
+                              <input type="checkbox" name="level" value="SD Kelas 1–3" class="level-filter">
+                              <span>SD Kelas 1–3 <i class="count">({{ $levelCounts['SD Kelas 1–3'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="development">
-                              <span>SD Kelas 4–6 <i class="count">(10)</i></span>
+                              <input type="checkbox" name="level" value="SD Kelas 4–6" class="level-filter">
+                              <span>SD Kelas 4–6 <i class="count">({{ $levelCounts['SD Kelas 4–6'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="music">
-                              <span>Beginner <i class="count">(8)</i></span>
+                              <input type="checkbox" name="level" value="Beginner" class="level-filter">
+                              <span>Beginner <i class="count">({{ $levelCounts['Beginner'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="marketing">
-                              <span>Medium <i class="count">(8)</i></span>
+                              <input type="checkbox" name="level" value="Medium" class="level-filter">
+                              <span>Medium <i class="count">({{ $levelCounts['Medium'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="data-science">
-                              <span>Jilid 1–4 <i class="count">(8)</i></span>
+                              <input type="checkbox" name="level" value="Jilid 1–4" class="level-filter">
+                              <span>Jilid 1–4 <i class="count">({{ $levelCounts['Jilid 1–4'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="lifestyle">
-                              <span>Jilid 5–Al-Qur'an <i class="count">(9)</i></span>
+                              <input type="checkbox" name="level" value="Jilid 5–Al-Qur'an" class="level-filter">
+                              <span>Jilid 5–Al-Qur'an <i class="count">({{ $levelCounts['Jilid 5–Al-Qur\'an'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="development-2">
-                              <span>Juz 1, 2, dst <i class="count">(10)</i></span>
+                              <input type="checkbox" name="level" value="Juz 1, 2, dst" class="level-filter">
+                              <span>Juz 1, 2, dst <i class="count">({{ $levelCounts['Juz 1, 2, dst'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="business-2">
-                              <span>Juz 30, 29 <i class="count">(12)</i></span>
+                              <input type="checkbox" name="level" value="Juz 30, 29" class="level-filter">
+                              <span>Juz 30, 29 <i class="count">({{ $levelCounts['Juz 30, 29'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="business-2">
-                              <span>WNI di Luar Negeri <i class="count">(12)</i></span>
+                              <input type="checkbox" name="level" value="WNI di Luar Negeri" class="level-filter">
+                              <span>WNI di Luar Negeri <i class="count">({{ $levelCounts['WNI di Luar Negeri'] ?? 0 }})</i></span>
                            </label>
                         </div>
                      </div>
@@ -159,12 +159,25 @@
                </div>
             </div>
          </div>
+         
+         <!-- No Results Message -->
+         <div id="noResults" style="display: none;" class="mb-4">
+            <div class="alert alert-info text-center">
+               <p class="mb-0">Tidak ada program yang ditemukan sesuai dengan kriteria pencarian Anda.</p>
+            </div>
+         </div>
+         
          <div class="it-course-tab-content mb-45">
             <div class="tab-content" id="myTabContent">
                <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab">
-                  <div class="row gx-35">
+                  <div class="row gx-35" id="programsContainer">
                      @forelse($programs as $program)
-                     <div class="col-xl-6 col-lg-6 col-md-6">
+                     <div class="col-xl-6 col-lg-6 col-md-6 program-item" 
+                          data-category="{{ $program->category }}" 
+                          data-level="{{ $program->level }}" 
+                          data-name="{{ strtolower($program->name) }}" 
+                          data-teacher="{{ strtolower($program->teacher) }}" 
+                          data-description="{{ strtolower($program->tujuan_program) }}">
                         <div class="it-course-item mb-35">
                            <div class="row gx-0">
                               <div class="col-xl-5 col-lg-12 col-md-12 col-sm-5">
@@ -207,7 +220,7 @@
                      @empty
                      <div class="col-12">
                         <div class="text-center py-5">
-                           <p>No courses available at the moment.</p>
+                           <p>Belum ada program yang tersedia saat ini.</p>
                         </div>
                      </div>
                      @endforelse
@@ -256,5 +269,92 @@
       </div>
    </section>
    <!-- cta-area-end -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilters = document.querySelectorAll('.category-filter');
+    const levelFilters = document.querySelectorAll('.level-filter');
+    const programItems = document.querySelectorAll('.program-item');
+    const courseCount = document.getElementById('courseCount');
+    const noResults = document.getElementById('noResults');
+
+    // Search functionality - real-time without enter
+    searchInput.addEventListener('input', function() {
+        filterPrograms();
+    });
+
+    // Category filter functionality
+    categoryFilters.forEach(filter => {
+        filter.addEventListener('change', function() {
+            filterPrograms();
+        });
+    });
+
+    // Level filter functionality
+    levelFilters.forEach(filter => {
+        filter.addEventListener('change', function() {
+            filterPrograms();
+        });
+    });
+
+    // Prevent form submission
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+
+    function filterPrograms() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedCategories = Array.from(categoryFilters)
+            .filter(filter => filter.checked)
+            .map(filter => filter.value);
+        const selectedLevels = Array.from(levelFilters)
+            .filter(filter => filter.checked)
+            .map(filter => filter.value);
+
+        let visibleCount = 0;
+
+        programItems.forEach(item => {
+            const category = item.dataset.category;
+            const level = item.dataset.level;
+            const name = item.dataset.name;
+            const teacher = item.dataset.teacher;
+            const description = item.dataset.description;
+
+            // Check search criteria
+            const matchesSearch = !searchTerm || 
+                name.includes(searchTerm) || 
+                teacher.includes(searchTerm) || 
+                description.includes(searchTerm);
+
+            // Check category filter
+            const matchesCategory = selectedCategories.length === 0 || 
+                selectedCategories.includes(category);
+
+            // Check level filter - partial match for levels
+            const matchesLevel = selectedLevels.length === 0 || 
+                selectedLevels.some(selectedLevel => level.toLowerCase().includes(selectedLevel.toLowerCase()));
+
+            // Show/hide item based on all criteria
+            if (matchesSearch && matchesCategory && matchesLevel) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        // Update course count
+        courseCount.textContent = visibleCount;
+
+        // Show/hide no results message
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
+    }
+});
+</script>
 
 @endsection
