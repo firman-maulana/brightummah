@@ -42,6 +42,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
 
     Route::delete('/teachers/bulk-destroy', [TeacherController::class, 'bulkDestroy'])->name('teachers.bulk-destroy');
     Route::resource('teachers', TeacherController::class);
+    Route::view('/testimonials', 'admin.testimonials.index');
     
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {
