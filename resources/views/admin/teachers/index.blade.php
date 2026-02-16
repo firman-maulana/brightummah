@@ -86,17 +86,11 @@
                                                 <div class="flex items-center">
                                                     <div class="mr-2 coqgc czvpl cr0m4 c59cs">
     @if($teacher->photo_url)
-        <img class="rounded-full"
-             src="{{ $teacher->photo_url }}"
-             width="40"
-             height="40"
-             alt="{{ $teacher->name }}">
-    @else
-        <img class="rounded-full"
-             src="{{ asset('assets/admin/img/user-avatar-32.png') }}"
-             width="40"
-             height="40"
-             alt="{{ $teacher->name }}">
+        <div style="width:40px;height:40px;border-radius:9999px;overflow:hidden;">
+            <img style="width:100%;height:100%;object-fit:cover;border-radius:9999px;display:block;"
+                 src="{{ $teacher->photo_url }}"
+                 alt="{{ $teacher->name }}">
+        </div>
     @endif
 </div>
 

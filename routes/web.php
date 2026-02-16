@@ -24,7 +24,7 @@ Route::middleware('guest')->group(function () {
 
 // Default login route redirect to admin login (for Laravel's auth system)
 Route::get('/login', function () {
-    return redirect()->route('admin.login');
+    return view('pages.error.error');
 })->name('login');
 
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
