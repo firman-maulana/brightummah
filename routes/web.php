@@ -7,8 +7,11 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TestimonialSubmissionController;
+use App\Http\Controllers\Admin\TestimonialController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])->name('testimonials.store');
 Route::resource('programs', ProgramController::class)->only(['index']);
 Route::get('/valuebasedroutine', fn() => view('pages.valuebasedroutine'))->name('valuebasedroutine');
 Route::get('/about', fn() => view('pages.about'))->name('about');
@@ -42,7 +45,10 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
 
     Route::delete('/teachers/bulk-destroy', [TeacherController::class, 'bulkDestroy'])->name('teachers.bulk-destroy');
     Route::resource('teachers', TeacherController::class);
-    Route::view('/testimonials', 'admin.testimonials.index');
+    Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
+    Route::get('/testimonials/{testimonial}/approve', [TestimonialController::class, 'approve'])->name('testimonials.approve');
+    Route::post('/testimonials/{testimonial}/post', [TestimonialController::class, 'post'])->name('testimonials.post');
+    Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
     
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {
