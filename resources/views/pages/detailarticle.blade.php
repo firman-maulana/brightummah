@@ -21,7 +21,7 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="index.html">Home</a></span>
+                        <span><a href="{{ route('home') }}">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
@@ -76,14 +76,13 @@
                                     </clipPath>
                                  </defs>
                               </svg>
-                              Jennifer Hale
+                              Username penulis
                            </span>
                         </div>
-                        <h4 class="it-section-title">A Step-by-Step Guide to Building Better User Experiences</h4>
+                        <h4 class="it-section-title">judul</h4>
                         <div class="postbox-dsc">
-                           <p class="mb-15">What does it take to deliver an amazing user experience (UX)? A seamless design process, of course.
-                          The UX design process is a cycle that leads to the creation of products that align with users’ needs to create a more satisfying, intuitive experience. It entails:</p>
-                          <p class="mb-20">Everything in this process — from research and prototyping to testing and continuous improvement — helps build better user experiences. Mastering these concepts will enhance your career and help you stand out from other candidates.</p>
+                           <p class="mb-15">paragraf</p>
+                          <p class="mb-20">paragraf</p>
                         </div>
                         <div class="postbox-list style-2 mb-55">
                            <ul>
@@ -93,8 +92,8 @@
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                  </svg>
-                                 <span> Research:</span>
-                                Often referred to as “discovery,” the goal in this phase is to learn about a problem, why it’s happening, and how designing a new product could resolve it.
+                                 <span> judul poin:</span>
+                                isi poin
                               </li>
                               <li>
                                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,8 +101,8 @@
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                  </svg>
-                                 <span> Ideation & design:</span>
-                               Explore potential solutions and develop a product that addresses the problem.
+                                 <span> judul poin:</span>
+                               isi poin
                               </li>
                               <li>
                                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -111,8 +110,8 @@
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                  </svg>
-                                 <span>Fine-tuning:</span>
-                                Make changes to the model based on feedback.
+                                 <span>judul poin:</span>
+                                isi poin
                               </li>
                               <li>
                                  <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,19 +119,17 @@
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                     <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                  </svg>
-                                 <span> Continuous improvement & iterating:</span>
-                               Monitor feedback about the product and keep looking for ways to enhance it.
+                                 <span> judul poin:</span>
+                               isi poin
                               </li>
                            </ul>
                         </div>
-                        <h4 class="it-section-title">UX/UI/Product Designer Responsibilities</h4>
                         <div class="postbox-dsc pt-5 mb-55">
-                           <p class="mb-15">Companies often use the titles <span>UX Designer, UI Designer, and Product Designer </span> interchangeably, but each role has distinct responsibilities in creating seamless digital experiences. Let’s lay out each role’s responsibilities with the understanding that real-world careers will most likely require a combination of UX, UI, and Product duties.</p>
-                           <p class="mb-20"><span>UX designers </span> focus on understanding user needs and designing solutions that enhance usability and experience. They conduct research, identify user pain points, and develop features that improve interaction, asking questions like: What is the best outcome for users? and How can the design solve</p>
+                           <p class="mb-15">paragraf</p>
+                           <p class="mb-20">paragraf</p>
                         </div>
-                        <h4 class="it-section-title">Learn UX Design with Udemy Courses</h4>
                         <div class="postbox-dsc pt-5">
-                           <p class="mb-20">Educeet global catalog includes 250,000 courses that help people adapt to change and thrive. With our expert-led courses in UX design, you can</p>
+                           <p class="mb-20">paragraf</p>
                         </div>   
                         <div class="postbox-list-wrap-2 mb-20">
                            <div class="postbox-list">
@@ -143,7 +140,7 @@
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    Learn wireframing, prototyping, and other UX fundamentals.
+                                    isi poin
                                  </li>
                                  <li>
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +148,7 @@
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    Get hands-on experience with <span> Figma, Adobe XD,</span> and other UX design tools.
+                                    isi poin
                                  </li>
                                  <li>
                                     <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -159,13 +156,13 @@
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
                                        <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
-                                    Build a portfolio and, if possible, case studies that help you land your dream job.
+                                    isi poin
                                  </li>
                               </ul>
                            </div>
                         </div>                     
                         <div class="postbox-dsc">
-                           <p class="mb-15">Begin your UX design career today. Browse our catalog and enroll in courses that align with your career interests and goals.</p>
+                           <p class="mb-15">paragraf</p>
                         </div>
                      </div>
                   </div>
@@ -186,14 +183,13 @@
                               <span>Share:</span>
                               <div class="postbox-share-social">
                                  <a href="#">
-                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path
-                                          d="M16.9989 10.0113C16.2575 9.87227 15.4949 9.7998 14.7168 9.7998C10.435 9.7998 6.62665 11.9938 4.19922 15.3997M14.5997 3.39941C12.0962 6.33329 8.33416 8.19931 4.12763 8.19931C3.05145 8.19931 2.00436 8.07718 1 7.84627M11.0941 17.0005C11.2946 16.0293 11.3999 15.0235 11.3999 13.9931C11.3999 8.94036 8.86738 4.47788 5 1.80078M16.9997 8.99983C16.9997 13.418 13.418 16.9997 8.99983 16.9997C4.58165 16.9997 1 13.418 1 8.99983C1 4.58165 4.58165 1 8.99983 1C13.418 1 16.9997 4.58165 16.9997 8.99983Z"
-                                          stroke="currentcolor" stroke-width="1.5"
-                                          stroke-linejoin="round" />
-                                    </svg>
-                                 </a>
+   <svg width="18" height="18" viewBox="0 0 16 16" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0zM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2z"
+         fill="currentColor"/>
+   </svg>
+</a>
+
                               </div>
                            </div>
                         </div>

@@ -1057,7 +1057,6 @@
                <div class="it-blog-item mb-35">
                   <div class="it-blog-thumb border-radius-20 mb-30 p-relative">
                      <img class="w-100" src="{{ asset('assets/img/blog-1-1.jpg') }}" alt="">
-                     <span class="it-blog-tag">Design</span>
                   </div>
                   <div class="it-blog-content">
                      <div class="it-blog-meta mb-25">
@@ -1081,11 +1080,11 @@
                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M10 0.105957C4.48583 0.105957 0 4.59179 0 10.106C0 15.6201 4.48583 20.106 10 20.106C15.5142 20.106 20 15.6201 20 10.106C20 4.59179 15.5142 0.105957 10 0.105957ZM6.66667 17.7426V17.606C6.66667 15.7676 8.16167 14.2726 10 14.2726C11.8383 14.2726 13.3333 15.7676 13.3333 17.606V17.7426C12.3117 18.1901 11.185 18.4393 10 18.4393C8.815 18.4393 7.68833 18.1901 6.66667 17.7426ZM14.9375 16.8151C14.5575 14.4326 12.4883 12.606 10 12.606C7.51167 12.606 5.44333 14.4326 5.0625 16.8151C3.00417 15.296 1.66667 12.8543 1.66667 10.106C1.66667 5.51096 5.405 1.77262 10 1.77262C14.595 1.77262 18.3333 5.51096 18.3333 10.106C18.3333 12.8543 16.9958 15.296 14.9375 16.8151ZM10 4.27262C8.16167 4.27262 6.66667 5.76762 6.66667 7.60596C6.66667 9.44429 8.16167 10.9393 10 10.9393C11.8383 10.9393 13.3333 9.44429 13.3333 7.60596C13.3333 5.76762 11.8383 4.27262 10 4.27262ZM10 9.27262C9.08083 9.27262 8.33333 8.52512 8.33333 7.60596C8.33333 6.68679 9.08083 5.93929 10 5.93929C10.9192 5.93929 11.6667 6.68679 11.6667 7.60596C11.6667 8.52512 10.9192 9.27262 10 9.27262Z" fill="currentcolor" />
                            </svg>
-                           Roboth smith
+                           username penulis
                         </span>
                      </div>
                      <h5 class="it-blog-title mb-15">
-                        <a class="border-line" href="blog-details-left-sidebar.html">How to Avoid the Biggest College Admission Mistakes</a>
+                        <a class="border-line" href="blog-details-left-sidebar.html">judul</a>
                      </h5>
                      <div class="it-blog-btn">
                         <a href="blog-details-left-sidebar.html" class="it-btn-yellow">
@@ -1108,7 +1107,6 @@
                <div class="it-blog-item mb-35">
                   <div class="it-blog-thumb border-radius-20 mb-30 p-relative">
                      <img class="w-100" src="{{ asset('assets/img/blog-1-2.jpg') }}" alt="">
-                     <span class="it-blog-tag">Design</span>
                   </div>
                   <div class="it-blog-content">
                      <div class="it-blog-meta mb-25">
@@ -1132,11 +1130,11 @@
                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M10 0.105957C4.48583 0.105957 0 4.59179 0 10.106C0 15.6201 4.48583 20.106 10 20.106C15.5142 20.106 20 15.6201 20 10.106C20 4.59179 15.5142 0.105957 10 0.105957ZM6.66667 17.7426V17.606C6.66667 15.7676 8.16167 14.2726 10 14.2726C11.8383 14.2726 13.3333 15.7676 13.3333 17.606V17.7426C12.3117 18.1901 11.185 18.4393 10 18.4393C8.815 18.4393 7.68833 18.1901 6.66667 17.7426ZM14.9375 16.8151C14.5575 14.4326 12.4883 12.606 10 12.606C7.51167 12.606 5.44333 14.4326 5.0625 16.8151C3.00417 15.296 1.66667 12.8543 1.66667 10.106C1.66667 5.51096 5.405 1.77262 10 1.77262C14.595 1.77262 18.3333 5.51096 18.3333 10.106C18.3333 12.8543 16.9958 15.296 14.9375 16.8151ZM10 4.27262C8.16167 4.27262 6.66667 5.76762 6.66667 7.60596C6.66667 9.44429 8.16167 10.9393 10 10.9393C11.8383 10.9393 13.3333 9.44429 13.3333 7.60596C13.3333 5.76762 11.8383 4.27262 10 4.27262ZM10 9.27262C9.08083 9.27262 8.33333 8.52512 8.33333 7.60596C8.33333 6.68679 9.08083 5.93929 10 5.93929C10.9192 5.93929 11.6667 6.68679 11.6667 7.60596C11.6667 8.52512 10.9192 9.27262 10 9.27262Z" fill="currentcolor" />
                            </svg>
-                           Roboth smith
+                           username penulis
                         </span>
                      </div>
                      <h5 class="it-blog-title mb-15">
-                        <a class="border-line" href="blog-details-left-sidebar.html">How Digital Platforms Are Shaping Business Schools</a>
+                        <a class="border-line" href="blog-details-left-sidebar.html">judul</a>
                      </h5>
                      <div class="it-blog-btn">
                         <a href="blog-details-left-sidebar.html" class="it-btn-yellow">
@@ -1159,7 +1157,6 @@
                <div class="it-blog-item mb-35">
                   <div class="it-blog-thumb border-radius-20 mb-30 p-relative">
                      <img class="w-100" src="{{ asset('assets/img/blog-1-3.jpg') }}" alt="">
-                     <span class="it-blog-tag">Design</span>
                   </div>
                   <div class="it-blog-content">
                      <div class="it-blog-meta mb-25">
@@ -1183,11 +1180,11 @@
                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M10 0.105957C4.48583 0.105957 0 4.59179 0 10.106C0 15.6201 4.48583 20.106 10 20.106C15.5142 20.106 20 15.6201 20 10.106C20 4.59179 15.5142 0.105957 10 0.105957ZM6.66667 17.7426V17.606C6.66667 15.7676 8.16167 14.2726 10 14.2726C11.8383 14.2726 13.3333 15.7676 13.3333 17.606V17.7426C12.3117 18.1901 11.185 18.4393 10 18.4393C8.815 18.4393 7.68833 18.1901 6.66667 17.7426ZM14.9375 16.8151C14.5575 14.4326 12.4883 12.606 10 12.606C7.51167 12.606 5.44333 14.4326 5.0625 16.8151C3.00417 15.296 1.66667 12.8543 1.66667 10.106C1.66667 5.51096 5.405 1.77262 10 1.77262C14.595 1.77262 18.3333 5.51096 18.3333 10.106C18.3333 12.8543 16.9958 15.296 14.9375 16.8151ZM10 4.27262C8.16167 4.27262 6.66667 5.76762 6.66667 7.60596C6.66667 9.44429 8.16167 10.9393 10 10.9393C11.8383 10.9393 13.3333 9.44429 13.3333 7.60596C13.3333 5.76762 11.8383 4.27262 10 4.27262ZM10 9.27262C9.08083 9.27262 8.33333 8.52512 8.33333 7.60596C8.33333 6.68679 9.08083 5.93929 10 5.93929C10.9192 5.93929 11.6667 6.68679 11.6667 7.60596C11.6667 8.52512 10.9192 9.27262 10 9.27262Z" fill="currentcolor" />
                            </svg>
-                           Roboth smith
+                           username penulis
                         </span>
                      </div>
                      <h5 class="it-blog-title mb-15">
-                        <a class="border-line" href="blog-details-left-sidebar.html">Why Business Students Need Tech Skills for the Future</a>
+                        <a class="border-line" href="blog-details-left-sidebar.html">judul</a>
                      </h5>
                      <div class="it-blog-btn">
                         <a href="blog-details-left-sidebar.html" class="it-btn-yellow">
