@@ -1,9 +1,10 @@
 @extends('layouts.main2')
 @section('content')
 
-<div class="it-breadcrumb-area fix it-breadcrumb-style-2 z-index-1">
-      <img class="it-breadcrumb-shape-1" src="assets/img/breadcrumb-1-1.png" alt="">
-      <img class="it-breadcrumb-shape-3" src="assets/img/hero-1-5.png" alt="">
+<!-- breadcrumb-area-start -->
+   <div class="it-breadcrumb-area fix it-breadcrumb-style-2 z-index-1" data-background="assets/img/shape/breadcrumb-1-bg.png">
+      <img class="it-breadcrumb-shape-1" src="assets/img/shape/breadcrumb-1-1.png" alt="">
+      <img class="it-breadcrumb-shape-3" src="assets/img/shape/breadcrumb-1-2.png" alt="">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
@@ -20,19 +21,19 @@
                   </div>
                   <div class="it-breadcrumb-list-wrap">
                      <div class="it-breadcrumb-list">
-                        <span><a href="{{ route('home') }}">Home</a></span>
+                        <span><a href="index.html">Home</a></span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
                            </svg>
                         </span>
-                        <span>Blog</span>
+                        <span>Articles</span>
                         <span class="dvdr">
                            <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
                            </svg>
                         </span>
-                        <span>Blog Details</span>
+                        <span>Articles Details</span>
                      </div>
                   </div>
                </div>
@@ -43,223 +44,14 @@
    <!-- breadcrumb-area-end -->
 
    <!-- details-area-start -->
-   <div class="it-blog-details-area blog-details-left-sidebar pt-130 pb-130">
+   <div class="it-blog-details-area pt-130 pb-95">
       <div class="container">
-         <div class="row gx-35">
-            <div class="col-xl-4 col-lg-4">
-               <div class="it-shop-sidebar">
-                  <div class="sidebar-widget mb-60">
-                     <h4 class="sidebar-widget-title mb-25">Search here</h4>
-                     <!-- search -->
-                     <div class="sidebar-search-box p-relative">
-                        <form action="#">
-                           <div class="sidebar-search-input">
-                              <input type="text" placeholder="Search keywords">
-                           </div>
-                           <div class="sidebar-search-button">
-                              <button type="submit">
-                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M17.0287 15.9397L13.7295 12.6592C14.6152 11.4885 15.087 9.89996 15.1238 7.91246C15.045 3.34121 12.4935 0.80771 7.93275 0.77771C3.31725 0.80696 0.75 3.48671 0.75 7.91171C0.75 12.558 3.3195 15.0457 7.94175 15.0727C9.9135 15.0607 11.496 14.6032 12.669 13.719L15.9713 17.0032C16.3597 17.3722 16.8195 17.2215 17.0317 17.0002C17.319 16.7017 17.3228 16.2315 17.0287 15.9397ZM2.25 7.92521C2.32275 4.14896 4.18425 2.30096 7.932 2.27771C11.6438 2.30171 13.5593 4.20596 13.6238 7.91171C13.5533 11.7517 11.745 13.5502 7.94175 13.5727C4.134 13.5502 2.325 11.7562 2.25 7.92521Z" fill="#03594E" />
-                                 </svg>
-                              </button>
-                           </div>
-                        </form>
-                     </div>
-                  </div>
-                  <!-- category -->
-                  <div class="sidebar-widget mb-60">
-                     <h4 class="sidebar-widget-title mb-25">Category</h4>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Business
-                           <span>
-                              06
-                           </span>
-                        </div>
-                     </a>
-                     <a href="#">
-                        <div class="sidebar-widget-list active mb-15">
-                           Education
-                           <span>
-                              07
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Family & Divorce
-                           <span>
-                              09
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Online Marketing
-                           <span>
-                              06
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Islamic
-                           <span>
-                              05
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Quran
-                           <span>
-                              08
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list mb-15">
-                           Resturent
-                           <span>
-                              06
-                           </span>
-                        </div>
-                     </a>
-                     <a href="blog-details-left-sidebar.html">
-                        <div class="sidebar-widget-list">
-                           Web Design
-                           <span>
-                              05
-                           </span>
-                        </div>
-                     </a>
-                  </div>
-                  <!-- post -->
-                  <div class="sidebar-widget mb-60">
-                     <h4 class="sidebar-widget-title mb-25">Recent post</h4>
-                     <div class="sidebar-widget-content">
-                        <div class="sidebar-widget-post">
-                           <ul>
-                              <li>
-                                 <div class="rc-post">
-                                    <div class="rc-post-thumb mb-20">
-                                       <a href="blog-details-left-sidebar.html">
-                                          <img src="assets/img/sidebar-1-1.jpg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="rc-post-content">
-                                       <div class="rc-meta mb-10">
-                                          <span>
-                                             <i class="fa-solid fa-calendar-days"></i>
-                                             02 June, 2025
-                                          </span>
-                                       </div>
-                                       <h5 class="rc-post-title">
-                                          <a class="border-line" href="#">Dapibus cras nisi suscipit nibh elite <br>purus condimentum</a>
-                                       </h5>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="rc-post">
-                                    <div class="rc-post-thumb mb-20">
-                                       <a href="blog-details-left-sidebar.html">
-                                          <img src="assets/img/sidebar-1-2.jpg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="rc-post-content">
-                                       <div class="rc-meta mb-10">
-                                          <span>
-                                             <i class="fa-solid fa-calendar-days"></i>
-                                             02 June, 2025
-                                          </span>
-                                       </div>
-                                       <h5 class="rc-post-title">
-                                          <a class="border-line" href="#">Dapibus cras nisi suscipit nibh elite
-                                             purus condimentum</a>
-                                       </h5>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="rc-post">
-                                    <div class="rc-post-thumb mb-20">
-                                       <a href="blog-details-left-sidebar.html">
-                                          <img src="assets/img/sidebar-1-3.jpg" alt="">
-                                       </a>
-                                    </div>
-                                    <div class="rc-post-content">
-                                       <div class="rc-meta mb-10">
-                                          <span>
-                                             <i class="fa-solid fa-calendar-days"></i>
-                                             02 June, 2025
-                                          </span>
-                                       </div>
-                                       <h5 class="rc-post-title">
-                                          <a class="border-line" href="#">Dapibus cras nisi suscipit nibh elite
-                                             purus condimentum</a>
-                                       </h5>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- contact -->
-                  <div class="sidebar-contact-wrap theme-bg fix z-index-1 text-center mb-60">
-                     <img class="shape" src="assets/img/shape/blog-contact.png" alt="">
-                     <div class="thumb p-relative">
-                        <img src="assets/img/sidebar-1-4.jpg" alt="">
-                        <div class="sidebar-contact-circle">
-                           <span>100% <br>QUALITY</span>
-                        </div>
-                     </div>
-                     <div class="sidebar-contact-2 mt-30">
-                        <span>Make An Appointment</span>
-                        <a class="border-line" href="tel:+510888455369">+51-(0)-888-455-369</a>
-                        <div class="sidebar-contact-btn d-block">
-                           <a href="contact-us.html" class="it-btn-yellow w-100">
-                              <span>
-                                 <span class="text-1">Contact Us</span>
-                                 <span class="text-2">Contact Us</span>
-                              </span>
-                              <i>
-                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.0544 8.1364C15.4058 7.78492 15.4058 7.21508 15.0544 6.8636L9.3268 1.13604C8.97533 0.784567 8.40548 0.784567 8.05401 1.13604C7.70254 1.48751 7.70254 2.05736 8.05401 2.40883L13.1452 7.5L8.05401 12.5912C7.70254 12.9426 7.70254 13.5125 8.05401 13.864C8.40548 14.2154 8.97533 14.2154 9.3268 13.864L15.0544 8.1364ZM0.417969 7.5V8.4H14.418V7.5V6.6H0.417969V7.5Z" fill="currentcolor" />
-                                 </svg>
-                              </i>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- tags -->
-                  <div class="sidebar-widget tagcloud-widget">
-                     <div class="sideba-widge-title-box">
-                        <h3 class="sidebar-widget-title sm-border mb-35">Popular Tags</h3>
-                     </div>
-                     <div class="sidebar-widget-content">
-                        <div class="tagcloud">
-                           <a href="#">Business</a>
-                           <a href="#">Education</a>
-                           <a href="#">Students</a>
-                           <a href="#">Art</a>
-                           <a href="#">Modern</a>
-                           <a href="#">School</a>
-                           <a href="#">Tech</a>
-                           <a href="#">Development</a>
-                           <a href="#">UI UX Design</a>
-                           <a href="#">Market</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="col-xl-8 col-lg-8">
+         <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-12">
                <div class="postbox-details-wrapper it-career-details-area">
                   <div class="postbox-thumb-box mb-60">
                      <div class="postbox-main-thumb border-radius-20 mb-35">
-                        <img class="w-100" src="assets/img/details-1-6.jpg" alt="">
+                        <img class="w-100" src="assets/img/blog/details-1-8.jpg" alt="">
                      </div>
                      <div class="postbox-content-box">
                         <div class="it-blog-meta mb-20">
@@ -271,15 +63,6 @@
                                     fill="currentcolor" />
                               </svg>
                               December 24,2025
-                           </span>
-                           <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                 <path
-                                    d="M12.6667 2.66667H11.9327C11.6227 1.14733 10.276 0 8.66667 0H3.33333C1.49533 0 0 1.49533 0 3.33333V11.9027C0 12.432 0.29 12.916 0.756 13.1653C0.968 13.2793 1.20067 13.3353 1.43267 13.3353C1.71 13.3353 1.98667 13.2547 2.226 13.0953L4.19267 11.784C4.65333 13.074 5.88667 14 7.33333 14H11.1313L13.774 15.762C14.014 15.922 14.29 16.0027 14.5673 16.0027C14.7993 16.0027 15.0313 15.946 15.244 15.832C15.7107 15.5827 16 15.0987 16 14.5693V6C16 4.162 14.5047 2.66667 12.6667 2.66667ZM1.48667 11.986C1.474 11.994 1.43667 12.018 1.38533 11.9907C1.33267 11.9627 1.33267 11.918 1.33267 11.9033V3.33333C1.33267 2.23067 2.23 1.33333 3.33267 1.33333H8.666C9.76867 1.33333 10.666 2.23067 10.666 3.33333V8C10.666 9.10267 9.76867 10 8.666 10H4.666C4.448 10 4.30533 10.106 4.28933 10.1167L1.48667 11.986ZM14.6667 14.57C14.6667 14.584 14.6667 14.6293 14.614 14.6573C14.5613 14.6847 14.5253 14.6607 14.5133 14.6527L11.7033 12.7787C11.594 12.706 11.4653 12.6667 11.3333 12.6667H7.33333C6.464 12.6667 5.72333 12.1093 5.448 11.3333H8.66667C10.5047 11.3333 12 9.838 12 8V4H12.6667C13.7693 4 14.6667 4.89733 14.6667 6V14.57Z"
-                                    fill="currentcolor" />
-                              </svg>
-                              Comments
                            </span>
                            <span>
                               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -342,72 +125,6 @@
                               </li>
                            </ul>
                         </div>
-                        <div class="mb-50">
-                           <div class="row align-items-center">
-                              <div class="col-xl-6 col-lg-12 col-md-6">
-                                 <div class="postbox-banner border-radius-20">
-                                    <img src="assets/img/details-1-7.jpg" alt="">
-                                 </div>
-                              </div>
-                              <div class="col-xl-6 col-lg-12 col-md-6">
-                                 <div class="postbox-list-wrap">
-                                    <h4 class="it-details-title-sm">What Is the UX Design Process?</h4>
-                                    <div class="postbox-dsc dsc-style-2">
-                                       <p class="mb-20">The UX design process refers to the steps required to create intuitive digital experiences. Examples of where this process can be applied include</p>
-                                    </div>
-                                    <div class="row">
-                                       <div class="col-xl-6 col-lg-4 col-md-6 col-6 col-sm-4">
-                                          <div class="postbox-list">
-                                             <ul>
-                                                <li>
-                                                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <circle cx="8.5" cy="8.5" r="8.5" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                   </svg>
-                                                   <span> Websites</span>
-                                                </li>
-                                                <li>
-                                                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <circle cx="8.5" cy="8.5" r="8.5" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                   </svg>
-                                                   <span>Software</span>
-                                                </li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                       <div class="col-xl-6 col-lg-8 col-md-6 col-6 col-sm-8">
-                                          <div class="postbox-list">
-                                             <ul>
-                                                <li>
-                                                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <circle cx="8.5" cy="8.5" r="8.5" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                   </svg>
-                                                   <span>Apps</span>
-                                                </li>
-                                                <li>
-                                                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                      <circle cx="8.5" cy="8.5" r="8.5" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" fill="#03594E" />
-                                                      <path d="M11.7728 6.53906L7.41385 10.898L5.23438 8.71855" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                   </svg>
-                                                   <span>Digital services</span>
-                                                </li>
-                                             </ul>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="postbox-dsc dsc-style-2 mt-20">
-                                       <p class="mb-0">Ideally, the UX design process bridges the gap between products and the people who use them. To do this, designers focus on <span>enhancing usability and accessibility</span> (how easy to use an experience is by people of all abilities, including those with disabilities), <span>and improving user satisfaction.</span></p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
                         <h4 class="it-section-title">UX/UI/Product Designer Responsibilities</h4>
                         <div class="postbox-dsc pt-5 mb-55">
                            <p class="mb-15">Companies often use the titles <span>UX Designer, UI Designer, and Product Designer </span> interchangeably, but each role has distinct responsibilities in creating seamless digital experiences. Let’s lay out each role’s responsibilities with the understanding that real-world careers will most likely require a combination of UX, UI, and Product duties.</p>
@@ -466,33 +183,8 @@
                         </div>
                         <div class="col-xl-5 col-lg-5 col-md-5">
                            <div class="postbox-share d-flex align-items-center justify-content-lg-end">
-                              <span>Flowing:</span>
+                              <span>Share:</span>
                               <div class="postbox-share-social">
-                                 <a href="#">
-                                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M1.82727 6.83333C1.14284 6.83333 1 6.96763 1 7.61111V8.77778C1 9.42126 1.14284 9.55556 1.82727 9.55556H3.48182V14.2222C3.48182 14.8657 3.62466 15 4.30909 15H5.96364C6.64807 15 6.79091 14.8657 6.79091 14.2222V9.55556H8.64871C9.1678 9.55556 9.30155 9.4607 9.44416 8.99145L9.7987 7.82478C10.043 7.02095 9.89246 6.83333 9.00326 6.83333H6.79091V4.88889C6.79091 4.45933 7.16129 4.11111 7.61818 4.11111H9.97273C10.6572 4.11111 10.8 3.97681 10.8 3.33333V1.77778C10.8 1.1343 10.6572 1 9.97273 1H7.61818C5.33373 1 3.48182 2.74111 3.48182 4.88889V6.83333H1.82727Z"
-                                          stroke="currentcolor" stroke-width="1.5"
-                                          stroke-linejoin="round" />
-                                    </svg>
-                                 </a>
-                                 <a href="#">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path
-                                          d="M12.0586 4.94727C12.6109 4.94727 13.0586 4.49955 13.0586 3.94727C13.0586 3.39498 12.6109 2.94727 12.0586 2.94727V4.94727ZM12.0496 2.94727C11.4973 2.94727 11.0496 3.39498 11.0496 3.94727C11.0496 4.49955 11.4973 4.94727 12.0496 4.94727V2.94727ZM8 14C6.32181 14 5.16377 13.9979 4.2928 13.8808C3.45059 13.7675 3.02803 13.5636 2.73223 13.2678L1.31802 14.682C2.04735 15.4113 2.96231 15.7199 4.0263 15.8629C5.06152 16.0021 6.37835 16 8 16V14ZM0 8C0 9.62165 -0.00212373 10.9385 0.137058 11.9737C0.280107 13.0377 0.588687 13.9526 1.31802 14.682L2.73223 13.2678C2.43644 12.972 2.23246 12.5494 2.11922 11.7072C2.00212 10.8362 2 9.67819 2 8H0ZM14 8C14 9.67819 13.9979 10.8362 13.8808 11.7072C13.7675 12.5494 13.5636 12.972 13.2678 13.2678L14.682 14.682C15.4113 13.9526 15.7199 13.0377 15.8629 11.9737C16.0021 10.9385 16 9.62165 16 8H14ZM8 16C9.62165 16 10.9385 16.0021 11.9737 15.8629C13.0377 15.7199 13.9526 15.4113 14.682 14.682L13.2678 13.2678C12.972 13.5636 12.5494 13.7675 11.7072 13.8808C10.8362 13.9979 9.67819 14 8 14V16ZM8 2C9.67819 2 10.8362 2.00212 11.7072 2.11922C12.5494 2.23246 12.972 2.43644 13.2678 2.73223L14.682 1.31802C13.9526 0.588687 13.0377 0.280107 11.9737 0.137058C10.9385 -0.00212373 9.62165 0 8 0V2ZM16 8C16 6.37835 16.0021 5.06152 15.8629 4.0263C15.7199 2.96231 15.4113 2.04735 14.682 1.31802L13.2678 2.73223C13.5636 3.02803 13.7675 3.45059 13.8808 4.2928C13.9979 5.16377 14 6.32181 14 8H16ZM8 0C6.37835 0 5.06152 -0.00212373 4.0263 0.137058C2.96231 0.280107 2.04735 0.588687 1.31802 1.31802L2.73223 2.73223C3.02803 2.43644 3.45059 2.23246 4.2928 2.11922C5.16377 2.00212 6.32181 2 8 2V0ZM2 8C2 6.32181 2.00212 5.16377 2.11922 4.2928C2.23246 3.45059 2.43644 3.02803 2.73223 2.73223L1.31802 1.31802C0.588687 2.04735 0.280107 2.96231 0.137058 4.0263C-0.00212373 5.06152 0 6.37835 0 8H2ZM10.3171 8.00134C10.3171 9.28031 9.28031 10.3171 8.00134 10.3171V12.3171C10.3849 12.3171 12.3171 10.3849 12.3171 8.00134H10.3171ZM8.00134 10.3171C6.72236 10.3171 5.68555 9.28031 5.68555 8.00134H3.68555C3.68555 10.3849 5.61779 12.3171 8.00134 12.3171V10.3171ZM5.68555 8.00134C5.68555 6.72236 6.72236 5.68555 8.00134 5.68555V3.68555C5.61779 3.68555 3.68555 5.61779 3.68555 8.00134H5.68555ZM8.00134 5.68555C9.28031 5.68555 10.3171 6.72236 10.3171 8.00134H12.3171C12.3171 5.61779 10.3849 3.68555 8.00134 3.68555V5.68555ZM12.0586 2.94727H12.0496V4.94727H12.0586V2.94727Z"
-                                          fill="currentcolor" />
-                                    </svg>
-                                 </a>
-                                 <a href="#">
-                                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none"
-                                       xmlns="http://www.w3.org/2000/svg">
-                                       <path fill-rule="evenodd" clip-rule="evenodd"
-                                          d="M4.41177 0H0L5.23083 6.87316L0.334618 12.6389H2.59681L6.29998 8.27809L9.58823 12.5988H14L8.6172 5.52593L8.62673 5.53813L13.2614 0.0802914H10.9992L7.55741 4.13336L4.41177 0ZM2.43522 1.20371H3.80866L11.5648 11.395H10.1913L2.43522 1.20371Z"
-                                          fill="currentcolor" />
-                                    </svg>
-                                 </a>
                                  <a href="#">
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                        xmlns="http://www.w3.org/2000/svg">
@@ -505,114 +197,6 @@
                               </div>
                            </div>
                         </div>
-                     </div>
-                  </div>
-                  <div class="postbox-comment mb-70">
-                     <h3 class="it-section-title">Comment (02)</h3>
-                     <div class="postbox-comment-item mt-25">
-                        <div class="postbox-comment-content">
-                           <ul>
-                              <li>
-                                 <div class="postbox-comment-user d-flex align-items-center">
-                                    <div class="postbox-user-thumb">
-                                       <img src="assets/img/avatar-1-4.png" alt="">
-                                    </div>
-                                    <div>
-                                       <div class="d-flex justify-content-between">
-                                          <div class="postbox-user-info mb-10">
-                                             <h4 class="user-title">Linda Brain</h4>
-                                             <span>26 sep 2025 at 08:30pm</span>
-                                          </div>
-                                          <a class="reply" href="#">
-                                             <span>
-                                                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.88281 7.24219C4.36328 6.75 4.36328 5.90234 4.88281 5.41016L9.25781 1.03516C10.0781 0.214844 11.5 0.789062 11.5 1.96484V3.93359C15 4.07031 18.5 4.83594 18.5 8.74609C18.5 10.4961 17.7344 11.6992 16.3398 12.6562C15.3281 13.3398 13.9883 12.3828 14.3438 11.207C14.8086 9.59375 14.7266 8.88281 11.5 8.74609V10.6875C11.5 11.8633 10.0781 12.4375 9.25781 11.6172L4.88281 7.24219ZM5.8125 6.3125L10.1875 10.6875V7.40625C13.9336 7.40625 16.7227 7.84375 15.6016 11.5625C16.3945 11.043 17.1875 10.2773 17.1875 8.74609C17.1875 5.41016 13.4688 5.21875 10.1875 5.21875V1.9375L5.8125 6.3125ZM1.38281 5.41016L5.75781 1.03516C6.30469 0.460938 7.125 0.542969 7.61719 1.03516L2.3125 6.3125L7.61719 11.6172C7.125 12.1094 6.30469 12.1914 5.75781 11.6172L1.38281 7.24219C0.863281 6.75 0.863281 5.90234 1.38281 5.41016Z" fill="currentcolor"/>
-                                                </svg>
-
-                                             </span>
-                                             Reply
-                                          </a>
-                                       </div>
-                                       <div class="postbox-user-info">
-                                          <p>Conubia non viverra malesuada aenean per odio magna hymenaeos,
-                                             cubilia euducate class bulputate aenean laoreet nam ipsum mus
-                                             neko porttitor.</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </li>
-                              <li>
-                                 <div class="postbox-comment-user d-flex align-items-center">
-                                    <div class="postbox-user-thumb">
-                                       <img src="assets/img/avatar-1-5.png" alt="">
-                                    </div>
-                                    <div>
-                                       <div class="d-flex justify-content-between">
-                                          <div class="postbox-user-info mb-10">
-                                             <h4 class="user-title">Angel Parker</h4>
-                                             <span>26 sep 2023 at 08:30pm</span>
-                                          </div>
-                                          <a class="reply" href="#">
-                                             <span>
-                                                <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M4.88281 7.24219C4.36328 6.75 4.36328 5.90234 4.88281 5.41016L9.25781 1.03516C10.0781 0.214844 11.5 0.789062 11.5 1.96484V3.93359C15 4.07031 18.5 4.83594 18.5 8.74609C18.5 10.4961 17.7344 11.6992 16.3398 12.6562C15.3281 13.3398 13.9883 12.3828 14.3438 11.207C14.8086 9.59375 14.7266 8.88281 11.5 8.74609V10.6875C11.5 11.8633 10.0781 12.4375 9.25781 11.6172L4.88281 7.24219ZM5.8125 6.3125L10.1875 10.6875V7.40625C13.9336 7.40625 16.7227 7.84375 15.6016 11.5625C16.3945 11.043 17.1875 10.2773 17.1875 8.74609C17.1875 5.41016 13.4688 5.21875 10.1875 5.21875V1.9375L5.8125 6.3125ZM1.38281 5.41016L5.75781 1.03516C6.30469 0.460938 7.125 0.542969 7.61719 1.03516L2.3125 6.3125L7.61719 11.6172C7.125 12.1094 6.30469 12.1914 5.75781 11.6172L1.38281 7.24219C0.863281 6.75 0.863281 5.90234 1.38281 5.41016Z" fill="currentcolor"/>
-                                                </svg>
-                                             </span>
-                                             Reply
-                                          </a>
-                                       </div>
-                                       <div class="postbox-user-info">
-                                          <p>Conubia non viverra malesuada aenean per odio magna hymenaeos,
-                                             cubilia euducate class bulputate aenean laoreet nam ipsum mus
-                                             neko porttitor.</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="postbox-contact-box">
-                     <h4 class="it-section-title">Leave a reply</h4>
-                     <div class="pt-15">
-                        <form action="#">
-                           <div class="row gx-20">
-                              <div class="col-12 col-12 mb-40">
-                                 <div class="postbox-input-box p-relative">
-                                    <input type="text" placeholder="Full Name*">
-                                 </div>                           
-                              </div>
-                              <div class="col-sm-6 col-12 mb-30">
-                                 <div class="postbox-input-box p-relative">
-                                    <input type="email" placeholder="Email here*">
-                                 </div>                           
-                              </div>
-                              <div class="col-sm-6 col-12 mb-30">
-                                 <div class="postbox-input-box p-relative">
-                                    <input type="text" placeholder="Website">
-                                 </div>                           
-                              </div>
-                              <div class="col-12 mb-40">
-                                 <div class="postbox-input-box p-relative">
-                                    <textarea placeholder="write note*"></textarea>
-                                 </div>                           
-                              </div>
-                              <div class="postbox-btn">
-                                 <button type="submit" class="it-btn-yellow theme-bg">
-                                    <span>
-                                       <span class="text-1">Submit Now</span>
-                                       <span class="text-2">Submit Now</span>
-                                    </span>
-                                    <i>
-                                       <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M15.0544 8.1364C15.4058 7.78492 15.4058 7.21508 15.0544 6.8636L9.3268 1.13604C8.97533 0.784567 8.40548 0.784567 8.05401 1.13604C7.70254 1.48751 7.70254 2.05736 8.05401 2.40883L13.1452 7.5L8.05401 12.5912C7.70254 12.9426 7.70254 13.5125 8.05401 13.864C8.40548 14.2154 8.97533 14.2154 9.3268 13.864L15.0544 8.1364ZM0.417969 7.5V8.4H14.418V7.5V6.6H0.417969V7.5Z" fill="currentcolor" />
-                                       </svg>
-                                    </i>
-                                 </button>
-                              </div>
-                           </div>
-                        </form> 
                      </div>
                   </div>
                </div> 
@@ -629,10 +213,10 @@
             <div class="row align-items-end">
                <div class="col-lg-8">
                    <div class="it-event-section-title-box">
-                     <span class="it-section-subtitle style-2">Blog</span>
+                     <span class="it-section-subtitle style-2">Articles</span>
                      <h4 class="it-section-title">
                         <span class="z-index-1">
-                           Similar Blog
+                           Other Articles
                            <span class="it-title-shape">
                               <svg width="259" height="16" viewBox="0 0 259 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M2.44773 0.0495975C3.89383 -0.0643544 5.78895 0.0343127 7.23225 0.177537C7.68431 0.221928 7.45699 0.435496 7.7691 0.475686C8.37951 0.554018 8.94688 0.446206 9.54999 0.540355C9.74987 0.572594 9.50361 0.91012 9.71314 0.936237C10.8617 1.07694 11.9442 0.984098 13.1088 1.04765C18.8341 1.36135 24.4691 1.4495 30.259 1.56358C32.1751 1.60086 34.4984 1.89004 36.4679 1.7435C36.6988 1.72608 36.5591 1.43222 36.6029 1.40762C37.2895 1.03103 37.0644 1.6277 37.5146 1.70374C39.303 2.00393 41.2755 2.01782 42.9928 1.89251C43.7235 1.83833 42.9868 1.25772 43.7248 1.58143C43.776 1.60329 43.5928 1.91759 43.7934 1.94963C44.2483 2.02167 45.1091 1.95993 45.4607 1.98237C46.1383 2.02721 46.2503 2.0233 46.8901 2.02257C47.7628 2.02431 48.8082 2.17291 49.75 2.09565C49.9509 2.07823 49.6827 1.7591 50.0028 1.70234C50.3233 1.64567 51.1712 1.66718 51.4571 1.74092C51.7432 1.81469 51.6233 2.06773 51.6742 2.12521C52.0934 2.61039 53.067 1.92798 53.1924 1.91042C55.4876 1.61021 57.473 1.98191 59.6207 1.96641C61.2631 1.95374 63.0192 1.81486 64.5728 1.82188C66.4204 1.8315 68.0152 1.99472 69.8118 1.9528C70.0018 1.94874 69.7767 1.57291 70.0086 1.56719C72.4696 1.50681 74.9423 1.53139 77.3923 1.76974C77.6406 1.79396 77.3231 2.12738 77.5712 2.17139C79.0918 2.43349 81.4802 3.07158 82.3603 1.62326C83.3837 1.67275 84.6344 1.7226 85.5493 2.00725C86.1397 2.19045 85.5702 2.55517 86.2923 2.39634C86.4551 2.36095 86.241 2.0463 86.4853 2.01712C87.5112 1.89456 88.6375 1.9898 89.6634 1.81965C89.8715 1.7843 89.8127 1.50148 89.8714 1.45009C90.3645 1.03378 91.1918 1.71102 91.3711 1.75944C92.7376 2.12029 93.7236 1.96814 95.0074 1.96862C95.3038 1.96891 94.9509 1.59084 95.236 1.57745C96.7183 1.51306 98.2215 1.53576 99.6767 1.69489C99.9999 1.7312 99.7051 2.0572 99.8597 2.09114C100.541 2.23682 100.687 1.6238 101.337 1.75172C101.474 1.77791 101.399 2.05581 101.424 2.08611C101.818 2.56175 102.152 1.88188 102.252 1.86626C103.518 1.65343 104.324 2.35551 105.563 2.24712C105.71 2.23345 105.375 1.88466 105.789 1.86768C108.533 1.75259 111.461 1.82962 114.162 2.09253C114.581 2.13294 114.284 2.39858 114.31 2.43091C114.747 2.93591 115.029 2.25354 115.167 2.227C116.263 2.03529 117.282 2.59924 118.013 1.78389C122.636 2.03467 127.192 1.54957 131.789 2.24562C131.847 2.25365 131.745 2.58946 131.861 2.60404C133.254 2.78311 132.971 2.26408 133.896 1.62099C134.131 1.45949 134.85 2.22393 134.913 2.27989C135.144 2.48614 134.909 2.98628 134.986 3.02601C135.623 3.33779 135.51 1.6896 136.362 1.68352C136.388 1.68609 136.278 1.99031 136.35 2.02002C136.572 2.11331 136.791 1.99129 137.008 2.09435C137.507 2.33285 137.674 3.133 138.441 2.66169C138.538 2.60054 138.384 1.66619 139.153 1.70538C139.461 1.72178 140.807 1.697 141.18 1.7552C141.554 1.81331 141.299 2.11637 141.326 2.12925C142.333 2.52128 141.953 2.68894 142.457 3.27574C142.977 3.86022 142.825 2.45913 143.033 2.30129C143.243 2.14388 143.994 2.46786 144.177 2.58099C144.361 2.69417 144.134 2.88717 144.297 2.95083C145.376 3.36669 144.765 2.25186 145.117 2.02705C145.95 1.49475 146.581 2.53046 147.368 2.62727C147.577 2.65343 147.405 2.41772 147.591 2.39438C148.328 2.30505 148.77 2.62664 149.594 2.32386C149.73 2.27451 150.387 1.64513 150.822 2.10112C150.885 2.16687 150.708 2.42711 151.025 2.48311C151.499 2.56718 152.344 2.61839 152.843 2.52859C153.21 2.46215 152.786 2.03791 153.25 2.16758C153.455 2.22548 153.076 2.47768 153.463 2.56564C153.849 2.65356 154.81 2.63644 155.204 2.62531C155.583 2.61407 155.373 2.29154 155.404 2.26953C155.59 2.14336 156.312 1.98259 156.375 1.98257C159.496 1.92366 162.496 2.4362 165.52 2.25708C165.561 2.25475 165.602 2.25229 165.643 2.24972C165.894 2.23445 165.725 1.89398 165.763 1.88813C166.617 1.7397 165.95 2.65189 166.546 2.95211C166.455 2.25963 166.808 2.38291 167.396 2.30325C167.679 2.2643 167.523 1.99691 167.549 1.96928C167.966 1.55909 168.257 2.08375 168.332 2.19099C168.608 2.58545 168.903 2.11551 169.103 2.37908C169.299 2.6407 168.856 3.03308 169.433 3.02452C169.593 2.77544 169.161 2.12979 169.598 2.02202C171.224 1.6145 174.24 2.10478 175.553 2.14975C176.877 2.1946 177.245 2.14665 178.03 2.23166C179.419 2.38557 178.907 1.90758 179.748 1.68248C180.579 1.45749 180.185 2.64331 180.307 2.89702C180.432 3.1506 180.565 2.88804 180.719 3.02695C180.871 3.16583 180.544 3.34072 180.901 3.39113C181.261 3.44147 182.211 2.9836 182.328 2.71691C182.589 2.15183 182.134 1.56288 183.084 1.76534C183.139 1.77736 182.963 2.08955 183.172 2.11982C184.81 2.35014 186.472 2.35585 188.12 2.55909C188.343 2.58754 188.145 2.93478 188.275 2.95525C189.61 3.16976 189.133 2.58851 189.88 1.93625C189.713 2.80006 190.144 3.32578 191.145 3.32598C191.779 3.32627 191.667 2.94993 192.066 2.68239C192.186 2.60174 192.617 2.85852 192.693 2.68092C192.946 2.10037 192.529 1.45362 193.606 1.70704C193.653 1.71911 193.506 2.03692 193.667 2.05541C194.682 2.17667 194.844 1.56992 195.939 1.49218C196.842 1.43099 198.378 1.79521 199.394 1.85273C199.378 2.82294 200.314 2.59844 200.703 1.92884C201.335 1.95501 202.038 1.91627 202.683 2.00851C202.899 2.03996 202.757 2.32091 202.784 2.35125C203.188 2.82726 203.488 2.17664 203.625 2.15121C205.14 1.90459 206.381 2.40101 207.84 1.93423C207.891 1.91749 207.98 1.24419 208.366 1.74138C208.391 1.77568 207.909 2.07573 208.589 2.1088C209.063 2.13211 209.841 2.32769 210.583 2.34984C210.901 2.35917 211.223 2.33542 211.509 2.24952C211.742 2.18102 212.339 1.65141 212.791 2.09296C212.851 2.15289 212.777 2.34399 212.863 2.45425C213.144 2.80578 213.321 2.12978 213.644 2.71891C213.967 3.308 214.658 3.76358 215.627 3.39557C215.657 3.38494 215.903 2.85275 216.201 2.871C216.682 2.90074 217.359 3.03536 217.858 3.04807C218.099 3.054 217.956 2.71392 217.998 2.70915C219.615 2.57354 220.755 2.90921 222.476 3.09076C222.795 3.12482 223.714 2.69455 224.318 3.07308C224.979 3.48725 224.242 5.11397 225.802 4.76376C226.432 4.62352 227.275 2.55668 228.37 3.66437C230.55 3.44679 232.555 4.03838 234.743 3.68425C234.843 3.6686 235.158 3.0898 235.389 3.10044C235.545 3.10816 235.668 3.16929 235.78 3.23552C235.915 3.3147 236.031 3.40133 236.164 3.41291C237.187 3.50903 238.13 3.29818 239.118 3.36833C239.487 3.39459 239.355 3.67135 239.797 3.70433C240.242 3.73788 240.56 3.38021 241.152 3.58939C241.609 3.74955 242.012 4.53102 242.611 4.65785C242.679 3.91328 243.095 3.95378 243.848 3.81189C243.995 3.7845 243.86 3.5134 243.93 3.48707C244.216 3.37408 244.454 3.60921 244.724 3.48489C244.789 3.45507 244.813 3.20087 244.87 3.16232C245.342 2.82363 246.023 3.46256 246.135 3.57375C246.575 3.9965 246.831 3.68806 247.18 3.87295C247.531 4.05822 246.965 4.18959 247.383 4.32262C248.245 4.59668 249.382 4.67767 250.288 4.75236C250.651 4.77985 250.425 4.42305 250.477 4.41911C250.513 4.41725 250.549 4.41634 250.584 4.41621C251.293 4.43961 251.95 4.81546 252.418 4.22182C252.712 6.02835 252.884 4.10417 253.896 4.60087C253.975 4.64108 253.959 5.47722 253.628 5.55313C253.297 5.62911 252.855 5.30743 252.393 5.44182C252.283 5.47235 251.602 6.17509 251.518 6.21371C250.854 6.51009 250.893 5.26946 250.866 5.19765C250.786 4.996 250.67 4.89933 250.54 4.86759L250.556 4.86889C250.181 4.79281 249.697 5.22131 249.549 5.25121C248.624 5.43574 247.89 5.18116 247.133 5.29669C246.641 5.37079 246.515 6.17505 246.142 6.11441C244.909 5.91659 244.557 4.74947 243.31 5.64382C243.039 5.8354 243.236 6.73703 242.382 5.98195C242.33 5.93416 241.692 5.25538 241.287 5.63921C241.236 5.68751 241.224 5.94608 241.158 5.96443C240.724 6.08283 240.447 5.86324 239.975 5.94203C239.505 6.02099 238.939 6.1477 238.407 6.04414C238.089 5.982 237.685 5.4895 237.534 5.36799C237.097 5.01755 236.622 5.56702 236.358 5.1512C236.09 4.73343 236.639 4.11205 235.917 3.83506C235.881 4.50718 235.811 5.19666 235.761 5.87244C235.757 5.87236 235.754 5.87227 235.751 5.87218C234.153 5.82999 232.591 5.58915 230.99 5.58789C230.791 5.58838 230.987 5.95382 230.774 5.96363C229.874 6.00334 229.095 5.72869 228.161 5.80947C227.44 5.87341 226.636 6.23625 225.881 6.31277C225.44 5.53148 224.315 5.76206 223.507 5.66812C223.222 5.63555 223.247 5.43065 223.047 5.3577C222.294 5.08735 222.629 5.77754 222.416 5.8783C221.507 6.30785 221.475 4.767 220.419 4.77201C220.363 4.77179 219.651 5.57014 219.557 5.61823C218.945 5.93202 219.466 5.32962 219.093 5.25703C218.413 5.12437 217.943 4.91306 217.134 5.12716C216.897 5.19068 216.319 5.68346 215.88 5.27343C215.822 5.21973 215.864 4.94975 215.816 4.93231C214.954 4.63945 214.902 5.49037 214.398 5.76295C213.89 6.03528 213.144 5.42338 212.993 5.24914C212.597 4.79809 213.313 5.07151 213.335 5.02919C213.61 4.5254 213.049 4.59595 212.622 4.53963C212.588 3.70263 211.985 3.73462 212.18 4.4847C212.203 4.56663 212.539 4.49888 212.622 4.53963C212.222 5.34754 211.564 5.43261 210.861 4.64652C210.66 4.42077 210.706 4.17959 210.536 4.05537C210.43 3.97699 210.234 3.94495 209.835 3.99507C209.374 4.05408 209.531 4.63282 209.127 4.782C208.188 5.12236 206.975 4.57513 206.007 4.65526C205.654 4.68432 205.998 5.0008 205.754 5.03155C205.119 5.11435 204.557 4.87681 203.908 4.99715C203.851 5.00846 203.99 5.33824 203.794 5.34225C202.284 5.37937 200.96 5.17047 199.376 5.1687C198.591 5.16802 197.246 5.35429 196.446 5.32081C195.083 5.26449 193.361 4.79273 192.204 4.91467C191.438 4.99284 191.604 5.32179 191.27 5.54805C190.648 5.98651 189.524 5.21217 189.36 5.09224C189.357 5.08825 190.028 5.00712 189.669 4.83969C189.459 4.48809 189.368 5.09067 189.36 5.09224C189.25 5.01475 187.965 4.94658 187.688 5.0111C187.544 5.04631 187.626 5.35826 187.551 5.37072C185.803 5.65955 184.034 5.74878 182.237 5.61298C182.206 5.60684 182.251 5.25716 182.178 5.2471C181.169 5.0975 180.442 5.52919 179.631 5.78772C178.792 6.0463 178.097 5.96545 177.579 5.36865C176.956 5.44788 176.033 5.1882 175.49 5.03055C174.948 4.87289 174.871 5.55356 174.827 5.56727C173.422 6.00614 172.495 5.62246 171.027 5.57089C170.331 5.54519 168.835 5.65308 168.098 5.73204C167.491 5.79573 167.119 5.63864 166.547 5.74414C166.47 5.75823 166.55 6.06059 166.526 6.0724C165.887 6.43874 166.19 5.69646 166.056 5.56507C165.87 5.38225 165.711 5.23216 165.538 5.12949C165.273 4.96374 164.976 4.92141 164.481 5.06417C164.297 5.11713 163.76 6.18655 163.417 6.25105C162.971 6.33296 163.138 5.94979 162.667 6.04531C162.627 6.05314 162.637 6.28881 162.345 6.28026C161.029 6.2434 159.576 6.11542 158.181 6.14791C157.996 6.15141 158.236 6.5238 157.968 6.53501C156.717 6.58729 155.265 6.58271 154.038 6.41554C153.734 6.37322 153.923 6.11021 153.856 6.0329C153.449 5.56516 152.875 6.25224 152.779 6.26588C150.462 6.60914 148.766 6.00158 146.406 6.31127C146.282 6.32936 145.322 7.06819 144.883 6.4427C144.853 6.40109 144.419 5.76106 144.039 6.20304C144.016 6.23069 144.288 6.55988 143.817 6.52919C143.35 6.49856 142.57 6.72462 141.943 6.36507C141.741 6.25183 141.261 5.61369 140.658 6.12878C140.619 6.16471 139.688 7.32659 139.345 6.53136C139.289 6.40045 139.342 5.55621 138.612 5.99364C138.472 6.07843 138.728 6.265 138.359 6.38494C137.796 6.56976 137.071 6.34846 136.386 6.72886C136.267 6.79619 135.761 7.37227 135.347 6.94023C135.282 6.87256 135.403 6.59004 135.185 6.55993C134.146 6.41547 133.072 6.61094 132.035 6.42279C131.666 6.35671 131.852 5.90004 131.466 5.78051C131.081 5.66102 130.3 5.54876 129.895 5.75955C129.489 5.97043 129.939 6.69338 129.328 6.75547C126.728 7.02479 124.089 6.6163 121.483 6.57117C121.092 6.56444 121.418 6.82204 120.842 6.83076C118.714 6.8641 115.069 7.13171 113.239 6.59187C111.772 6.15951 113.613 5.81078 112.492 5.6383C111.951 5.55607 111.369 6.40385 111.238 6.43128C109.955 6.70966 109.059 6.34175 107.919 6.464C107.682 6.48937 107.917 6.82987 107.715 6.84768C107.027 6.91156 106.3 6.76371 105.637 6.79603C105.34 6.81132 105.396 7.07219 105.122 7.05385C104.464 7.01298 103.888 6.90698 103.256 6.66632C103.198 6.64439 103.584 6.31685 103.105 6.30794C102.328 6.29446 101.359 6.05935 100.459 6.31478C100.191 6.39159 100.185 6.98871 99.6061 6.58021C99.4845 6.4949 99.6346 5.77694 98.966 6.40087C98.8556 6.50455 97.748 7.34748 97.1952 6.81256C97.0496 6.67177 96.6761 6.08757 96.3563 6.1819C96.3129 6.1969 96.4892 6.51643 96.2238 6.54948C95.2899 6.66037 94.2983 6.63275 93.3381 6.73959C93.0832 6.76875 93.4653 7.09808 93.0854 7.13093C92.0405 7.22178 90.7277 7.14602 89.6944 7.04904C89.3134 7.01265 89.5747 6.73599 89.5468 6.70626C89.098 6.22264 88.8383 6.88119 88.6904 6.92047C87.7674 7.15595 87.0818 6.852 86.2372 6.93928C86.0046 6.96253 86.1717 7.27459 86.1256 7.30282C85.6469 7.57887 86.0011 7.01408 85.6964 6.95412C84.8427 6.78427 83.8891 6.81581 83.0213 6.86162C82.7025 6.87891 83.0634 7.23964 82.7772 7.25096C81.1022 7.32472 79.3552 7.30164 77.7022 7.1125C77.3911 7.07623 77.5848 6.79531 77.5196 6.73188C77.0668 6.28808 76.4266 6.90184 76.2769 6.9609C75.6 7.23051 75.3343 6.98501 74.7336 7.03519C71.786 7.2847 68.1718 7.14513 65.3829 7.06264C61.7785 6.95658 58.9612 6.70946 55.5144 6.80167C55.2948 6.80718 55.5188 7.17767 55.3295 7.18719C52.8835 7.29328 50.4961 7.16396 48.0421 7.28788C47.8422 7.29738 48.1328 7.64808 47.812 7.67518C47.1542 7.73324 46.3191 7.71968 45.6511 7.61157C45.3252 7.55951 45.7598 7.25399 45.4318 7.20776C44.6681 7.09944 43.849 7.07983 43.0636 7.14164C42.7294 7.16872 43.2364 7.52598 42.8017 7.53306C39.8553 7.58864 36.9409 7.67036 33.9624 7.22335C33.7576 7.19265 33.5733 6.46087 33.1391 6.60436C33.1077 6.808 33.1111 7.04728 33.0983 7.2648C28.7937 7.41089 24.5399 7.1854 20.2288 7.17513C20.0469 7.17478 20.3639 7.56104 20.0117 7.56234C17.9707 7.57034 15.9988 7.69121 13.9107 7.31923C13.7036 7.28287 13.8051 6.59892 13.1962 6.70635C13.0889 6.72593 12.1706 6.82324 11.9349 6.97315C11.9029 6.99574 12.0723 7.31352 11.7769 7.32481C10.0601 7.3848 8.25877 7.32412 6.54131 7.14082C6.26411 7.11063 6.55679 6.76903 6.35934 6.74458C4.9595 6.57372 3.44024 6.84213 2.1015 6.54278C1.20543 6.34118 1.53271 5.7519 1.05339 5.17725C0.985599 5.09618 0.431484 5.08699 0.400569 4.75098C0.321321 3.90605 0.583441 2.97851 0.46726 2.07811C0.44269 1.88417 -0.297893 2.09822 0.138254 1.62622C0.168733 1.59462 0.705631 1.43532 0.837054 1.27531C0.928561 1.16468 0.760025 0.823877 0.947291 0.681784C1.13454 0.539824 1.34328 0.825049 1.65419 0.657492C1.96494 0.487889 1.82519 0.0998371 2.44773 0.0495975ZM173.097 4.32578C172.598 4.00217 172.532 5.19897 173.068 4.90947C173.094 4.89405 173.123 4.34165 173.097 4.32578ZM232.617 4.68495C231.983 4.14656 231.525 4.914 231.974 5.32973C232.423 5.74486 232.811 4.84813 232.617 4.68495ZM239.282 4.42506C238.552 3.98354 238.382 5.67575 239.185 5.35968C239.23 5.34189 239.326 4.45082 239.282 4.42506ZM3.25698 4.99786C3.25008 4.98202 2.85176 4.96921 2.84235 4.98502C2.63287 5.36641 3.42934 5.39175 3.25698 4.99786ZM245.883 4.42721C245.67 4.17655 244.974 4.38188 245.241 4.69157C245.453 4.94004 246.145 4.73807 245.883 4.42721ZM147.392 3.2111C147.385 3.19332 147.095 3.17914 147.102 3.27987C147.124 3.60432 147.525 3.51012 147.392 3.2111ZM257.063 5.70421C255.344 5.46647 254.692 3.86624 256.364 4.31183C256.672 4.38485 255.628 4.65567 256.007 4.83985C256.727 5.17841 257.305 4.34087 258.034 4.86679C258.17 4.96427 257.164 5.72343 257.06 5.70589C257.061 5.70533 257.062 5.70477 257.063 5.70421ZM172.802 2.89055C172.793 2.87479 172.391 2.86223 172.381 2.87798C172.166 3.25911 172.975 3.28462 172.802 2.89055ZM130.733 2.57968C130.712 2.54611 129.789 2.52063 129.758 2.55189C129.281 3.17613 131.147 3.22949 130.733 2.57968ZM199.41 1.87857C199.834 1.49534 200.356 1.44918 200.701 1.92835C200.27 1.9037 199.835 1.90096 199.41 1.87857Z" fill="#03594E" />
@@ -643,21 +227,6 @@
                      </h4>
                   </div>
                </div>
-               <div class="col-lg-4">
-                  <div class="it-event-btn text-lg-end">
-                     <a href="blog-grid.html" class="it-btn-yellow">
-                        <span>
-                           <span class="text-1">View All Blog</span>
-                           <span class="text-2">View All Blog</span>
-                        </span>
-                        <i>
-                           <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M15.0544 8.1364C15.4058 7.78492 15.4058 7.21508 15.0544 6.8636L9.3268 1.13604C8.97533 0.784567 8.40548 0.784567 8.05401 1.13604C7.70254 1.48751 7.70254 2.05736 8.05401 2.40883L13.1452 7.5L8.05401 12.5912C7.70254 12.9426 7.70254 13.5125 8.05401 13.864C8.40548 14.2154 8.97533 14.2154 9.3268 13.864L15.0544 8.1364ZM0.417969 7.5V8.4H14.418V7.5V6.6H0.417969V7.5Z" fill="currentcolor" />
-                           </svg>
-                        </i>
-                     </a>
-                  </div>
-               </div>
             </div>
          </div>
          <div class="row gx-35">
@@ -665,7 +234,7 @@
                   data-wow-delay=".3s">
                <div class="it-event-item mb-35">
                   <div class="it-event-thumb border-radius-20 mb-35 p-relative">
-                     <img class="w-100" src="assets/img/event-1-1.jpg" alt="">
+                     <img class="w-100" src="assets/img/event/event-1-1.jpg" alt="">
                      <span class="it-event-date">24 May 2025</span>
                   </div>
                   <div class="it-event-content">
@@ -715,7 +284,7 @@
                   data-wow-delay=".5s">
                <div class="it-event-item mb-35">
                   <div class="it-event-thumb border-radius-20 mb-35 p-relative">
-                     <img class="w-100" src="assets/img/event-1-2.jpg" alt="">
+                     <img class="w-100" src="assets/img/event/event-1-2.jpg" alt="">
                      <span class="it-event-date">09 Dec 2025</span>
                   </div>
                   <div class="it-event-content">
@@ -765,7 +334,7 @@
                   data-wow-delay=".7s">
                <div class="it-event-item mb-35">
                   <div class="it-event-thumb border-radius-20 mb-35 p-relative">
-                     <img class="w-100" src="assets/img/event-1-3.jpg" alt="">
+                     <img class="w-100" src="assets/img/event/event-1-3.jpg" alt="">
                      <span class="it-event-date">19 Dec 2025</span>
                   </div>
                   <div class="it-event-content">
@@ -821,7 +390,7 @@
       <div class="container">
          <div class="it-newsletter-wrap theme-bg z-index-2 wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".3s">
-            <img class="it-newsletter-shape-1" src="assets/img/brg.png" alt="">
+            <img class="it-newsletter-shape-1" src="assets/img/shape/newsletter-2-1.png" alt="">
             <div class="row align-items-center">
                <div class="col-lg-6">
                   <div class="it-newsletter-2-left">
@@ -844,5 +413,6 @@
          </div>
       </div>
    </div>
+   <!-- newsletter-area-end -->
 
 @endsection

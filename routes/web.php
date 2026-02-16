@@ -18,6 +18,12 @@ Route::get('/about', fn() => view('pages.about'))->name('about');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
 Route::resource('detailprogram', ProgramController::class)->only(['show']);
+Route::get('/detail_articles', function () {
+    return view('pages.detailarticle');
+});
+Route::get('/admin/articles', function () {
+    return view('admin.articles.index');
+});
 
 // Admin Authentication Routes
 Route::middleware('guest')->group(function () {
@@ -26,9 +32,7 @@ Route::middleware('guest')->group(function () {
 });
 
 // Default login route redirect to admin login (for Laravel's auth system)
-Route::get('/login', function () {
-    return view('pages.error.error');
-})->name('login');
+Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
