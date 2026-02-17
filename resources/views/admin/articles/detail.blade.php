@@ -26,7 +26,7 @@
                             <div class="bg-white c2vpa c1hly c2y99 ccwri cai6b csusu">
                                 <div class="cydwr cai6b">
                                     <div class="inline-flex cxg65">
-                                        <img class="rounded-full c3nk1 crzrx" src="{{ asset('storage/' . $article->thumbnail) }}" width="64" height="64" alt="Author">
+                                        <img class="rounded-full c3nk1 crzrx" src="./images/company-icon-01.svg" width="64" height="64" alt="Author">
                                     </div>
                                     <div class="font-bold text-gray-800 dark:text-gray-100 c7x0x cu6vl">Admin</div>
                                     <div class="text-sm text-gray-500 dark:text-gray-400 caf78">Author</div>
@@ -116,7 +116,7 @@
                             <div class="bg-white c2vpa c1hly c5vqk cl6wk ch0sq csusu">
                                 <div class="cydwr cai6b">
                                     <div class="inline-flex cxg65">
-                                        <img class="rounded-full c3nk1 crzrx" src="{{ asset('storage/' . $article->thumbnail) }}" width="64" height="64" alt="Author">
+                                        <img class="rounded-full c3nk1 crzrx" src="./images/company-icon-01.svg" width="64" height="64" alt="Author">
                                     </div>
                                     <div class="font-bold text-gray-800 dark:text-gray-100 c7x0x cu6vl">Admin</div>
                                     <div class="text-sm text-gray-500 dark:text-gray-400 caf78">Author</div>
