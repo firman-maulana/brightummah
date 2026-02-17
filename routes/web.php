@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\TeacherController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TestimonialSubmissionController;
 use App\Http\Controllers\Admin\TestimonialController;
+use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
+use App\Http\Controllers\ArticleController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])->name('testimonials.store');
@@ -18,12 +20,7 @@ Route::get('/about', fn() => view('pages.about'))->name('about');
 Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
 Route::resource('detailprogram', ProgramController::class)->only(['show']);
-Route::get('/detail_articles', function () {
-    return view('pages.detailarticle');
-});
-Route::get('/admin/articles', function () {
-    return view('admin.articles.index');
-});
+Route::get('/detail_articles/{id}', [ArticleController::class, 'detail'])->name('articles.detail');
 
 // Admin Authentication Routes
 Route::middleware('guest')->group(function () {
@@ -53,6 +50,9 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::get('/testimonials/{testimonial}/approve', [TestimonialController::class, 'approve'])->name('testimonials.approve');
     Route::post('/testimonials/{testimonial}/post', [TestimonialController::class, 'post'])->name('testimonials.post');
     Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
+    
+    // Articles Management
+    Route::resource('articles', AdminArticleController::class);
     
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {

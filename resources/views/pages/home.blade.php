@@ -450,39 +450,7 @@
                <div class="it-choose-2-item text-center mb-35">
                   <div class="it-choose-2-icon">
                      <span>
-                        <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <g clip-path="url(#clip0_value_education_large)">
-                              <path d="M5 20C5 17.2386 7.23858 15 10 15H38C40.7614 15 43 17.2386 43 20V72C43 74.7614 40.7614 77 38 77H10C7.23858 77 5 74.7614 5 72V20Z" stroke="#03594E" stroke-width="2.5" fill="none"/>
-                              <path d="M44 20C44 17.2386 46.2386 15 49 15H77C79.7614 15 82 17.2386 82 20V72C82 74.7614 79.7614 77 77 77H49C46.2386 77 44 74.7614 44 72V20Z" stroke="#03594E" stroke-width="2.5" fill="none"/>
-    
-                              <path d="M43.5 15V77" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-    
-                              <path d="M24 32C20 32 17 35 17 39C17 46 24 52 24 52C24 52 31 46 31 39C31 35 28 32 24 32Z" stroke="#03594E" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
-    
-                              <path d="M63 30L65.5 37H73L67 42L69.5 49L63 44L56.5 49L59 42L53 37H60.5L63 30Z" stroke="#03594E" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
-    
-                              <circle cx="43.5" cy="5" r="3.5" stroke="#03594E" stroke-width="2.5" fill="none"/>
-    
-                              <path d="M35 8L38 10" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                              <path d="M30 13L34 14" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                              <path d="M52 8L49 10" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                              <path d="M57 13L53 14" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                              <path d="M43.5 13L43.5 15" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-    
-                              <path d="M15 80C15 80 22 77 43.5 77C65 77 72 80 72 80" stroke="#03594E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                              <path d="M20 83C20 83 27 81 43.5 81C60 81 67 83 67 83" stroke="#03594E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    
-                              <circle cx="12" cy="60" r="2" stroke="#03594E" stroke-width="2" fill="none"/>
-                              <circle cx="18" cy="65" r="2" stroke="#03594E" stroke-width="2" fill="none"/>
-                              <circle cx="75" cy="60" r="2" stroke="#03594E" stroke-width="2" fill="none"/>
-                              <circle cx="69" cy="65" r="2" stroke="#03594E" stroke-width="2" fill="none"/>
-                           </g>
-                           <defs>
-                           <clipPath id="clip0_value_education_large">
-                           <rect width="87" height="87" fill="white"/>
-                           </clipPath>
-                           </defs>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 24 24" fill="none" stroke="#03594E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-bell-school"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 10a6 6 0 1 0 12 0a6 6 0 1 0 -12 0" /><path d="M13.5 15h.5a2 2 0 0 1 2 2v1a2 2 0 0 1 -2 2h-8a2 2 0 0 1 -2 -2v-1a2 2 0 0 1 2 -2h.5" /><path d="M16 17a5.698 5.698 0 0 0 4.467 -7.932l-.467 -1.068" /><path d="M10 10v.01" /><path d="M19 8a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
                      </span>
                   </div>
                   <div class="it-choose-2-content">
@@ -496,64 +464,7 @@
                <div class="it-choose-2-item text-center mb-35">
                   <div class="it-choose-2-icon">
                      <span>
-                        <svg width="100" height="87" viewBox="0 0 100 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <g clip-path="url(#clip0_personalized_learning)">    
-                              <g>
-                                 <circle cx="18" cy="25" r="8" stroke="#03594E" stroke-width="2.5" fill="none"/>
-                                 <path d="M18 33C18 33 10 35 10 45V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M18 33C18 33 26 35 26 45V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M10 45H26" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                                 <circle cx="15.5" cy="24" r="1.5" fill="#03594E"/>
-                                 <circle cx="20.5" cy="24" r="1.5" fill="#03594E"/>
-                                 <rect x="10" y="65" width="16" height="12" stroke="#03594E" stroke-width="2" fill="none" rx="1"/>
-                                 <path d="M13 68L18 73L23 68" stroke="#03594E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                              </g>
-    
-                              <g>
-                                 <circle cx="50" cy="20" r="9" stroke="#03594E" stroke-width="2.5" fill="none"/>
-                                 <path d="M50 29C50 29 41 31 41 42V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M50 29C50 29 59 31 59 42V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M41 42H59" stroke="#03594E" stroke-width="2.5" stroke-linecap="round"/>
-                                 <path d="M38 18C38 18 36 20 36 20" stroke="#03594E" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                 <path d="M35 16C35 16 33 20 33 20" stroke="#03594E" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                 <path d="M62 18C62 18 64 20 64 20" stroke="#03594E" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                 <path d="M65 16C65 16 67 20 67 20" stroke="#03594E" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                 <path d="M43 65C43 65 45 68 50 68C55 68 57 65 57 65" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <circle cx="43" cy="68" r="4" stroke="#03594E" stroke-width="2" fill="none"/>
-                                 <circle cx="57" cy="68" r="4" stroke="#03594E" stroke-width="2" fill="none"/>
-                              </g>
-                              <g>
-                                 <circle cx="82" cy="25" r="8" stroke="#03594E" stroke-width="2.5" fill="none"/>
-                                 <path d="M82 33C82 33 74 35 74 45V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M82 33C82 33 90 35 90 45V60" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M74 45L70 38" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M90 45L94 38" stroke="#03594E" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                                 <path d="M78 23L80 25L78 27" stroke="#03594E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                 <path d="M86 23L84 25L86 27" stroke="#03594E" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                                 <circle cx="82" cy="70" r="6" stroke="#03594E" stroke-width="2" fill="none"/>
-                                 <path d="M82 64V76M76 70H88" stroke="#03594E" stroke-width="1.5"/>
-                              </g>
-    
-                                 <path d="M18 82L50 82L82 82" stroke="#03594E" stroke-width="2.5" stroke-dasharray="4 4"/>
-    
-                                 <circle cx="50" cy="82" r="5" stroke="#03594E" stroke-width="2.5" fill="none"/>
-                                 <path d="M50 79V85M47 82H53" stroke="#03594E" stroke-width="2"/>
-                                 <circle cx="50" cy="82" r="2.5" fill="#03594E"/>
-    
-                                 <path d="M30 5L50 2L70 5L72 10L68 12L50 14L32 12L28 10L30 5Z" stroke="#03594E" stroke-width="2" fill="none" stroke-linejoin="round"/>
-                                 <circle cx="50" cy="8" r="2" fill="#03594E"/>
-    
-                                 <path d="M18 17L35 8" stroke="#03594E" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-                                 <path d="M50 11L50 8" stroke="#03594E" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-                                 <path d="M82 17L65 8" stroke="#03594E" stroke-width="1.5" stroke-dasharray="2 2" opacity="0.6"/>
-    
-                           </g>
-                           <defs>
-                                 <clipPath id="clip0_personalized_learning">
-                                    <rect width="100" height="87" fill="white"/>
-                                 </clipPath>
-                           </defs>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 24 24" fill="none" stroke="#03594E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-databricks"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l9 5l9 -5v-3l-9 5l-9 -5v-3l9 5l9 -5v-3l-9 5l-9 -5l9 -5l5.418 3.01" /></svg>
                      </span>
                   </div>
                   <div class="it-choose-2-content">
@@ -567,40 +478,7 @@
                <div class="it-choose-2-item text-center mb-35">
                   <div class="it-choose-2-icon">
                      <span>
-                        <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <g clip-path="url(#clip0_programs)">
-                              <path d="M43.5 5V82M43.5 5L3 13V79L43.5 82M43.5 5L84 13V79L43.5 82" stroke="#03594E" stroke-width="3" stroke-linejoin="round"/>
-                              <line x1="8" y1="25" x2="38" y2="21" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="8" y1="33" x2="38" y2="29" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="8" y1="41" x2="38" y2="37" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="8" y1="49" x2="38" y2="45" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="8" y1="57" x2="38" y2="53" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="8" y1="65" x2="38" y2="61" stroke="#03594E" stroke-width="2.5"/>
-                              <path d="M55 23L62 16L69 23C69 23 73 26 73 30V45H51V30C51 26 55 23 55 23Z" stroke="#03594E" stroke-width="2.8" stroke-linejoin="round"/>
-                              <circle cx="62" cy="14" r="3" stroke="#03594E" stroke-width="2.5"/>
-                              <line x1="51" y1="45" x2="73" y2="45" stroke="#03594E" stroke-width="3"/>
-                              <circle cx="62" cy="57" r="10" stroke="#03594E" stroke-width="2.8"/>
-                              <ellipse cx="62" cy="57" rx="4.5" ry="10" stroke="#03594E" stroke-width="2.3"/>
-                              <line x1="52" y1="57" x2="72" y2="57" stroke="#03594E" stroke-width="2.3"/>
-                              <path d="M62 47C62 47 56 52 56 57C56 62 62 67 62 67" stroke="#03594E" stroke-width="2.3"/>
-                              <path d="M62 47C62 47 68 52 68 57C68 62 62 67 62 67" stroke="#03594E" stroke-width="2.3"/>
-                              <circle cx="62" cy="73" r="7" stroke="#03594E" stroke-width="2.8"/>
-                              <circle cx="62" cy="73" r="3" fill="#03594E"/>
-                              <rect x="60.25" y="64" width="3.5" height="5" fill="#03594E"/>
-                              <rect x="60.25" y="77" width="3.5" height="5" fill="#03594E"/>
-                              <rect x="53" y="71.25" width="5" height="3.5" fill="#03594E"/>
-                              <rect x="74" y="71.25" width="5" height="3.5" fill="#03594E"/>
-                              <rect x="55" y="66" width="3.5" height="3.5" transform="rotate(45 56.75 67.75)" fill="#03594E"/>
-                              <rect x="66" y="66" width="3.5" height="3.5" transform="rotate(-45 67.75 67.75)" fill="#03594E"/>
-                              <rect x="55" y="76.5" width="3.5" height="3.5" transform="rotate(-45 56.75 78.25)" fill="#03594E"/>
-                              <rect x="66" y="76.5" width="3.5" height="3.5" transform="rotate(45 67.75 78.25)" fill="#03594E"/>
-                           </g>
-                        <defs>
-                           <clipPath id="clip0_programs">
-                              <rect width="87" height="87" rx="2" fill="white"/>
-                           </clipPath>
-                        </defs>
-                     </svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 24 24" fill="none" stroke="#03594E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-table-options"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21h-7a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v7" /><path d="M3 10h18" /><path d="M10 3v18" /><path d="M17.001 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19.001 15.5v1.5" /><path d="M19.001 21v1.5" /><path d="M22.032 17.25l-1.299 .75" /><path d="M17.27 20l-1.3 .75" /><path d="M15.97 17.25l1.3 .75" /><path d="M20.733 20l1.3 .75" /></svg>
                      </span>
                   </div>
                   <div class="it-choose-2-content">
@@ -614,29 +492,7 @@
                <div class="it-choose-2-item text-center mb-35">
                   <div class="it-choose-2-icon">
                      <span>
-                        <svg width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-                           <g clip-path="url(#clip0_inclusive)">
-                              <circle cx="43.5" cy="8" r="7" stroke="#03594E" stroke-width="3.2"/>
-                              <path d="M43.5 16C43.5 16 33 18 33 27V42H54V27C54 18 43.5 16 43.5 16Z" stroke="#03594E" stroke-width="3.2" stroke-linejoin="round"/>
-      
-                              <circle cx="14" cy="20" r="6" stroke="#03594E" stroke-width="3"/>
-                              <path d="M14 27C14 27 6 29 6 36V46H22V36C22 29 14 27 14 27Z" stroke="#03594E" stroke-width="3" stroke-linejoin="round"/>
-      
-                              <circle cx="73" cy="20" r="6" stroke="#03594E" stroke-width="3"/>
-                              <path d="M73 27C73 27 65 29 65 36V46H81V36C81 29 73 27 73 27Z" stroke="#03594E" stroke-width="3" stroke-linejoin="round"/>
-      
-                              <circle cx="20" cy="48" r="5.5" stroke="#03594E" stroke-width="3"/>
-                              <path d="M20 54C20 54 12 56 12 62V72H28V62C28 56 20 54 20 54Z" stroke="#03594E" stroke-width="3" stroke-linejoin="round"/>
-      
-                              <circle cx="67" cy="48" r="5.5" stroke="#03594E" stroke-width="3"/>
-                              <path d="M67 54C67 54 59 56 59 62V72H75V62C75 56 67 54 67 54Z" stroke="#03594E" stroke-width="3" stroke-linejoin="round"/>
-                           </g>
-                        <defs>
-                           <clipPath id="clip0_inclusive">
-                              <rect width="87" height="87" rx="2" fill="white"/>
-                           </clipPath>
-                        </defs>
-                     </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="87" viewBox="0 0 24 24" fill="none" stroke="#03594E" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-terraform"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 15.5l-11.476 -6.216a1 1 0 0 1 -.524 -.88v-4.054a1.35 1.35 0 0 1 2.03 -1.166l9.97 5.816v10.65a1.35 1.35 0 0 1 -2.03 1.166l-3.474 -2.027a1 1 0 0 1 -.496 -.863v-11.926" /><path d="M15 15.5l5.504 -3.21a1 1 0 0 0 .496 -.864v-3.576a1.35 1.35 0 0 0 -2.03 -1.166l-3.97 2.316" /></svg>
                      </span>
                   </div>
                   <div class="it-choose-2-content">

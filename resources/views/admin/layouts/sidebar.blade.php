@@ -115,6 +115,20 @@
                                     </div>
                                 </a>
                             </li>
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.articles.*') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.articles.index') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg>
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Articles</span>
+                                    </div>
+                                </a>
+                            </li>
                             <!-- E-Commerce -->
                             <!-- Community -->
                             <!-- Finance -->
