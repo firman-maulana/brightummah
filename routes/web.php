@@ -65,6 +65,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     });
 
     Route::get('/calendar', fn() => view('admin.calendar'))->name('calendar');
+    
+    // Changelog (Superadmin Only)
+    Route::middleware('superadmin')->group(function () {
+        Route::get('/changelog', fn() => view('admin.changelog'))->name('changelog');
+    });
 });
 
 Route::get('/force-logout', function () { Auth::logout(); request()->session()->invalidate(); request()->session()->regenerateToken(); return redirect('/login'); })->name('force.logout');

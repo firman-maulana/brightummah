@@ -148,6 +148,20 @@
                                     </div>
                                 </a>
                             </li>
+                            <!-- Changelog (Superadmin Only) -->
+                            @if(auth()->user()->role === 'superadmin')
+                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
+                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.changelog') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path>
+                                            <path d="M8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+                                        </svg>                                        
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Changelog</span>
+                                    </div>
+                                </a>
+                            </li>
+                            @endif
                             <!-- Campaigns -->
                             <!-- Settings -->
                             <!-- Utility -->
@@ -196,115 +210,68 @@
                         <!-- Header: Right side -->
                         <div class="flex items-center cp3jk">
 
-                            <!-- Search button -->
-                            <div x-data="{ searchOpen: false }">
-                                <!-- Button -->
-                                <button class="flex items-center justify-center rounded-full cukve cvdqj cw5z1 c76um cue4z cmwfi" :class="{ 'cvwbh c2vpa': searchOpen }" @click.prevent="searchOpen = true;if (searchOpen) $nextTick(()=>{$refs.searchInput.focus();});" aria-controls="search-modal">
-                                    <span class="cn8jz">Search</span>
-                                    <svg class="cp14x ch0mp cbm9w" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7ZM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5Z"></path>
-                                        <path d="m13.314 11.9 2.393 2.393a.999.999 0 1 1-1.414 1.414L11.9 13.314a8.019 8.019 0 0 0 1.414-1.414Z"></path>
-                                    </svg>
-                                </button>
-                                <!-- Modal backdrop -->
-                                <div class="bg-gray-900 c29tc c2iqv cini7 cjxg0 cys4p" x-show="searchOpen" x-transition:enter="cxxol cbmha c8uqq" x-transition:enter-start="opacity-0" x-transition:enter-end="cgcrn" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak=""></div>
-                                <!-- Modal dialog -->
-                                <div id="search-modal" class="flex justify-center cxe43 ce4zk cnbwt cini7 c8zfd cjxg0 cys4p cdiog clbq0" role="dialog" aria-modal="true" x-show="searchOpen" x-transition:enter="cxxol cz9ag c8uqq" x-transition:enter-start="opacity-0 cu867" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cz9ag c8uqq" x-transition:leave-start="cgcrn csdj3" x-transition:leave-end="opacity-0 cu867" x-cloak="">
-                                    <div class="bg-white border cghq3 c1xby c2vpa co669 caufm cb8zv cn9uy ccwri c6btv" @click.outside="searchOpen = false" @keydown.escape.window="searchOpen = false">   
-                                        <!-- Search form -->
-                                        <form class="border-gray-200 cghq3 ctv3r">
-                                            <div class="cm84d">
-                                                <label for="modal-search" class="cn8jz">Search</label>
-                                                <input id="modal-search" class="bg-white c9hby c37no c7vc0 c0zkc c2vpa co5c0 cs6bq c6btv cih2z c72q5 cnqyw" type="search" placeholder="Search Anything…" x-ref="searchInput">
-                                                <button class="c29dn cqdkw cini7 cqogy" type="submit" aria-label="Search">
-                                                    <svg class="mr-2 cba8l c4it8 cmpw7 cdqku cbm9w coqgc cfh3y" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"></path>
-                                                        <path d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"></path>
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
-                                        <div class="c9hxi cz8qb">
-                                            <!-- Recent searches -->
-                                            <div class="c5w78 cxg65">
-                                                <div class="cmpw7 cgulq cdqku c0ef0 c1iho c6f83 c9hxi">Recent searches</div>
-                                                <ul class="text-sm">
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Form Builder - 23 hours on-demand video</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Access Mosaic on mobile and TV</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Product Update - Q4 2024</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Master Digital Marketing Strategy course</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Dedicated forms for products</span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M15.707 14.293v.001a1 1 0 01-1.414 1.414L11.185 12.6A6.935 6.935 0 017 14a7.016 7.016 0 01-5.173-2.308l-1.537 1.3L0 8l4.873 1.12-1.521 1.285a4.971 4.971 0 008.59-2.835l1.979.454a6.971 6.971 0 01-1.321 3.157l3.107 3.112zM14 6L9.127 4.88l1.521-1.28a4.971 4.971 0 00-8.59 2.83L.084 5.976a6.977 6.977 0 0112.089-3.668l1.537-1.3L14 6z"></path>
-                                                            </svg>
-                                                            <span>Product Update - Q4 2024</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Recent pages -->
-                                            <div class="c5w78 cxg65">
-                                                <div class="cmpw7 cgulq cdqku c0ef0 c1iho c6f83 c9hxi">Recent pages</div>
-                                                <ul class="text-sm">
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M14 0H2c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h8l5-5V1c0-.6-.4-1-1-1zM3 2h10v8H9v4H3V2z"></path>
-                                                            </svg>
-                                                            <span><span class="c1k3n">Messages</span> - <span class="dark:text-gray-400 c1ukq">Conversation / … / Mike Mills</span></span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a class="flex items-center text-gray-800 dark:text-gray-100 chfxh c76um cb8zv c27zx" href="#0" @click="searchOpen = false" @focus="searchOpen = true" @focusout="searchOpen = false">
-                                                            <svg class="cmpw7 cdqku cbm9w coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
-                                                                <path d="M14 0H2c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h8l5-5V1c0-.6-.4-1-1-1zM3 2h10v8H9v4H3V2z"></path>
-                                                            </svg>
-                                                            <span><span class="c1k3n">Messages</span> - <span class="dark:text-gray-400 c1ukq">Conversation / … / Eva Patrick</span></span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                        <!-- Send Feedback (Admin Only) -->
+                        @if(auth()->user()->role === 'admin')
+                                    <div class="ctq43">
+                                        <!-- Start -->
+                                        <div x-data="{ modalOpen: false }">
+                                            <button class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a flex items-center justify-center" @click.prevent="modalOpen = true" aria-controls="feedback-modal" title="Laporkan Bug">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true">
+                                                    <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
+                                                    <path d="M12 8v6"></path>
+                                                    <path d="M9 11h6"></path>
+                                                </svg>
+                                            </button>
+                                            <!-- Modal backdrop -->
+                                            <div class="bg-gray-900 c29tc c2iqv cini7 cjxg0 cys4p" x-show="modalOpen" x-transition:enter="cxxol cbmha c8uqq" x-transition:enter-start="opacity-0" x-transition:enter-end="cgcrn" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak=""></div>
+                                            <!-- Modal dialog -->
+                                            <div id="feedback-modal" class="flex items-center justify-center cxe43 cnbwt cini7 cjxg0 cys4p codu7 clbq0" role="dialog" aria-modal="true" x-show="modalOpen" x-transition:enter="cxxol cz9ag c8uqq" x-transition:enter-start="opacity-0 cu867" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cz9ag c8uqq" x-transition:leave-start="cgcrn csdj3" x-transition:leave-end="opacity-0 cu867" x-cloak="">
+                                                <div class="bg-white c2vpa co669 caufm cb8zv ccwri crwo8 c6btv" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+                                                    <!-- Modal header -->
+                                                    <div class="border-gray-200 cghq3 ctv3r cx3hp c72q5">
+                                                        <div class="flex items-center cm3rx">
+                                                            <div class="text-gray-800 dark:text-gray-100 cgulq">Laporkan Bug</div>
+                                                            <button class="c3e4j cg12x cmpw7 cdqku" @click="modalOpen = false">
+                                                                <div class="cn8jz">Close</div>
+                                                                <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16">
+                                                                    <path d="M7.95 6.536l4.242-4.243a1 1 0 111.415 1.414L9.364 7.95l4.243 4.242a1 1 0 11-1.415 1.415L7.95 9.364l-4.243 4.243a1 1 0 01-1.414-1.415L6.536 7.95 2.293 3.707a1 1 0 011.414-1.414L7.95 6.536z"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Modal content -->
+                                                    <div class="cx3hp cz8qb">
+                                                        <div class="text-sm">
+                                                            <div class="text-gray-800 dark:text-gray-100 c1k3n cxg65">Bantu kami meningkatkan Bright Ummah Academy. Laporkan bug atau berikan saran fitur baru.</div>
+                                                        </div>
+                                                        <div class="cjav5">
+                                                            <div>
+                                                                <label class="block text-sm c1k3n cu6vl" for="name">Name <span class="czr3n">*</span></label>
+                                                                <input id="name" class="caqf9 c6btv c9hxi cwn3v" type="text" required="">
+                                                            </div>
+                                                            <div>
+                                                                <label class="block text-sm c1k3n cu6vl" for="email">Email <span class="czr3n">*</span></label>
+                                                                <input id="email" class="caqf9 c6btv c9hxi cwn3v" type="email" required="">
+                                                            </div>
+                                                            <div>
+                                                                <label class="block text-sm c1k3n cu6vl" for="feedback">Message <span class="czr3n">*</span></label>
+                                                                <textarea id="feedback" class="c071z c6btv c9hxi cwn3v" rows="4" required=""></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Modal footer -->
+                                                    <div class="border-gray-200 cghq3 cr4kg cx3hp cz8qb">
+                                                        <div class="flex flex-wrap justify-end ch3kz">
+                                                            <button class="border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc cnf4p" @click="modalOpen = false">Cancel</button>
+                                                            <button class="bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a cnf4p">Send</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
                                         </div>
+                                        <!-- End -->
                                     </div>
-                                </div>                    
-                            </div>
+                        @endif
 
                             <!-- Notifications button -->
 

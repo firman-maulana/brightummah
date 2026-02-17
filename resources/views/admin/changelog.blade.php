@@ -54,7 +54,6 @@
                                     </div>
                                     <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
                                         <header>
-                                            <h2 class="text-gray-800 dark:text-gray-100 font-bold cbtcb cxg65">Released version 2.0</h2>
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
@@ -85,7 +84,6 @@
                                     </div>
                                     <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
                                         <header>
-                                            <h2 class="text-gray-800 dark:text-gray-100 font-bold cbtcb cxg65">Feature Name is now public 🎉</h2>
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
@@ -116,7 +114,6 @@
                                     </div>
                                     <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
                                         <header>
-                                            <h2 class="text-gray-800 dark:text-gray-100 font-bold cbtcb cxg65">Bugs fixed, issues, and more</h2>
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
@@ -153,7 +150,6 @@
                                     </div>
                                     <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
                                         <header>
-                                            <h2 class="text-gray-800 dark:text-gray-100 font-bold cbtcb cxg65">Thanks, everyone 🙌</h2>
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
