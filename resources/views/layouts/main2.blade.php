@@ -146,8 +146,8 @@
                      <h4 class="it-footer-widget-title">Our Company</h4>
                      <div class="it-footer-widget-menu">
                         <ul>
-                           <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                           <li><a href="{{ route('programs.index') }}">Courses</a></li>
+                           <li><a href="{{ route('home') }}#contact">Contact Us</a></li>
+                           <li><a href="{{ route('home') }}#courses">Courses</a></li>
                         </ul>
                      </div>
                   </div>
@@ -233,6 +233,17 @@
     <script src="{{ asset('assets/js/parallax.js') }}"></script>
     <script src="{{ asset('assets/js/slider.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <!-- Custom Script: Close mobile menu when submenu clicked -->
+    <script>
+    $(document).ready(function() {
+        // Close offcanvas when any submenu link in mobile menu is clicked
+        $('.it-menu-mobile .it-submenu a').on('click', function() {
+            $('.itoffcanvas').removeClass('opened');
+            $('.body-overlay').removeClass('apply');
+        });
+    });
+    </script>
 
 
 </body>
