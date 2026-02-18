@@ -51,19 +51,9 @@
                                         <!-- Start -->
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag <span class="czr3n">*</span></label>
-                                            <div id="hashtagsContainer">
-                                                @foreach($article->hashtags as $index => $hashtag)
-                                                    @if($index === 0)
-                                                        <input name="hashtags[]" class="caqf9 c6btv mb-2" type="text" required value="{{ $hashtag }}">
-                                                    @else
-                                                        <div class="flex gap-2 mb-2">
-                                                            <input name="hashtags[]" class="caqf9 c6btv flex-1" type="text" required value="{{ $hashtag }}">
-                                                            <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-600">Remove</button>
-                                                        </div>
-                                                    @endif
-                                                @endforeach
-                                            </div>
-                                            <button type="button" onclick="addHashtag()" class="text-sm text-violet-500 hover:text-violet-600">+ Add Hashtag</button>
+                                            <input id="hashtagInput" class="caqf9 c6btv mb-2" type="text" placeholder="Type hashtag and press Enter...">
+                                            <div id="hashtagsDisplay" class="flex flex-wrap gap-2 mt-2"></div>
+                                            <div id="hashtagsContainer" style="display: none;"></div>
                                             @error('hashtags')
                                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                                             @enderror
@@ -277,15 +267,73 @@ function previewThumbnail(event) {
     }
 }
 
-function addHashtag() {
+let hashtags = @json($article->hashtags ?? []);
+
+// Hashtag functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hashtagInput = document.getElementById('hashtagInput');
+    
+    // Render existing hashtags
+    renderHashtags();
+    
+    hashtagInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const value = this.value.trim();
+            
+            if (value && !hashtags.includes(value)) {
+                hashtags.push(value);
+                renderHashtags();
+                this.value = '';
+            }
+        }
+    });
+});
+
+function renderHashtags() {
+    const display = document.getElementById('hashtagsDisplay');
     const container = document.getElementById('hashtagsContainer');
-    const div = document.createElement('div');
-    div.className = 'flex gap-2 mb-2';
-    div.innerHTML = `
-        <input name="hashtags[]" class="caqf9 c6btv flex-1" type="text" required>
-        <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-600">Remove</button>
-    `;
-    container.appendChild(div);
+    
+    // Clear both containers
+    display.innerHTML = '';
+    container.innerHTML = '';
+    
+    // Render badges
+    hashtags.forEach((tag, index) => {
+        // Create badge
+        const badge = document.createElement('div');
+        badge.className = 'ctq43';
+        badge.innerHTML = `
+            <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n ch4gv c1iho cwn3v cursor-pointer hover:opacity-80" onclick="removeHashtag(${index})">
+                ${tag}
+            </div>
+        `;
+        display.appendChild(badge);
+        
+        // Create hidden input
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'hashtags[]';
+        input.value = tag;
+        container.appendChild(input);
+    });
+}
+
+function removeHashtag(index) {
+    hashtags.splice(index, 1);
+    renderHashtags();
+}
+
+function previewThumbnail(event) {
+    const preview = document.getElementById('thumbnailPreview');
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            preview.innerHTML = `<img src="${e.target.result}" class="w-32 h-32 object-cover rounded">`;
+        }
+        reader.readAsDataURL(file);
+    }
 }
 
 function toggleContentOptions() {

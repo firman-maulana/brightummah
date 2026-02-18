@@ -48,68 +48,66 @@
                                         <!-- Start -->
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag <span class="czr3n">*</span></label>
-                                            <div id="hashtagsContainer">
-                                                <input id="hashtag" name="hashtags[]" class="caqf9 c6btv mb-2" type="text" required>
-                                            </div>
-                                            <button type="button" onclick="addHashtag()" class="text-sm text-violet-500 hover:text-violet-600">+ Add Hashtag</button>
+                                            <input id="hashtagInput" class="caqf9 c6btv mb-2" type="text" placeholder="Type hashtag and press Enter...">
+                                            <div id="hashtagsDisplay" class="flex flex-wrap gap-2 mt-2"></div>
+                                            <div id="hashtagsContainer" style="display: none;"></div>
                                             @error('hashtags')
                                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                                             @enderror
                                         </div>
                                         <!-- End -->
                                     </div>
-                                    <div class="cm3b7 c51uw ccww4 csdex cemhh c4sak">
-
-                                <!-- Avatars -->
-                                <div class="flex cjgpi coqgc cg40v">
-                                    <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul">
-                                        <span class="cn8jz">Add new user</span>
-                                        <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
-                                            <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="flex flex-wrap items-center c9uh3" id="contentOptions" style="display: none;">
-                            
-                                    <div class="cm0ci">
-                                        <!-- Start -->
-                                        <label class="flex items-center cursor-pointer" onclick="addContentBlock('paragraph')">
-                                            <input type="radio" name="content-type-selector" class="cgd3c">
-                                            <span class="text-sm c8bkw">Paragraf</span>
-                                        </label>
-                                        <!-- End -->
-                                    </div>
-                            
-                                    <div class="cm0ci">
-                                        <!-- Start -->
-                                        <label class="flex items-center cursor-pointer" onclick="addContentBlock('point')">
-                                            <input type="radio" name="content-type-selector" class="cgd3c">
-                                            <span class="text-sm c8bkw">Point</span>
-                                        </label>
-                                        <!-- End -->
-                                    </div>
-                                    <div class="cm0ci">
-                                        <!-- Start -->
-                                        <label class="flex items-center cursor-pointer" onclick="addContentBlock('photo')">
-                                            <input type="radio" name="content-type-selector" class="cgd3c">
-                                            <span class="text-sm c8bkw">Photo</span>
-                                        </label>
-                                        <!-- End -->
-                                    </div>
-                                </div>
-                            </div>
     
     
                             </div>
 
                             <!-- Group 1 -->
-                            <div>
+                            <div class="mt-6">
                                 <div class="cweej" id="contentBlocks">
     
                                     <!-- Content blocks will be added here dynamically -->
 
                                 </div>
                                 
+                                <!-- Add Content Button (moved here) -->
+                                <div class="mt-6">
+                                    <div class="flex items-center gap-4">
+                                        <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul">
+                                            <span class="cn8jz">Add new user</span>
+                                            <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
+                                                <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
+                                            </svg>
+                                        </button>
+                                        <div class="flex flex-wrap items-center c9uh3" id="contentOptions" style="display: none;">
+                                    
+                                            <div class="cm0ci">
+                                                <!-- Start -->
+                                                <label class="flex items-center cursor-pointer">
+                                                    <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('paragraph')">
+                                                    <span class="text-sm c8bkw">Paragraf</span>
+                                                </label>
+                                                <!-- End -->
+                                            </div>
+                                    
+                                            <div class="cm0ci">
+                                                <!-- Start -->
+                                                <label class="flex items-center cursor-pointer">
+                                                    <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('point')">
+                                                    <span class="text-sm c8bkw">Point</span>
+                                                </label>
+                                                <!-- End -->
+                                            </div>
+                                            <div class="cm0ci">
+                                                <!-- Start -->
+                                                <label class="flex items-center cursor-pointer">
+                                                    <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('photo')">
+                                                    <span class="text-sm c8bkw">Photo</span>
+                                                </label>
+                                                <!-- End -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <hr class="cghq3 cbv37 cr4kg cf7n6">
@@ -134,6 +132,59 @@
 
 <script>
 let blockCounter = 0;
+let hashtags = [];
+
+// Hashtag functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hashtagInput = document.getElementById('hashtagInput');
+    
+    hashtagInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const value = this.value.trim();
+            
+            if (value && !hashtags.includes(value)) {
+                hashtags.push(value);
+                renderHashtags();
+                this.value = '';
+            }
+        }
+    });
+});
+
+function renderHashtags() {
+    const display = document.getElementById('hashtagsDisplay');
+    const container = document.getElementById('hashtagsContainer');
+    
+    // Clear both containers
+    display.innerHTML = '';
+    container.innerHTML = '';
+    
+    // Render badges
+    hashtags.forEach((tag, index) => {
+        // Create badge
+        const badge = document.createElement('div');
+        badge.className = 'ctq43';
+        badge.innerHTML = `
+            <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n ch4gv c1iho cwn3v cursor-pointer hover:opacity-80" onclick="removeHashtag(${index})">
+                ${tag}
+            </div>
+        `;
+        display.appendChild(badge);
+        
+        // Create hidden input
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'hashtags[]';
+        input.value = tag;
+        container.appendChild(input);
+    });
+}
+
+function removeHashtag(index) {
+    hashtags.splice(index, 1);
+    renderHashtags();
+}
 
 function previewThumbnail(event) {
     const preview = document.getElementById('thumbnailPreview');
@@ -147,23 +198,20 @@ function previewThumbnail(event) {
     }
 }
 
-function addHashtag() {
-    const container = document.getElementById('hashtagsContainer');
-    const div = document.createElement('div');
-    div.className = 'flex gap-2 mb-2';
-    div.innerHTML = `
-        <input name="hashtags[]" class="caqf9 c6btv flex-1" type="text" required>
-        <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-600">Remove</button>
-    `;
-    container.appendChild(div);
-}
-
 function toggleContentOptions() {
     const options = document.getElementById('contentOptions');
     options.style.display = options.style.display === 'none' ? 'flex' : 'none';
 }
 
 function addContentBlock(type) {
+    // Hide options immediately to prevent double clicks
+    const options = document.getElementById('contentOptions');
+    options.style.display = 'none';
+    
+    // Uncheck all radio buttons
+    const radios = document.querySelectorAll('input[name="content-type-selector"]');
+    radios.forEach(radio => radio.checked = false);
+    
     const container = document.getElementById('contentBlocks');
     const blockId = `block_${blockCounter++}`;
     const div = document.createElement('div');
@@ -240,12 +288,7 @@ function addContentBlock(type) {
             <div id="points_${blockId}">
                 <input type="hidden" name="content[${blockId}][type]" value="point">
                 <div class="flex gap-2 mb-2">
-                    <div class="cm84d flex-1">
-                        <input name="content[${blockId}][points][]" class="caqf9 c6btv cxbw2" type="text" required>
-                        <div class="flex items-center pointer-events-none c29dn cqdkw cini7">
-                            <span class="text-sm cmpw7 cdqku c1k3n cb2br">Point</span>
-                        </div>
-                    </div>
+                    <input name="content[${blockId}][points][]" class="caqf9 c6btv flex-1" type="text" placeholder="Point" required>
                     <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku">
                         <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
@@ -288,8 +331,6 @@ function addContentBlock(type) {
 
     div.innerHTML = content;
     container.appendChild(div);
-    
-    document.getElementById('contentOptions').style.display = 'none';
 }
 
 function removeBlock(btn) {
@@ -301,12 +342,7 @@ function addPoint(blockId) {
     const div = document.createElement('div');
     div.className = 'flex gap-2 mb-2';
     div.innerHTML = `
-        <div class="cm84d flex-1">
-            <input name="content[${blockId}][points][]" class="caqf9 c6btv cxbw2" type="text" required>
-            <div class="flex items-center pointer-events-none c29dn cqdkw cini7">
-                <span class="text-sm cmpw7 cdqku c1k3n cb2br">Point</span>
-            </div>
-        </div>
+        <input name="content[${blockId}][points][]" class="caqf9 c6btv flex-1" type="text" placeholder="Point" required>
         <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku">
             <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                 <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>

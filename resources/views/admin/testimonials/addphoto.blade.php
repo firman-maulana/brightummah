@@ -24,21 +24,21 @@
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="name">Name</label>
-                                                <input id="name" name="name" class="caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->name)) }}" readonly>
+                                                <input id="name" name="name" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->name)) }}" disabled>
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="institute">Institute</label>
-                                                <input id="institute" name="institute" class="caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->institute)) }}" readonly>
+                                                <input id="institute" name="institute" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->institute)) }}" disabled>
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="country">Country</label>
-                                                <input id="country" name="country" class="caqf9 c6btv" type="text" value="{{ $testimonial->country }}" readonly>
+                                                <input id="country" name="country" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ $testimonial->country }}" disabled>
                                             </div>
                                         </div>
 
@@ -112,7 +112,7 @@
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
-                                                <textarea id="message" name="message" class="caqf9 c6btv" rows="4" readonly>{{ $testimonial->message }}</textarea>
+                                                <textarea id="message" name="message" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" rows="4" disabled>{{ $testimonial->message }}</textarea>
                                             </div>
                                         </div>
 
