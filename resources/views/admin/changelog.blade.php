@@ -9,189 +9,122 @@
                     <div class="c2rn6 cdiog">
                         <h1 class="text-gray-800 dark:text-gray-100 font-bold c459m cbtcb">Changelog</h1>
                     </div>
-                
-                    <!-- Right: Actions -->
-                    <div class="cm3b7 c51uw ccww4 csdex cbe1i c4sak">
-                
-                        <!-- Add entry button -->
-                        <button class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a">Add Entry</button>
-                
-                    </div>
-                
                 </div>  
 
-                <div class="ch3yp cnbwt cs7xl clu2m c6btv clbq0 cxsfz">
+                <div class="ch3yp cnbwt cs7xl clu2m c6btv clbq0 cxsfz" x-data="{ activeFilter: '{{ request('category', 'all') }}' }">
                     <div class="cbb0u ct8yz">
 
                         <!-- Filters -->
                         <div class="cjdac cmfxv c6f83">
                             <ul class="flex flex-wrap -m-1">
                                 <li class="m-1">
-                                    <button class="inline-flex items-center justify-center text-sm rounded-full border bg-gray-900 cg0jr c1xby cilvw c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v">View All</button>
+                                    <a href="{{ route('admin.changelog') }}" 
+                                       @click="activeFilter = 'all'"
+                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v"
+                                       :class="activeFilter === 'all' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                        View All
+                                    </a>
                                 </li>
                                 <li class="m-1">
-                                    <button class="inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v">Announcements</button>
+                                    <a href="{{ route('admin.changelog', ['category' => 'Saran Fitur']) }}" 
+                                       @click="activeFilter = 'Saran Fitur'"
+                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
+                                       :class="activeFilter === 'Saran Fitur' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                        Saran Fitur
+                                    </a>
                                 </li>
                                 <li class="m-1">
-                                    <button class="inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v">Bug Fix</button>
+                                    <a href="{{ route('admin.changelog', ['category' => 'Lapor Bug']) }}" 
+                                       @click="activeFilter = 'Lapor Bug'"
+                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
+                                       :class="activeFilter === 'Lapor Bug' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                        Lapor Bug
+                                    </a>
                                 </li>
                                 <li class="m-1">
-                                    <button class="inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v">Product</button>
-                                </li>
-                                <li class="m-1">
-                                    <button class="inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v">Exciting News</button>
+                                    <a href="{{ route('admin.changelog', ['category' => 'Lainnya']) }}" 
+                                       @click="activeFilter = 'Lainnya'"
+                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
+                                       :class="activeFilter === 'Lainnya' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                        Lainnya
+                                    </a>
                                 </li>
                             </ul>
                         </div>
 
                         <!-- Posts -->
                         <div class="cjdac">
+                            @forelse($bugReports as $report)
                             <!-- Post -->
                             <article class="cxtep">
                                 <div class="clxbf">
                                     <div class="coqgc c5srn">
-                                        <div class="cmpw7 cgulq cdqku cg5yh c0ef0 c1iho">8 July, 2024</div>
+                                        <div class="cmpw7 cgulq cdqku cg5yh c0ef0 c1iho">{{ $report->created_at->format('d F, Y') }}</div>
                                     </div>
                                     <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
                                         <header>
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-07.jpg') }}" width="32" height="32" alt="User 04">
+                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-0' . (($report->id % 7) + 1) . '.jpg') }}" width="32" height="32" alt="User">
                                                     </a>
                                                     <a class="block text-sm text-gray-800 dark:text-gray-100 cgulq" href="#0">
-                                                        Simona Lürwer
+                                                        {{ $report->user->name }}
                                                     </a>
                                                 </div>
                                                 <div class="co1wq cdqku">·</div>
                                                 <div>
-                                                    <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n ch4gv c1iho cwn3v">Product</div>
+                                                    @if($report->category == 'Saran Fitur')
+                                                        <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n ch4gv c1iho cwn3v">{{ $report->category }}</div>
+                                                    @elseif($report->category == 'Lapor Bug')
+                                                        <div class="inline-flex rounded-full cfts0 c5px7 cydwr c1k3n ch4gv c1iho cwn3v">{{ $report->category }}</div>
+                                                    @else
+                                                        <div class="inline-flex rounded-full cx6qj cz4gk cydwr c1k3n ch4gv c1iho cwn3v">{{ $report->category }}</div>
+                                                    @endif
                                                 </div>
                                             </div>
                                         </header>
                                         <div class="cjav5">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.</p>
+                                            <p>{{ $report->message }}</p>
                                         </div>
                                     </div>
                                 </div>
                             </article>
-                            <!-- Post -->
-                            <article class="cxtep">
-                                <div class="clxbf">
-                                    <div class="coqgc c5srn">
-                                        <div class="cmpw7 cgulq cdqku cg5yh c0ef0 c1iho">6 July, 2024</div>
-                                    </div>
-                                    <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
-                                        <header>
-                                            <div class="flex items-center c8vtj ch3kz cdiog">
-                                                <div class="flex items-center">
-                                                    <a class="block mr-2 coqgc" href="#0">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-02.jpg') }}" width="32" height="32" alt="User 04">
-                                                    </a>
-                                                    <a class="block text-sm text-gray-800 dark:text-gray-100 cgulq" href="#0">
-                                                        Danielle Cohen
-                                                    </a>
-                                                </div>
-                                                <div class="co1wq cdqku">·</div>
-                                                <div>
-                                                    <div class="inline-flex rounded-full cfts0 c5px7 cydwr c1k3n ch4gv c1iho cwn3v">Announcement</div>
-                                                </div>
-                                            </div>
-                                        </header>
-                                        <div class="cjav5">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- Post -->
-                            <article class="cxtep">
-                                <div class="clxbf">
-                                    <div class="coqgc c5srn">
-                                        <div class="cmpw7 cgulq cdqku cg5yh c0ef0 c1iho">4 July, 2024</div>
-                                    </div>
-                                    <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
-                                        <header>
-                                            <div class="flex items-center c8vtj ch3kz cdiog">
-                                                <div class="flex items-center">
-                                                    <a class="block mr-2 coqgc" href="#0">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-01.jpg') }}" width="32" height="32" alt="User 04">
-                                                    </a>
-                                                    <a class="block text-sm text-gray-800 dark:text-gray-100 cgulq" href="#0">
-                                                        Patrick Kumar
-                                                    </a>
-                                                </div>
-                                                <div class="co1wq cdqku">·</div>
-                                                <div>
-                                                    <div class="inline-flex rounded-full cx6qj cz4gk cydwr c1k3n ch4gv c1iho cwn3v">Bug Fix</div>
-                                                </div>
-                                            </div>
-                                        </header>
-                                        <div class="cjav5">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.</p>
-                                            <ul class="cjqz5 cektu c1647">
-                                                <li>E-commerce: Better lorem ipsum generator.</li>
-                                                <li>Booking: Lorem ipsum post generator.</li>
-                                                <li>Retail: Better lorem ipsum generator.</li>
-                                                <li>Services: Better lorem ipsum generator.</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <!-- Post -->
-                            <article class="cxtep">
-                                <div class="clxbf">
-                                    <div class="coqgc c5srn">
-                                        <div class="cmpw7 cgulq cdqku cg5yh c0ef0 c1iho">2 July, 2024</div>
-                                    </div>
-                                    <div class="border-gray-200 cghq3 ctv3r cbw8w cfv15">
-                                        <header>
-                                            <div class="flex items-center c8vtj ch3kz cdiog">
-                                                <div class="flex items-center">
-                                                    <a class="block mr-2 coqgc" href="#0">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-02.jpg') }}" width="32" height="32" alt="User 04">
-                                                    </a>
-                                                    <a class="block text-sm text-gray-800 dark:text-gray-100 cgulq" href="#0">
-                                                        Danielle Cohen
-                                                    </a>
-                                                </div>
-                                                <div class="co1wq cdqku">·</div>
-                                                <div>
-                                                    <div class="inline-flex rounded-full chk7w cinhi cydwr c1k3n ch4gv c1iho cwn3v">Exciting News</div>
-                                                </div>
-                                            </div>
-                                        </header>
-                                        <div class="cjav5">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
+                            @empty
+                            <div class="text-center text-gray-500 dark:text-gray-400 cjav5">
+                                <p>Belum ada laporan.</p>
+                            </div>
+                            @endforelse
                         </div>
 
                         <!-- Pagination -->
+                        @if($bugReports->hasPages())
                         <div class="cjdac cmfxv cgndh">
                             <div class="flex c2g1r cwnq4 c6o0w cetff">
                                 <nav class="cafp8 c2rn6 cdiog" role="navigation" aria-label="Navigation">
                                     <ul class="flex justify-center">
                                         <li class="ml-3 c77jh">
-                                            <span class="btn bg-white border-gray-200 cghq3 co1wq c2vpa ckbo4">&lt;- Previous</span>
+                                            @if($bugReports->onFirstPage())
+                                                <span class="btn bg-white border-gray-200 cghq3 co1wq c2vpa ckbo4">&lt;- Previous</span>
+                                            @else
+                                                <a href="{{ $bugReports->appends(['category' => request('category')])->previousPageUrl() }}" class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa">&lt;- Previous</a>
+                                            @endif
                                         </li>
                                         <li class="ml-3 c77jh">
-                                            <a class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa" href="#0">Next -&gt;</a>
+                                            @if($bugReports->hasMorePages())
+                                                <a class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa" href="{{ $bugReports->appends(['category' => request('category')])->nextPageUrl() }}">Next -&gt;</a>
+                                            @else
+                                                <span class="btn bg-white border-gray-200 cghq3 co1wq c2vpa ckbo4">Next -&gt;</span>
+                                            @endif
                                         </li>
                                     </ul>
                                 </nav>
                                 <div class="text-sm text-gray-500 c2bzj cydwr">
-                                    Showing <span class="c0zkc c1ukq c1k3n">1</span> to <span class="c0zkc c1ukq c1k3n">10</span> of <span class="c0zkc c1ukq c1k3n">467</span> results
+                                    Showing <span class="c0zkc c1ukq c1k3n">{{ $bugReports->firstItem() ?? 0 }}</span> to <span class="c0zkc c1ukq c1k3n">{{ $bugReports->lastItem() ?? 0 }}</span> of <span class="c0zkc c1ukq c1k3n">{{ $bugReports->total() }}</span> results
                                 </div>
                             </div>
                         </div>
+                        @endif
 
                     </div>
                 </div>

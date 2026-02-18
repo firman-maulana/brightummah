@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Program;
 use App\Models\User;
+use App\Models\BugReport;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Cloudinary\Cloudinary;
@@ -236,5 +237,19 @@ class AdminController extends Controller
 
         return redirect()->route('admin.admins')
             ->with('success', 'Admin berhasil dihapus!');
+    }
+
+    // Changelog (Only for Superadmin)
+    public function changelog(Request $request)
+    {
+        $query = BugReport::with('user');
+        
+        if ($request->has('category') && $request->category != '') {
+            $query->where('category', $request->category);
+        }
+        
+        $bugReports = $query->latest()->paginate(10);
+        
+        return view('admin.changelog', compact('bugReports'));
     }
 }

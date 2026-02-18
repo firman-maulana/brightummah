@@ -11,6 +11,7 @@ use App\Http\Controllers\TestimonialSubmissionController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BugReportController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])->name('testimonials.store');
@@ -54,6 +55,9 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     // Articles Management
     Route::resource('articles', AdminArticleController::class);
     
+    // Bug Report (Admin Only)
+    Route::post('/bug-reports', [BugReportController::class, 'store'])->name('bug-reports.store');
+    
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {
         Route::get('/admins', [AdminController::class, 'admins'])->name('admins');
@@ -68,7 +72,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     
     // Changelog (Superadmin Only)
     Route::middleware('superadmin')->group(function () {
-        Route::get('/changelog', fn() => view('admin.changelog'))->name('changelog');
+        Route::get('/changelog', [AdminController::class, 'changelog'])->name('changelog');
     });
 });
 

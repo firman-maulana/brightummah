@@ -64,10 +64,10 @@
                         </h3>
                         <ul class="c7gr8">
                             @if(auth()->user()->role === 'superadmin')
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.admins') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.admins') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.admins') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.admins') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg"
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.admins') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg"
      width="16" height="16" viewBox="0 0 24 24" fill="none"
      stroke="currentColor" stroke-width="2"
      stroke-linecap="round" stroke-linejoin="round">
@@ -82,20 +82,20 @@
                                 </a>
                             </li>
                             @endif
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.programs') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.programs') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.programs*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.programs') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.programs*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z"></path>
                                         </svg> 
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Programs</span>
                                     </div>
                                 </a>
                             </li>
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.teachers.*') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.teachers.index') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.teachers.*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.teachers.index') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.teachers.*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                                             <circle cx="12" cy="7" r="4" />
                                         </svg>
@@ -103,10 +103,10 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->is('admin/testimonials') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ url('/admin/testimonials') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->is('admin/testimonials') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ url('/admin/testimonials') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->is('admin/testimonials') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
                                             <path d="M7 8h10"></path>
                                             <path d="M7 12h6"></path>
@@ -115,10 +115,10 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.articles.*') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.articles.index') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.articles.*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.articles.index') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.articles.*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
                                             <polyline points="14 2 14 8 20 8"></polyline>
                                             <line x1="16" y1="13" x2="8" y2="13"></line>
@@ -137,10 +137,10 @@
                             <!-- Messages -->
                             <!-- Inbox -->
                             <!-- Calendar -->
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.calendar') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.calendar') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.calendar') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.calendar') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.calendar') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"></path>
                                             <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4ZM2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Z"></path>
                                         </svg>                                        
@@ -150,10 +150,10 @@
                             </li>
                             <!-- Changelog (Superadmin Only) -->
                             @if(auth()->user()->role === 'superadmin')
-                            <li class="cvwie cosgb c33r0 cgnhv cb8zv c5w78 cjxkd cuvgf csr1i cnbr1">
-                                <a class="block text-gray-800 dark:text-gray-100 {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : 'text-gray-800' }}" href="{{ route('admin.changelog') }}">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.changelog') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.changelog') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path>
                                             <path d="M8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
                                         </svg>                                        
@@ -215,8 +215,8 @@
                                     <div class="ctq43">
                                         <!-- Start -->
                                         <div x-data="{ modalOpen: false }">
-                                            <button class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a flex items-center justify-center" @click.prevent="modalOpen = true" aria-controls="feedback-modal" title="Laporkan Bug">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6" aria-hidden="true">
+                                            <button class="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 flex items-center justify-center" @click.prevent="modalOpen = true" aria-controls="feedback-modal" title="Laporkan Bug">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                                     <path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path>
                                                     <path d="M12 8v6"></path>
                                                     <path d="M9 11h6"></path>
@@ -227,45 +227,76 @@
                                             <!-- Modal dialog -->
                                             <div id="feedback-modal" class="flex items-center justify-center cxe43 cnbwt cini7 cjxg0 cys4p codu7 clbq0" role="dialog" aria-modal="true" x-show="modalOpen" x-transition:enter="cxxol cz9ag c8uqq" x-transition:enter-start="opacity-0 cu867" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cz9ag c8uqq" x-transition:leave-start="cgcrn csdj3" x-transition:leave-end="opacity-0 cu867" x-cloak="">
                                                 <div class="bg-white c2vpa co669 caufm cb8zv ccwri crwo8 c6btv" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
-                                                    <!-- Modal header -->
-                                                    <div class="border-gray-200 cghq3 ctv3r cx3hp c72q5">
-                                                        <div class="flex items-center cm3rx">
-                                                            <div class="text-gray-800 dark:text-gray-100 cgulq">Laporkan Bug</div>
-                                                            <button class="c3e4j cg12x cmpw7 cdqku" @click="modalOpen = false">
-                                                                <div class="cn8jz">Close</div>
-                                                                <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16">
-                                                                    <path d="M7.95 6.536l4.242-4.243a1 1 0 111.415 1.414L9.364 7.95l4.243 4.242a1 1 0 11-1.415 1.415L7.95 9.364l-4.243 4.243a1 1 0 01-1.414-1.415L6.536 7.95 2.293 3.707a1 1 0 011.414-1.414L7.95 6.536z"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <!-- Modal content -->
-                                                    <div class="cx3hp cz8qb">
-                                                        <div class="text-sm">
-                                                            <div class="text-gray-800 dark:text-gray-100 c1k3n cxg65">Bantu kami meningkatkan Bright Ummah Academy. Laporkan bug atau berikan saran fitur baru.</div>
-                                                        </div>
-                                                        <div class="cjav5">
-                                                            <div>
-                                                                <label class="block text-sm c1k3n cu6vl" for="name">Name <span class="czr3n">*</span></label>
-                                                                <input id="name" class="caqf9 c6btv c9hxi cwn3v" type="text" required="">
-                                                            </div>
-                                                            <div>
-                                                                <label class="block text-sm c1k3n cu6vl" for="email">Email <span class="czr3n">*</span></label>
-                                                                <input id="email" class="caqf9 c6btv c9hxi cwn3v" type="email" required="">
-                                                            </div>
-                                                            <div>
-                                                                <label class="block text-sm c1k3n cu6vl" for="feedback">Message <span class="czr3n">*</span></label>
-                                                                <textarea id="feedback" class="c071z c6btv c9hxi cwn3v" rows="4" required=""></textarea>
+                                                    <form method="POST" action="{{ route('admin.bug-reports.store') }}">
+                                                        @csrf
+                                                        <!-- Modal header -->
+                                                        <div class="border-gray-200 cghq3 ctv3r cx3hp c72q5">
+                                                            <div class="flex items-center cm3rx">
+                                                                <div class="text-gray-800 dark:text-gray-100 cgulq">Laporkan Bug</div>
+                                                                <button type="button" class="c3e4j cg12x cmpw7 cdqku" @click="modalOpen = false">
+                                                                    <div class="cn8jz">Close</div>
+                                                                    <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16">
+                                                                        <path d="M7.95 6.536l4.242-4.243a1 1 0 111.415 1.414L9.364 7.95l4.243 4.242a1 1 0 11-1.415 1.415L7.95 9.364l-4.243 4.243a1 1 0 01-1.414-1.415L6.536 7.95 2.293 3.707a1 1 0 011.414-1.414L7.95 6.536z"></path>
+                                                                    </svg>
+                                                                </button>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- Modal footer -->
-                                                    <div class="border-gray-200 cghq3 cr4kg cx3hp cz8qb">
-                                                        <div class="flex flex-wrap justify-end ch3kz">
-                                                            <button class="border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc cnf4p" @click="modalOpen = false">Cancel</button>
-                                                            <button class="bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a cnf4p">Send</button>
+                                                        <!-- Modal content -->
+                                                        <div class="cx3hp cz8qb">
+                                                            <div class="text-sm">
+                                                                <div class="text-gray-800 dark:text-gray-100 c1k3n cxg65">Bantu kami meningkatkan Bright Ummah Academy. Laporkan bug atau berikan saran fitur baru.</div>
+                                                            </div>
+                                                            <div class="cjav5">
+                                                                <div>
+                                                                    <label class="block text-sm c1k3n cu6vl mb-2" for="category">Category <span class="czr3n">*</span></label>
+                                                                    <div class="inline-flex cm84d c6btv" x-data="{ open: false, selected: 0, categories: ['Saran Fitur', 'Lapor Bug', 'Lainnya'] }">
+                                                                        <input type="hidden" name="category" :value="categories[selected]">
+                                                                        <button type="button" class="btn bg-white border-gray-200 cc0oq c29yw cghq3 cspbm cqahh c0zkc c2vpa cm3rx c1ukq c45yg c6btv" aria-label="Select category" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
+                                                                            <span class="flex items-center">
+                                                                                <span x-text="categories[selected]"></span>
+                                                                            </span>
+                                                                            <svg class="cmpw7 cdqku cbm9w coqgc cpts2" width="11" height="7" viewBox="0 0 11 7">
+                                                                                <path d="M5.4 6.8L0 1.4 1.4 0l4 4 4-4 1.4 1.4z"></path>
+                                                                            </svg>
+                                                                        </button>
+                                                                        <div class="bg-white border border-gray-200 cghq3 c2vpa cxe43 cb8zv ccwri cqdkw ctd47 cbxoy cu1dd c6btv cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha cf39k c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
+                                                                            <div class="text-sm ce8qq c0zkc c6sh9 c1ukq c1k3n co0ms">
+                                                                                <button type="button" tabindex="0" class="flex items-center chfxh csd0k cm3rx c5flv c6btv cb2br cuvgf" :class="selected === 0 && 'text-violet-500'" @click="selected = 0;open = false" @focus="open = true" @focusout="open = false">
+                                                                                    <span>Saran Fitur</span>
+                                                                                    <svg class="text-violet-400 cbm9w coqgc c8bkw" :class="selected !== 0 && 'invisible'" width="12" height="9" viewBox="0 0 12 9">
+                                                                                        <path d="M10.28.28L3.989 6.575 1.695 4.28A1 1 0 00.28 5.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28.28z"></path>
+                                                                                    </svg>
+                                                                                </button>
+                                                                                <button type="button" tabindex="0" class="flex items-center chfxh csd0k cm3rx c5flv c6btv cb2br cuvgf" :class="selected === 1 && 'text-violet-500'" @click="selected = 1;open = false" @focus="open = true" @focusout="open = false">
+                                                                                    <span>Lapor Bug</span>
+                                                                                    <svg class="text-violet-400 cbm9w coqgc c8bkw" :class="selected !== 1 && 'invisible'" width="12" height="9" viewBox="0 0 12 9">
+                                                                                        <path d="M10.28.28L3.989 6.575 1.695 4.28A1 1 0 00.28 5.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28.28z"></path>
+                                                                                    </svg>
+                                                                                </button>
+                                                                                <button type="button" tabindex="0" class="flex items-center chfxh csd0k cm3rx c5flv c6btv cb2br cuvgf" :class="selected === 2 && 'text-violet-500'" @click="selected = 2;open = false" @focus="open = true" @focusout="open = false">
+                                                                                    <span>Lainnya</span>
+                                                                                    <svg class="text-violet-400 cbm9w coqgc c8bkw" :class="selected !== 2 && 'invisible'" width="12" height="9" viewBox="0 0 12 9">
+                                                                                        <path d="M10.28.28L3.989 6.575 1.695 4.28A1 1 0 00.28 5.695l3 3a1 1 0 001.414 0l7-7A1 1 0 0010.28.28z"></path>
+                                                                                    </svg>
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div>
+                                                                    <label class="block text-sm c1k3n cu6vl" for="message">Message <span class="czr3n">*</span></label>
+                                                                    <textarea id="message" name="message" class="c071z c6btv c9hxi cwn3v" rows="4" required></textarea>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
+                                                        <!-- Modal footer -->
+                                                        <div class="border-gray-200 cghq3 cr4kg cx3hp cz8qb">
+                                                            <div class="flex flex-wrap justify-end ch3kz">
+                                                                <button type="button" class="border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc cnf4p" @click="modalOpen = false">Cancel</button>
+                                                                <button type="submit" class="bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a cnf4p">Send</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>                                            
                                         </div>
