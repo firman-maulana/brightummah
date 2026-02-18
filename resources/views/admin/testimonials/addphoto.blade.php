@@ -44,20 +44,6 @@
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
-                                                <textarea id="message" name="message" class="caqf9 c6btv" rows="4" readonly>{{ $testimonial->message }}</textarea>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="date">Date</label>
-                                                <input id="date" name="date" class="caqf9 c6btv" type="text" value="{{ ($testimonial->date ? $testimonial->date->format('Y-m-d') : optional($testimonial->created_at)->format('Y-m-d')) }}" readonly>
-                                            </div>
-                                        </div>
-
-                                        <div>
-                                            <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="photo">Photo</label>
 
                                                 @if($testimonial->photo)
@@ -122,6 +108,15 @@
                                                 @enderror
                                             </div>
                                         </div>
+
+                                        <div>
+                                            <div>
+                                                <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
+                                                <textarea id="message" name="message" class="caqf9 c6btv" rows="4" readonly>{{ $testimonial->message }}</textarea>
+                                            </div>
+                                        </div>
+
+
 
                                     </div>
                                 </div>

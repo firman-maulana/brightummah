@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Program;
 use App\Models\User;
 use App\Models\BugReport;
+use App\Traits\LogsActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Cloudinary\Cloudinary;
@@ -13,6 +14,7 @@ use Carbon\Carbon;
 
 class AdminController extends Controller
 {
+    use LogsActivity;
     public function dashboard()
     {
         $totalPrograms = Program::count();
@@ -48,6 +50,7 @@ class AdminController extends Controller
 
     public function showProgram(Program $program)
     {
+        $program->load('user');
         $otherProgram = Program::where('id', '!=', $program->id)
             ->inRandomOrder()
             ->first();
@@ -93,7 +96,11 @@ class AdminController extends Controller
 
         $validated['image'] = $upload['secure_url'];
 
-        Program::create($validated);
+        $validated['user_id'] = auth()->id();
+        $program = Program::create($validated);
+        
+        // Log activity
+        $this->logCreate('Program', $program->name);
 
         return redirect()->route('admin.programs')
             ->with('success', 'Program created successfully!');
@@ -128,6 +135,9 @@ class AdminController extends Controller
         }
 
         $validated = $request->validate($rules);
+        
+        // Deteksi field yang berubah sebelum update
+        $changedFields = $this->detectChangedFields($program, $request);
 
         if ($request->hasFile('image')) {
             $cloudinary = new Cloudinary([
@@ -147,6 +157,9 @@ class AdminController extends Controller
         }
 
         $program->update($validated);
+        
+        // Log activity dengan field yang berubah
+        $this->logUpdate('Program', $program->name, $changedFields);
 
         return redirect()->route('admin.programs')
             ->with('success', 'Program updated successfully!');
@@ -154,7 +167,11 @@ class AdminController extends Controller
 
     public function destroyProgram(Program $program)
     {
+        $programName = $program->name;
         $program->delete();
+        
+        // Log activity
+        $this->logDelete('Program', $programName);
 
         return redirect()->route('admin.programs')
             ->with('success', 'Program deleted successfully!');
@@ -164,17 +181,7 @@ class AdminController extends Controller
     public function admins(Request $request)
     {
         // Only show admin role, exclude superadmin
-        $query = User::where('role', 'admin');
-        
-        if ($request->has('search') && $request->search != '') {
-            $search = $request->search;
-            $query->where(function($q) use ($search) {
-                $q->where('name', 'like', '%' . $search . '%')
-                  ->orWhere('email', 'like', '%' . $search . '%');
-            });
-        }
-        
-        $admins = $query->latest()->paginate(10);
+        $admins = User::where('role', 'admin')->latest()->paginate(10);
         
         return view('admin.admins.index', compact('admins'));
     }
@@ -237,6 +244,21 @@ class AdminController extends Controller
 
         return redirect()->route('admin.admins')
             ->with('success', 'Admin berhasil dihapus!');
+    }
+
+    public function bulkDestroyAdmins(Request $request)
+    {
+        $ids = json_decode($request->ids);
+        
+        if (empty($ids)) {
+            return redirect()->route('admin.admins')
+                ->with('error', 'No admins selected for deletion');
+        }
+
+        User::whereIn('id', $ids)->where('role', 'admin')->delete();
+
+        return redirect()->route('admin.admins')
+            ->with('success', count($ids) . ' admin(s) berhasil dihapus!');
     }
 
     // Changelog (Only for Superadmin)

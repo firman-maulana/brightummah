@@ -27,10 +27,7 @@
                             <div class="c2g1r cwnq4 cld0c cjav5 cnlq0 cai6b">
                                 <!-- Author -->
                                 <div class="flex items-center ccduf">
-                                    <a class="block mr-2 coqgc" href="#0">
-                                        <img class="rounded-full" src="{{ asset('assets/admin/img/user-32-07.jpg') }}" width="32" height="32" alt="User 04">
-                                    </a>
-                                    <div class="text-sm cq84g">Teacher by <a class="text-gray-800 dark:text-gray-100 cgulq" href="#0">{{ $program->teacher }}</a></div>
+                                    <div class="text-sm cq84g">Teacher: <a class="text-gray-800 dark:text-gray-100 cgulq" href="#0">{{ $program->teacher }}</a></div>
                                 </div>
                                 <!-- Right side -->
                                 <div class="flex flex-wrap items-center c51uw ch3kz">
@@ -41,6 +38,7 @@
                                         </svg>
                                         <span>{{ $program->mode }}</span>
                                     </div>
+                                    <div class="inline-flex rounded-full c1lu4 c19il cydwr c1k3n c0ef0 ch4gv c1iho cwn3v">{{ $program->level }}</div>
                                 </div>
                             </div>
 
@@ -127,6 +125,13 @@
 
                             <!-- 1st block -->
                             <div class="bg-white c2vpa c1hly c5vqk cl6wk ch0sq csusu">
+                                <div class="cydwr cai6b">
+                                    <div class="inline-flex cxg65">
+                                        <img class="rounded-full c3nk1 crzrx" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="64" height="64" alt="Author">
+                                    </div>
+                                    <div class="font-bold text-gray-800 dark:text-gray-100 c7x0x cu6vl">{{ $program->user ? $program->user->name : 'Admin' }}</div>
+                                    <div class="text-sm text-gray-500 dark:text-gray-400 caf78">{{ $program->user ? ucfirst($program->user->role) : 'Admin' }}</div>
+                                </div>
                                 <div class="cweej">
                                     <a href="{{ route('admin.programs.edit', $program) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">

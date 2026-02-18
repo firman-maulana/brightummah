@@ -17,7 +17,7 @@ class HomeController extends Controller
 
         $teachers = Teacher::latest()->take(4)->get();
         $postedTestimonials = Testimonial::where('status', 'posted')->latest()->take(6)->get();
-        $articles = Article::latest()->take(3)->get();
+        $articles = Article::with('user')->latest()->take(3)->get();
         
         return view('pages.home', compact('latestPrograms', 'teachers', 'postedTestimonials', 'articles'));
     }

@@ -137,17 +137,6 @@
                             <!-- Messages -->
                             <!-- Inbox -->
                             <!-- Calendar -->
-                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.calendar') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
-                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.calendar') }}">
-                                    <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.calendar') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M5 4a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"></path>
-                                            <path d="M4 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4H4ZM2 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4Z"></path>
-                                        </svg>                                        
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Calendar</span>
-                                    </div>
-                                </a>
-                            </li>
                             <!-- Changelog (Superadmin Only) -->
                             @if(auth()->user()->role === 'superadmin')
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.changelog') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
@@ -210,6 +199,53 @@
                         <!-- Header: Right side -->
                         <div class="flex items-center cp3jk">
 
+                        <!-- Notifications button -->
+                            <div class="inline-flex cm84d" x-data="{ open: false, hasUnread: {{ $unreadCount ?? 0 }} > 0 }">
+                                <button class="flex items-center justify-center rounded-full cukve cvdqj cw5z1 c76um cue4z cmwfi" :class="{ 'cvwbh c2vpa': open }" aria-haspopup="true" @click.prevent="open = !open; if(open && hasUnread) { markAllAsRead(); hasUnread = false; }" :aria-expanded="open">
+                                    <span class="cn8jz">Notifications</span>
+                                    <svg class="cp14x ch0mp cbm9w" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 0a7 7 0 0 0-7 7c0 1.202.308 2.33.84 3.316l-.789 2.368a1 1 0 0 0 1.265 1.265l2.595-.865a1 1 0 0 0-.632-1.898l-.698.233.3-.9a1 1 0 0 0-.104-.85A4.97 4.97 0 0 1 2 7a5 5 0 0 1 5-5 4.99 4.99 0 0 1 4.093 2.135 1 1 0 1 0 1.638-1.148A6.99 6.99 0 0 0 7 0Z"></path>
+                                        <path d="M11 6a5 5 0 0 0 0 10c.807 0 1.567-.194 2.24-.533l1.444.482a1 1 0 0 0 1.265-1.265l-.482-1.444A4.962 4.962 0 0 0 16 11a5 5 0 0 0-5-5Zm-3 5a3 3 0 0 1 6 0c0 .588-.171 1.134-.466 1.6a1 1 0 0 0-.115.82 1 1 0 0 0-.82.114A2.973 2.973 0 0 1 11 14a3 3 0 0 1-3-3Z"></path>                                        
+                                    </svg>
+                                    @php
+                                        $unreadCount = \App\Models\Notification::where('user_id', '!=', auth()->id())
+                                            ->where('is_read', false)
+                                            ->count();
+                                    @endphp
+                                    <div x-show="hasUnread" class="rounded-full cdnc2 cbv37 cg902 cqdkw ct7xr cgky2 cf894 cych8 cli41"></div>
+                                </button>
+                                <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cyh17 ctj0o cgky2 cbxoy cdqsh cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
+                                    <div class="cmpw7 cgulq cdqku c0ef0 c1yoz c1iho clbq0 cif3q">Notifications</div>
+                                    <ul>
+                                        @php
+                                            $notifications = \App\Models\Notification::with('user')
+                                                ->where('user_id', '!=', auth()->id())
+                                                ->latest()
+                                                ->take(10)
+                                                ->get();
+                                        @endphp
+                                        
+                                        @forelse($notifications as $notification)
+                                        <li class="border-gray-200 cghq3 cmtlz ctv3r">
+                                            <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
+                                                <span class="block text-sm c6f83">
+                                                    <span class="text-gray-800 dark:text-gray-100 c1k3n">{{ $notification->user->name }}</span> 
+                                                    {{ $notification->message }}
+                                                </span>
+                                                <span class="block cmpw7 cdqku c1k3n c1iho">{{ $notification->created_at->format('M d, Y') }}</span>
+                                            </a>
+                                        </li>
+                                        @empty
+                                        <li class="border-gray-200 cghq3 cmtlz ctv3r">
+                                            <div class="block chfxh csd0k clbq0 cuvgf">
+                                                <span class="block text-sm c6f83 text-gray-500">Tidak ada notifikasi</span>
+                                            </div>
+                                        </li>
+                                        @endforelse
+                                    </ul>                
+                                </div>
+                            </div>
+
                         <!-- Send Feedback (Admin Only) -->
                         @if(auth()->user()->role === 'admin')
                                     <div class="ctq43">
@@ -248,7 +284,6 @@
                                                             </div>
                                                             <div class="cjav5">
                                                                 <div>
-                                                                    <label class="block text-sm c1k3n cu6vl mb-2" for="category">Category <span class="czr3n">*</span></label>
                                                                     <div class="inline-flex cm84d c6btv" x-data="{ open: false, selected: 0, categories: ['Saran Fitur', 'Lapor Bug', 'Lainnya'] }">
                                                                         <input type="hidden" name="category" :value="categories[selected]">
                                                                         <button type="button" class="btn bg-white border-gray-200 cc0oq c29yw cghq3 cspbm cqahh c0zkc c2vpa cm3rx c1ukq c45yg c6btv" aria-label="Select category" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
@@ -284,7 +319,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div>
-                                                                    <label class="block text-sm c1k3n cu6vl" for="message">Message <span class="czr3n">*</span></label>
+                                                                    <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
                                                                     <textarea id="message" name="message" class="c071z c6btv c9hxi cwn3v" rows="4" required></textarea>
                                                                 </div>
                                                             </div>
@@ -304,9 +339,38 @@
                                     </div>
                         @endif
 
-                            <!-- Notifications button -->
-
-                            <!-- Info button -->
+                        <!-- Info button -->
+                            <div class="inline-flex cm84d" x-data="{ open: false }">
+                                <button class="flex items-center justify-center rounded-full cukve cvdqj cw5z1 c76um cue4z cmwfi" :class="{ 'cvwbh c2vpa': open }" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
+                                    <span class="cn8jz">Info</span>
+                                    <svg class="cp14x ch0mp cbm9w" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 7.5a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0v-4ZM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"></path>
+                                        <path fill-rule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"></path>
+                                    </svg>
+                                </button>
+                                <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 c45yg cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
+                                    <div class="cmpw7 cgulq cdqku c0ef0 c1yoz c1iho cb2br cif3q">Need help?</div>
+                                    <ul>
+                                        <li>
+                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="https://drive.google.com/drive/folders/1K7Emajal5D02opyL-yDyOBti3eWMt5oN?usp=sharing" @click="open = false" @focus="open = true" @focusout="open = false">
+                                                <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
+                                                    <rect y="3" width="12" height="9" rx="1"></rect>
+                                                    <path d="M2 0h8v2H2z"></path>
+                                                </svg>
+                                                <span>Document</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="https://wa.me/62895378059606" @click="open = false" @focus="open = true" @focusout="open = false">
+                                                <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
+                                                    <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"></path>
+                                                </svg>
+                                                <span>Contact us</span>
+                                            </a>
+                                        </li>
+                                    </ul>                
+                                </div>
+                            </div>
 
                             <!-- Dark mode toggle -->
                             <div>
@@ -345,9 +409,6 @@
                                         <div class="text-gray-500 dark:text-gray-400 c1iho caf78">{{ ucfirst(auth()->user()->role) }}</div>
                                     </div>
                                     <ul>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="settings.html" @click="open = false" @focus="open = true" @focusout="open = false">Settings</a>
-                                        </li>
 <li>
     <form id="logout-form" method="POST" action="{{ route('logout') }}" class="hidden">
         @csrf
@@ -603,6 +664,26 @@
                 }
             }))
         })
-	</script> 
+	
+        <script>
+        // Function to mark all notifications as read
+        function markAllAsRead() {
+            fetch('{{ route("admin.notifications.readAll") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    console.log('All notifications marked as read');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        </script>
+</script> 
 </body>
 </html>

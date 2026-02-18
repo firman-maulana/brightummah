@@ -15,6 +15,13 @@
                         <div class="cm3b7 c51uw ccww4 csdex cbe1i c4sak">
 
                             <!-- Delete button -->
+                            <div class="table-items-action hidden">
+                                <div class="flex items-center">
+                                    <div class="hidden text-sm mr-2 cq84g c3nql caf78"><span class="table-items-count"></span> items selected</div>
+                                    <button type="button" @click="$dispatch('open-delete-modal')" class="btn bg-white border-gray-200 cc0oq cghq3 cspbm c2vpa czr3n">Delete</button>
+                                </div>
+                            </div>
+
                             <!-- Add customer button -->
                             @if(($teachersCount ?? $teachers->count()) >= 4)
                                 <button class="btn bg-gray-900 cpqp6 cv9uq c14v6 cha85 cbnll cqvjc cdj8c cg0jr ch8z9 cat76 cilvw cyn7a c6btv" disabled>Add Teachers</button>
@@ -36,9 +43,7 @@
                         <header class="cx3hp cz8qb">
                             <h2 class="text-gray-800 dark:text-gray-100 cgulq">All Teachers <span class="cmpw7 cdqku c1k3n">{{ $teachers->count() }}</span></h2>
                         </header>
-                        <form method="POST" action="{{ route('admin.teachers.bulk-destroy') }}" x-data="handleSelect">
-                            @csrf
-                            @method('DELETE')
+                        <div x-data="handleSelect">
 
                             <!-- Table -->
                             <div class="cocyr">
@@ -78,7 +83,7 @@
                                                 <div class="flex items-center">
                                                     <label class="inline-flex">
                                                         <span class="cn8jz">Select</span>
-                                                        <input class="table-item crgcy" type="checkbox" name="ids[]" value="{{ $teacher->id }}" @click="uncheckParent">
+                                                        <input class="table-item crgcy" type="checkbox" value="{{ $teacher->id }}" @click="uncheckParent">
                                                     </label>
                                                 </div>
                                             </td>
@@ -104,11 +109,25 @@
                                                 <div class="c2hoo">{{ $teacher->institusi }}</div>
                                             </td>
                                             <td class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
-                                                <a class="btn bg-white border-gray-200 cc0oq cghq3 cspbm c2vpa" href="{{ route('admin.teachers.edit', $teacher) }}" aria-label="Edit">
-                                                    <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
-                                                        <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
-                                                    </svg>
-                                                </a>
+                                                <div class="cm84d">
+                                                    <div class="inline-flex cqdkw cgky2 cli41" x-data="{ open: false }">
+                                                        <button class="rounded-full" :class="open ? 'cyhlg cmr9m text-gray-500 dark:cdqku': 'cdqku cg12x cmpw7 c3e4j'" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
+                                                            <span class="cn8jz">Menu</span>
+                                                            <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
+                                                                <circle cx="16" cy="16" r="2"></circle>
+                                                                <circle cx="10" cy="16" r="2"></circle>
+                                                                <circle cx="22" cy="16" r="2"></circle>
+                                                            </svg>
+                                                        </button>
+                                                        <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cr617 cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
+                                                            <ul>
+                                                                <li>
+                                                                    <a class="text-sm flex c196r cqahh c0zkc c1ukq c1k3n cb2br cwn3v" href="{{ route('admin.teachers.edit', $teacher) }}" @click="open = false" @focus="open = true" @focusout="open = false">Edit</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </td>
                                         </tr>
                                         @empty
@@ -122,14 +141,7 @@
                                 </table>
 
                             </div>
-                            <div class="table-items-action hidden mt-4">
-                                <div class="flex items-center">
-                                    <div class="hidden text-sm mr-2 cq84g c3nql caf78"><span class="table-items-count"></span> items selected</div>
-                                    <button type="submit" class="btn bg-white border-gray-200 cc0oq cghq3 cspbm c2vpa czr3n" onclick="return confirm('Hapus teacher terpilih?');">Delete</button>
-                                </div>
-                            </div>
-
-                        </form>
+                        </div>
                     </div>
 
                     <script>
@@ -163,6 +175,83 @@
                                 }
                             }))
                         })    
+                    </script>
+
+                    <!-- Delete Modal -->
+                    <div x-data="{ modalOpen: false }" @open-delete-modal.window="modalOpen = true">
+                        <!-- Modal backdrop -->
+                        <div class="bg-gray-900 c29tc c2iqv cini7 cjxg0 cys4p" x-show="modalOpen" x-transition:enter="cxxol cbmha c8uqq" x-transition:enter-start="opacity-0" x-transition:enter-end="cgcrn" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak=""></div>
+                        <!-- Modal dialog -->
+                        <div id="danger-modal" class="flex items-center justify-center cxe43 cnbwt cini7 cjxg0 cys4p codu7 clbq0" role="dialog" aria-modal="true" x-show="modalOpen" x-transition:enter="cxxol cz9ag c8uqq" x-transition:enter-start="opacity-0 cu867" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cz9ag c8uqq" x-transition:leave-start="cgcrn csdj3" x-transition:leave-end="opacity-0 cu867" x-cloak="">
+                            <div class="bg-white c2vpa co669 caufm cb8zv ccwri crwo8 c6btv" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+                                <div class="flex cm4ey csusu">
+                                    <!-- Icon -->
+                                    <div class="rounded-full flex items-center justify-center dark:bg-gray-700 cyhlg coqgc cr0m4 c59cs">
+                                        <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
+                                            <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 12c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm1-3H7V4h2v5z"></path>
+                                        </svg>
+                                    </div>
+                                    <!-- Content -->
+                                    <div>
+                                        <!-- Modal header -->
+                                        <div class="c6f83">
+                                            <div class="text-gray-800 dark:text-gray-100 cgulq c7x0x">Delete Selected Teachers?</div>
+                                        </div>
+                                        <!-- Modal content -->
+                                        <div class="text-sm ckdp3">
+                                            <div class="cweej">
+                                                <p>Are you sure you want to delete the selected teacher(s)? This action cannot be undone.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Modal footer -->
+                                        <div class="flex flex-wrap justify-end ch3kz">
+                                            <button class="border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc cnf4p" @click="modalOpen = false">Cancel</button>
+                                            <button type="button" class="c8ham cg902 cpcyu cnf4p" @click="deleteSelected()">Yes, Delete it</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                                            
+                    </div>
+
+                    <script>
+                        function deleteSelected() {
+                            const checkboxes = document.querySelectorAll('input.table-item:checked');
+                            const ids = Array.from(checkboxes).map(cb => cb.value);
+                            
+                            if (ids.length === 0) {
+                                alert('Please select at least one teacher to delete');
+                                return;
+                            }
+
+                            // Create form and submit
+                            const form = document.createElement('form');
+                            form.method = 'POST';
+                            form.action = '{{ route("admin.teachers.bulk-destroy") }}';
+                            
+                            const csrfToken = document.createElement('input');
+                            csrfToken.type = 'hidden';
+                            csrfToken.name = '_token';
+                            csrfToken.value = '{{ csrf_token() }}';
+                            form.appendChild(csrfToken);
+                            
+                            const methodField = document.createElement('input');
+                            methodField.type = 'hidden';
+                            methodField.name = '_method';
+                            methodField.value = 'DELETE';
+                            form.appendChild(methodField);
+                            
+                            ids.forEach(id => {
+                                const idField = document.createElement('input');
+                                idField.type = 'hidden';
+                                idField.name = 'ids[]';
+                                idField.value = id;
+                                form.appendChild(idField);
+                            });
+                            
+                            document.body.appendChild(form);
+                            form.submit();
+                        }
                     </script>
 
                 </div>

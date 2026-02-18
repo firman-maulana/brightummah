@@ -4,14 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Traits\LogsActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
+    use LogsActivity;
     public function index()
     {
-        $articles = Article::latest()->get();
+        $articles = Article::with('user')->latest()->get();
         return view('admin.articles.index', compact('articles'));
     }
 
@@ -58,18 +60,23 @@ class ArticleController extends Controller
         }
 
         Article::create([
+            'user_id' => auth()->id(),
             'title' => $request->title,
             'thumbnail' => $thumbnailPath,
             'hashtags' => $request->hashtags,
             'content' => $content,
             'has_photo' => $hasPhoto
         ]);
+        
+        // Log activity
+        $this->logCreate('Article', $request->title);
 
         return redirect()->route('admin.articles.index')->with('success', 'Article created successfully');
     }
 
     public function show(Article $article)
     {
+        $article->load('user');
         return view('admin.articles.detail', compact('article'));
     }
 
@@ -86,6 +93,9 @@ class ArticleController extends Controller
             'hashtags' => 'required|array',
             'content' => 'required|array'
         ]);
+        
+        // Deteksi field yang berubah sebelum update
+        $changedFields = $this->detectChangedFields($article, $request);
 
         $data = [
             'title' => $request->title,
@@ -130,12 +140,17 @@ class ArticleController extends Controller
         $data['has_photo'] = $hasPhoto;
 
         $article->update($data);
+        
+        // Log activity dengan field yang berubah
+        $this->logUpdate('Article', $article->title, $changedFields);
 
         return redirect()->route('admin.articles.index')->with('success', 'Article updated successfully');
     }
 
     public function destroy(Article $article)
     {
+        $articleTitle = $article->title;
+        
         Storage::disk('public')->delete($article->thumbnail);
         
         foreach ($article->content as $block) {
@@ -145,6 +160,9 @@ class ArticleController extends Controller
         }
 
         $article->delete();
+        
+        // Log activity
+        $this->logDelete('Article', $articleTitle);
 
         return redirect()->route('admin.articles.index')->with('success', 'Article deleted successfully');
     }

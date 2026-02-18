@@ -9,7 +9,7 @@ class ArticleController extends Controller
 {
     public function detail($id)
     {
-        $article = Article::findOrFail($id);
+        $article = Article::with('user')->findOrFail($id);
         return view('pages.detailarticle', compact('article'));
     }
 }

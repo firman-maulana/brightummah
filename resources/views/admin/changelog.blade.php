@@ -66,7 +66,7 @@
                                             <div class="flex items-center c8vtj ch3kz cdiog">
                                                 <div class="flex items-center">
                                                     <a class="block mr-2 coqgc" href="#0">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-32-0' . (($report->id % 7) + 1) . '.jpg') }}" width="32" height="32" alt="User">
+                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="32" height="32" alt="User">
                                                     </a>
                                                     <a class="block text-sm text-gray-800 dark:text-gray-100 cgulq" href="#0">
                                                         {{ $report->user->name }}

@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\ArticleController as AdminArticleController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\BugReportController;
+use App\Http\Controllers\NotificationController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])->name('testimonials.store');
@@ -58,6 +59,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     // Bug Report (Admin Only)
     Route::post('/bug-reports', [BugReportController::class, 'store'])->name('bug-reports.store');
     
+    // Notifications
+    Route::post('/notifications/{id}/read', [NotificationController::class, 'markAsRead'])->name('notifications.read');
+    Route::post('/notifications/read-all', [NotificationController::class, 'markAllAsRead'])->name('notifications.readAll');
+    Route::get('/notifications/unread-count', [NotificationController::class, 'getUnreadCount'])->name('notifications.unreadCount');
+    
     // Admin Management (Only for Superadmin)
     Route::middleware('superadmin')->group(function () {
         Route::get('/admins', [AdminController::class, 'admins'])->name('admins');
@@ -66,6 +72,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
         Route::get('/admins/{user}/edit', [AdminController::class, 'editAdmin'])->name('admins.edit');
         Route::put('/admins/{user}', [AdminController::class, 'updateAdmin'])->name('admins.update');
         Route::delete('/admins/{user}', [AdminController::class, 'destroyAdmin'])->name('admins.destroy');
+        Route::delete('/admins-bulk-delete', [AdminController::class, 'bulkDestroyAdmins'])->name('admins.bulk-delete');
     });
 
     Route::get('/calendar', fn() => view('admin.calendar'))->name('calendar');

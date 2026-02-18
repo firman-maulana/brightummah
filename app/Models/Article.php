@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $fillable = [
+        'user_id',
         'title',
         'thumbnail',
         'hashtags',
@@ -19,4 +20,9 @@ class Article extends Model
         'content' => 'array',
         'has_photo' => 'boolean'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

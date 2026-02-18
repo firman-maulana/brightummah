@@ -5,138 +5,278 @@
 <div class="ch3yp cnbwt cs7xl clu2m c6btv clbq0 cxsfz">
 
     <!-- Page header -->
-    <div class="c5w78 cxg65 c3nk1">
-        <div class="c5w78 cxg65">
-            <h1 class="text-gray-800 dark:text-gray-100 font-bold c459m cbtcb">Management Admin ✨</h1>
-        </div>
+    <div class="c2g1r cwnq4 cnlq0 cgd7w">
 
-        @if(session('success'))
-        <div class="bg-emerald-100 border border-emerald-400 text-emerald-700 px-4 py-3 rounded relative mb-4" role="alert">
-            <span class="block sm:inline">{{ session('success') }}</span>
+        <!-- Left: Title -->
+        <div class="c2rn6 cdiog">
+            <h1 class="text-gray-800 dark:text-gray-100 font-bold c459m cbtcb">Admins</h1>
         </div>
-        @endif
-
-        @if(session('error'))
-        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-            <span class="block sm:inline">{{ session('error') }}</span>
-        </div>
-        @endif
 
         <!-- Right: Actions -->
-        <div class="cqogy cnnms">
-            <!-- Search form -->
-            <form method="GET" action="{{ route('admin.admins') }}" class="c84a4" id="searchFormAdmins">
-                <label for="action-search" class="cn8jz">Search</label>
-                <input id="action-search" name="search" class="caqf9" type="search" placeholder="Search admin…" value="{{ request('search') }}">
-                <button type="submit" class="c29dn cqdkw cini7 cqogy" aria-label="Search">
-                    <svg class="cbm9w coqgc cfh3y" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5z"></path>
-                        <path d="M15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z"></path>
-                    </svg>
-                </button>
-            </form>
+        <div class="cm3b7 c51uw ccww4 csdex cbe1i c4sak">
 
-            <script>
-            document.getElementById('action-search').addEventListener('input', function() {
-                document.getElementById('searchFormAdmins').submit();
-            });
-            </script>
-            <!-- Add admin button -->
+            <!-- Delete button -->
+            <div class="table-items-action hidden">
+                <div class="flex items-center">
+                    <div class="hidden text-sm mr-2 cq84g c3nql caf78"><span class="table-items-count"></span> items selected</div>
+                    <button @click="$dispatch('open-delete-modal')" class="btn bg-white border-gray-200 cc0oq cghq3 cspbm c2vpa czr3n">Delete</button>
+                </div>
+            </div>
+
+            <!-- Add Admin button -->
             <a href="{{ route('admin.admins.create') }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a">
-                <svg class="cbm9w coqgc cfh3y" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <svg class="cbm9w cbmv0 coqgc" width="16" height="16" viewBox="0 0 16 16">
                     <path d="M15 7H9V1c0-.6-.4-1-1-1S7 .4 7 1v6H1c-.6 0-1 .4-1 1s.4 1 1 1h6v6c0 .6.4 1 1 1s1-.4 1-1V9h6c.6 0 1-.4 1-1s-.4-1-1-1z"></path>
                 </svg>
-                <span class="hidden xs:block ml-2">Add Admin</span>
-            </a>
+                <span class="cyga5">Add Admin</span>
+            </a>                            
+            
         </div>
+
     </div>
+
+    @if(session('success'))
+    <div class="bg-emerald-100 border border-emerald-400 text-emerald-700 px-4 py-3 rounded relative mb-4" role="alert">
+        <span class="block sm:inline">{{ session('success') }}</span>
+    </div>
+    @endif
+
+    @if(session('error'))
+    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+        <span class="block sm:inline">{{ session('error') }}</span>
+    </div>
+    @endif
 
     <!-- Table -->
-    <div class="bg-white border border-gray-200 cghq3 c2vpa cb8zv ccwri">
-        <!-- Table -->
-        <div class="cqnhx">
-            <table class="c6btv">
-                <!-- Table header -->
-                <thead class="text-xs cmpw7 cgulq cdqku c0ef0 c1iho border-gray-200 cghq3 ctv3r">
-                    <tr>
-                        <th class="cnbwt cs7xl c3nk1">
-                            <div class="text-left c1k3n">Name</div>
-                        </th>
-                        <th class="cnbwt cs7xl c3nk1">
-                            <div class="text-left c1k3n">Email</div>
-                        </th>
-                        <th class="cnbwt cs7xl c3nk1">
-                            <div class="text-left c1k3n">Role</div>
-                        </th>
-                        <th class="cnbwt cs7xl c3nk1">
-                            <div class="text-left c1k3n">Created</div>
-                        </th>
-                        <th class="cnbwt cs7xl c3nk1">
-                            <div class="text-center c1k3n">Actions</div>
-                        </th>
-                    </tr>
-                </thead>
-                <!-- Table body -->
-                <tbody class="text-sm">
-                    @forelse($admins as $admin)
-                    <tr class="border-gray-200 cghq3 ctv3r">
-                        <td class="cnbwt cs7xl c3nk1">
-                            <div class="flex items-center">
-                                <div class="rounded-full cmpw7 cdqku cbm9w coqgc cue4z cmwfi bg-violet-500">
-                                    <svg class="cbm9w coqgc cfh3y" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-                                    </svg>
+    <div class="bg-white c2vpa c1hly c5vqk">
+        <header class="cx3hp cz8qb">
+            <h2 class="text-gray-800 dark:text-gray-100 cgulq">All Admins <span class="cmpw7 cdqku c1k3n">{{ $admins->total() }}</span></h2>
+        </header>
+        <div x-data="handleSelect">
+
+            <!-- Table -->
+            <div class="cocyr">
+                <table class="c0zkc cn9pt c6btv">
+                    <!-- Table header -->
+                    <thead class="text-gray-500 dark:text-gray-400 cghq3 cib75 cbv37 cgulq cgk1f c0ef0 ctv3r cr4kg c1iho">
+                        <tr>
+                            <th class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
+                                <div class="flex items-center">
+                                    <label class="inline-flex">
+                                        <span class="cn8jz">Select all</span>
+                                        <input id="parent-checkbox" class="crgcy" type="checkbox" @click="toggleAll">
+                                    </label>
                                 </div>
-                                <div class="text-gray-800 dark:text-gray-100 c1k3n">{{ $admin->name }}</div>
-                            </div>
-                        </td>
-                        <td class="cnbwt cs7xl c3nk1">
-                            <div class="text-left">{{ $admin->email }}</div>
-                        </td>
-                        <td class="cnbwt cs7xl c3nk1">
-                            <div class="inline-flex c1k3n rounded-full text-center cnbwt cs7xl bg-violet-100 text-violet-600">
-                                Admin
-                            </div>
-                        </td>
-                        <td class="cnbwt cs7xl c3nk1">
-                            <div>{{ $admin->created_at->format('M d, Y') }}</div>
-                        </td>
-                        <td class="cnbwt cs7xl c3nk1">
-                            <div class="flex items-center justify-center space-x-2">
-                                <a href="{{ route('admin.admins.edit', $admin) }}" class="text-gray-400 hover:text-gray-500 rounded-full">
-                                    <span class="cn8jz">Edit</span>
-                                    <svg class="cbm9w coqgc cfh3y" width="16" height="16" viewBox="0 0 16 16">
-                                        <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
-                                    </svg>
-                                </a>
-                                <form method="POST" action="{{ route('admin.admins.destroy', $admin) }}" onsubmit="return confirm('Are you sure you want to delete this admin?')" class="inline">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="text-red-500 hover:text-red-600 rounded-full">
-                                        <span class="cn8jz">Delete</span>
-                                        <svg class="cbm9w coqgc cfh3y" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
-                                        </svg>
-                                    </button>
-                                </form>
-                            </div>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="5" class="cnbwt cs7xl c3nk1 text-center">
-                            <div class="text-gray-500 dark:text-gray-400">No admins found</div>
-                        </td>
-                    </tr>
-                    @endforelse
-                </tbody>
-            </table>
+                            </th>
+                            <th class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="cgulq c2hoo">Name</div>
+                            </th>
+                            <th class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="cgulq c2hoo">Email</div>
+                            </th>
+                            <th class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="cgulq">Created</div>
+                            </th>
+                            <th class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <span class="cn8jz">Menu</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <!-- Table body -->
+                    <tbody class="text-sm ce8qq ca8s8 co0ms">
+                        @forelse($admins as $admin)
+                        <!-- Row -->
+                        <tr>
+                            <td class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
+                                <div class="flex items-center">
+                                    <label class="inline-flex">
+                                        <span class="cn8jz">Select</span>
+                                        <input class="table-item crgcy" type="checkbox" value="{{ $admin->id }}" @click="uncheckParent">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="flex items-center">
+                                    <div class="mr-2 coqgc czvpl cr0m4 c59cs">
+                                        <img class="rounded-full" src="{{ asset('assets/admin/img/user-avatar-32.png') }}" width="40" height="40" alt="{{ $admin->name }}">
+                                    </div>
+                                    <div class="text-gray-800 dark:text-gray-100 c1k3n">{{ $admin->name }}</div>
+                                </div>
+                            </td>
+                            <td class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="c2hoo">{{ $admin->email }}</div>
+                            </td>
+                            <td class="cq84g cyjcc cgn91 c9hxi c72q5">
+                                <div class="cydwr">{{ $admin->created_at->format('M d, Y') }}</div>
+                            </td>
+                            <td class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
+                                <div class="cm84d">
+                                    <div class="inline-flex cqdkw cgky2 cli41" x-data="{ open: false }">
+                                        <button class="rounded-full" :class="open ? 'cyhlg cmr9m text-gray-500 dark:cdqku': 'cdqku cg12x cmpw7 c3e4j'" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
+                                            <span class="cn8jz">Menu</span>
+                                            <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
+                                                <circle cx="16" cy="16" r="2"></circle>
+                                                <circle cx="10" cy="16" r="2"></circle>
+                                                <circle cx="22" cy="16" r="2"></circle>
+                                            </svg>
+                                        </button>
+                                        <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cr617 cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
+                                            <ul>
+                                                <li>
+                                                    <a class="text-sm flex c196r cqahh c0zkc c1ukq c1k3n cb2br cwn3v" href="{{ route('admin.admins.edit', $admin) }}" @click="open = false" @focus="open = true" @focusout="open = false">Edit</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="5" class="cq84g cyjcc cgn91 c9hxi c72q5 text-center">
+                                <div class="text-gray-500 dark:text-gray-400">No admins found</div>
+                            </td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+
+            </div>
         </div>
     </div>
+    <script>
+        // A basic demo function to handle "select all" functionality
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('handleSelect', () => ({
+                selectall: false,
+                selectAction() {
+                    countEl = document.querySelector('.table-items-action');
+                    if (!countEl) return;
+                    checkboxes = document.querySelectorAll('input.table-item:checked');
+                    document.querySelector('.table-items-count').innerHTML = checkboxes.length;
+                    if (checkboxes.length > 0) {
+                        countEl.classList.remove('hidden');
+                    } else {
+                        countEl.classList.add('hidden');
+                    }
+                },
+                toggleAll() {
+                    this.selectall = !this.selectall;
+                    checkboxes = document.querySelectorAll('input.table-item');
+                    [...checkboxes].map((el) => {
+                        el.checked = this.selectall;
+                    });
+                    this.selectAction();
+                },
+                uncheckParent() {
+                    this.selectall = false;
+                    document.getElementById('parent-checkbox').checked = false;
+                    this.selectAction();
+                }
+            }))
+        })    
+    </script>
+    
+    <!-- Delete Modal -->
+    <div x-data="{ modalOpen: false }" @open-delete-modal.window="modalOpen = true">
+        <!-- Modal backdrop -->
+        <div class="bg-gray-900 c29tc c2iqv cini7 cjxg0 cys4p" x-show="modalOpen" x-transition:enter="cxxol cbmha c8uqq" x-transition:enter-start="opacity-0" x-transition:enter-end="cgcrn" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak=""></div>
+        <!-- Modal dialog -->
+        <div id="danger-modal" class="flex items-center justify-center cxe43 cnbwt cini7 cjxg0 cys4p codu7 clbq0" role="dialog" aria-modal="true" x-show="modalOpen" x-transition:enter="cxxol cz9ag c8uqq" x-transition:enter-start="opacity-0 cu867" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cz9ag c8uqq" x-transition:leave-start="cgcrn csdj3" x-transition:leave-end="opacity-0 cu867" x-cloak="">
+            <div class="bg-white c2vpa co669 caufm cb8zv ccwri crwo8 c6btv" @click.outside="modalOpen = false" @keydown.escape.window="modalOpen = false">
+                <div class="flex cm4ey csusu">
+                    <!-- Icon -->
+                    <div class="rounded-full flex items-center justify-center dark:bg-gray-700 cyhlg coqgc cr0m4 c59cs">
+                        <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
+                            <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 12c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm1-3H7V4h2v5z"></path>
+                        </svg>
+                    </div>
+                    <!-- Content -->
+                    <div>
+                        <!-- Modal header -->
+                        <div class="c6f83">
+                            <div class="text-gray-800 dark:text-gray-100 cgulq c7x0x">Delete Selected Admins?</div>
+                        </div>
+                        <!-- Modal content -->
+                        <div class="text-sm ckdp3">
+                            <div class="cweej">
+                                <p>Are you sure you want to delete the selected admin(s)? This action cannot be undone.</p>
+                            </div>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="flex flex-wrap justify-end ch3kz">
+                            <button class="border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc cnf4p" @click="modalOpen = false">Cancel</button>
+                            <button type="button" class="c8ham cg902 cpcyu cnf4p" @click="deleteSelected()">Yes, Delete it</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                                            
+    </div>
 
+    <script>
+        function deleteSelected() {
+            const checkboxes = document.querySelectorAll('input.table-item:checked');
+            const ids = Array.from(checkboxes).map(cb => cb.value);
+            
+            if (ids.length === 0) {
+                alert('Please select at least one admin to delete');
+                return;
+            }
+
+            // Create form and submit
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '{{ route("admin.admins.bulk-delete") }}';
+            
+            const csrfToken = document.createElement('input');
+            csrfToken.type = 'hidden';
+            csrfToken.name = '_token';
+            csrfToken.value = '{{ csrf_token() }}';
+            form.appendChild(csrfToken);
+            
+            const methodField = document.createElement('input');
+            methodField.type = 'hidden';
+            methodField.name = '_method';
+            methodField.value = 'DELETE';
+            form.appendChild(methodField);
+            
+            const idsField = document.createElement('input');
+            idsField.type = 'hidden';
+            idsField.name = 'ids';
+            idsField.value = JSON.stringify(ids);
+            form.appendChild(idsField);
+            
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+    
     <!-- Pagination -->
-    <div class="c7gr8">
-        {{ $admins->links() }}
+    <div class="cvxzw">
+        <div class="flex c2g1r cwnq4 c6o0w cetff">
+            <nav class="cafp8 c2rn6 cdiog" role="navigation" aria-label="Navigation">
+                <ul class="flex justify-center">
+                    <li class="ml-3 c77jh">
+                        @if($admins->onFirstPage())
+                            <span class="btn bg-white border-gray-200 cghq3 co1wq c2vpa ckbo4">&lt;- Previous</span>
+                        @else
+                            <a href="{{ $admins->previousPageUrl() }}" class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa">&lt;- Previous</a>
+                        @endif
+                    </li>
+                    <li class="ml-3 c77jh">
+                        @if($admins->hasMorePages())
+                            <a class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa" href="{{ $admins->nextPageUrl() }}">Next -&gt;</a>
+                        @else
+                            <span class="btn bg-white border-gray-200 cghq3 co1wq c2vpa ckbo4">Next -&gt;</span>
+                        @endif
+                    </li>
+                </ul>
+            </nav>
+            <div class="text-sm text-gray-500 c2bzj cydwr">
+                Showing <span class="c0zkc c1ukq c1k3n">{{ $admins->firstItem() ?? 0 }}</span> to <span class="c0zkc c1ukq c1k3n">{{ $admins->lastItem() ?? 0 }}</span> of <span class="c0zkc c1ukq c1k3n">{{ $admins->total() }}</span> results
+            </div>
+        </div>
     </div>
 
 </div>

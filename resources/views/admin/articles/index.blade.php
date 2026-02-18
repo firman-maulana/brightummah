@@ -59,12 +59,12 @@
                                 <div class="flex mr-2 cjgpi coqgc cg40v">
                                     <a class="block" href="#0">
                                         <img class="rounded-full ctxup cv1so chwil ct7xr" 
-                                             src="./images/user-28-12.jpg" 
-                                             width="28" height="28" alt="User 12">
+                                             src="{{ asset('assets/admin/img/user-avatar-32.png') }}" 
+                                             width="28" height="28" alt="User">
                                     </a>
                                 </div>
                                 <div class="cbw8w">
-                                    <h2 class="text-gray-800 dark:text-gray-100 cgulq">Admin</h2>
+                                    <h2 class="text-gray-800 dark:text-gray-100 cgulq">{{ $article->user ? $article->user->name : 'Admin' }}</h2>
                                     <div class="text-gray-500 c1k3n c1iho">
                                         {{ $article->created_at->timezone('Asia/Jakarta')->format('g:i A M d') }}
                                     </div>

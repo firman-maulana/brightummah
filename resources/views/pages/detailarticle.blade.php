@@ -76,7 +76,7 @@
                                     </clipPath>
                                  </defs>
                               </svg>
-                              Admin
+                              {{ $article->user ? $article->user->name : 'Admin' }}
                            </span>
                         </div>
                         <h4 class="it-section-title">{{ $article->title }}</h4>
@@ -116,7 +116,7 @@
                               <span class="postbox-tag-title">Tags:</span>
                               <div class="postbox-tag-content">
                                  @foreach($article->hashtags as $index => $tag)
-                                    <a class="{{ $index === 0 ? 'active' : '' }}" href="#">{{ $tag }}</a>
+                                    <a class="{{ $index === 0 ? 'active' : '' }}">{{ $tag }}</a>
                                  @endforeach
                               </div>
                            </div>
