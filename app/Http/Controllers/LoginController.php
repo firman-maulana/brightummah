@@ -25,9 +25,9 @@ class LoginController extends Controller
             $user = Auth::user();
 
             if ($user->role === 'superadmin') {
-                return redirect()->intended(route('admin.admins'));
+                return redirect()->route('admin.admins');
             } elseif ($user->role === 'admin') {
-                return redirect()->intended(route('admin.programs'));
+                return redirect()->route('admin.programs');
             }
 
             Auth::logout();
