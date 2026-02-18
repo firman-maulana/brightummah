@@ -74,9 +74,13 @@
                                 </div>
                             </div>
                             <div class="flex items-center cm3rx cgndh">
-                                <div class="mr-1 flex items-center">
-                                    <input type="checkbox" id="remember" name="remember" class="mr-2">
-                                    <label for="remember" class="text-sm">Remember Me</label>
+                                <div class="cm0ci">
+                                    <!-- Start -->
+                                    <label class="flex items-center">
+                                        <input type="checkbox" id="remember" name="remember" class="crgcy">
+                                        <span class="text-sm c8bkw">Remember Me</span>
+                                    </label>
+                                    <!-- End -->
                                 </div>
                                 <button type="submit" class="btn bg-gray-900 ml-3 cdj8c cg0jr ch8z9 cilvw cyn7a">Sign In</button>
                             </div>

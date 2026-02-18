@@ -216,7 +216,7 @@
                                 </button>
                                 <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cyh17 ctj0o cgky2 cbxoy cdqsh cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
                                     <div class="cmpw7 cgulq cdqku c0ef0 c1yoz c1iho clbq0 cif3q">Notifications</div>
-                                    <ul>
+                                    <ul style="max-height: 300px; overflow-y: auto;">
                                         @php
                                             $notifications = \App\Models\Notification::with('user')
                                                 ->where('user_id', '!=', auth()->id())
