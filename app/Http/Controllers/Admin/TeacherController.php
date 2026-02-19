@@ -67,13 +67,18 @@ class TeacherController extends Controller
         // Deteksi field yang berubah sebelum update
         $changedFields = $this->detectChangedFields($teacher, $request);
 
+        // Handle photo removal
         if (($validated['remove_photo'] ?? null) == '1') {
             if ($teacher->photo) {
                 Storage::disk('public')->delete($teacher->photo);
             }
             $validated['photo'] = null;
+        } else {
+            // Remove photo from validated data if not uploading new photo
+            unset($validated['photo']);
         }
 
+        // Handle new photo upload
         if ($request->hasFile('photo')) {
             if ($teacher->photo) {
                 Storage::disk('public')->delete($teacher->photo);
@@ -114,6 +119,11 @@ class TeacherController extends Controller
         ]);
 
         $teachers = Teacher::whereIn('id', $validated['ids'])->get();
+        
+        // Collect teacher names
+        $teacherNames = $teachers->pluck('name')->toArray();
+        
+        // Delete photos and teachers
         foreach ($teachers as $teacher) {
             if ($teacher->photo) {
                 Storage::disk('public')->delete($teacher->photo);
@@ -122,6 +132,17 @@ class TeacherController extends Controller
 
         Teacher::whereIn('id', $validated['ids'])->delete();
 
-        return redirect()->route('admin.teachers.index')->with('success', 'Teacher terpilih berhasil dihapus.');
+        // Format names for notification
+        $count = count($teacherNames);
+        if ($count === 1) {
+            $message = "Teacher {$teacherNames[0]} berhasil dihapus.";
+        } elseif ($count === 2) {
+            $message = "Teacher {$teacherNames[0]} and {$teacherNames[1]} berhasil dihapus.";
+        } else {
+            $lastTeacher = array_pop($teacherNames);
+            $message = "Teacher " . implode(', ', $teacherNames) . ", and {$lastTeacher} berhasil dihapus.";
+        }
+
+        return redirect()->route('admin.teachers.index')->with('success', $message);
     }
 }

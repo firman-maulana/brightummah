@@ -64,9 +64,9 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
-                                            <textarea name="fokus_pembelajaran" id="fokus_pembelajaran" class="caqf9 c6btv @error('fokus_pembelajaran') is-invalid @enderror" rows="4" placeholder="Masukkan fokus pembelajaran..." required>{{ old('fokus_pembelajaran') }}</textarea>
-                                            @error('fokus_pembelajaran')
+                                            <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
+                                            <textarea name="tujuan_program" id="tujuan_program" class="caqf9 c6btv @error('tujuan_program') is-invalid @enderror" rows="4" placeholder="Masukkan tujuan program..." required>{{ old('tujuan_program') }}</textarea>
+                                            @error('tujuan_program')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
@@ -88,9 +88,9 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
-                                            <textarea name="tujuan_program" id="tujuan_program" class="caqf9 c6btv @error('tujuan_program') is-invalid @enderror" rows="4" placeholder="Masukkan tujuan program..." required>{{ old('tujuan_program') }}</textarea>
-                                            @error('tujuan_program')
+                                            <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
+                                            <textarea name="fokus_pembelajaran" id="fokus_pembelajaran" class="caqf9 c6btv @error('fokus_pembelajaran') is-invalid @enderror" rows="4" placeholder="Masukkan fokus pembelajaran..." required>{{ old('fokus_pembelajaran') }}</textarea>
+                                            @error('fokus_pembelajaran')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>

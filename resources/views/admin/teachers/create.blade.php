@@ -35,7 +35,7 @@
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="categories">Categories</label>
                                                 <select id="categories" name="categories" class="caqf9 c6btv" required>
-                                                    <option value="" {{ old('categories') == '' ? 'selected' : '' }}>-- Pilih Categories --</option>
+                                                    <option value="" {{ old('categories') == '' ? 'selected' : '' }}>Pilih Categories</option>
                                                     <option value="General Program" {{ old('categories') == 'General Program' ? 'selected' : '' }}>General Program</option>
                                                     <option value="Islamic Integrated Program" {{ old('categories') == 'Islamic Integrated Program' ? 'selected' : '' }}>Islamic Integrated Program</option>
                                                 </select>

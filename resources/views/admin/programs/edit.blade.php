@@ -47,27 +47,25 @@
                                             </div>
                                             <!-- End -->
                                         </div>
-                                        
+
                                         <div>
                                             <!-- Start -->
-                                            <label class="block text-sm c1k3n cu6vl" for="mode">Mode</label>
-                                            <select id="mode" name="mode" class="caqf9 c6btv" required>
-                                                @foreach($modes as $m)
-                                                    <option value="{{ $m }}" {{ $program->mode == $m ? 'selected' : '' }}>{{ $m }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('mode')
-                                                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                            @enderror
+                                            <div>
+                                                <label class="block text-sm c1k3n cu6vl" for="level">Level</label>
+                                                <input id="level" name="level" class="caqf9 c6btv" type="text" placeholder="Level..." value="{{ old('level', $program->level) }}" required>
+                                                @error('level')
+                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+                                                @enderror
+                                            </div>
                                             <!-- End -->
                                         </div>
 
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
-                                                <textarea id="fokus_pembelajaran" name="fokus_pembelajaran" class="caqf9 c6btv" rows="3" placeholder="Learning focus..." required>{{ old('fokus_pembelajaran', $program->fokus_pembelajaran) }}</textarea>
-                                                @error('fokus_pembelajaran')
+                                                <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
+                                                <textarea id="tujuan_program" name="tujuan_program" class="caqf9 c6btv" rows="3" placeholder="Program objectives..." required>{{ old('tujuan_program', $program->tujuan_program) }}</textarea>
+                                                @error('tujuan_program')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
                                             </div>
@@ -89,9 +87,9 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
-                                                <textarea id="tujuan_program" name="tujuan_program" class="caqf9 c6btv" rows="3" placeholder="Program objectives..." required>{{ old('tujuan_program', $program->tujuan_program) }}</textarea>
-                                                @error('tujuan_program')
+                                                <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
+                                                <textarea id="fokus_pembelajaran" name="fokus_pembelajaran" class="caqf9 c6btv" rows="3" placeholder="Learning focus..." required>{{ old('fokus_pembelajaran', $program->fokus_pembelajaran) }}</textarea>
+                                                @error('fokus_pembelajaran')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
                                             </div>
@@ -175,13 +173,15 @@
 
                                         <div>
                                             <!-- Start -->
-                                            <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="level">Level</label>
-                                                <input id="level" name="level" class="caqf9 c6btv" type="text" placeholder="Level..." value="{{ old('level', $program->level) }}" required>
-                                                @error('level')
-                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                                @enderror
-                                            </div>
+                                            <label class="block text-sm c1k3n cu6vl" for="mode">Mode</label>
+                                            <select id="mode" name="mode" class="caqf9 c6btv" required>
+                                                @foreach($modes as $m)
+                                                    <option value="{{ $m }}" {{ $program->mode == $m ? 'selected' : '' }}>{{ $m }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('mode')
+                                                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+                                            @enderror
                                             <!-- End -->
                                         </div>
 

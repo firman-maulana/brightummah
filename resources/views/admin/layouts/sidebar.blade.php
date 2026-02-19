@@ -63,25 +63,6 @@
                             <span class="2xl:block c185y cmt20 c2y99">Menu</span>
                         </h3>
                         <ul class="c7gr8">
-                            @if(auth()->user()->role === 'superadmin')
-                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.admins') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
-                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.admins') }}">
-                                    <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.admins') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg"
-     width="16" height="16" viewBox="0 0 24 24" fill="none"
-     stroke="currentColor" stroke-width="2"
-     stroke-linecap="round" stroke-linejoin="round">
-    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-    <circle cx="9" cy="7" r="4"/>
-    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-</svg>
-
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Admins</span>
-                                    </div>
-                                </a>
-                            </li>
-                            @endif
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.programs*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.programs') }}">
                                     <div class="flex items-center">
@@ -103,18 +84,6 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->is('admin/testimonials') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
-                                <a class="block text-gray-800 dark:text-gray-100" href="{{ url('/admin/testimonials') }}">
-                                    <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->is('admin/testimonials') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
-                                            <path d="M7 8h10"></path>
-                                            <path d="M7 12h6"></path>
-                                        </svg>
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Testimonisls</span>
-                                    </div>
-                                </a>
-                            </li>
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.articles.*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.articles.index') }}">
                                     <div class="flex items-center">
@@ -129,16 +98,42 @@
                                     </div>
                                 </a>
                             </li>
-                            <!-- E-Commerce -->
-                            <!-- Community -->
-                            <!-- Finance -->
-                            <!-- Job Board -->
-                            <!-- Tasks -->
-                            <!-- Messages -->
-                            <!-- Inbox -->
-                            <!-- Calendar -->
-                            <!-- Changelog (Superadmin Only) -->
-                            @if(auth()->user()->role === 'superadmin')
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->is('admin/testimonials') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ url('/admin/testimonials') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->is('admin/testimonials') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
+                                            <path d="M7 8h10"></path>
+                                            <path d="M7 12h6"></path>
+                                        </svg>
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Testimonials</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    @if(auth()->user()->role === 'superadmin')
+                    <!-- Lainnya group (Superadmin Only) -->
+                    <div>
+                        <h3 class="cmpw7 cgulq cdqku c0ef0 c1iho c9aea">
+                            <span class="hidden 2xl:hidden cs2n8 cbbia cydwr cv9uc cg8so" aria-hidden="true">•••</span>
+                            <span class="2xl:block c185y cmt20 c2y99">Lainnya</span>
+                        </h3>
+                        <ul class="c7gr8">
+                            <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.admins*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
+                                <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.admins') }}">
+                                    <div class="flex items-center">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.admins*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                            <circle cx="9" cy="7" r="4"/>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        </svg>
+                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Admins</span>
+                                    </div>
+                                </a>
+                            </li>
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.changelog') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.changelog') }}">
                                     <div class="flex items-center">
@@ -150,12 +145,9 @@
                                     </div>
                                 </a>
                             </li>
-                            @endif
-                            <!-- Campaigns -->
-                            <!-- Settings -->
-                            <!-- Utility -->
                         </ul>
                     </div>
+                    @endif
 
                 </div>
 

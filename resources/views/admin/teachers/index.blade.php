@@ -46,8 +46,8 @@
                         <div x-data="handleSelect">
 
                             <!-- Table -->
-                            <div class="cocyr">
-                                <table class="c0zkc cn9pt c6btv">
+                            <div class="cocyr overflow-x-auto">
+                                <table class="c0zkc cn9pt c6btv" style="min-width: 640px;">
 
                                     <!-- Table header -->
                                     <thead class="text-gray-500 dark:text-gray-400 cghq3 cib75 cbv37 cgulq cgk1f c0ef0 ctv3r cr4kg c1iho">
@@ -68,9 +68,9 @@
                                                 <div class="cgulq c2hoo">Categories</div>
                                             </th>
                                             <th class="cq84g cyjcc cgn91 c9hxi c72q5">
-                                                <div class="cgulq">Institusi</div>
+                                                <div class="c2hoo">Institusi</div>
                                             </th>
-                                            <th class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
+                                            <th class="cq84g cyjcc cgn91 c9hxi c72q5" style="width: 80px;">
                                                 <span class="cn8jz">Menu</span>
                                             </th>
                                         </tr>
@@ -83,7 +83,7 @@
                                                 <div class="flex items-center">
                                                     <label class="inline-flex">
                                                         <span class="cn8jz">Select</span>
-                                                        <input class="table-item crgcy" type="checkbox" value="{{ $teacher->id }}" @click="uncheckParent">
+                                                        <input class="table-item crgcy" type="checkbox" value="{{ $teacher->id }}" data-name="{{ $teacher->name }}" @click="uncheckParent">
                                                     </label>
                                                 </div>
                                             </td>
@@ -108,10 +108,10 @@
                                             <td class="cq84g cyjcc cgn91 c9hxi c72q5">
                                                 <div class="c2hoo">{{ $teacher->institusi }}</div>
                                             </td>
-                                            <td class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5">
+                                            <td class="cq84g cyjcc cgn91 cn8zk c9hxi c72q5" style="vertical-align: middle;">
                                                 <div class="cm84d">
                                                     <div class="inline-flex cqdkw cgky2 cli41" x-data="{ open: false }">
-                                                        <button class="rounded-full" :class="open ? 'cyhlg cmr9m text-gray-500 dark:cdqku': 'cdqku cg12x cmpw7 c3e4j'" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open">
+                                                        <button class="rounded-full" :class="open ? 'cyhlg cmr9m text-gray-500 dark:cdqku': 'cdqku cg12x cmpw7 c3e4j'" aria-haspopup="true" @click.prevent="open = !open" :aria-expanded="open" style="margin-top: -15px;">
                                                             <span class="cn8jz">Menu</span>
                                                             <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
                                                                 <circle cx="16" cy="16" r="2"></circle>
@@ -149,11 +149,16 @@
                         document.addEventListener('alpine:init', () => {
                             Alpine.data('handleSelect', () => ({
                                 selectall: false,
+                                selectedNames: [],
                                 selectAction() {
                                     countEl = document.querySelector('.table-items-action');
                                     if (!countEl) return;
                                     checkboxes = document.querySelectorAll('input.table-item:checked');
                                     document.querySelector('.table-items-count').innerHTML = checkboxes.length;
+                                    
+                                    // Update selected names
+                                    this.selectedNames = Array.from(checkboxes).map(cb => cb.getAttribute('data-name'));
+                                    
                                     if (checkboxes.length > 0) {
                                         countEl.classList.remove('hidden');
                                     } else {
@@ -172,13 +177,19 @@
                                     this.selectall = false;
                                     document.getElementById('parent-checkbox').checked = false;
                                     this.selectAction();
+                                },
+                                getSelectedNamesText() {
+                                    if (this.selectedNames.length === 0) return '';
+                                    if (this.selectedNames.length === 1) return this.selectedNames[0];
+                                    if (this.selectedNames.length === 2) return this.selectedNames.join(' and ');
+                                    return this.selectedNames.slice(0, -1).join(', ') + ', and ' + this.selectedNames[this.selectedNames.length - 1];
                                 }
                             }))
                         })    
                     </script>
 
                     <!-- Delete Modal -->
-                    <div x-data="{ modalOpen: false }" @open-delete-modal.window="modalOpen = true">
+                    <div x-data="{ modalOpen: false, selectedTeacherNames: '' }" @open-delete-modal.window="modalOpen = true; selectedTeacherNames = getSelectedTeacherNames()">
                         <!-- Modal backdrop -->
                         <div class="bg-gray-900 c29tc c2iqv cini7 cjxg0 cys4p" x-show="modalOpen" x-transition:enter="cxxol cbmha c8uqq" x-transition:enter-start="opacity-0" x-transition:enter-end="cgcrn" x-transition:leave="cxxol cbmha cf39k" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" aria-hidden="true" x-cloak=""></div>
                         <!-- Modal dialog -->
@@ -200,7 +211,7 @@
                                         <!-- Modal content -->
                                         <div class="text-sm ckdp3">
                                             <div class="cweej">
-                                                <p>Are you sure you want to delete the selected teacher(s)? This action cannot be undone.</p>
+                                                <p>Are you sure you want to delete teacher <strong x-text="selectedTeacherNames"></strong>? This action cannot be undone.</p>
                                             </div>
                                         </div>
                                         <!-- Modal footer -->
@@ -215,6 +226,16 @@
                     </div>
 
                     <script>
+                        function getSelectedTeacherNames() {
+                            const checkboxes = document.querySelectorAll('input.table-item:checked');
+                            const names = Array.from(checkboxes).map(cb => cb.getAttribute('data-name'));
+                            
+                            if (names.length === 0) return '';
+                            if (names.length === 1) return names[0];
+                            if (names.length === 2) return names.join(' and ');
+                            return names.slice(0, -1).join(', ') + ', and ' + names[names.length - 1];
+                        }
+
                         function deleteSelected() {
                             const checkboxes = document.querySelectorAll('input.table-item:checked');
                             const ids = Array.from(checkboxes).map(cb => cb.value);

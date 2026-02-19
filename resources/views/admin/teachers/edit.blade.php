@@ -12,7 +12,7 @@
                     <div>
 
                         <!-- Components -->
-                        <form action="{{ route('admin.teachers.update', $teacher) }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('admin.teachers.update', $teacher) }}" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
                             @csrf
                             @method('PUT')
                             
@@ -97,8 +97,7 @@
                                                     id="imageInput" 
                                                     name="photo" 
                                                     type="file" 
-                                                    accept="image/*" 
-                                                    required
+                                                    accept="image/*"
                                                     class="caqf9 c6btv {{ $teacher->photo_url ? 'hidden' : '' }}"
                                                     onchange="handleImageUpload(event)"
                                                 >
@@ -164,6 +163,29 @@
                 </div>
 
 <script>
+function validateForm() {
+    const existingImageWrapper = document.getElementById('existingImageWrapper');
+    const imageInput = document.getElementById('imageInput');
+    const removeFlag = document.getElementById('removeImageFlag').value;
+    
+    // Check if existing image is visible (not removed)
+    const hasExistingImage = existingImageWrapper && !existingImageWrapper.classList.contains('hidden');
+    
+    // Check if new image is uploaded
+    const hasNewImage = imageInput.files && imageInput.files.length > 0;
+    
+    // Check if user is trying to remove the image
+    const isRemoving = removeFlag === '1';
+    
+    // If removing image or no image at all, show error
+    if (isRemoving || (!hasExistingImage && !hasNewImage)) {
+        alert('Photo harus terisi. Silakan upload photo atau batalkan penghapusan photo.');
+        return false;
+    }
+    
+    return true;
+}
+
 function handleImageUpload(event) {
     const file = event.target.files[0];
 
@@ -191,6 +213,8 @@ function removeExistingImage() {
     document.getElementById('imageInput').classList.remove('hidden');
     // Set flag to remove image
     document.getElementById('removeImageFlag').value = '1';
+    // Make file input required
+    document.getElementById('imageInput').setAttribute('required', 'required');
 }
 
 function removeNewImage() {
@@ -206,6 +230,8 @@ function removeNewImage() {
         existingImageWrapper.classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
         document.getElementById('removeImageFlag').value = '0';
+        // Remove required attribute
+        document.getElementById('imageInput').removeAttribute('required');
     } else {
         // Show file input
         document.getElementById('imageInput').classList.remove('hidden');
