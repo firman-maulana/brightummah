@@ -1,7 +1,7 @@
 @extends('layouts.main2')
 
 @section('content')
-<div class="it-breadcrumb-area it-breadcrumb-course-details-3-style fix z-index-1" data-background="{{ asset('assets/img/bgprograms.jpeg') }}">
+<div class="it-breadcrumb-area fix it-breadcrumb-course-details-4-style z-index-1" data-background="{{ asset('assets/img/bgprograms.jpeg') }}">
       <img class="it-breadcrumb-shape-1" src="{{ asset('assets/img/breadcrumb-1-1.png') }}" alt="">
       <div class="container">
          <div class="row align-items-center">
