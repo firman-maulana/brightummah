@@ -244,29 +244,25 @@ function addContentBlock(type) {
     
     if (type === 'paragraph') {
         content = `
-            <div class="c2g1r cv0ns cnlq0">
-                <div class="cjav5 c2rn6 cz7b0 cxg65 cbw8w">
-                    <div class="flex items-center">
-                        <button type="button" class="mr-2 c8uzu drag-handle">
-                            <span class="cn8jz">Drag</span>
-                            <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <label class="flex items-center">
-                            <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Paragraf</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex items-center justify-end cp3jk">
-                    <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku">
-                        <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
-                            <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-2">
+                    <button type="button" class="c8uzu drag-handle flex-shrink-0">
+                        <span class="cn8jz">Drag</span>
+                        <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
                         </svg>
                     </button>
+                    <label class="flex items-center">
+                        <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Paragraf</span>
+                    </label>
                 </div>
+                <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: auto;">
+                    <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
+                    </svg>
+                </button>
             </div>
-            <div>
+            <div style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="paragraph">
                 <div>
                     <textarea name="content[${blockId}][text]" class="caqf9 c6btv" rows="4" placeholder="Masukkan paragraf..." required></textarea>
@@ -275,38 +271,36 @@ function addContentBlock(type) {
         `;
     } else if (type === 'point') {
         content = `
-            <div class="c2g1r cv0ns cnlq0">
-                <div class="cjav5 c2rn6 cz7b0 cxg65 cbw8w">
-                    <div class="flex items-center">
-                        <button type="button" class="mr-2 c8uzu drag-handle">
-                            <span class="cn8jz">Drag</span>
-                            <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <label class="flex items-center">
-                            <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Point</span>
-                        </label>
-                    </div>
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-2">
+                    <button type="button" class="c8uzu drag-handle flex-shrink-0">
+                        <span class="cn8jz">Drag</span>
+                        <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    <label class="flex items-center">
+                        <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Point</span>
+                    </label>
                 </div>
-                <div class="flex items-center justify-end cp3jk">
-                    <button type="button" onclick="addPoint('${blockId}')" class="mr-2">
+                <div class="flex items-center flex-shrink-0" style="margin-left: auto; gap: 20px;">
+                    <button type="button" onclick="addPoint('${blockId}')" class="flex-shrink-0">
                         <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
                             <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
                         </svg>
                     </button>
-                    <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku">
+                    <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku flex-shrink-0">
                         <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-            <div id="points_${blockId}" style="padding-right: 0;">
+            <div id="points_${blockId}" style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="point">
-                <div class="flex items-center" style="gap: 12px; padding-right: 0; margin-bottom: 12px;">
-                    <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="flex: 1;" type="text" placeholder="Point" required>
-                    <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku" style="flex-shrink: 0; margin-right: 0;">
+                <div class="flex items-center justify-between" style="margin-bottom: 16px;">
+                    <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="max-width: calc(100% - 80px); width: 100%; flex: 1 1 auto; min-width: 0;" type="text" placeholder="Point" required>
+                    <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: 12px;">
                         <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
                         </svg>
@@ -316,29 +310,25 @@ function addContentBlock(type) {
         `;
     } else if (type === 'photo') {
         content = `
-            <div class="c2g1r cv0ns cnlq0">
-                <div class="cjav5 c2rn6 cz7b0 cxg65 cbw8w">
-                    <div class="flex items-center">
-                        <button type="button" class="mr-2 c8uzu drag-handle">
-                            <span class="cn8jz">Drag</span>
-                            <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
-                            </svg>
-                        </button>
-                        <label class="flex items-center">
-                            <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Photo</span>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex items-center justify-end cp3jk">
-                    <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku">
-                        <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
-                            <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
+            <div class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-2">
+                    <button type="button" class="c8uzu drag-handle flex-shrink-0">
+                        <span class="cn8jz">Drag</span>
+                        <svg class="w-3 h-3 ca2tk cyq9w" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1h12v2H0V1Zm0 4h12v2H0V5Zm0 4h12v2H0V9Z" fill-rule="evenodd"></path>
                         </svg>
                     </button>
+                    <label class="flex items-center">
+                        <span class="text-gray-800 dark:text-gray-100 c225f c1k3n c8bkw">Photo</span>
+                    </label>
                 </div>
+                <button type="button" onclick="removeBlock(this)" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: auto;">
+                    <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
+                    </svg>
+                </button>
             </div>
-            <div>
+            <div style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="photo">
                 <input type="file" name="content[${blockId}][file]" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '${blockId}')">
                 <div id="photoPreview_${blockId}" class="mt-2"></div>
@@ -357,13 +347,11 @@ function removeBlock(btn) {
 function addPoint(blockId) {
     const container = document.getElementById(`points_${blockId}`);
     const div = document.createElement('div');
-    div.className = 'flex items-center';
-    div.style.gap = '12px';
-    div.style.paddingRight = '0';
-    div.style.marginBottom = '12px';
+    div.className = 'flex items-center justify-between';
+    div.style.marginBottom = '16px';
     div.innerHTML = `
-        <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="flex: 1;" type="text" placeholder="Point" required>
-        <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku" style="flex-shrink: 0; margin-right: 0;">
+        <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="max-width: calc(100% - 80px); width: 100%; flex: 1 1 auto; min-width: 0;" type="text" placeholder="Point" required>
+        <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: 12px;">
             <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                 <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
             </svg>

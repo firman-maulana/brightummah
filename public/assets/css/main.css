@@ -10298,7 +10298,7 @@ input[type=radio] {
   margin-right: 22px;
 }
 .it-header-top-2-area .it-header-top-social-box a:hover svg, .it-header-top-2-area .it-header-top-social-box a:hover i {
-  color: var(--it-theme-3);
+  color: var(--it-theme-2);
 }
 .it-header-top-2-area .it-header-top-social-box svg {
   color: var(--it-common-black);
@@ -10573,10 +10573,10 @@ input[type=radio] {
   }
 }
 .it-header-area .it-header-style-2 .it-header-menu > nav > ul > li:hover > a {
-  color: var(--it-theme-3);
+  color: var(--it-theme-2);
 }
 .it-header-area .it-header-style-2 .it-header-menu > nav > ul > li:hover.has-dropdown a::after {
-  color: var(--it-theme-3);
+  color: var(--it-theme-2);
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .it-header-area .it-header-style-2 .it-header-search-2 {
@@ -12293,7 +12293,7 @@ input[type=radio] {
   left: -9%;
   bottom: 1px;
   border-radius: 10px 10px 268px 10px;
-  background-color: var(--it-theme-3);
+  background-color: var(--it-theme-2);
 }
 .it-hero-3-thumb-box.style-2 img {
   border-radius: 0 0 268px 0;
@@ -14609,7 +14609,7 @@ input[type=radio] {
   background-color: var(--it-theme-2);
 }
 .it-categories-3-item.style-5 {
-  background-color: var(--it-theme-3);
+  background-color: var(--it-theme-2);
 }
 .it-categories-3-title {
   font-size: 24px;

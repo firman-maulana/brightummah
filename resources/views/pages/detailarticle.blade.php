@@ -1,16 +1,14 @@
 @extends('layouts.main2')
 
 @section('content')
-<!-- breadcrumb-area-start -->
-   <div class="it-breadcrumb-area fix it-breadcrumb-style-2 z-index-1" data-background="assets/img/shape/breadcrumb-1-bg.png">
-      <img class="it-breadcrumb-shape-1" src="assets/img/shape/breadcrumb-1-1.png" alt="">
-      <img class="it-breadcrumb-shape-3" src="assets/img/shape/breadcrumb-1-2.png" alt="">
+<div class="it-breadcrumb-area it-breadcrumb-course-details-3-style fix z-index-1" data-background="{{ asset('assets/img/bgprograms.jpeg') }}">
+      <img class="it-breadcrumb-shape-1" src="{{ asset('assets/img/breadcrumb-1-1.png') }}" alt="">
       <div class="container">
          <div class="row align-items-center">
             <div class="col-12">
                <div class="it-breadcrumb-content text-center z-index-1">
                   <div class="it-breadcrumb-title-box">
-                     <h3 class="it-breadcrumb-title style-2">
+                     <h3 class="it-breadcrumb-title text-white style-2">
                        {{ $article->title }}
                         <span class="title-shape">
                            <svg width="346" height="26" viewBox="0 0 346 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,7 +31,7 @@
                               <path d="M14.6364 7.6364C14.9879 7.28492 14.9879 6.71508 14.6364 6.3636L8.90883 0.636039C8.55736 0.284567 7.98751 0.284567 7.63604 0.636039C7.28457 0.987511 7.28457 1.55736 7.63604 1.90883L12.7272 7L7.63604 12.0912C7.28457 12.4426 7.28457 13.0125 7.63604 13.364C7.98751 13.7154 8.55736 13.7154 8.90883 13.364L14.6364 7.6364ZM0 7V7.9H14V7V6.1H0V7Z" fill="white" />
                            </svg>
                         </span>
-                        <span>Articles Details</span>
+                        <span>Detail Articles</span>
                      </div>
                   </div>
                </div>
