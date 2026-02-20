@@ -175,7 +175,7 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="https://wa.me/62895378059606" class="it-btn-yellow white-bg">
+                     <a href="https://wa.me/62895378059606?text=Selamat%20datang%20di%20Bright%20Ummah%20Academy%0AAda%20yang%20bisa%20kami%20bantu%3F" class="it-btn-yellow white-bg">
                         <span>
                            <span class="text-1">Start Learning Now</span>
                            <span class="text-2">Start Learning Now</span>

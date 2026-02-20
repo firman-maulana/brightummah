@@ -47,7 +47,7 @@
    <!-- pre loader area end -->
 
    <a 
-   href="https://wa.me/62895378059606"
+   href="https://wa.me/62895378059606?text=Selamat%20datang%20di%20Bright%20Ummah%20Academy%0AAda%20yang%20bisa%20kami%20bantu%3F"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat WhatsApp"

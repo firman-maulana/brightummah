@@ -184,7 +184,7 @@
 @endif
 
                   </div>
-                  <a href="https://wa.me/62895378059606" target="_blank" class="it-btn-yellow">
+                  <a href="https://wa.me/62895378059606?text=Halo%20Bright%20Ummah%20Academy.%0A%0ASaya%20tertarik%20dengan%20program%20{{ urlencode($program->name) }}%20di%20Bright%20Ummah%20Academy.%0A%0AMohon%20informasi%20terkait%3A%0A%E2%80%A2%20Jadwal%20pembelajaran%0A%E2%80%A2%20Biaya%20program%0A%E2%80%A2%20Lainnya" target="_blank" class="it-btn-yellow">
                      <span>
                         <span class="text-1">Apply Now</span>
                         <span class="text-2">Apply Now</span>
@@ -226,7 +226,7 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="https://wa.me/62895378059606" class="it-btn-yellow white-bg">
+                     <a href="https://wa.me/62895378059606?text=Selamat%20datang%20di%20Bright%20Ummah%20Academy%20%F0%9F%98%8A%0AAda%20yang%20bisa%20kamu%20bantu%3F" class="it-btn-yellow white-bg">
                         <span>
                            <span class="text-1">Start Learning Now</span>
                            <span class="text-2">Start Learning Now</span>
