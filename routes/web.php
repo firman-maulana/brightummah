@@ -23,6 +23,7 @@ Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
 Route::resource('detailprogram', ProgramController::class)->only(['show']);
 Route::get('/detail_articles/{id}', [ArticleController::class, 'detail'])->name('articles.detail');
+Route::post('/articles/{id}/like', [ArticleController::class, 'like'])->name('articles.like');
 
 // Admin Authentication Routes
 Route::middleware('guest')->group(function () {

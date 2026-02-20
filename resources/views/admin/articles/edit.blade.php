@@ -500,9 +500,27 @@ function previewPhoto(event, blockId) {
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            preview.innerHTML = `<img src="${e.target.result}" class="w-48 h-48 object-cover rounded">`;
+            preview.innerHTML = `
+                <div class="relative inline-block">
+                    <img src="${e.target.result}" class="w-48 h-48 object-cover rounded">
+                    <button type="button" onclick="removePhoto('${blockId}')" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
+                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
         }
         reader.readAsDataURL(file);
+    }
+}
+
+function removePhoto(blockId) {
+    const preview = document.getElementById(`photoPreview_${blockId}`);
+    const input = document.querySelector(`input[name="content[${blockId}][file]"]`);
+    preview.innerHTML = '';
+    if (input) {
+        input.value = '';
     }
 }
 

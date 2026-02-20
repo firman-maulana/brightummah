@@ -111,8 +111,8 @@
                   </div>
                   <div class="postbox-tag-box mb-65">
                      <div class="row align-items-center">
-                        <div class="col-xl-7 col-lg-7 col-md-7">
-                           <div class="postbox-tag d-flex align-items-center">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="postbox-tag d-flex align-items-center flex-wrap">
                               <span class="postbox-tag-title">Tags:</span>
                               <div class="postbox-tag-content">
                                  @foreach($article->hashtags as $index => $tag)
@@ -121,8 +121,15 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col-xl-5 col-lg-5 col-md-5">
-                           <div class="postbox-share d-flex align-items-center justify-content-lg-end">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                           <div class="postbox-share d-flex align-items-center justify-content-lg-end justify-content-start mt-3 mt-md-0">
+                              <button type="button" id="likeButton" onclick="toggleLike({{ $article->id }})" class="like-btn d-flex align-items-center me-3" style="background: none; border: none; cursor: pointer; color: #666; transition: color 0.3s ease;">
+                                 <svg id="heartIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                 </svg>
+                                 <span id="likeCount" class="ms-1">{{ $article->likes_count ?? 0 }}</span>
+                              </button>
                               <span>Share:</span>
                               <div class="postbox-share-social">
                                  <a href="#">
@@ -181,4 +188,76 @@
       </div>
    </section>
    <!-- cta-area-end -->
+
+   <script>
+   let isLiked = false;
+   
+   function toggleLike(articleId) {
+       const heartIcon = document.getElementById('heartIcon');
+       const likeCount = document.getElementById('likeCount');
+       const likeButton = document.getElementById('likeButton');
+       
+       // Disable button to prevent double clicks
+       likeButton.disabled = true;
+       
+       fetch(`/articles/${articleId}/like`, {
+           method: 'POST',
+           headers: {
+               'Content-Type': 'application/json',
+               'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+           }
+       })
+       .then(response => response.json())
+       .then(data => {
+           if (data.success) {
+               // Update like count
+               likeCount.textContent = data.likes_count;
+               
+               // Toggle heart icon
+               if (data.liked) {
+                   heartIcon.style.fill = '#e74c3c';
+                   heartIcon.style.color = '#e74c3c';
+                   likeButton.style.color = '#e74c3c';
+               } else {
+                   heartIcon.style.fill = 'none';
+                   heartIcon.style.color = '#666';
+                   likeButton.style.color = '#666';
+               }
+               
+               // Add animation
+               heartIcon.style.transform = 'scale(1.2)';
+               setTimeout(() => {
+                   heartIcon.style.transform = 'scale(1)';
+               }, 200);
+           }
+       })
+       .catch(error => {
+           console.error('Error:', error);
+       })
+       .finally(() => {
+           // Re-enable button
+           likeButton.disabled = false;
+       });
+   }
+   </script>
+
+   <style>
+   .like-btn {
+       transition: all 0.3s ease;
+   }
+   
+   .like-btn:hover {
+       color: #e74c3c !important;
+       transform: scale(1.05);
+   }
+   
+   .like-btn:disabled {
+       opacity: 0.6;
+       cursor: not-allowed;
+   }
+   
+   #heartIcon {
+       transition: all 0.3s ease;
+   }
+   </style>
 @endsection

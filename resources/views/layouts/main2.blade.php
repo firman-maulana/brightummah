@@ -7,6 +7,7 @@
    <title>@yield('title', 'Bright Ummah Academy - Platform Pendidikan Islami Modern')</title>
    <meta name="description" content="@yield('description', 'Platform pendidikan Islam modern yang mengintegrasikan kurikulum nasional dengan nilai-nilai Islam')">
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="csrf-token" content="{{ csrf_token() }}">
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">

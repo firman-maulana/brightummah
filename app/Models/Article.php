@@ -12,7 +12,8 @@ class Article extends Model
         'thumbnail',
         'hashtags',
         'content',
-        'has_photo'
+        'has_photo',
+        'likes_count'
     ];
 
     protected $casts = [

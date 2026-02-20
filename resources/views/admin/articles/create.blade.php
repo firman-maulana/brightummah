@@ -35,7 +35,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="thumbnail">Thumbnail <span class="czr3n">*</span></label>
+                                            <label class="block text-sm c1k3n cu6vl" for="thumbnail">Thumbnail</label>
                                             <input id="thumbnail" name="thumbnail" class="caqf9 c6btv" type="file" accept="image/*" required onchange="previewThumbnail(event)">
                                             <div id="thumbnailPreview" class="mt-2"></div>
                                             @error('thumbnail')
@@ -47,7 +47,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag <span class="czr3n">*</span></label>
+                                            <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag</label>
                                             <input id="hashtagInput" class="caqf9 c6btv mb-2" type="text" placeholder="Type hashtag and press Enter...">
                                             <div id="hashtagsDisplay" class="flex flex-wrap gap-2 mt-2"></div>
                                             <div id="hashtagsContainer" style="display: none;"></div>
@@ -62,7 +62,7 @@
                             </div>
 
                             <!-- Group 1 -->
-                            <div class="mt-6">
+                            <div style="margin-top: 48px;">
                                 <div class="cweej" id="contentBlocks">
     
                                     <!-- Content blocks will be added here dynamically -->
@@ -70,17 +70,17 @@
                                 </div>
                                 
                                 <!-- Add Content Button (moved here) -->
-                                <div class="mt-6">
-                                    <div class="flex items-center gap-4">
-                                        <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul">
+                                <div style="margin-top: 48px;">
+                                    <div class="flex flex-col" style="gap: 24px;">
+                                        <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul w-fit">
                                             <span class="cn8jz">Add new user</span>
                                             <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
                                                 <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
                                             </svg>
                                         </button>
-                                        <div class="flex flex-wrap items-center c9uh3" id="contentOptions" style="display: none;">
+                                        <div class="flex flex-wrap items-center" style="gap: 20px; display: none;" id="contentOptions">
                                     
-                                            <div class="cm0ci">
+                                            <div>
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('paragraph')">
@@ -89,7 +89,7 @@
                                                 <!-- End -->
                                             </div>
                                     
-                                            <div class="cm0ci">
+                                            <div>
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('point')">
@@ -97,7 +97,7 @@
                                                 </label>
                                                 <!-- End -->
                                             </div>
-                                            <div class="cm0ci">
+                                            <div>
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('photo')">
@@ -188,14 +188,31 @@ function removeHashtag(index) {
 
 function previewThumbnail(event) {
     const preview = document.getElementById('thumbnailPreview');
+    const input = document.getElementById('thumbnail');
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            preview.innerHTML = `<img src="${e.target.result}" class="w-32 h-32 object-cover rounded">`;
+            preview.innerHTML = `
+                <div class="relative inline-block">
+                    <img src="${e.target.result}" class="w-32 h-32 object-cover rounded">
+                    <button type="button" onclick="removeThumbnail()" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
+                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
         }
         reader.readAsDataURL(file);
     }
+}
+
+function removeThumbnail() {
+    const preview = document.getElementById('thumbnailPreview');
+    const input = document.getElementById('thumbnail');
+    preview.innerHTML = '';
+    input.value = '';
 }
 
 function toggleContentOptions() {
@@ -252,7 +269,7 @@ function addContentBlock(type) {
             <div>
                 <input type="hidden" name="content[${blockId}][type]" value="paragraph">
                 <div>
-                    <textarea name="content[${blockId}][text]" class="caqf9 c6btv" rows="4" placeholder="Something cool..." required></textarea>
+                    <textarea name="content[${blockId}][text]" class="caqf9 c6btv" rows="4" placeholder="Masukkan paragraf..." required></textarea>
                 </div>
             </div>
         `;
@@ -285,11 +302,11 @@ function addContentBlock(type) {
                     </button>
                 </div>
             </div>
-            <div id="points_${blockId}">
+            <div id="points_${blockId}" style="padding-right: 0;">
                 <input type="hidden" name="content[${blockId}][type]" value="point">
-                <div class="flex gap-2 mb-2">
-                    <input name="content[${blockId}][points][]" class="caqf9 c6btv flex-1" type="text" placeholder="Point" required>
-                    <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku">
+                <div class="flex items-center" style="gap: 12px; padding-right: 0; margin-bottom: 12px;">
+                    <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="flex: 1;" type="text" placeholder="Point" required>
+                    <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku" style="flex-shrink: 0; margin-right: 0;">
                         <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                             <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
                         </svg>
@@ -340,10 +357,13 @@ function removeBlock(btn) {
 function addPoint(blockId) {
     const container = document.getElementById(`points_${blockId}`);
     const div = document.createElement('div');
-    div.className = 'flex gap-2 mb-2';
+    div.className = 'flex items-center';
+    div.style.gap = '12px';
+    div.style.paddingRight = '0';
+    div.style.marginBottom = '12px';
     div.innerHTML = `
-        <input name="content[${blockId}][points][]" class="caqf9 c6btv flex-1" type="text" placeholder="Point" required>
-        <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku">
+        <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="flex: 1;" type="text" placeholder="Point" required>
+        <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku" style="flex-shrink: 0; margin-right: 0;">
             <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                 <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
             </svg>
@@ -354,14 +374,31 @@ function addPoint(blockId) {
 
 function previewPhoto(event, blockId) {
     const preview = document.getElementById(`photoPreview_${blockId}`);
+    const input = event.target;
     const file = event.target.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
-            preview.innerHTML = `<img src="${e.target.result}" class="w-48 h-48 object-cover rounded">`;
+            preview.innerHTML = `
+                <div class="relative inline-block">
+                    <img src="${e.target.result}" class="w-48 h-48 object-cover rounded">
+                    <button type="button" onclick="removePhoto('${blockId}')" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
+                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
+                            <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
+                        </svg>
+                    </button>
+                </div>
+            `;
         }
         reader.readAsDataURL(file);
     }
+}
+
+function removePhoto(blockId) {
+    const preview = document.getElementById(`photoPreview_${blockId}`);
+    const input = document.querySelector(`input[name="content[${blockId}][file]"]`);
+    preview.innerHTML = '';
+    if (input) input.value = '';
 }
 
 // Drag and Drop functionality

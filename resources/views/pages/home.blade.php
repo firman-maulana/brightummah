@@ -1208,7 +1208,10 @@
                            <div class="col-12">
                               <div class="it-signup-input mb-40">
                                  <label>Message</label>
-                                 <textarea name="message" placeholder="Message" required></textarea>
+                                 <textarea name="message" placeholder="Message" maxlength="225" id="testimonial-message" required></textarea>
+                                 <div class="character-counter" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                                    <span id="char-count">0</span>/225 characters
+                                 </div>
                               </div>
                            </div>
                            <div class="col-12">
@@ -1271,5 +1274,44 @@
       </div>
    </section>
    <!-- cta-area-end -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const messageTextarea = document.getElementById('testimonial-message');
+    const charCount = document.getElementById('char-count');
+    
+    if (messageTextarea && charCount) {
+        // Update character count on input
+        messageTextarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = currentLength;
+            
+            // Change color when approaching limit
+            if (currentLength >= 200) {
+                charCount.style.color = '#ff6b6b';
+            } else if (currentLength >= 180) {
+                charCount.style.color = '#ffa500';
+            } else {
+                charCount.style.color = '#666';
+            }
+        });
+        
+        // Prevent typing beyond limit
+        messageTextarea.addEventListener('keydown', function(e) {
+            if (this.value.length >= 225 && 
+                e.key !== 'Backspace' && 
+                e.key !== 'Delete' && 
+                e.key !== 'ArrowLeft' && 
+                e.key !== 'ArrowRight' && 
+                e.key !== 'ArrowUp' && 
+                e.key !== 'ArrowDown' && 
+                !e.ctrlKey && 
+                !e.metaKey) {
+                e.preventDefault();
+            }
+        });
+    }
+});
+</script>
 
 @endsection
