@@ -18,8 +18,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])->name('testimonials.store');
 Route::resource('programs', ProgramController::class)->only(['index']);
 Route::get('/valuebasedroutine', fn() => view('pages.valuebasedroutine'))->name('valuebasedroutine');
-Route::get('/about', fn() => view('pages.about'))->name('about');
-Route::get('/contact', fn() => view('pages.contact'))->name('contact');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
 Route::resource('detailprogram', ProgramController::class)->only(['show']);
 Route::get('/detail_articles/{id}', [ArticleController::class, 'detail'])->name('articles.detail');
@@ -37,8 +35,6 @@ Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 Route::post('/admin/logout', [LoginController::class, 'logout'])->name('logout')->middleware('auth');
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-    
     Route::get('/programs', [AdminController::class, 'programs'])->name('programs');
     Route::get('/programs/create', [AdminController::class, 'createProgram'])->name('programs.create');
     Route::post('/programs', [AdminController::class, 'storeProgram'])->name('programs.store');
@@ -75,8 +71,6 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
         Route::delete('/admins/{user}', [AdminController::class, 'destroyAdmin'])->name('admins.destroy');
         Route::delete('/admins-bulk-delete', [AdminController::class, 'bulkDestroyAdmins'])->name('admins.bulk-delete');
     });
-
-    Route::get('/calendar', fn() => view('admin.calendar'))->name('calendar');
     
     // Changelog (Superadmin Only)
     Route::middleware('superadmin')->group(function () {

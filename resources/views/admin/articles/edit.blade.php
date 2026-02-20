@@ -1,3 +1,6 @@
+@php
+    $title = 'Bright Ummah Academy - Edit Article';
+@endphp
 @extends('admin.layouts.sidebar')
 @section('content')
 

@@ -1,3 +1,6 @@
+@php
+    $title = 'Bright Ummah Academy - Add Testimonial Photo';
+@endphp
 @extends('admin.layouts.sidebar')
 
 @section('content')

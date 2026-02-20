@@ -1,3 +1,6 @@
+@php
+    $title = 'Bright Ummah Academy - Account Settings';
+@endphp
 @extends('admin.layouts.sidebar')
 
 @section('content')

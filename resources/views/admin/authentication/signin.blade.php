@@ -1,7 +1,7 @@
 
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
-    <title>Mosaic HTML Demo - Sign in</title>
+    <title>Bright Ummah Academy - Sign in</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="{{ asset('assets/admin/css/flatpickr.min.css') }}" rel="stylesheet">              
@@ -40,7 +40,7 @@
                     <div class="c7jh9">
                         <div class="flex items-center cm3rx cnbwt cs7xl c3nk1 clbq0">
                             <!-- Logo -->
-                            <a class="block" href="{{ route('admin.dashboard') }}">
+                            <a class="block" href="{{ route('admin.programs') }}">
                                 <img src="{{ asset('assets/img/logo/logo.png') }}" class="cwjz0" width="64" height="64">
                             </a>
                         </div>
