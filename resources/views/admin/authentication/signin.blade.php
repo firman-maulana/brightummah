@@ -51,12 +51,21 @@
                         <h1 class="text-3xl text-gray-800 dark:text-gray-100 font-bold cai6b">Login</h1>
                         
                         @if ($errors->any())
-                            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
-                                <ul>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
+                            <div x-data="{ open: true }" x-show="open" role="alert" class="w-full" style="margin-bottom: 15px;">
+                                <div class="w-full text-sm bg-white border border-gray-200 dark:text-gray-100 cghq3 c2vpa c1ukq cb8zv c5vqk cyh17 clbq0 cuvgf">
+                                    <div class="flex cm3rx ce4zk c6btv">
+                                        <div class="flex">
+                                            <svg class="cbm9w czr3n cq1qg coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
+                                                <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.5 10.1l-1.4 1.4L8 9.4l-2.1 2.1-1.4-1.4L6.6 8 4.5 5.9l1.4-1.4L8 6.6l2.1-2.1 1.4 1.4L9.4 8l2.1 2.1z"></path>
+                                            </svg>
+                                            <div>
+                                                @foreach ($errors->all() as $error)
+                                                    <div>{{ $error }}</div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         @endif
 
@@ -98,14 +107,6 @@
                                     <!-- End -->
                                 </div>
                                 <button type="submit" class="btn bg-gray-900 ml-3 cdj8c cg0jr ch8z9 cilvw cyn7a">Sign In</button>
-                            </div>
-                            <!-- Warning -->
-                            <div class="cv2no">
-                                <div class="cfts0 c5px7 cb8zv cb2br cuvgf">
-                                    <span class="text-sm">
-                                        Masukkan username dan password Anda dengan benar. Jika terjadi kendala login, silahkan hubungi superadmin
-                                    </span>
-                                </div>
                             </div>
                         </form>
         
