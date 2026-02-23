@@ -240,10 +240,11 @@ class AdminController extends Controller
 
     public function destroyAdmin(User $user)
     {
+        $adminName = $user->name;
         $user->delete();
 
         return redirect()->route('admin.admins')
-            ->with('success', 'Admin berhasil dihapus!');
+            ->with('success', $adminName . ' berhasil dihapus!');
     }
 
     public function bulkDestroyAdmins(Request $request)
@@ -255,10 +256,21 @@ class AdminController extends Controller
                 ->with('error', 'No admins selected for deletion');
         }
 
+        // Get admin names before deletion
+        $admins = User::whereIn('id', $ids)->where('role', 'admin')->get();
+        
+        // Delete admins
         User::whereIn('id', $ids)->where('role', 'admin')->delete();
 
+        // Create success message
+        if (count($admins) === 1) {
+            $message = $admins->first()->name . ' berhasil dihapus!';
+        } else {
+            $message = count($admins) . ' admin(s) berhasil dihapus!';
+        }
+
         return redirect()->route('admin.admins')
-            ->with('success', count($ids) . ' admin(s) berhasil dihapus!');
+            ->with('success', $message);
     }
 
     // Changelog (Only for Superadmin)

@@ -39,14 +39,44 @@
     </div>
 
     @if(session('success'))
-    <div class="bg-emerald-100 border border-emerald-400 text-emerald-700 px-4 py-3 rounded relative mb-4" role="alert">
-        <span class="block sm:inline">{{ session('success') }}</span>
+    <div x-show="open" x-data="{ open: true }" role="alert" class="mb-4" style="margin-bottom: 15px;">
+        <div class="w-full text-sm bg-white border border-gray-200 dark:text-gray-100 cghq3 c2vpa c1ukq cb8zv c5vqk cyh17 clbq0 cuvgf">
+            <div class="flex cm3rx ce4zk c6btv">
+                <div class="flex">
+                    <svg class="c612e cbm9w cq1qg coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zM7 11.4L3.6 8 5 6.6l2 2 4-4L12.4 6 7 11.4z"></path>
+                    </svg>
+                    <div>{{ session('success') }}</div>
+                </div>
+                <button class="dark:text-gray-400 ml-3 cmsx4 cq1qg cnyvm" @click="open = false">
+                    <div class="cn8jz">Close</div>
+                    <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M7.95 6.536l4.242-4.243a1 1 0 111.415 1.414L9.364 7.95l4.243 4.242a1 1 0 11-1.415 1.415L7.95 9.364l-4.243 4.243a1 1 0 01-1.414-1.415L6.536 7.95 2.293 3.707a1 1 0 011.414-1.414L7.95 6.536z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
     @endif
 
     @if(session('error'))
-    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-        <span class="block sm:inline">{{ session('error') }}</span>
+    <div x-show="open" x-data="{ open: true }" role="alert" class="mb-4" style="margin-bottom: 15px;">
+        <div class="w-full text-sm bg-white border border-gray-200 dark:text-gray-100 cghq3 c2vpa c1ukq cb8zv c5vqk cyh17 clbq0 cuvgf">
+            <div class="flex cm3rx ce4zk c6btv">
+                <div class="flex">
+                    <svg class="cbm9w czr3n cq1qg coqgc chfzq" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm3.5 10.1l-1.4 1.4L8 9.4l-2.1 2.1-1.4-1.4L6.6 8 4.5 5.9l1.4-1.4L8 6.6l2.1-2.1 1.4 1.4L9.4 8l2.1 2.1z"></path>
+                    </svg>
+                    <div>{{ session('error') }}</div>
+                </div>
+                <button class="dark:text-gray-400 ml-3 cmsx4 cq1qg cnyvm" @click="open = false">
+                    <div class="cn8jz">Close</div>
+                    <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M7.95 6.536l4.242-4.243a1 1 0 111.415 1.414L9.364 7.95l4.243 4.242a1 1 0 11-1.415 1.415L7.95 9.364l-4.243 4.243a1 1 0 01-1.414-1.415L6.536 7.95 2.293 3.707a1 1 0 011.414-1.414L7.95 6.536z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
     @endif
 
