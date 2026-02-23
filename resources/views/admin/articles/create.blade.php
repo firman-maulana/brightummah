@@ -1,7 +1,7 @@
 @php
     $title = 'Bright Ummah Academy - Create Article';
 @endphp
-@extends('admin.layouts.sidebar')
+@extends('admin.layouts.secondsidebar')
 @section('content')
 
 <div class="ch3yp cnbwt cs7xl clu2m c6btv clbq0 cxsfz">

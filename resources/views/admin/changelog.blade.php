@@ -1,7 +1,7 @@
 @php
     $title = 'Bright Ummah Academy - Changelog';
 @endphp
-@extends('admin.layouts.sidebar')
+@extends('admin.layouts.secondsidebar')
 
 @section('content')
 
