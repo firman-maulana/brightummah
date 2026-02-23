@@ -1151,21 +1151,8 @@
                               </div>
                               <div class="col-12">
                                  <div class="it-signup-input mb-40">
-                                    <label>Country</label>
-                                    <div class="contact__select">
-                                       <select name="country" required>
-                                          <option>Select your country</option>
-                                          <option>Australia</option>
-                                          <option>Belgia</option>
-                                          <option>Chile</option>
-                                          <option>Denmark</option>
-                                          <option>Finlandia</option>
-                                          <option>Germany</option>
-                                          <option>Indonesia</option>
-                                          <option>Japan</option>
-                                          <option>Lebanon</option>
-                                       </select>
-                                    </div>
+                                    <label>Institute</label>
+                                    <input type="text" name="country" placeholder="Enter your country" class="capitalize-input" required>
                                  </div>
                               </div>
                            </div>

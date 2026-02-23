@@ -27,21 +27,21 @@
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="name">Name</label>
-                                                <input id="name" name="name" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->name)) }}" disabled>
+                                                <input id="name" name="name" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->name)) }}">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="institute">Institute</label>
-                                                <input id="institute" name="institute" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->institute)) }}" disabled>
+                                                <input id="institute" name="institute" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->institute)) }}">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="country">Country</label>
-                                                <input id="country" name="country" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ $testimonial->country }}" disabled>
+                                                <input id="country" name="country" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->country)) }}">
                                             </div>
                                         </div>
 
@@ -115,7 +115,10 @@
                                         <div>
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
-                                                <textarea id="message" name="message" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" rows="4" disabled>{{ $testimonial->message }}</textarea>
+                                                <textarea id="message" name="message" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" rows="4" maxlength="225">{{ $testimonial->message }}</textarea>
+                                                <div class="character-counter" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
+                                                    <span id="char-count">{{ strlen($testimonial->message) }}</span>/225 characters
+                                                </div>
                                             </div>
                                         </div>
 
@@ -189,6 +192,60 @@ document.addEventListener('DOMContentLoaded', function () {
     const existing = document.getElementById('existingImageWrapper');
     if (existing) {
         document.getElementById('imageInput').classList.add('hidden');
+    }
+
+    // Capitalize first letter of each word for name, institute, and country fields
+    const capitalizeFields = ['name', 'institute', 'country'];
+    
+    capitalizeFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            field.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const value = this.value;
+                
+                // Capitalize first letter of each word
+                const capitalizedValue = value.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+                
+                this.value = capitalizedValue;
+                
+                // Restore cursor position
+                this.setSelectionRange(cursorPosition, cursorPosition);
+            });
+        }
+    });
+
+    // Character counter for message textarea
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('char-count');
+    
+    if (messageTextarea && charCount) {
+        // Update counter on input
+        messageTextarea.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCount.textContent = currentLength;
+            
+            // Prevent typing beyond limit
+            if (currentLength >= 225) {
+                this.value = this.value.substring(0, 225);
+                charCount.textContent = 225;
+            }
+        });
+
+        // Prevent typing beyond limit
+        messageTextarea.addEventListener('keydown', function(e) {
+            if (this.value.length >= 225 &&
+                e.key !== 'Backspace' &&
+                e.key !== 'Delete' &&
+                e.key !== 'ArrowLeft' &&
+                e.key !== 'ArrowRight' &&
+                e.key !== 'ArrowUp' &&
+                e.key !== 'ArrowDown' &&
+                !e.ctrlKey &&
+                !e.metaKey) {
+                e.preventDefault();
+            }
+        });
     }
 });
 </script>

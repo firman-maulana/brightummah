@@ -39,7 +39,7 @@
                                         <div class="c2hoo">{{ ucwords(strtolower($testimonial->institute)) }}</div>
                                     </td>
                                     <td class="cq84g cyjcc cgn91 c9hxi c72q5">
-                                        <div class="c2hoo">{{ $testimonial->country }}</div>
+                                        <div class="c2hoo">{{ ucwords(strtolower($testimonial->country)) }}</div>
                                     </td>
                                     <td class="cq84g cyjcc cgn91 c9hxi c72q5">
                                         <div class="c2hoo">{{ optional($testimonial->date)->format('Y-m-d') }}</div>
@@ -81,7 +81,7 @@
                                                         <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
                                                             <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-.4 1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L9.4 4l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
                                                         </svg>
-                                                        <span class="c8bkw">Edit photo</span>
+                                                        <span class="c8bkw">Edit</span>
                                                     </a>
                                                 </div>
 
@@ -133,7 +133,7 @@
                                         <div class="c2hoo">{{ ucwords(strtolower($testimonial->institute)) }}</div>
                                     </td>
                                     <td class="cq84g cyjcc cgn91 c9hxi c72q5">
-                                        <div class="c2hoo">{{ $testimonial->country }}</div>
+                                        <div class="c2hoo">{{ ucwords(strtolower($testimonial->country)) }}</div>
                                     </td>
                                     <td class="cq84g cyjcc cgn91 c9hxi c72q5">
                                         <div class="c2hoo">{{ optional($testimonial->created_at)->format('Y-m-d') }}</div>
