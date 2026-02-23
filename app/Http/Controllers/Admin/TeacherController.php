@@ -7,10 +7,23 @@ use App\Models\Teacher;
 use App\Traits\LogsActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Cloudinary\Cloudinary;
 
 class TeacherController extends Controller
 {
     use LogsActivity;
+    
+    private function getCloudinary()
+    {
+        return new Cloudinary([
+            'cloud' => [
+                'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+                'api_key'    => env('CLOUDINARY_API_KEY'),
+                'api_secret' => env('CLOUDINARY_API_SECRET'),
+            ],
+        ]);
+    }
+    
     public function index()
     {
         $teachers = Teacher::latest()->get();
@@ -38,7 +51,12 @@ class TeacherController extends Controller
         ]);
 
         if ($request->hasFile('photo')) {
-            $validated['photo'] = $request->file('photo')->store('teachers', 'public');
+            $cloudinary = $this->getCloudinary();
+            $photoUpload = $cloudinary->uploadApi()->upload(
+                $request->file('photo')->getRealPath(),
+                ['folder' => 'teachers']
+            );
+            $validated['photo'] = $photoUpload['secure_url'];
         }
 
         $teacher = Teacher::create($validated);
@@ -69,9 +87,6 @@ class TeacherController extends Controller
 
         // Handle photo removal
         if (($validated['remove_photo'] ?? null) == '1') {
-            if ($teacher->photo) {
-                Storage::disk('public')->delete($teacher->photo);
-            }
             $validated['photo'] = null;
         } else {
             // Remove photo from validated data if not uploading new photo
@@ -80,10 +95,12 @@ class TeacherController extends Controller
 
         // Handle new photo upload
         if ($request->hasFile('photo')) {
-            if ($teacher->photo) {
-                Storage::disk('public')->delete($teacher->photo);
-            }
-            $validated['photo'] = $request->file('photo')->store('teachers', 'public');
+            $cloudinary = $this->getCloudinary();
+            $photoUpload = $cloudinary->uploadApi()->upload(
+                $request->file('photo')->getRealPath(),
+                ['folder' => 'teachers']
+            );
+            $validated['photo'] = $photoUpload['secure_url'];
         }
 
         unset($validated['remove_photo']);
@@ -99,10 +116,6 @@ class TeacherController extends Controller
     {
         $teacherName = $teacher->name;
         
-        if ($teacher->photo) {
-            Storage::disk('public')->delete($teacher->photo);
-        }
-
         $teacher->delete();
         
         // Log activity
@@ -122,13 +135,6 @@ class TeacherController extends Controller
         
         // Collect teacher names
         $teacherNames = $teachers->pluck('name')->toArray();
-        
-        // Delete photos and teachers
-        foreach ($teachers as $teacher) {
-            if ($teacher->photo) {
-                Storage::disk('public')->delete($teacher->photo);
-            }
-        }
 
         Teacher::whereIn('id', $validated['ids'])->delete();
 

@@ -43,7 +43,7 @@
                                             <input id="thumbnail" name="thumbnail" class="caqf9 c6btv" type="file" accept="image/*" onchange="previewThumbnail(event)">
                                             <div id="thumbnailPreview" class="mt-2">
                                                 <div class="relative inline-block">
-                                                    <img src="{{ asset('storage/' . $article->thumbnail) }}" class="w-32 h-32 object-cover rounded">
+                                                    <img src="{{ $article->thumbnail_url }}" class="w-32 h-32 object-cover rounded">
                                                     <button type="button" onclick="removeThumbnail()" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
                                                         <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
                                                             <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
@@ -60,13 +60,10 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag <span class="czr3n">*</span></label>
+                                            <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag</label>
                                             <input id="hashtagInput" class="caqf9 c6btv mb-2" type="text" placeholder="Type hashtag and press Enter...">
                                             <div id="hashtagsDisplay" class="flex flex-wrap gap-2 mt-2"></div>
                                             <div id="hashtagsContainer" style="display: none;"></div>
-                                            @error('hashtags')
-                                                <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                                            @enderror
                                         </div>
                                         <!-- End -->
                                     </div>
@@ -176,7 +173,7 @@
                                                     <div id="photoPreview_{{ $blockId }}" class="mt-2">
                                                         @if(isset($block['path']))
                                                             <div class="relative inline-block">
-                                                                <img src="{{ asset('storage/' . $block['path']) }}" class="w-48 h-48 object-cover rounded">
+                                                                <img src="{{ $block['path'] }}" class="w-48 h-48 object-cover rounded">
                                                                 <button type="button" onclick="removePhoto('{{ $blockId }}')" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
                                                                     <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
                                                                         <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
@@ -239,7 +236,7 @@
                             <div>
                                 <div class="flex flex-wrap items-center cnnms">
                                     <div class="ctq43">
-                                        <button type="submit" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a">Update</button>   
+                                        <button type="submit" id="submitBtn" class="btn bg-gray-900 cpqp6 cv9uq c14v6 cha85 cbnll cqvjc cdj8c cg0jr ch8z9 cat76 cilvw cyn7a c6btv">Update</button>   
                                     </div>
                                     <div class="ctq43">
                                         <a href="{{ route('admin.articles.index') }}" class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa">Cancel</a> 
@@ -306,6 +303,11 @@ function renderHashtags() {
         input.value = tag;
         container.appendChild(input);
     });
+    
+    // Validate form after hashtag changes
+    if (typeof validateForm === 'function') {
+        validateForm();
+    }
 }
 
 function removeHashtag(index) {
@@ -339,6 +341,7 @@ function removeThumbnail() {
     const input = document.getElementById('thumbnail');
     preview.innerHTML = '';
     input.value = '';
+    validateForm();
 }
 
 function toggleContentOptions() {
@@ -466,10 +469,14 @@ function addContentBlock(type) {
     container.appendChild(div);
     
     document.getElementById('contentOptions').style.display = 'none';
+    
+    // Validate form after adding content block
+    validateForm();
 }
 
 function removeBlock(btn) {
     btn.closest('.bg-white').remove();
+    validateForm();
 }
 
 function addPoint(blockId) {
@@ -479,13 +486,17 @@ function addPoint(blockId) {
     div.style.marginBottom = '16px';
     div.innerHTML = `
         <input name="content[${blockId}][points][]" class="caqf9 c6btv" style="max-width: calc(100% - 80px); width: 100%; flex: 1 1 auto; min-width: 0;" type="text" placeholder="Point" required>
-        <button type="button" onclick="this.parentElement.remove()" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: 12px;">
+        <button type="button" onclick="this.parentElement.remove(); validateForm();" class="casia cz0f0 cmpw7 cdqku flex-shrink-0" style="margin-left: 12px;">
             <svg class="cbm9w czr3n coqgc" width="16" height="16" viewBox="0 0 16 16">
                 <path d="M5 7h2v6H5V7zm4 0h2v6H9V7zm3-6v2h4v2h-1v10c0 .6-.4 1-1 1H2c-.6 0-1-.4-1-1V5H0V3h4V1c0-.6.4-1 1-1h6c.6 0 1 .4 1 1zM6 2v1h4V2H6zm7 3H3v9h10V5z"></path>
             </svg>
         </button>
     `;
     container.appendChild(div);
+    
+    // Add input event listener to the new point input
+    const newInput = div.querySelector('input');
+    newInput.addEventListener('input', validateForm);
 }
 
 function previewPhoto(event, blockId) {
@@ -516,6 +527,7 @@ function removePhoto(blockId) {
     if (input) {
         input.value = '';
     }
+    validateForm();
 }
 
 // Drag and Drop functionality
@@ -569,6 +581,81 @@ document.addEventListener('DOMContentLoaded', function() {
         block.ondrop = handleDrop;
         block.ondragend = handleDragEnd;
     });
+});
+
+// Form validation for submit button
+function validateForm() {
+    const title = document.getElementById('title').value.trim();
+    const thumbnailInput = document.getElementById('thumbnail');
+    const thumbnailPreview = document.getElementById('thumbnailPreview');
+    const hasThumbnail = thumbnailInput.files.length > 0 || thumbnailPreview.innerHTML.trim() !== '';
+    const hasHashtags = hashtags.length > 0;
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Check if ALL content blocks are filled
+    const contentBlocks = document.querySelectorAll('#contentBlocks > div');
+    let allContentValid = true;
+    let hasAtLeastOneBlock = contentBlocks.length > 0;
+    
+    contentBlocks.forEach(block => {
+        const type = block.querySelector('input[type="hidden"][name*="[type]"]')?.value;
+        
+        if (type === 'paragraph') {
+            const textarea = block.querySelector('textarea');
+            if (!textarea || textarea.value.trim() === '') {
+                allContentValid = false;
+            }
+        } else if (type === 'point') {
+            const pointInputs = block.querySelectorAll('input[name*="[points]"]');
+            let hasEmptyPoint = false;
+            pointInputs.forEach(input => {
+                if (input.value.trim() === '') {
+                    hasEmptyPoint = true;
+                }
+            });
+            if (hasEmptyPoint || pointInputs.length === 0) {
+                allContentValid = false;
+            }
+        } else if (type === 'photo') {
+            const fileInput = block.querySelector('input[type="file"]');
+            const photoPreview = block.querySelector('[id^="photoPreview_"]');
+            const hiddenPath = block.querySelector('input[type="hidden"][name*="[path]"]');
+            if ((!fileInput || fileInput.files.length === 0) && (!photoPreview || photoPreview.innerHTML.trim() === '') && !hiddenPath) {
+                allContentValid = false;
+            }
+        }
+    });
+    
+    // Enable button only if all conditions are met
+    if (title && hasThumbnail && hasHashtags && hasAtLeastOneBlock && allContentValid) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+    } else {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+    }
+}
+
+// Add event listeners for form validation
+document.addEventListener('DOMContentLoaded', function() {
+    const titleInput = document.getElementById('title');
+    const thumbnailInput = document.getElementById('thumbnail');
+    
+    // Initial validation
+    validateForm();
+    
+    // Validate on input change
+    titleInput.addEventListener('input', validateForm);
+    thumbnailInput.addEventListener('change', validateForm);
+    
+    // Observe changes in content blocks
+    const contentBlocks = document.getElementById('contentBlocks');
+    const observer = new MutationObserver(validateForm);
+    observer.observe(contentBlocks, { childList: true, subtree: true, characterData: true });
+    
+    // Add input event listeners to existing and future content blocks
+    contentBlocks.addEventListener('input', validateForm);
+    contentBlocks.addEventListener('change', validateForm);
 });
 </script>
 

@@ -878,7 +878,7 @@
                   data-wow-delay="{{ 0.3 + ($index * 0.2) }}s">
                <div class="it-blog-item mb-35">
                   <div class="it-blog-thumb border-radius-20 mb-30 p-relative">
-                     <img class="w-100" src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}">
+                     <img class="w-100" src="{{ $article->thumbnail_url }}" alt="{{ $article->title }}">
                   </div>
                   <div class="it-blog-content">
                      <div class="it-blog-meta mb-25">
@@ -968,7 +968,7 @@
                                     <div class="row align-items-center">
                                        <div class="col-lg-5 col-md-5">
                                           <div class="it-testimonial-thumb border-radius-20">
-                                             <img src="{{ $testimonial->photo ? asset('storage/' . $testimonial->photo) : asset('assets/img/thumbabout2.png') }}" alt="">
+                                             <img src="{{ $testimonial->photo_url ?? asset('assets/img/thumbabout2.png') }}" alt="">
                                           </div>
                                        </div>
                                        <div class="col-lg-7 col-md-7">

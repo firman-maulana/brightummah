@@ -49,7 +49,7 @@
                <div class="postbox-details-wrapper it-career-details-area">
                   <div class="postbox-thumb-box mb-60">
                      <div class="postbox-main-thumb border-radius-20 mb-35">
-                        <img class="w-100" src="{{ asset('storage/' . $article->thumbnail) }}" alt="{{ $article->title }}">
+                        <img class="w-100" src="{{ $article->thumbnail_url }}" alt="{{ $article->title }}">
                      </div>
                      <div class="postbox-content-box">
                         <div class="it-blog-meta mb-20">
@@ -101,7 +101,7 @@
                               </div>
                            @elseif($block['type'] === 'photo')
                               <div class="postbox-main-thumb border-radius-20 mb-35">
-                                 <img class="w-100" src="{{ asset('storage/' . $block['path']) }}" alt="Article photo">
+                                 <img class="w-100" src="{{ $block['path'] }}" alt="Article photo">
                               </div>
                            @endif
                         @endforeach

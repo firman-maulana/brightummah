@@ -7,10 +7,23 @@ use App\Models\Testimonial;
 use App\Traits\LogsActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Cloudinary\Cloudinary;
 
 class TestimonialController extends Controller
 {
     use LogsActivity;
+    
+    private function getCloudinary()
+    {
+        return new Cloudinary([
+            'cloud' => [
+                'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+                'api_key'    => env('CLOUDINARY_API_KEY'),
+                'api_secret' => env('CLOUDINARY_API_SECRET'),
+            ],
+        ]);
+    }
+    
     public function index()
     {
         $postedTestimonials = Testimonial::where('status', 'posted')->latest()->get();
@@ -39,10 +52,12 @@ class TestimonialController extends Controller
 
         // Handle photo upload jika ada file baru
         if ($request->hasFile('photo')) {
-            if ($testimonial->photo) {
-                Storage::disk('public')->delete($testimonial->photo);
-            }
-            $validated['photo'] = $request->file('photo')->store('testimonials', 'public');
+            $cloudinary = $this->getCloudinary();
+            $photoUpload = $cloudinary->uploadApi()->upload(
+                $request->file('photo')->getRealPath(),
+                ['folder' => 'testimonials']
+            );
+            $validated['photo'] = $photoUpload['secure_url'];
         }
 
         $testimonial->update([
@@ -71,10 +86,6 @@ class TestimonialController extends Controller
     {
         $testimonialName = $testimonial->name;
         
-        if ($testimonial->photo) {
-            Storage::disk('public')->delete($testimonial->photo);
-        }
-
         $testimonial->delete();
         
         // Log activity

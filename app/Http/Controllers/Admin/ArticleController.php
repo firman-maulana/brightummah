@@ -7,10 +7,23 @@ use App\Models\Article;
 use App\Traits\LogsActivity;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Cloudinary\Cloudinary;
 
 class ArticleController extends Controller
 {
     use LogsActivity;
+    
+    private function getCloudinary()
+    {
+        return new Cloudinary([
+            'cloud' => [
+                'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+                'api_key'    => env('CLOUDINARY_API_KEY'),
+                'api_secret' => env('CLOUDINARY_API_SECRET'),
+            ],
+        ]);
+    }
+    
     public function index()
     {
         $articles = Article::with('user')->latest()->get();
@@ -31,7 +44,14 @@ class ArticleController extends Controller
             'content' => 'required|array'
         ]);
 
-        $thumbnailPath = $request->file('thumbnail')->store('articles/thumbnails', 'public');
+        $cloudinary = $this->getCloudinary();
+        
+        // Upload thumbnail to Cloudinary
+        $thumbnailUpload = $cloudinary->uploadApi()->upload(
+            $request->file('thumbnail')->getRealPath(),
+            ['folder' => 'articles/thumbnails']
+        );
+        $thumbnailPath = $thumbnailUpload['secure_url'];
 
         // Process content blocks and check if has photo
         $hasPhoto = false;
@@ -49,8 +69,11 @@ class ArticleController extends Controller
                     $contentBlock['points'] = $block['points'];
                 } elseif ($block['type'] === 'photo') {
                     if (isset($block['file']) && $block['file'] instanceof \Illuminate\Http\UploadedFile) {
-                        $photoPath = $block['file']->store('articles/photos', 'public');
-                        $contentBlock['path'] = $photoPath;
+                        $photoUpload = $cloudinary->uploadApi()->upload(
+                            $block['file']->getRealPath(),
+                            ['folder' => 'articles/photos']
+                        );
+                        $contentBlock['path'] = $photoUpload['secure_url'];
                         $hasPhoto = true;
                     }
                 }
@@ -103,8 +126,12 @@ class ArticleController extends Controller
         ];
 
         if ($request->hasFile('thumbnail')) {
-            Storage::disk('public')->delete($article->thumbnail);
-            $data['thumbnail'] = $request->file('thumbnail')->store('articles/thumbnails', 'public');
+            $cloudinary = $this->getCloudinary();
+            $thumbnailUpload = $cloudinary->uploadApi()->upload(
+                $request->file('thumbnail')->getRealPath(),
+                ['folder' => 'articles/thumbnails']
+            );
+            $data['thumbnail'] = $thumbnailUpload['secure_url'];
         }
 
         // Process content blocks
@@ -112,6 +139,8 @@ class ArticleController extends Controller
         $content = [];
         
         if ($request->has('content')) {
+            $cloudinary = $this->getCloudinary();
+            
             foreach ($request->content as $blockId => $block) {
                 $contentBlock = [
                     'type' => $block['type']
@@ -123,8 +152,11 @@ class ArticleController extends Controller
                     $contentBlock['points'] = $block['points'];
                 } elseif ($block['type'] === 'photo') {
                     if (isset($block['file']) && $block['file'] instanceof \Illuminate\Http\UploadedFile) {
-                        $photoPath = $block['file']->store('articles/photos', 'public');
-                        $contentBlock['path'] = $photoPath;
+                        $photoUpload = $cloudinary->uploadApi()->upload(
+                            $block['file']->getRealPath(),
+                            ['folder' => 'articles/photos']
+                        );
+                        $contentBlock['path'] = $photoUpload['secure_url'];
                         $hasPhoto = true;
                     } elseif (isset($block['path'])) {
                         $contentBlock['path'] = $block['path'];
@@ -151,14 +183,6 @@ class ArticleController extends Controller
     {
         $articleTitle = $article->title;
         
-        Storage::disk('public')->delete($article->thumbnail);
-        
-        foreach ($article->content as $block) {
-            if ($block['type'] === 'photo' && isset($block['path'])) {
-                Storage::disk('public')->delete($block['path']);
-            }
-        }
-
         $article->delete();
         
         // Log activity

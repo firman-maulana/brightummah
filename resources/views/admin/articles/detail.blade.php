@@ -86,7 +86,7 @@
                                 @elseif($block['type'] === 'photo' && isset($block['path']))
                                     <div>
                                         <div class="cmxzb">
-                                            <img src="{{ asset('storage/' . $block['path']) }}" alt="Article image" class="c6btv rounded">
+                                            <img src="{{ $block['path'] }}" alt="Article image" class="c6btv rounded">
                                         </div>
                                     </div>
                                     <hr class="cghq3 cbv37 cr4kg cf7n6">

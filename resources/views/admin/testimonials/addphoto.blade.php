@@ -54,7 +54,7 @@
                                                         <div class="relative inline-block">
                                                             <img
                                                                 id="existingImagePreview"
-                                                                src="{{ asset('storage/' . $testimonial->photo) }}"
+                                                                src="{{ $testimonial->photo_url }}"
                                                                 class="shadow-md"
                                                                 style="max-width: 240px; height: auto;"
                                                             >
