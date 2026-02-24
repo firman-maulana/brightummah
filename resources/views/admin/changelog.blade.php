@@ -23,32 +23,28 @@
                                 <li class="m-1">
                                     <a href="{{ route('admin.changelog') }}" 
                                        @click="activeFilter = 'all'"
-                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v"
-                                       :class="activeFilter === 'all' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                       :class="activeFilter === 'all' ? 'inline-flex items-center justify-center text-sm rounded-full border bg-gray-900 cg0jr c1xby cilvw c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v' : 'inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v'">
                                         View All
                                     </a>
                                 </li>
                                 <li class="m-1">
                                     <a href="{{ route('admin.changelog', ['category' => 'Saran Fitur']) }}" 
                                        @click="activeFilter = 'Saran Fitur'"
-                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
-                                       :class="activeFilter === 'Saran Fitur' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                       :class="activeFilter === 'Saran Fitur' ? 'inline-flex items-center justify-center text-sm rounded-full border bg-gray-900 cg0jr c1xby cilvw c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v' : 'inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v'">
                                         Saran Fitur
                                     </a>
                                 </li>
                                 <li class="m-1">
                                     <a href="{{ route('admin.changelog', ['category' => 'Lapor Bug']) }}" 
                                        @click="activeFilter = 'Lapor Bug'"
-                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
-                                       :class="activeFilter === 'Lapor Bug' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                       :class="activeFilter === 'Lapor Bug' ? 'inline-flex items-center justify-center text-sm rounded-full border bg-gray-900 cg0jr c1xby cilvw c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v' : 'inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v'">
                                         Lapor Bug
                                     </a>
                                 </li>
                                 <li class="m-1">
                                     <a href="{{ route('admin.changelog', ['category' => 'Lainnya']) }}" 
                                        @click="activeFilter = 'Lainnya'"
-                                       class="inline-flex items-center justify-center text-sm rounded-full border c1k3n cxxol cdzfq c5vqk cb2br cwn3v"
-                                       :class="activeFilter === 'Lainnya' ? 'bg-gray-900 cg0jr c1xby cilvw' : 'border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa'">
+                                       :class="activeFilter === 'Lainnya' ? 'inline-flex items-center justify-center text-sm rounded-full border bg-gray-900 cg0jr c1xby cilvw c1k3n cpcyu cxxol cdzfq c5vqk cb2br cwn3v' : 'inline-flex items-center justify-center text-sm rounded-full border border-gray-200 bg-white text-gray-500 dark:text-gray-400 cc0oq cghq3 cspbm c2vpa c1k3n cxxol cdzfq c5vqk cb2br cwn3v'">
                                         Lainnya
                                     </a>
                                 </li>

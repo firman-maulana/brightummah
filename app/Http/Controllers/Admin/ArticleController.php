@@ -39,9 +39,10 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'thumbnail' => 'required|image|mimes:jpeg,png,jpg|max:10240',
             'hashtags' => 'required|array',
-            'content' => 'required|array'
+            'content' => 'required|array',
+            'content.*.file' => 'nullable|image|mimes:jpeg,png,jpg|max:10240'
         ]);
 
         $cloudinary = $this->getCloudinary();
@@ -112,9 +113,10 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'thumbnail' => 'nullable|image|mimes:jpeg,png,jpg|max:10240',
             'hashtags' => 'required|array',
-            'content' => 'required|array'
+            'content' => 'required|array',
+            'content.*.file' => 'nullable|image|mimes:jpeg,png,jpg|max:10240'
         ]);
         
         // Deteksi field yang berubah sebelum update

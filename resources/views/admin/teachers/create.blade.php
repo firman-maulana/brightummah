@@ -94,7 +94,7 @@
                                                     </div>
                                                 </div>
 
-                                                <p class="text-xs text-gray-500 mt-2">JPG, PNG, JPEG. Maksimal 10 MB.</p>
+                                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                                 @error('photo')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror

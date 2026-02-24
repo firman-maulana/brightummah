@@ -40,6 +40,7 @@
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="thumbnail">Thumbnail</label>
                                             <input id="thumbnail" name="thumbnail" class="caqf9 c6btv" type="file" accept="image/*" required onchange="previewThumbnail(event)">
+                                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                             <div id="thumbnailPreview" class="mt-2"></div>
                                             @error('thumbnail')
                                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -337,6 +338,7 @@ function addContentBlock(type) {
             <div style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="photo">
                 <input type="file" name="content[${blockId}][file]" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '${blockId}')">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                 <div id="photoPreview_${blockId}" class="mt-2"></div>
             </div>
         `;

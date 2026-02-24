@@ -41,6 +41,7 @@
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="thumbnail">Thumbnail</label>
                                             <input id="thumbnail" name="thumbnail" class="caqf9 c6btv" type="file" accept="image/*" onchange="previewThumbnail(event)">
+                                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                             <div id="thumbnailPreview" class="mt-2">
                                                 <div class="relative inline-block">
                                                     <img src="{{ $article->thumbnail_url }}" class="w-32 h-32 object-cover rounded">
@@ -170,6 +171,7 @@
                                                         <input type="hidden" name="content[{{ $blockId }}][path]" value="{{ $block['path'] }}">
                                                     @endif
                                                     <input type="file" name="content[{{ $blockId }}][file]" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '{{ $blockId }}')">
+                                                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                                     <div id="photoPreview_{{ $blockId }}" class="mt-2">
                                                         @if(isset($block['path']))
                                                             <div class="relative inline-block">
@@ -460,6 +462,7 @@ function addContentBlock(type) {
             <div style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="photo">
                 <input type="file" name="content[${blockId}][file]" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '${blockId}')">
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                 <div id="photoPreview_${blockId}" class="mt-2"></div>
             </div>
         `;

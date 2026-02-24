@@ -66,7 +66,7 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.programs*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.programs') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.programs*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.programs*') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M12 1a1 1 0 1 0-2 0v2a3 3 0 0 0 3 3h2a1 1 0 1 0 0-2h-2a1 1 0 0 1-1-1V1ZM1 10a1 1 0 1 0 0 2h2a1 1 0 0 1 1 1v2a1 1 0 1 0 2 0v-2a3 3 0 0 0-3-3H1ZM5 0a1 1 0 0 1 1 1v2a3 3 0 0 1-3 3H1a1 1 0 0 1 0-2h2a1 1 0 0 0 1-1V1a1 1 0 0 1 1-1ZM12 13a1 1 0 0 1 1-1h2a1 1 0 1 0 0-2h-2a3 3 0 0 0-3 3v2a1 1 0 1 0 2 0v-2Z"></path>
                                         </svg> 
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Programs</span>
@@ -76,9 +76,12 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.teachers.*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.teachers.index') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.teachers.*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                                            <circle cx="12" cy="7" r="4" />
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.teachers.*') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M5 7a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                            <path d="M21 21v-2a4 4 0 0 0 -3 -3.85" />
                                         </svg>
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Teachers</span>
                                     </div>
@@ -87,12 +90,12 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.articles.*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.articles.index') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.articles.*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                            <polyline points="14 2 14 8 20 8"></polyline>
-                                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.articles.*') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11" />
+                                            <path d="M8 8l4 0" />
+                                            <path d="M8 12l4 0" />
+                                            <path d="M8 16l4 0" />
                                         </svg>
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Articles</span>
                                     </div>
@@ -101,10 +104,12 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->is('admin/testimonials') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ url('/admin/testimonials') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->is('admin/testimonials') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path>
-                                            <path d="M7 8h10"></path>
-                                            <path d="M7 12h6"></path>
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->is('admin/testimonials') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M8 9h8" />
+                                            <path d="M8 13h4.5" />
+                                            <path d="M10.325 19.605l-2.325 1.395v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12a3 3 0 0 1 3 3v4.5" />
+                                            <path d="M17.8 20.817l-2.172 1.138a.392 .392 0 0 1 -.568 -.41l.415 -2.411l-1.757 -1.707a.389 .389 0 0 1 .217 -.665l2.428 -.352l1.086 -2.193a.392 .392 0 0 1 .702 0l1.086 2.193l2.428 .352a.39 .39 0 0 1 .217 .665l-1.757 1.707l.414 2.41a.39 .39 0 0 1 -.567 .411l-2.172 -1.138" />
                                         </svg>
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Testimonials</span>
                                     </div>
@@ -124,11 +129,12 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.admins*') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.admins') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.admins*') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                            <circle cx="9" cy="7" r="4"/>
-                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.admins*') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                                            <path d="M16 19h6" />
+                                            <path d="M19 16v6" />
+                                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
                                         </svg>
                                         <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Admins</span>
                                     </div>
@@ -137,7 +143,7 @@
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.changelog') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.changelog') }}">
                                     <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.changelog') ? 'text-violet-500' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.changelog') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path>
                                             <path d="M8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
                                         </svg>                                        
@@ -222,7 +228,7 @@
                                             <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
                                                 <span class="block text-sm c6f83">
                                                     <span class="text-gray-800 dark:text-gray-100 c1k3n">{{ $notification->user->name }}</span> 
-                                                    {{ $notification->message }}
+                                                    <span class="dark:text-gray-400"></span>{{ $notification->message }}</span>
                                                 </span>
                                                 <span class="block cmpw7 cdqku c1k3n c1iho">{{ $notification->created_at->format('M d, Y') }}</span>
                                             </a>

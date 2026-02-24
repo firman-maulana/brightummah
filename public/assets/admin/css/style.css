@@ -5899,3 +5899,9 @@ span.flatpickr-weekday:is(.dark *) {
 .\[\&_\*\]\:\!transition-none * {
     transition-property: none !important
 }
+
+/* Custom dark mode icon colors for active menu items */
+.dark .text-violet-500 {
+    --tw-text-opacity: 1;
+    color: rgb(167 139 250/var(--tw-text-opacity)) !important;
+}

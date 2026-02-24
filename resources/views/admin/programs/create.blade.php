@@ -115,7 +115,7 @@
                                                 required
                                             >
 
-                                            <small class="text-muted block mt-1">
+                                            <small class="text-muted dark:text-gray-400 block mt-1">
                                                 JPG, PNG, JPEG. Maksimal 10 MB.
                                             </small>
 
