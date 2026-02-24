@@ -202,7 +202,7 @@
                         <!-- Modal content -->
                         <div class="text-sm ckdp3">
                             <div class="cweej">
-                                <p>Are you sure you want to delete testimonial <strong x-text="deleteTestimonialName"></strong>? This action cannot be undone.</p>
+                                <p class="dark:text-gray-400">Are you sure you want to delete testimonial <strong x-text="deleteTestimonialName"></strong>? This action cannot be undone.</p>
                             </div>
                         </div>
                         <!-- Modal footer -->

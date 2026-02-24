@@ -26,28 +26,28 @@
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="name">Name</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="name">Name</label>
                                                 <input id="name" name="name" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->name)) }}">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="institute">Institute</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="institute">Institute</label>
                                                 <input id="institute" name="institute" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->institute)) }}">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="country">Country</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="country">Country</label>
                                                 <input id="country" name="country" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" type="text" value="{{ ucwords(strtolower($testimonial->country)) }}">
                                             </div>
                                         </div>
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="photo">Photo</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="photo">Photo</label>
 
                                                 @if($testimonial->photo)
                                                     <div id="existingImageWrapper" class="mt-3">
@@ -114,7 +114,7 @@
 
                                         <div>
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="message">Message</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="message">Message</label>
                                                 <textarea id="message" name="message" class="curyp cpqp6 cv9uq c14v6 cha85 cbnll c7cy2 czsk6 cpw2l caqf9 c6btv" rows="4" maxlength="225">{{ $testimonial->message }}</textarea>
                                                 <div class="character-counter" style="text-align: right; font-size: 12px; color: #666; margin-top: 5px;">
                                                     <span id="char-count">{{ strlen($testimonial->message) }}</span>/225 characters

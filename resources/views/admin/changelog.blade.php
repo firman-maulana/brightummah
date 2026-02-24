@@ -88,7 +88,7 @@
                                             </div>
                                         </header>
                                         <div class="cjav5">
-                                            <p>{{ $report->message }}</p>
+                                            <div class="dark:text-gray-400">{{ $report->message }}</div>
                                         </div>
                                     </div>
                                 </div>

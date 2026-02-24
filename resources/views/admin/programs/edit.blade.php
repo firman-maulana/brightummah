@@ -27,7 +27,7 @@
                                         
                                         <div>
                                             <!-- Start -->
-                                            <label class="block text-sm c1k3n cu6vl" for="category">Category</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="category">Category</label>
                                             <select id="category" name="category" class="caqf9 c6btv" required>
                                                 @foreach($categories as $cat)
                                                     <option value="{{ $cat }}" {{ $program->category == $cat ? 'selected' : '' }}>{{ $cat }}</option>
@@ -42,7 +42,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="name">Program Name</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="name">Program Name</label>
                                                 <input id="name" name="name" class="caqf9 c6btv" type="text" placeholder="Program name..." value="{{ old('name', $program->name) }}" required>
                                                 @error('name')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -54,7 +54,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="level">Level</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="level">Level</label>
                                                 <input id="level" name="level" class="caqf9 c6btv" type="text" placeholder="Level..." value="{{ old('level', $program->level) }}" required>
                                                 @error('level')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -66,7 +66,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="tujuan_program">Tujuan Program</label>
                                                 <textarea id="tujuan_program" name="tujuan_program" class="caqf9 c6btv" rows="3" placeholder="Program objectives..." required>{{ old('tujuan_program', $program->tujuan_program) }}</textarea>
                                                 @error('tujuan_program')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -78,7 +78,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="manfaat_program">Manfaat Program</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
                                                 <textarea id="manfaat_program" name="manfaat_program" class="caqf9 c6btv" rows="3" placeholder="Program benefits..." required>{{ old('manfaat_program', $program->manfaat_program) }}</textarea>
                                                 @error('manfaat_program')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -90,7 +90,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="fokus_pembelajaran">Fokus Pembelajaran</label>
                                                 <textarea id="fokus_pembelajaran" name="fokus_pembelajaran" class="caqf9 c6btv" rows="3" placeholder="Learning focus..." required>{{ old('fokus_pembelajaran', $program->fokus_pembelajaran) }}</textarea>
                                                 @error('fokus_pembelajaran')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -102,7 +102,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="image">Program Image</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="image">Program Image</label>
                                                 
                                                 {{-- EXISTING IMAGE PREVIEW --}}
                                                 @if($program->image)
@@ -176,7 +176,7 @@
 
                                         <div>
                                             <!-- Start -->
-                                            <label class="block text-sm c1k3n cu6vl" for="mode">Mode</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
                                             <select id="mode" name="mode" class="caqf9 c6btv" required>
                                                 @foreach($modes as $m)
                                                     <option value="{{ $m }}" {{ $program->mode == $m ? 'selected' : '' }}>{{ $m }}</option>
@@ -191,7 +191,7 @@
                                         <div>
                                              <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="teacher">Teacher</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="teacher">Teacher</label>
                                                 <input id="teacher" name="teacher" class="caqf9 c6btv" type="text" placeholder="Teacher name..." value="{{ old('teacher', $program->teacher) }}" required>
                                                 @error('teacher')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>

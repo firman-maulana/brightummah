@@ -32,3 +32,27 @@ if (lightSwitches.length > 0) {
     });
   });
 }
+
+// Logo switcher for dark mode
+function updateLogo() {
+  const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+  const sidebarLogo = document.getElementById('sidebar-logo');
+  const signinLogo = document.getElementById('signin-logo');
+  
+  const lightLogo = '/assets/img/logo/logo.png';
+  const darkLogo = '/assets/admin/img/logo_darkmode.png';
+  
+  if (sidebarLogo) {
+    sidebarLogo.src = isDarkMode ? darkLogo : lightLogo;
+  }
+  
+  if (signinLogo) {
+    signinLogo.src = isDarkMode ? darkLogo : lightLogo;
+  }
+}
+
+// Update logo on page load
+document.addEventListener('DOMContentLoaded', updateLogo);
+
+// Update logo when dark mode changes
+document.addEventListener('darkMode', updateLogo);

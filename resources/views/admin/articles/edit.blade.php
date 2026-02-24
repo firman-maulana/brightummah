@@ -28,7 +28,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="title">Judul</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="title">Judul</label>
                                             <input id="title" name="title" class="caqf9 c6btv" type="text" placeholder="Masukkan judul..." required value="{{ old('title', $article->title) }}">
                                             @error('title')
                                                 <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
@@ -39,7 +39,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="thumbnail">Thumbnail</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="thumbnail">Thumbnail</label>
                                             <input id="thumbnail" name="thumbnail" class="caqf9 c6btv" type="file" accept="image/*" onchange="previewThumbnail(event)">
                                             <div id="thumbnailPreview" class="mt-2">
                                                 <div class="relative inline-block">
@@ -60,7 +60,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="hashtag">Hastag</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="hashtag">Hastag</label>
                                             <input id="hashtagInput" class="caqf9 c6btv mb-2" type="text" placeholder="Type hashtag and press Enter...">
                                             <div id="hashtagsDisplay" class="flex flex-wrap gap-2 mt-2"></div>
                                             <div id="hashtagsContainer" style="display: none;"></div>
@@ -80,7 +80,7 @@
                                             $blockId = "block_existing_{$index}";
                                         @endphp
                                         
-                                        <div class="bg-white c2vpa c1hly c5vqk clxb7" draggable="true" data-block-id="{{ $blockId }}">
+                                        <div class="bg-white c2vpa c1hly c5vqk clxb7 border border-gray-200 cghq3" draggable="true" data-block-id="{{ $blockId }}">
                                             @if($block['type'] === 'paragraph')
                                                 <div class="flex items-center justify-between w-full">
                                                     <div class="flex items-center gap-2">
@@ -120,7 +120,7 @@
                                                         </label>
                                                     </div>
                                                     <div class="flex items-center flex-shrink-0" style="margin-left: auto; gap: 20px;">
-                                                        <button type="button" onclick="addPoint('{{ $blockId }}')" class="flex-shrink-0">
+                                                        <button type="button" onclick="addPoint('{{ $blockId }}')" class="flex-shrink-0 dark:text-white">
                                                             <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
                                                                 <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
                                                             </svg>
@@ -192,7 +192,7 @@
                                 <!-- Add Content Button (moved here) -->
                                 <div style="margin-top: 48px;">
                                     <div class="flex flex-col" style="gap: 24px;">
-                                        <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul w-fit">
+                                        <button type="button" onclick="toggleContentOptions()" class="flex justify-center items-center rounded-full bg-white border border-gray-200 text-violet-500 dark:text-white cc0oq cghq3 cspbm c2vpa cxxol c5vqk c8bkw cex0k c6oul w-fit">
                                             <span class="cn8jz">Add new user</span>
                                             <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
                                                 <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
@@ -204,7 +204,7 @@
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('paragraph')">
-                                                    <span class="text-sm c8bkw">Paragraf</span>
+                                                    <span class="text-sm c8bkw dark:text-gray-400">Paragraf</span>
                                                 </label>
                                                 <!-- End -->
                                             </div>
@@ -213,7 +213,7 @@
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('point')">
-                                                    <span class="text-sm c8bkw">Point</span>
+                                                    <span class="text-sm c8bkw dark:text-gray-400">Point</span>
                                                 </label>
                                                 <!-- End -->
                                             </div>
@@ -221,7 +221,7 @@
                                                 <!-- Start -->
                                                 <label class="flex items-center cursor-pointer">
                                                     <input type="radio" name="content-type-selector" class="cgd3c" onclick="addContentBlock('photo')">
-                                                    <span class="text-sm c8bkw">Photo</span>
+                                                    <span class="text-sm c8bkw dark:text-gray-400">Photo</span>
                                                 </label>
                                                 <!-- End -->
                                             </div>
@@ -361,7 +361,7 @@ function addContentBlock(type) {
     const container = document.getElementById('contentBlocks');
     const blockId = `block_${blockCounter++}`;
     const div = document.createElement('div');
-    div.className = 'bg-white c2vpa c1hly c5vqk clxb7';
+    div.className = 'bg-white c2vpa c1hly c5vqk clxb7 border border-gray-200 cghq3';
     div.setAttribute('draggable', 'true');
     div.setAttribute('data-block-id', blockId);
     div.ondragstart = handleDragStart;
@@ -413,7 +413,7 @@ function addContentBlock(type) {
                     </label>
                 </div>
                 <div class="flex items-center flex-shrink-0" style="margin-left: auto; gap: 20px;">
-                    <button type="button" onclick="addPoint('${blockId}')" class="flex-shrink-0">
+                    <button type="button" onclick="addPoint('${blockId}')" class="flex-shrink-0 dark:text-white">
                         <svg class="w-3 h-3 cbm9w" viewBox="0 0 12 12">
                             <path d="M11 5H7V1a1 1 0 0 0-2 0v4H1a1 1 0 0 0 0 2h4v4a1 1 0 0 0 2 0V7h4a1 1 0 0 0 0-2Z"></path>
                         </svg>
@@ -658,5 +658,12 @@ document.addEventListener('DOMContentLoaded', function() {
     contentBlocks.addEventListener('change', validateForm);
 });
 </script>
+
+<style>
+    .dark button[onclick*="addPoint"] svg,
+    .dark button[onclick*="toggleContentOptions"] svg {
+        fill: white !important;
+    }
+</style>
 
 @endsection

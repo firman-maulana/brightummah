@@ -28,7 +28,7 @@
                         <div>
                             <!-- Start -->
                             <div>
-                                <label class="block text-sm c1k3n cu6vl" for="name">Name</label>
+                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="name">Name</label>
                                 <input name="name" id="name" class="caqf9 c6btv @error('name') border-red-500 @enderror" type="text" value="{{ old('name', $user->name) }}" placeholder="Enter admin name" required>
                                 @error('name')
                                     <div class="text-red-500 text-xs mt-1">{{ $message }}</div>
@@ -40,7 +40,7 @@
                         <div>
                             <!-- Start -->
                             <div>
-                                <label class="block text-sm c1k3n cu6vl" for="email">Email Address</label>
+                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="email">Email Address</label>
                                 <input name="email" id="email" class="caqf9 c6btv @error('email') border-red-500 @enderror" type="email" value="{{ old('email', $user->email) }}" placeholder="admin@example.com" required>
                                 @error('email')
                                     <div class="text-red-500 text-xs mt-1">{{ $message }}</div>
@@ -52,7 +52,7 @@
                         <div>
                             <!-- Start -->
                             <div>
-                                <label class="block text-sm c1k3n cu6vl" for="password">Password</label>
+                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="password">Password</label>
                                 <input name="password" id="password" class="caqf9 c6btv @error('password') border-red-500 @enderror" type="password" placeholder="Leave blank to keep current password">
                                 <small class="text-gray-500 dark:text-gray-400 block mt-1">Leave blank if you don't want to change the password</small>
                                 @error('password')
@@ -65,7 +65,7 @@
                         <div>
                             <!-- Start -->
                             <div>
-                                <label class="block text-sm c1k3n cu6vl" for="password_confirmation">Confirm Password</label>
+                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="password_confirmation">Confirm Password</label>
                                 <input name="password_confirmation" id="password_confirmation" class="caqf9 c6btv" type="password" placeholder="Re-enter new password">
                             </div>
                             <!-- End -->

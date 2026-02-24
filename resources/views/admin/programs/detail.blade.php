@@ -104,15 +104,6 @@
                                                     </svg>
                                                     <span>{{ $otherProgram->mode }}</span>
                                                 </div>
-                                                <!-- Avatars -->
-                                                <div class="flex items-center ch3kz">
-                                                    <div class="flex cjgpi c45a5">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-02.jpg') }}" width="28" height="28" alt="User 02">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-01.jpg') }}" width="28" height="28" alt="User 01">
-                                                        <img class="rounded-full ctxup cv1so chwil ct7xr" src="{{ asset('assets/admin/img/avatar-03.jpg') }}" width="28" height="28" alt="User 03">
-                                                    </div>
-                                                    <div class="cmpw7 cdqku c1k3n c1iho caf78">+34</div>
-                                                </div>
                                             </div>
                                         </div>
                                     </article>

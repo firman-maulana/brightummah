@@ -28,7 +28,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="name">Name</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="name">Name</label>
                                                 <input id="name" name="name" class="caqf9 c6btv" type="text" placeholder="Teacher name..." value="{{ old('name', $teacher->name) }}" required>
                                                 @error('name')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -40,7 +40,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="categories">Categories</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="categories">Categories</label>
                                                 <select id="categories" name="categories" class="caqf9 c6btv" required>
                                                     <option value="General Program" {{ old('categories', $teacher->categories) == 'General Program' ? 'selected' : '' }}>General Program</option>
                                                     <option value="Islamic Integrated Program" {{ old('categories', $teacher->categories) == 'Islamic Integrated Program' ? 'selected' : '' }}>Islamic Integrated Program</option>
@@ -55,7 +55,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="institusi">Institusi</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="institusi">Institusi</label>
                                                 <input id="institusi" name="institusi" class="caqf9 c6btv" type="text" placeholder="Institusi..." value="{{ old('institusi', $teacher->institusi) }}" required>
                                                 @error('institusi')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
@@ -67,7 +67,7 @@
                                         <div>
                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl" for="photo">Photo</label>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="photo">Photo</label>
                                                 
                                                 {{-- EXISTING IMAGE PREVIEW --}}
                                                 @if($teacher->photo_url)

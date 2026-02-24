@@ -26,7 +26,7 @@
                                     
                                     <div>
                                         <!-- Start -->
-                                        <label class="block text-sm c1k3n cu6vl" for="category">Category</label>
+                                        <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="category">Category</label>
                                         <select name="category" id="category" class="caqf9 c6btv @error('category') is-invalid @enderror" required>
                                             <option value="">Select Category</option>
                                             <option value="Academic & School Program" {{ old('category') == 'Academic & School Program' ? 'selected' : '' }}>Academic & School Program</option>
@@ -43,7 +43,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="name">Program Name</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="name">Program Name</label>
                                             <input name="name" id="name" class="caqf9 c6btv @error('name') is-invalid @enderror" type="text" value="{{ old('name') }}" placeholder="Masukkan nama program" required>
                                             @error('name')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -55,7 +55,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="teacher">Teacher</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="teacher">Teacher</label>
                                             <input name="teacher" id="teacher" class="caqf9 c6btv @error('teacher') is-invalid @enderror" type="text" value="{{ old('teacher') }}" placeholder="Contoh: Abdul Rakhman" required>
                                             @error('teacher')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -67,7 +67,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="tujuan_program">Tujuan Program</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="tujuan_program">Tujuan Program</label>
                                             <textarea name="tujuan_program" id="tujuan_program" class="caqf9 c6btv @error('tujuan_program') is-invalid @enderror" rows="4" placeholder="Masukkan tujuan program..." required>{{ old('tujuan_program') }}</textarea>
                                             @error('tujuan_program')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -79,7 +79,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="manfaat_program">Manfaat Program</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
                                             <textarea name="manfaat_program" id="manfaat_program" class="caqf9 c6btv @error('manfaat_program') is-invalid @enderror" rows="4" placeholder="Masukkan manfaat program..." required>{{ old('manfaat_program') }}</textarea>
                                             @error('manfaat_program')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -91,7 +91,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="fokus_pembelajaran">Fokus Pembelajaran</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="fokus_pembelajaran">Fokus Pembelajaran</label>
                                             <textarea name="fokus_pembelajaran" id="fokus_pembelajaran" class="caqf9 c6btv @error('fokus_pembelajaran') is-invalid @enderror" rows="4" placeholder="Masukkan fokus pembelajaran..." required>{{ old('fokus_pembelajaran') }}</textarea>
                                             @error('fokus_pembelajaran')
                                                 <div class="invalid-feedback">{{ $message }}</div>
@@ -103,7 +103,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="imageInput">Program Image</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="imageInput">Program Image</label>
                                             
                                             <input
                                                 type="file"
@@ -153,7 +153,7 @@
                                     <div>
                                         <!-- Start -->
                                         <div>
-                                            <label class="block text-sm c1k3n cu6vl" for="level">Level</label>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="level">Level</label>
                                             <input name="level" id="level" class="caqf9 c6btv @error('level') is-invalid @enderror" type="text" value="{{ old('level') }}" placeholder="Contoh: PAUD, SD" required>
                                             <datalist id="level-options">
                                                 @foreach ($levels as $level)
@@ -169,7 +169,7 @@
 
                                     <div>
                                         <!-- Start -->
-                                        <label class="block text-sm c1k3n cu6vl" for="mode">Mode</label>
+                                        <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
                                         <select name="mode" id="mode" class="caqf9 c6btv @error('mode') is-invalid @enderror" required>
                                             <option value="">Select Mode</option>
                                             <option value="Online & Offline" {{ old('mode') == 'Online & Offline' ? 'selected' : '' }}>Online & Offline</option>
