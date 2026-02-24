@@ -110,6 +110,7 @@
                               </svg>
                             Disesuaikan dengan kondisi dan preferensi keluarga
                            </span>
+                           <p style="color: var(--it-common-black);">Kami siap membantu Anda menemukan sistem pembelajaran yang paling sesuai untuk anak Anda.</p>
                         </li>
                      </ul>
                   </div>
