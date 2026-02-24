@@ -17,16 +17,9 @@ class DatabaseSeeder extends Seeder
         User::create([
             'name' => 'BUA Dev',
             'email' => 'superadmin@brightummah.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('superadminbua'),
             'role' => 'superadmin',
         ]);
 
-        // Create Admin
-        User::create([
-            'name' => 'Bright Ummah Academy',
-            'email' => 'admin1@brightummah.com',
-            'password' => Hash::make('password'),
-            'role' => 'admin',
-        ]);
     }
 }

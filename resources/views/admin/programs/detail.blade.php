@@ -76,15 +76,6 @@
                                             @else
                                                 <img class="ccrfs cfwu1 cqdkw cav8x c6btv" src="{{ asset('assets/admin/img/meetups-thumb-01.jpg') }}" width="220" height="236" alt="{{ $otherProgram->name }}">
                                             @endif
-                                            <!-- Like button -->
-                                            <button class="mr-4 cqdkw cgky2 cli41 cfo3t">
-                                                <div class="bg-gray-900 rounded-full cxnba cyn7a">
-                                                    <span class="cn8jz">Like</span>
-                                                    <svg class="cbm9w cue4z cmwfi" viewBox="0 0 32 32">
-                                                        <path d="M22.682 11.318A4.485 4.485 0 0019.5 10a4.377 4.377 0 00-3.5 1.707A4.383 4.383 0 0012.5 10a4.5 4.5 0 00-3.182 7.682L16 24l6.682-6.318a4.5 4.5 0 000-6.364zm-1.4 4.933L16 21.247l-5.285-5A2.5 2.5 0 0112.5 12c1.437 0 2.312.681 3.5 2.625C17.187 12.681 18.062 12 19.5 12a2.5 2.5 0 011.785 4.251h-.003z"></path>
-                                                    </svg>
-                                                </div>
-                                            </button>
                                         </a>
                                         <!-- Content -->
                                         <div class="flex cetff cbw8w csusu">
