@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head>
     <meta charset="utf-8">
-    <title>404 - Bright Ummah Academy</title>
+    <title>Bright Ummah Academy - 404</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="{{ asset('favicon.png') }}">
     <link href="{{ asset('assets/admin/css/flatpickr.min.css') }}" rel="stylesheet">
@@ -76,9 +76,6 @@
                                         <div class="text-gray-500 dark:text-gray-400 c1iho caf78">Administrator</div>
                                     </div>
                                     <ul>
-                                        <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="settings.html" @click="open = false" @focus="open = true" @focusout="open = false">Settings</a>
-                                        </li>
 <li>
     <a href="{{ route('force.logout') }}"
        class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v"
