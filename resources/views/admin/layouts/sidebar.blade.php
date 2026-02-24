@@ -142,12 +142,20 @@
                             </li>
                             <li class="c5w78 cjxkd cuvgf csr1i cnbr1 {{ request()->routeIs('admin.changelog') ? 'cvwie cosgb c33r0 cgnhv cb8zv' : '' }}">
                                 <a class="block text-gray-800 dark:text-gray-100" href="{{ route('admin.changelog') }}">
-                                    <div class="flex items-center">
-                                        <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.changelog') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path>
-                                            <path d="M8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
-                                        </svg>                                        
-                                        <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Changelog</span>
+                                    <div class="flex items-center justify-between">
+                                        <div class="flex items-center">
+                                            <svg class="cmpw7 cdqku cbm9w coqgc {{ request()->routeIs('admin.changelog') ? 'text-violet-500 dark:text-violet-400' : '' }}" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0Z"></path>
+                                                <path d="M8 4a.75.75 0 0 1 .75.75v3.5a.75.75 0 0 1-1.5 0v-3.5A.75.75 0 0 1 8 4Zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path>
+                                            </svg>
+                                            <span class="text-sm 2xl:opacity-100 c68cp c9gyy cvxm1 c8uqq c1k3n cfh3y">Changelog</span>
+                                        </div>
+                                        @php
+                                            $unreadBugReports = \App\Models\BugReport::where('is_read', false)->count();
+                                        @endphp
+                                        @if($unreadBugReports > 0)
+                                            <span style="background-color: #ef4444; color: white; font-size: 10px; font-weight: 600; padding: 2px 6px; border-radius: 10px; margin-left: 8px; min-width: 18px; text-align: center; display: inline-block;">{{ $unreadBugReports }}</span>
+                                        @endif
                                     </div>
                                 </a>
                             </li>

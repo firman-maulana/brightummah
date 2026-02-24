@@ -13,6 +13,7 @@ class BugReport extends Model
         'user_id',
         'category',
         'message',
+        'is_read',
     ];
 
     public function user()

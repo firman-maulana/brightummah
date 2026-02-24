@@ -18,6 +18,7 @@ class BugReportController extends Controller
             'user_id' => auth()->id(),
             'category' => $request->category,
             'message' => $request->message,
+            'is_read' => false,
         ]);
 
         return redirect()->back()->with('success', 'Laporan berhasil dikirim!');

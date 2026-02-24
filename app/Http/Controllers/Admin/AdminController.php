@@ -284,6 +284,9 @@ class AdminController extends Controller
         
         $bugReports = $query->latest()->paginate(10);
         
+        // Mark all unread bug reports as read when superadmin opens changelog
+        BugReport::where('is_read', false)->update(['is_read' => true]);
+        
         return view('admin.changelog', compact('bugReports'));
     }
 }
