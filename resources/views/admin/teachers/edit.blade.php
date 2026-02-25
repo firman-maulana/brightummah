@@ -72,26 +72,32 @@
                                                 {{-- EXISTING IMAGE PREVIEW --}}
                                                 @if($teacher->photo_url)
                                                     <div id="existingImageWrapper" class="mt-2 mb-3">
-                                                        <div class="relative inline-block">
+                                                        <div style="position: relative; display: inline-block;">
                                                             <img 
                                                                 src="{{ $teacher->photo_url }}" 
                                                                 alt="{{ $teacher->name }}" 
                                                                 class="shadow-md"
-                                                                style="max-width: 240px; height: auto;"
+                                                                style="max-width: 240px; height: auto; display: block;"
                                                             >
                                                             
                                                             {{-- REMOVE BUTTON WITH SVG X ICON --}}
                                                             <button
                                                                 type="button"
-                                                                class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
+                                                                class="text-white rounded-full shadow-lg transition-colors"
+                                                                style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;"
+                                                                onmouseover="this.style.backgroundColor='#dc2626'"
+                                                                onmouseout="this.style.backgroundColor='#ef4444'"
                                                                 onclick="removeExistingImage()"
                                                                 title="Remove current image"
                                                             >
-                                                                <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                                <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
                                                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                                                 </svg>
                                                             </button>
                                                         </div>
+                                                        <small class="text-muted dark:text-gray-400 block mt-2">
+                                                            JPG, PNG, JPEG. Maksimal 10 MB.
+                                                        </small>
                                                     </div>
                                                 @endif
                                                 
@@ -105,33 +111,42 @@
                                                     onchange="handleImageUpload(event)"
                                                 >
                                                 
+                                                <small id="imageHint" class="text-muted dark:text-gray-400 block mt-1 {{ $teacher->photo_url ? 'hidden' : '' }}">
+                                                    JPG, PNG, JPEG. Maksimal 10 MB.
+                                                </small>
+                                                
                                                 <input type="hidden" id="removeImageFlag" name="remove_photo" value="0">
                                                 
                                                 {{-- NEW IMAGE PREVIEW --}}
                                                 <div id="newImageWrapper" class="mt-3 hidden">
-                                                    <div class="relative inline-block">
+                                                    <div style="position: relative; display: inline-block;">
                                                         <img
                                                             id="imagePreview"
                                                             src=""
                                                             class="shadow-md"
-                                                            style="max-width: 240px; height: auto;"
+                                                            style="max-width: 240px; height: auto; display: block;"
                                                         >
                                                         
                                                         {{-- REMOVE BUTTON WITH SVG X ICON --}}
                                                         <button
                                                             type="button"
-                                                            class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
+                                                            class="text-white rounded-full shadow-lg transition-colors"
+                                                            style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;"
+                                                            onmouseover="this.style.backgroundColor='#dc2626'"
+                                                            onmouseout="this.style.backgroundColor='#ef4444'"
                                                             onclick="removeNewImage()"
                                                             title="Remove new image"
                                                         >
-                                                            <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                            <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
                                                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                                             </svg>
                                                         </button>
                                                     </div>
+                                                    <small class="text-muted dark:text-gray-400 block mt-2">
+                                                        JPG, PNG, JPEG. Maksimal 10 MB.
+                                                    </small>
                                                 </div>
                                                 
-                                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                                 @error('photo')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
@@ -205,6 +220,7 @@ function handleImageUpload(event) {
         document.getElementById('imagePreview').src = e.target.result;
         document.getElementById('newImageWrapper').classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
+        document.getElementById('imageHint').classList.add('hidden');
     };
     reader.readAsDataURL(file);
 }
@@ -214,6 +230,7 @@ function removeExistingImage() {
     document.getElementById('existingImageWrapper').classList.add('hidden');
     // Show file input
     document.getElementById('imageInput').classList.remove('hidden');
+    document.getElementById('imageHint').classList.remove('hidden');
     // Set flag to remove image
     document.getElementById('removeImageFlag').value = '1';
     // Make file input required
@@ -232,6 +249,7 @@ function removeNewImage() {
         // Show existing image again
         existingImageWrapper.classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
+        document.getElementById('imageHint').classList.add('hidden');
         document.getElementById('removeImageFlag').value = '0';
         // Remove required attribute
         document.getElementById('imageInput').removeAttribute('required');

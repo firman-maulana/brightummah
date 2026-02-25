@@ -51,25 +51,31 @@
 
                                                 @if($testimonial->photo)
                                                     <div id="existingImageWrapper" class="mt-3">
-                                                        <div class="relative inline-block">
+                                                        <div style="position: relative; display: inline-block;">
                                                             <img
                                                                 id="existingImagePreview"
                                                                 src="{{ $testimonial->photo_url }}"
                                                                 class="shadow-md"
-                                                                style="max-width: 240px; height: auto;"
+                                                                style="max-width: 240px; height: auto; display: block;"
                                                             >
 
                                                             <button
                                                                 type="button"
-                                                                class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
+                                                                class="text-white rounded-full shadow-lg transition-colors"
+                                                                style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;"
+                                                                onmouseover="this.style.backgroundColor='#dc2626'"
+                                                                onmouseout="this.style.backgroundColor='#ef4444'"
                                                                 onclick="removeExistingImage()"
                                                                 title="Remove existing image"
                                                             >
-                                                                <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                                <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
                                                                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                                                 </svg>
                                                             </button>
                                                         </div>
+                                                        <small class="text-muted dark:text-gray-400 block mt-2">
+                                                            JPG, PNG, JPEG. Maksimal 10 MB.
+                                                        </small>
                                                     </div>
                                                 @endif
 
@@ -83,29 +89,38 @@
                                                     onchange="handleImageUpload(event)"
                                                 >
 
+                                                <small id="imageHint" class="text-muted dark:text-gray-400 block mt-1">
+                                                    JPG, PNG, JPEG. Maksimal 10 MB.
+                                                </small>
+
                                                 <div id="newImageWrapper" class="mt-3 hidden">
-                                                    <div class="relative inline-block">
+                                                    <div style="position: relative; display: inline-block;">
                                                         <img
                                                             id="imagePreview"
                                                             src=""
                                                             class="shadow-md"
-                                                            style="max-width: 240px; height: auto;"
+                                                            style="max-width: 240px; height: auto; display: block;"
                                                         >
 
                                                         <button
                                                             type="button"
-                                                            class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
+                                                            class="text-white rounded-full shadow-lg transition-colors"
+                                                            style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;"
+                                                            onmouseover="this.style.backgroundColor='#dc2626'"
+                                                            onmouseout="this.style.backgroundColor='#ef4444'"
                                                             onclick="removeNewImage()"
                                                             title="Remove new image"
                                                         >
-                                                            <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                            <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
                                                                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                                             </svg>
                                                         </button>
                                                     </div>
+                                                    <small class="text-muted dark:text-gray-400 block mt-2">
+                                                        JPG, PNG, JPEG. Maksimal 10 MB.
+                                                    </small>
                                                 </div>
 
-                                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                                                 @error('photo')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
@@ -163,6 +178,7 @@ function handleImageUpload(event) {
         document.getElementById('imagePreview').src = e.target.result;
         document.getElementById('newImageWrapper').classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
+        document.getElementById('imageHint').classList.add('hidden');
 
         const existing = document.getElementById('existingImageWrapper');
         if (existing) {
@@ -175,7 +191,18 @@ function handleImageUpload(event) {
 function removeNewImage() {
     document.getElementById('imageInput').value = '';
     document.getElementById('newImageWrapper').classList.add('hidden');
-    document.getElementById('imageInput').classList.remove('hidden');
+    
+    const existing = document.getElementById('existingImageWrapper');
+    if (existing && !existing.classList.contains('hidden')) {
+        // If there's existing image, show it back
+        existing.classList.remove('hidden');
+        document.getElementById('imageInput').classList.add('hidden');
+        document.getElementById('imageHint').classList.add('hidden');
+    } else {
+        // No existing image, show input
+        document.getElementById('imageInput').classList.remove('hidden');
+        document.getElementById('imageHint').classList.remove('hidden');
+    }
 }
 
 function removeExistingImage() {
@@ -183,8 +210,8 @@ function removeExistingImage() {
     if (existing) {
         existing.classList.add('hidden');
     }
-
     document.getElementById('imageInput').classList.remove('hidden');
+    document.getElementById('imageHint').classList.remove('hidden');
     document.getElementById('imageInput').setAttribute('required', 'required');
 }
 
@@ -192,6 +219,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const existing = document.getElementById('existingImageWrapper');
     if (existing) {
         document.getElementById('imageInput').classList.add('hidden');
+        const hint = document.getElementById('imageHint');
+        if (hint) {
+            hint.classList.add('hidden');
+        }
     }
 
     // Capitalize first letter of each word for name, institute, and country fields

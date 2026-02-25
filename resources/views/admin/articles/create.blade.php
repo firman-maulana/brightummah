@@ -196,19 +196,36 @@ function previewThumbnail(event) {
     const preview = document.getElementById('thumbnailPreview');
     const input = document.getElementById('thumbnail');
     const file = event.target.files[0];
+    
+    if (!file) return;
+    
+    if (file.size > 10 * 1024 * 1024) {
+        alert('Ukuran gambar maksimal 10 MB');
+        input.value = '';
+        return;
+    }
+    
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
             preview.innerHTML = `
-                <div class="relative inline-block">
-                    <img src="${e.target.result}" class="w-32 h-32 object-cover rounded">
-                    <button type="button" onclick="removeThumbnail()" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
-                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
-                            <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
+                <div style="position: relative; display: inline-block;">
+                    <img src="${e.target.result}" class="rounded-lg shadow-md" style="max-width:300px; max-height:200px; object-fit: cover; display: block;">
+                    <button type="button" onclick="removeThumbnail()" class="text-white rounded-full shadow-lg transition-colors" style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;" onmouseover="this.style.backgroundColor='#dc2626'" onmouseout="this.style.backgroundColor='#ef4444'" title="Remove image">
+                        <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                         </svg>
                     </button>
                 </div>
+                <small class="text-muted dark:text-gray-400 block mt-2">
+                    JPG, PNG, JPEG. Maksimal 10 MB.
+                </small>
             `;
+            input.classList.add('hidden');
+            const hint = input.nextElementSibling;
+            if (hint && hint.tagName === 'P') {
+                hint.classList.add('hidden');
+            }
         }
         reader.readAsDataURL(file);
     }
@@ -219,6 +236,11 @@ function removeThumbnail() {
     const input = document.getElementById('thumbnail');
     preview.innerHTML = '';
     input.value = '';
+    input.classList.remove('hidden');
+    const hint = input.nextElementSibling;
+    if (hint && hint.tagName === 'P') {
+        hint.classList.remove('hidden');
+    }
     validateForm();
 }
 
@@ -337,8 +359,8 @@ function addContentBlock(type) {
             </div>
             <div style="margin-top: 16px;">
                 <input type="hidden" name="content[${blockId}][type]" value="photo">
-                <input type="file" name="content[${blockId}][file]" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '${blockId}')">
-                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
+                <input type="file" name="content[${blockId}][file]" id="photoInput_${blockId}" class="caqf9 c6btv" accept="image/*" onchange="previewPhoto(event, '${blockId}')">
+                <p id="photoHint_${blockId}" class="text-xs text-gray-500 dark:text-gray-400 mt-1">JPG, PNG, JPEG. Maksimal 10 MB.</p>
                 <div id="photoPreview_${blockId}" class="mt-2"></div>
             </div>
         `;
@@ -379,20 +401,37 @@ function addPoint(blockId) {
 function previewPhoto(event, blockId) {
     const preview = document.getElementById(`photoPreview_${blockId}`);
     const input = event.target;
+    const hint = document.getElementById(`photoHint_${blockId}`);
     const file = event.target.files[0];
+    
+    if (!file) return;
+    
+    if (file.size > 10 * 1024 * 1024) {
+        alert('Ukuran gambar maksimal 10 MB');
+        input.value = '';
+        return;
+    }
+    
     if (file) {
         const reader = new FileReader();
         reader.onload = function(e) {
             preview.innerHTML = `
-                <div class="relative inline-block">
-                    <img src="${e.target.result}" class="w-48 h-48 object-cover rounded">
-                    <button type="button" onclick="removePhoto('${blockId}')" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-red-600" style="cursor: pointer;">
-                        <svg class="w-3 h-3" viewBox="0 0 12 12" fill="currentColor">
-                            <path d="M10.707 1.293a1 1 0 0 0-1.414 0L6 4.586 2.707 1.293a1 1 0 0 0-1.414 1.414L4.586 6 1.293 9.293a1 1 0 1 0 1.414 1.414L6 7.414l3.293 3.293a1 1 0 0 0 1.414-1.414L7.414 6l3.293-3.293a1 1 0 0 0 0-1.414z"/>
+                <div style="position: relative; display: inline-block;">
+                    <img src="${e.target.result}" class="rounded-lg shadow-md" style="max-width:300px; max-height:200px; object-fit: cover; display: block;">
+                    <button type="button" onclick="removePhoto('${blockId}')" class="text-white rounded-full shadow-lg transition-colors" style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;" onmouseover="this.style.backgroundColor='#dc2626'" onmouseout="this.style.backgroundColor='#ef4444'" title="Remove image">
+                        <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                         </svg>
                     </button>
                 </div>
+                <small class="text-muted dark:text-gray-400 block mt-2">
+                    JPG, PNG, JPEG. Maksimal 10 MB.
+                </small>
             `;
+            input.classList.add('hidden');
+            if (hint) {
+                hint.classList.add('hidden');
+            }
         }
         reader.readAsDataURL(file);
     }
@@ -400,9 +439,16 @@ function previewPhoto(event, blockId) {
 
 function removePhoto(blockId) {
     const preview = document.getElementById(`photoPreview_${blockId}`);
-    const input = document.querySelector(`input[name="content[${blockId}][file]"]`);
+    const input = document.getElementById(`photoInput_${blockId}`);
+    const hint = document.getElementById(`photoHint_${blockId}`);
     preview.innerHTML = '';
-    if (input) input.value = '';
+    if (input) {
+        input.value = '';
+        input.classList.remove('hidden');
+    }
+    if (hint) {
+        hint.classList.remove('hidden');
+    }
     validateForm();
 }
 

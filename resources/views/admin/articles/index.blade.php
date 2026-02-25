@@ -91,7 +91,7 @@
                                     @endphp
                                     @if($firstPhoto && isset($firstPhoto['path']))
                                         <img class="c6btv c7gr8" 
-                                             src="{{ asset('storage/' . $firstPhoto['path']) }}" 
+                                             src="{{ $firstPhoto['path'] }}" 
                                              width="259" height="142" alt="{{ $article->title }}">
                                     @endif
                                 @endif

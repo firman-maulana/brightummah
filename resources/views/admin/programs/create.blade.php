@@ -115,32 +115,39 @@
                                                 required
                                             >
 
-                                            <small class="text-muted dark:text-gray-400 block mt-1">
+                                            <small id="imageHint" class="text-muted dark:text-gray-400 block mt-1">
                                                 JPG, PNG, JPEG. Maksimal 10 MB.
                                             </small>
 
                                             {{-- IMAGE PREVIEW --}}
                                             <div id="imageWrapper" class="mt-3 hidden">
-                                                <div class="relative inline-block">
+                                                <div style="position: relative; display: inline-block;">
                                                     <img
                                                         id="imagePreview"
                                                         src=""
                                                         class="rounded-lg shadow-md"
-                                                        style="max-width:300px; max-height:200px; object-fit: cover;"
+                                                        style="max-width:300px; max-height:200px; object-fit: cover; display: block;"
                                                     >
-
+                                                    
                                                     {{-- REMOVE BUTTON WITH SVG X ICON --}}
                                                     <button
                                                         type="button"
-                                                        class="absolute top-0 right-0 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
+                                                        class="text-white rounded-full shadow-lg transition-colors"
+                                                        style="position: absolute; top: 8px; right: 8px; padding: 4px; z-index: 10; display: flex; align-items: center; justify-content: center; background-color: #ef4444 !important; border-radius: 50% !important; border: none; cursor: pointer; width: 24px; height: 24px;"
+                                                        onmouseover="this.style.backgroundColor='#dc2626'"
+                                                        onmouseout="this.style.backgroundColor='#ef4444'"
                                                         onclick="removeImage()"
                                                         title="Remove image"
                                                     >
-                                                        <svg class="h-4 w-4" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                        <svg class="h-3 w-3" width="12" height="12" viewBox="0 0 16 16" fill="currentColor" style="color: white;">
                                                             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                                                         </svg>
                                                     </button>
                                                 </div>
+                                                
+                                                <small class="text-muted dark:text-gray-400 block mt-2">
+                                                    JPG, PNG, JPEG. Maksimal 10 MB.
+                                                </small>
                                             </div>
 
                                             @error('image')
@@ -229,6 +236,7 @@ function handleImageUpload(event) {
         document.getElementById('imagePreview').src = e.target.result;
         document.getElementById('imageWrapper').classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
+        document.getElementById('imageHint').classList.add('hidden');
     };
     reader.readAsDataURL(file);
 }
@@ -237,6 +245,7 @@ function removeImage() {
     document.getElementById('imageInput').value = '';
     document.getElementById('imageInput').classList.remove('hidden');
     document.getElementById('imageWrapper').classList.add('hidden');
+    document.getElementById('imageHint').classList.remove('hidden');
 }
 </script>
 

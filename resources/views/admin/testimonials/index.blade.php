@@ -29,9 +29,7 @@
                                 <tr>
                                     <td class="cq84g cyjcc cgn91 c9hxi c72q5">
                                         <div class="flex items-center text-gray-800">
-                                            <div class="flex items-center justify-center dark:bg-gray-700 mr-2 cyhlg coqgc czvpl cr0m4 c59cs">
-                                                <img class="cpts2" src="{{ $testimonial->photo_url ?? asset('assets/admin/img/user-avatar-32.png') }}" width="40" height="40" alt="User">
-                                            </div>
+                                                <img class="cpts2" src="{{ $testimonial->photo_url ?? asset('assets/admin/img/user-avatar-32.png') }}" width="40" height="40" alt="User" style="margin-right: 12px;">
                                             <div class="text-gray-800 dark:text-gray-100 c1k3n">{{ ucwords(strtolower($testimonial->name)) }}</div>
                                         </div>
                                     </td>
