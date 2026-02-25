@@ -160,6 +160,29 @@ function removeNewImage() {
     document.getElementById('imageInput').classList.remove('hidden');
     document.getElementById('imageHint').classList.remove('hidden');
 }
+
+// Auto-capitalize name and institusi fields
+document.addEventListener('DOMContentLoaded', function () {
+    const capitalizeFields = ['name', 'institusi'];
+    
+    capitalizeFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            field.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const value = this.value;
+                
+                // Capitalize first letter of each word
+                const capitalizedValue = value.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+                
+                this.value = capitalizedValue;
+                
+                // Restore cursor position
+                this.setSelectionRange(cursorPosition, cursorPosition);
+            });
+        }
+    });
+});
 </script>
 </script>
 

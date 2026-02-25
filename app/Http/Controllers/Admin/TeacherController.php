@@ -50,6 +50,10 @@ class TeacherController extends Controller
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
         ]);
 
+        // Format name and institusi to Title Case
+        $validated['name'] = ucwords(strtolower($validated['name']));
+        $validated['institusi'] = ucwords(strtolower($validated['institusi']));
+
         if ($request->hasFile('photo')) {
             $cloudinary = $this->getCloudinary();
             $photoUpload = $cloudinary->uploadApi()->upload(
@@ -81,6 +85,10 @@ class TeacherController extends Controller
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:10240',
             'remove_photo' => 'nullable|in:0,1',
         ]);
+        
+        // Format name and institusi to Title Case
+        $validated['name'] = ucwords(strtolower($validated['name']));
+        $validated['institusi'] = ucwords(strtolower($validated['institusi']));
         
         // Deteksi field yang berubah sebelum update
         $changedFields = $this->detectChangedFields($teacher, $request);

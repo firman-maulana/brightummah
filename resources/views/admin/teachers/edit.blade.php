@@ -183,11 +183,15 @@
 <script>
 function validateForm() {
     const existingImageWrapper = document.getElementById('existingImageWrapper');
+    const newImageWrapper = document.getElementById('newImageWrapper');
     const imageInput = document.getElementById('imageInput');
     const removeFlag = document.getElementById('removeImageFlag').value;
     
     // Check if existing image is visible (not removed)
     const hasExistingImage = existingImageWrapper && !existingImageWrapper.classList.contains('hidden');
+    
+    // Check if new image preview is visible
+    const hasNewImagePreview = newImageWrapper && !newImageWrapper.classList.contains('hidden');
     
     // Check if new image is uploaded
     const hasNewImage = imageInput.files && imageInput.files.length > 0;
@@ -195,9 +199,15 @@ function validateForm() {
     // Check if user is trying to remove the image
     const isRemoving = removeFlag === '1';
     
-    // If removing image or no image at all, show error
-    if (isRemoving || (!hasExistingImage && !hasNewImage)) {
+    // If removing image AND no new image uploaded, show error
+    if (isRemoving && !hasNewImage && !hasNewImagePreview) {
         alert('Photo harus terisi. Silakan upload photo atau batalkan penghapusan photo.');
+        return false;
+    }
+    
+    // If no existing image and no new image, show error
+    if (!hasExistingImage && !hasNewImage && !hasNewImagePreview) {
+        alert('Photo harus terisi. Silakan upload photo.');
         return false;
     }
     
@@ -221,6 +231,15 @@ function handleImageUpload(event) {
         document.getElementById('newImageWrapper').classList.remove('hidden');
         document.getElementById('imageInput').classList.add('hidden');
         document.getElementById('imageHint').classList.add('hidden');
+        
+        // Reset remove flag since user uploaded new image
+        document.getElementById('removeImageFlag').value = '0';
+        
+        // Hide existing image if present
+        const existingImageWrapper = document.getElementById('existingImageWrapper');
+        if (existingImageWrapper) {
+            existingImageWrapper.classList.add('hidden');
+        }
     };
     reader.readAsDataURL(file);
 }
@@ -258,6 +277,29 @@ function removeNewImage() {
         document.getElementById('imageInput').classList.remove('hidden');
     }
 }
+
+// Auto-capitalize name and institusi fields
+document.addEventListener('DOMContentLoaded', function () {
+    const capitalizeFields = ['name', 'institusi'];
+    
+    capitalizeFields.forEach(fieldId => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+            field.addEventListener('input', function(e) {
+                const cursorPosition = this.selectionStart;
+                const value = this.value;
+                
+                // Capitalize first letter of each word
+                const capitalizedValue = value.toLowerCase().replace(/\b\w/g, char => char.toUpperCase());
+                
+                this.value = capitalizedValue;
+                
+                // Restore cursor position
+                this.setSelectionRange(cursorPosition, cursorPosition);
+            });
+        }
+    });
+});
 </script>
 
 @endsection
