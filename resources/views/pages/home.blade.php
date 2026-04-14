@@ -1151,7 +1151,7 @@
                               </div>
                               <div class="col-12">
                                  <div class="it-signup-input mb-40">
-                                    <label>Institute</label>
+                                    <label>Country</label>
                                     <input type="text" name="country" placeholder="Enter your country" class="capitalize-input" required>
                                  </div>
                               </div>
