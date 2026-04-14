@@ -46,7 +46,7 @@
    <!-- pre loader area end -->
 
    <a 
-   href="https://wa.me/62895378059606?text=Terima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih"
+   href="https://wa.me/62895378059606?text=Halo%20Bright%20Ummah%20Academy%0A%0ATerima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih"
    class="whatsapp-float"
    target="_blank"
    aria-label="Chat WhatsApp"
