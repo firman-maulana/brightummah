@@ -31,6 +31,7 @@ class Testimonial extends Model
             return $this->photo;
         }
 
-        return Storage::url($this->photo);
+        // Use asset() instead of Storage::url() to avoid finfo dependency
+        return asset('storage/' . $this->photo);
     }
 }
