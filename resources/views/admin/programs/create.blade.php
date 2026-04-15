@@ -51,19 +51,22 @@
                                         </div>
                                         <!-- End -->
                                     </div>
-                                    
+
                                     <div>
                                         <!-- Start -->
-                                        <div>
-                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="teacher">Teacher</label>
-                                            <input name="teacher" id="teacher" class="caqf9 c6btv @error('teacher') is-invalid @enderror" type="text" value="{{ old('teacher') }}" placeholder="Contoh: Abdul Rakhman" required>
-                                            @error('teacher')
-                                                <div class="invalid-feedback">{{ $message }}</div>
-                                            @enderror
-                                        </div>
+                                        <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
+                                        <select name="mode" id="mode" class="caqf9 c6btv @error('mode') is-invalid @enderror" required>
+                                            <option value="">Select Mode</option>
+                                            <option value="Online & Offline" {{ old('mode') == 'Online & Offline' ? 'selected' : '' }}>Online & Offline</option>
+                                            <option value="Online" {{ old('mode') == 'Online' ? 'selected' : '' }}>Online</option>
+                                            <option value="Offline" {{ old('mode') == 'Offline' ? 'selected' : '' }}>Offline</option>
+                                        </select>
+                                        @error('mode')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                         <!-- End -->
                                     </div>
-
+                                    
                                     <div>
                                         <!-- Start -->
                                         <div>
@@ -171,21 +174,6 @@
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
                                         </div>
-                                        <!-- End -->
-                                    </div>
-
-                                    <div>
-                                        <!-- Start -->
-                                        <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
-                                        <select name="mode" id="mode" class="caqf9 c6btv @error('mode') is-invalid @enderror" required>
-                                            <option value="">Select Mode</option>
-                                            <option value="Online & Offline" {{ old('mode') == 'Online & Offline' ? 'selected' : '' }}>Online & Offline</option>
-                                            <option value="Online" {{ old('mode') == 'Online' ? 'selected' : '' }}>Online</option>
-                                            <option value="Offline" {{ old('mode') == 'Offline' ? 'selected' : '' }}>Offline</option>
-                                        </select>
-                                        @error('mode')
-                                            <div class="invalid-feedback">{{ $message }}</div>
-                                        @enderror
                                         <!-- End -->
                                     </div>
 

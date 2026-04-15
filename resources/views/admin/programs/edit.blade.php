@@ -53,13 +53,15 @@
 
                                         <div>
                                             <!-- Start -->
-                                            <div>
-                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="level">Level</label>
-                                                <input id="level" name="level" class="caqf9 c6btv" type="text" placeholder="Level..." value="{{ old('level', $program->level) }}" required>
-                                                @error('level')
-                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                                @enderror
-                                            </div>
+                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
+                                            <select id="mode" name="mode" class="caqf9 c6btv" required>
+                                                @foreach($modes as $m)
+                                                    <option value="{{ $m }}" {{ $program->mode == $m ? 'selected' : '' }}>{{ $m }}</option>
+                                                @endforeach
+                                            </select>
+                                            @error('mode')
+                                                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+                                            @enderror
                                             <!-- End -->
                                         </div>
 
@@ -191,24 +193,10 @@
 
                                         <div>
                                             <!-- Start -->
-                                            <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="mode">Mode</label>
-                                            <select id="mode" name="mode" class="caqf9 c6btv" required>
-                                                @foreach($modes as $m)
-                                                    <option value="{{ $m }}" {{ $program->mode == $m ? 'selected' : '' }}>{{ $m }}</option>
-                                                @endforeach
-                                            </select>
-                                            @error('mode')
-                                                <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                            @enderror
-                                            <!-- End -->
-                                        </div>
-
-                                        <div>
-                                             <!-- Start -->
                                             <div>
-                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="teacher">Teacher</label>
-                                                <input id="teacher" name="teacher" class="caqf9 c6btv" type="text" placeholder="Teacher name..." value="{{ old('teacher', $program->teacher) }}" required>
-                                                @error('teacher')
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="level">Level</label>
+                                                <input id="level" name="level" class="caqf9 c6btv" type="text" placeholder="Level..." value="{{ old('level', $program->level) }}" required>
+                                                @error('level')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
                                             </div>

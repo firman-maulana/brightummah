@@ -13,7 +13,6 @@ class Program extends Model
         'mode',
         'level',
         'image',
-        'teacher',
         'tujuan_program',
         'fokus_pembelajaran',
         'manfaat_program',

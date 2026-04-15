@@ -30,7 +30,6 @@
                             <div class="c2g1r cwnq4 cld0c cjav5 cnlq0 cai6b">
                                 <!-- Author -->
                                 <div class="flex items-center ccduf">
-                                    <div class="text-sm cq84g">Teacher: <a class="text-gray-800 dark:text-gray-100 cgulq" href="#0">{{ $program->teacher }}</a></div>
                                 </div>
                                 <!-- Right side -->
                                 <div class="flex flex-wrap items-center c51uw ch3kz">
