@@ -76,18 +76,6 @@
                                             </div>
                                             <!-- End -->
                                         </div>
-                                        
-                                        <div>
-                                            <!-- Start -->
-                                            <div>
-                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
-                                                <textarea id="manfaat_program" name="manfaat_program" class="caqf9 c6btv" rows="3" placeholder="Program benefits..." required>{{ old('manfaat_program', $program->manfaat_program) }}</textarea>
-                                                @error('manfaat_program')
-                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
-                                                @enderror
-                                            </div>
-                                            <!-- End -->
-                                        </div>
 
                                         <div>
                                             <!-- Start -->
@@ -95,6 +83,18 @@
                                                 <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="fokus_pembelajaran">Fokus Pembelajaran</label>
                                                 <textarea id="fokus_pembelajaran" name="fokus_pembelajaran" class="caqf9 c6btv" rows="3" placeholder="Learning focus..." required>{{ old('fokus_pembelajaran', $program->fokus_pembelajaran) }}</textarea>
                                                 @error('fokus_pembelajaran')
+                                                    <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
+                                                @enderror
+                                            </div>
+                                            <!-- End -->
+                                        </div>
+                                        
+                                        <div>
+                                            <!-- Start -->
+                                            <div>
+                                                <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
+                                                <textarea id="manfaat_program" name="manfaat_program" class="caqf9 c6btv" rows="3" placeholder="Program benefits..." required>{{ old('manfaat_program', $program->manfaat_program) }}</textarea>
+                                                @error('manfaat_program')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
                                             </div>
