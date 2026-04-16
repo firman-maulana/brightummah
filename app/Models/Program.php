@@ -22,4 +22,9 @@ class Program extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function getSlugAttribute()
+    {
+        return \Illuminate\Support\Str::slug($this->name);
+    }
 }

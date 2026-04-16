@@ -71,7 +71,7 @@
                         <!-- Item -->
                         <article class="flex bg-white c2vpa cxe43 c1hly c5vqk">
                             <!-- Image -->
-                            <a class="block 2xl:sidebar-expanded:w-56 cwdfl cdafh cm84d coqgc ckarq cd1i2" href="{{ route('admin.programs.show', $program) }}">
+                            <a class="block 2xl:sidebar-expanded:w-56 cwdfl cdafh cm84d coqgc ckarq cd1i2" href="{{ route('admin.programs.show', [$program->id, $program->slug]) }}">
                                 @if($program->image)
                                     <img class="ccrfs cfwu1 cqdkw cav8x c6btv" src="{{ $program->image }}" width="220" height="236" alt="{{ $program->name }}">
                                 @else
@@ -82,7 +82,7 @@
                             <div class="flex cetff cbw8w csusu">
                                 <div class="cbw8w">
                                     <div class="text-sm text-violet-500 cgulq c0ef0 c6f83">{{ $program->category }}</div>
-                                    <a class="inline-flex c6f83" href="{{ route('admin.programs.show', $program) }}">
+                                    <a class="inline-flex c6f83" href="{{ route('admin.programs.show', [$program->id, $program->slug]) }}">
                                         <h3 class="font-bold text-gray-800 dark:text-gray-100 c7x0x">{{ $program->name }}</h3>
                                     </a>
                                     <div class="text-sm">{{ Str::limit($program->tujuan_program, 100) }}</div>

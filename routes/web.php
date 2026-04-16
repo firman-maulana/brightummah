@@ -19,8 +19,8 @@ Route::post('/testimonials', [TestimonialSubmissionController::class, 'store'])-
 Route::resource('programs', ProgramController::class)->only(['index']);
 Route::get('/valuebasedroutine', fn() => view('pages.valuebasedroutine'))->name('valuebasedroutine');
 Route::get('/faqs', fn() => view('pages.faq'))->name('faqs');
-Route::resource('detailprogram', ProgramController::class)->only(['show']);
-Route::get('/detail_articles/{id}', [ArticleController::class, 'detail'])->name('articles.detail');
+Route::get('/detailprogram/{id}/{name}', [ProgramController::class, 'show'])->name('detailprogram.show');
+Route::get('/detail_articles/{id}/{title}', [ArticleController::class, 'detail'])->name('articles.detail');
 Route::post('/articles/{id}/like', [ArticleController::class, 'like'])->name('articles.like');
 
 // Admin Authentication Routes
@@ -38,20 +38,31 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->name('admin.')->group(fun
     Route::get('/programs', [AdminController::class, 'programs'])->name('programs');
     Route::get('/programs/create', [AdminController::class, 'createProgram'])->name('programs.create');
     Route::post('/programs', [AdminController::class, 'storeProgram'])->name('programs.store');
-    Route::get('/programs/{program}', [AdminController::class, 'showProgram'])->name('programs.show');
-    Route::get('/programs/{program}/edit', [AdminController::class, 'editProgram'])->name('programs.edit');
+    Route::get('/programs/{program}/{name}', [AdminController::class, 'showProgram'])->name('programs.show');
+    Route::get('/programs/edit/{program}/{name}', [AdminController::class, 'editProgram'])->name('programs.edit');
     Route::put('/programs/{program}', [AdminController::class, 'updateProgram'])->name('programs.update');
     Route::delete('/programs/{program}', [AdminController::class, 'destroyProgram'])->name('programs.destroy');
 
     Route::delete('/teachers/bulk-destroy', [TeacherController::class, 'bulkDestroy'])->name('teachers.bulk-destroy');
-    Route::resource('teachers', TeacherController::class);
+    Route::get('/teachers', [TeacherController::class, 'index'])->name('teachers.index');
+    Route::get('/teachers/create', [TeacherController::class, 'create'])->name('teachers.create');
+    Route::post('/teachers', [TeacherController::class, 'store'])->name('teachers.store');
+    Route::get('/teachers/edit/{teacher}/{name}', [TeacherController::class, 'edit'])->name('teachers.edit');
+    Route::put('/teachers/{teacher}', [TeacherController::class, 'update'])->name('teachers.update');
+    Route::delete('/teachers/{teacher}', [TeacherController::class, 'destroy'])->name('teachers.destroy');
     Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonials.index');
-    Route::get('/testimonials/{testimonial}/approve', [TestimonialController::class, 'approve'])->name('testimonials.approve');
+    Route::get('/testimonials/approve/{testimonial}/{name}', [TestimonialController::class, 'approve'])->name('testimonials.approve');
     Route::post('/testimonials/{testimonial}/post', [TestimonialController::class, 'post'])->name('testimonials.post');
     Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
     
     // Articles Management
-    Route::resource('articles', AdminArticleController::class);
+    Route::get('/articles', [AdminArticleController::class, 'index'])->name('articles.index');
+    Route::get('/articles/create', [AdminArticleController::class, 'create'])->name('articles.create');
+    Route::post('/articles', [AdminArticleController::class, 'store'])->name('articles.store');
+    Route::get('/articles/{article}/{title}', [AdminArticleController::class, 'show'])->name('articles.show');
+    Route::get('/articles/edit/{article}/{title}', [AdminArticleController::class, 'edit'])->name('articles.edit');
+    Route::put('/articles/{article}', [AdminArticleController::class, 'update'])->name('articles.update');
+    Route::delete('/articles/{article}', [AdminArticleController::class, 'destroy'])->name('articles.destroy');
     
     // Bug Report (Admin Only)
     Route::post('/bug-reports', [BugReportController::class, 'store'])->name('bug-reports.store');

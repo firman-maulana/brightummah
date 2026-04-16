@@ -84,6 +84,9 @@
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="fokus_pembelajaran">Fokus Pembelajaran</label>
                                             <textarea name="fokus_pembelajaran" id="fokus_pembelajaran" class="caqf9 c6btv @error('fokus_pembelajaran') is-invalid @enderror" rows="4" placeholder="Masukkan fokus pembelajaran..." required>{{ old('fokus_pembelajaran') }}</textarea>
+                                            <small class="text-muted dark:text-gray-400 block mt-1">
+                                                Tekan Enter untuk membuat poin baru. Setiap baris akan ditampilkan sebagai list bernomor.
+                                            </small>
                                             @error('fokus_pembelajaran')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror
@@ -96,6 +99,9 @@
                                         <div>
                                             <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
                                             <textarea name="manfaat_program" id="manfaat_program" class="caqf9 c6btv @error('manfaat_program') is-invalid @enderror" rows="4" placeholder="Masukkan manfaat program..." required>{{ old('manfaat_program') }}</textarea>
+                                            <small class="text-muted dark:text-gray-400 block mt-1">
+                                                Tekan Enter untuk membuat poin baru. Setiap baris akan ditampilkan sebagai list bernomor.
+                                            </small>
                                             @error('manfaat_program')
                                                 <div class="invalid-feedback">{{ $message }}</div>
                                             @enderror

@@ -26,4 +26,9 @@ class Teacher extends Model
 
         return Storage::url($this->photo);
     }
+
+    public function getSlugAttribute()
+    {
+        return \Illuminate\Support\Str::slug($this->name);
+    }
 }

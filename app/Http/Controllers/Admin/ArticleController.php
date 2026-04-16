@@ -98,13 +98,13 @@ class ArticleController extends Controller
         return redirect()->route('admin.articles.index')->with('success', 'Article created successfully');
     }
 
-    public function show(Article $article)
+    public function show(Article $article, $title = null)
     {
         $article->load('user');
         return view('admin.articles.detail', compact('article'));
     }
 
-    public function edit(Article $article)
+    public function edit(Article $article, $title = null)
     {
         return view('admin.articles.edit', compact('article'));
     }

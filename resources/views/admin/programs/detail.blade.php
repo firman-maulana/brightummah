@@ -55,9 +55,33 @@
 
                             <!-- Post content -->
                             <div>
-                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Program Details</h2>
-                                <p class="cai6b">{{ $program->manfaat_program }}</p>
-                                <p class="cai6b">{{ $program->fokus_pembelajaran }}</p>
+                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83">Fokus Pembelajaran</h2>
+                                @php
+                                    $fokusItems = array_filter(array_map('trim', explode("\n", $program->fokus_pembelajaran)));
+                                @endphp
+                                @if(count($fokusItems) > 1)
+                                    <ol class="cai6b" style="list-style-type: decimal; padding-left: 1.5rem;">
+                                        @foreach($fokusItems as $item)
+                                            <li class="mb-2">{{ $item }}</li>
+                                        @endforeach
+                                    </ol>
+                                @else
+                                    <p class="cai6b">{{ $program->fokus_pembelajaran }}</p>
+                                @endif
+
+                                <h2 class="text-gray-800 dark:text-gray-100 font-bold ce5fk clctu c6f83 mt-6">Manfaat Program</h2>
+                                @php
+                                    $manfaatItems = array_filter(array_map('trim', explode("\n", $program->manfaat_program)));
+                                @endphp
+                                @if(count($manfaatItems) > 1)
+                                    <ol class="cai6b" style="list-style-type: decimal; padding-left: 1.5rem;">
+                                        @foreach($manfaatItems as $item)
+                                            <li class="mb-2">{{ $item }}</li>
+                                        @endforeach
+                                    </ol>
+                                @else
+                                    <p class="cai6b">{{ $program->manfaat_program }}</p>
+                                @endif
                             </div>
 
                             <hr class="cghq3 cbv37 cr4kg cf7n6">
@@ -69,7 +93,7 @@
                                     <!-- Related item -->
                                     <article class="flex bg-white c2vpa cxe43 c1hly c5vqk">
                                         <!-- Image -->
-                                        <a class="block ck67t ccnsg cm84d coqgc ckarq cd1i2" href="{{ route('admin.programs.show', $otherProgram) }}">
+                                        <a class="block ck67t ccnsg cm84d coqgc ckarq cd1i2" href="{{ route('admin.programs.show', [$otherProgram->id, $otherProgram->slug]) }}">
                                             @if($otherProgram->image)
                                                 <img class="ccrfs cfwu1 cqdkw cav8x c6btv" src="{{ $otherProgram->image }}" width="220" height="236" alt="{{ $otherProgram->name }}">
                                             @else
@@ -80,7 +104,7 @@
                                         <div class="flex cetff cbw8w csusu">
                                             <div class="cbw8w">
                                                 <div class="text-sm text-violet-500 cgulq c0ef0 c6f83">{{ $otherProgram->category }}</div>
-                                                <a class="inline-flex c6f83" href="{{ route('admin.programs.show', $otherProgram) }}">
+                                                <a class="inline-flex c6f83" href="{{ route('admin.programs.show', [$otherProgram->id, $otherProgram->slug]) }}">
                                                     <h3 class="font-bold text-gray-800 dark:text-gray-100 c7x0x">{{ $otherProgram->name }}</h3>
                                                 </a>
                                                 <div class="text-sm">{{ Str::limit($otherProgram->tujuan_program, 100) }}</div>
@@ -117,7 +141,7 @@
                                     <div class="text-sm text-gray-500 dark:text-gray-400 caf78">{{ $program->user ? ucfirst($program->user->role) : 'Admin' }}</div>
                                 </div>
                                 <div class="cweej">
-                                    <a href="{{ route('admin.programs.edit', $program) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
+                                    <a href="{{ route('admin.programs.edit', [$program->id, $program->slug]) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
                                                 <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
                                             </svg>

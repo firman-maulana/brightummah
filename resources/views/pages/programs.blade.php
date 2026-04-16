@@ -182,7 +182,7 @@
                            <div class="row gx-0">
                               <div class="col-xl-5 col-lg-12 col-md-12 col-sm-5">
                                  <div class="it-course-thumb z-index-1 border-radius-20">
-                                    <a href="{{ route('detailprogram.show', $program->id) }}">
+                                    <a href="{{ route('detailprogram.show', [$program->id, $program->slug]) }}">
                                        <img class="w-100" src="{{ $program->image }}" alt="{{ $program->name }}" style="height: 200px; object-fit: cover;">
                                     </a>
                                  </div>                                 
@@ -195,7 +195,7 @@
                                        </div>
                                     </div>
                                     <h5 class="it-course-title mb-20">
-                                       <a class="border-line" href="{{ route('detailprogram.show', $program->id) }}">
+                                       <a class="border-line" href="{{ route('detailprogram.show', [$program->id, $program->slug]) }}">
                                           {{ $program->name }}
                                        </a>
                                     </h5>

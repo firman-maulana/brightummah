@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    public function detail($id)
+    public function detail($id, $title = null)
     {
         $article = Article::with('user')->findOrFail($id);
         return view('pages.detailarticle', compact('article'));

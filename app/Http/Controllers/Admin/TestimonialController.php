@@ -32,7 +32,7 @@ class TestimonialController extends Controller
         return view('admin.testimonials.index', compact('postedTestimonials', 'latestTestimonials'));
     }
 
-    public function approve(Testimonial $testimonial)
+    public function approve(Testimonial $testimonial, $name = null)
     {
         return view('admin.testimonials.addphoto', compact('testimonial'));
     }

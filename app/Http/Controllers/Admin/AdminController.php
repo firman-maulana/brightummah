@@ -48,7 +48,7 @@ class AdminController extends Controller
         return view('admin.programs.index', compact('programs', 'categories', 'totalPrograms'));
     }
 
-    public function showProgram(Program $program)
+    public function showProgram(Program $program, $name = null)
     {
         $program->load('user');
         $otherProgram = Program::where('id', '!=', $program->id)
@@ -105,7 +105,7 @@ class AdminController extends Controller
             ->with('success', 'Program created successfully!');
     }
 
-    public function editProgram(Program $program)
+    public function editProgram(Program $program, $name = null)
     {
         $categories = ['Academic & School Program', 'Quran & Islamic Studies Program', 'Language & Skill Program', 'Program Options'];
         $modes = ['Online & Offline', 'Online', 'Offline'];

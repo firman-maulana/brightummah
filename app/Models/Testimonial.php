@@ -34,4 +34,9 @@ class Testimonial extends Model
         // Use asset() instead of Storage::url() to avoid finfo dependency
         return asset('storage/' . $this->photo);
     }
+
+    public function getSlugAttribute()
+    {
+        return \Illuminate\Support\Str::slug($this->name);
+    }
 }

@@ -82,6 +82,9 @@
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="fokus_pembelajaran">Fokus Pembelajaran</label>
                                                 <textarea id="fokus_pembelajaran" name="fokus_pembelajaran" class="caqf9 c6btv" rows="3" placeholder="Learning focus..." required>{{ old('fokus_pembelajaran', $program->fokus_pembelajaran) }}</textarea>
+                                                <small class="text-muted dark:text-gray-400 block mt-1">
+                                                    Tekan Enter untuk membuat poin baru. Setiap baris akan ditampilkan sebagai list bernomor.
+                                                </small>
                                                 @error('fokus_pembelajaran')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
@@ -94,6 +97,9 @@
                                             <div>
                                                 <label class="block text-sm c1k3n cu6vl dark:text-gray-400" for="manfaat_program">Manfaat Program</label>
                                                 <textarea id="manfaat_program" name="manfaat_program" class="caqf9 c6btv" rows="3" placeholder="Program benefits..." required>{{ old('manfaat_program', $program->manfaat_program) }}</textarea>
+                                                <small class="text-muted dark:text-gray-400 block mt-1">
+                                                    Tekan Enter untuk membuat poin baru. Setiap baris akan ditampilkan sebagai list bernomor.
+                                                </small>
                                                 @error('manfaat_program')
                                                     <p class="text-sm text-red-600 mt-1">{{ $message }}</p>
                                                 @enderror
@@ -217,7 +223,7 @@
                                         </div>
                                         <div class="ctq43">
                                             <!-- Start -->
-                                            <a href="{{ route('admin.programs.show', $program) }}" class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa">Cancel</a>
+                                            <a href="{{ route('admin.programs.show', [$program->id, $program->slug]) }}" class="btn bg-white border-gray-200 text-gray-800 cc0oq cghq3 cspbm c0zkc c2vpa">Cancel</a>
                                             <!-- End -->
                                         </div>
                                     </div>

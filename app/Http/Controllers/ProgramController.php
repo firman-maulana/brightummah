@@ -105,7 +105,7 @@ class ProgramController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($id, $name = null)
 {
     $program = Program::findOrFail($id);
     return view('pages.detailprogram', compact('program'));

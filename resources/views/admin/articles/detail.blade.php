@@ -35,7 +35,7 @@
                                     <div class="text-sm text-gray-500 dark:text-gray-400 caf78">{{ $article->user ? ucfirst($article->user->role) : 'Admin' }}</div>
                                 </div>
                                 <div class="c40hu cld0c cweej cnlq0">
-                                    <a href="{{ route('admin.articles.edit', $article->id) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
+                                    <a href="{{ route('admin.articles.edit', [$article->id, $article->slug]) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
                                         </svg>
@@ -100,7 +100,7 @@
                                     <div class="flex items-center">
                                         <div class="text-sm text-gray-500 dark:text-gray-400 mr-4 caf78">Share:</div>
                                         <div class="flex items-center cp3jk">
-                                           <button class="casia cz0f0 cmpw7 cdqku">
+                                           <button onclick="copyArticleLink({{ $article->id }}, '{{ $article->slug }}')" class="casia cz0f0 cmpw7 cdqku" title="Copy article link">
    <span class="cn8jz">Share on Website</span>
    <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +131,7 @@
                                     <div class="text-sm text-gray-500 dark:text-gray-400 caf78">{{ $article->user ? ucfirst($article->user->role) : 'Admin' }}</div>
                                 </div>
                                 <div class="cweej">
-                                    <a href="{{ route('admin.articles.edit', $article->id) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
+                                    <a href="{{ route('admin.articles.edit', [$article->id, $article->slug]) }}" class="btn bg-gray-900 cdj8c cg0jr ch8z9 cilvw cyn7a c6btv">
                                         <svg class="cmpw7 cdqku cbm9w coqgc" width="16" height="16" viewBox="0 0 16 16">
                                             <path d="M11.7.3c-.4-.4-1-.4-1.4 0l-10 10c-.2.2-.3.4-.3.7v4c0 .6.4 1 1 1h4c.3 0 .5-.1.7-.3l10-10c.4-.4.4-1 0-1.4l-4-4zM4.6 14H2v-2.6l6-6L10.6 8l-6 6zM12 6.6L9.4 4 11 2.4 13.6 5 12 6.6z"></path>
                                         </svg>
@@ -194,3 +194,89 @@
                 </div>
 
 @endsection
+
+<script>
+function copyArticleLink(articleId, articleSlug) {
+    // Construct the public article URL
+    const baseUrl = window.location.origin;
+    const articleUrl = `${baseUrl}/detail_articles/${articleId}/${articleSlug}`;
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(articleUrl).then(() => {
+        // Show success notification
+        showNotification('Article link copied to clipboard!', 'success');
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        showNotification('Failed to copy link', 'error');
+    });
+}
+
+function showNotification(message, type = 'success') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'admin-notification';
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 8px;">
+            ${type === 'success' ? 
+                '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 15l-5-5 1.41-1.41L8 12.17l7.59-7.59L17 6l-9 9z" fill="white"/></svg>' :
+                '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9v-2h2v2zm0-4H9V5h2v6z" fill="white"/></svg>'
+            }
+            <span>${message}</span>
+        </div>
+    `;
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#10b981' : '#ef4444'};
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        z-index: 99999;
+        font-size: 14px;
+        font-weight: 500;
+        animation: slideInRight 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+</script>
+
+<style>
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.casia.cz0f0:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+</style>

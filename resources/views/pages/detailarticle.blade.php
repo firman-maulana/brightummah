@@ -130,7 +130,7 @@
                               </button>
                               <span>Share:</span>
                               <div class="postbox-share-social">
-                                 <a href="#">
+                                 <a href="#" id="copyLinkBtn" onclick="copyArticleLink(event)" title="Copy link">
                                      <svg class="cbm9w" width="16" height="16" viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg">
       <path d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0zM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2z"
@@ -237,6 +237,66 @@
            likeButton.disabled = false;
        });
    }
+
+   function copyArticleLink(event) {
+       event.preventDefault();
+       
+       // Get current URL
+       const articleUrl = window.location.href;
+       
+       // Copy to clipboard
+       navigator.clipboard.writeText(articleUrl).then(() => {
+           // Show success feedback
+           const copyBtn = document.getElementById('copyLinkBtn');
+           const originalTitle = copyBtn.getAttribute('title');
+           
+           // Change icon color temporarily
+           copyBtn.style.color = '#28a745';
+           copyBtn.setAttribute('title', 'Link copied!');
+           
+           // Show toast notification (optional)
+           showToast('Link copied to clipboard!');
+           
+           // Reset after 2 seconds
+           setTimeout(() => {
+               copyBtn.style.color = '';
+               copyBtn.setAttribute('title', originalTitle);
+           }, 2000);
+       }).catch(err => {
+           console.error('Failed to copy:', err);
+           showToast('Failed to copy link', 'error');
+       });
+   }
+
+   function showToast(message, type = 'success') {
+       // Create toast element
+       const toast = document.createElement('div');
+       toast.className = 'copy-toast';
+       toast.textContent = message;
+       toast.style.cssText = `
+           position: fixed;
+           bottom: 30px;
+           right: 30px;
+           background: ${type === 'success' ? '#28a745' : '#dc3545'};
+           color: white;
+           padding: 12px 24px;
+           border-radius: 8px;
+           box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+           z-index: 9999;
+           font-size: 14px;
+           animation: slideIn 0.3s ease;
+       `;
+       
+       document.body.appendChild(toast);
+       
+       // Remove after 3 seconds
+       setTimeout(() => {
+           toast.style.animation = 'slideOut 0.3s ease';
+           setTimeout(() => {
+               document.body.removeChild(toast);
+           }, 300);
+       }, 3000);
+   }
    </script>
 
    <style>
@@ -256,6 +316,36 @@
    
    #heartIcon {
        transition: all 0.3s ease;
+   }
+
+   #copyLinkBtn {
+       transition: all 0.3s ease;
+   }
+
+   #copyLinkBtn:hover {
+       transform: scale(1.1);
+   }
+
+   @keyframes slideIn {
+       from {
+           transform: translateX(400px);
+           opacity: 0;
+       }
+       to {
+           transform: translateX(0);
+           opacity: 1;
+       }
+   }
+
+   @keyframes slideOut {
+       from {
+           transform: translateX(0);
+           opacity: 1;
+       }
+       to {
+           transform: translateX(400px);
+           opacity: 0;
+       }
    }
    </style>
 @endsection

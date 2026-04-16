@@ -40,4 +40,9 @@ class Article extends Model
 
         return Storage::url($this->thumbnail);
     }
+
+    public function getSlugAttribute()
+    {
+        return \Illuminate\Support\Str::slug($this->title);
+    }
 }

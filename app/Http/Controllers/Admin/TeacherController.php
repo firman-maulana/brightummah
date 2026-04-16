@@ -71,7 +71,7 @@ class TeacherController extends Controller
         return redirect()->route('admin.teachers.index')->with('success', 'Teacher berhasil ditambahkan.');
     }
 
-    public function edit(Teacher $teacher)
+    public function edit(Teacher $teacher, $name = null)
     {
         return view('admin.teachers.edit', compact('teacher'));
     }

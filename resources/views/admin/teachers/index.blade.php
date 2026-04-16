@@ -125,7 +125,7 @@
                                                         <div class="bg-white border border-gray-200 cghq3 c2vpa cbx8s cxe43 cb8zv ccwri cqdkw ctd47 cr617 cgky2 cbxoy cvggx ccwg3" @click.outside="open = false" @keydown.escape.window="open = false" x-show="open" x-transition:enter="cxxol cbmha c8uqq c98dn" x-transition:enter-start="opacity-0 cx9xg" x-transition:enter-end="cgcrn csdj3" x-transition:leave="cxxol cbmha c8uqq" x-transition:leave-start="cgcrn" x-transition:leave-end="opacity-0" x-cloak="">
                                                             <ul>
                                                                 <li>
-                                                                    <a class="text-sm flex c196r cqahh c0zkc c1ukq c1k3n cb2br cwn3v" href="{{ route('admin.teachers.edit', $teacher) }}" @click="open = false" @focus="open = true" @focusout="open = false">Edit</a>
+                                                                    <a class="text-sm flex c196r cqahh c0zkc c1ukq c1k3n cb2br cwn3v" href="{{ route('admin.teachers.edit', [$teacher->id, $teacher->slug]) }}" @click="open = false" @focus="open = true" @focusout="open = false">Edit</a>
                                                                 </li>
                                                             </ul>
                                                         </div>

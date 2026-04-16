@@ -76,7 +76,7 @@
                             <!-- Content -->
                             <div>
                                 <div class="text-sm">
-                                    <a href="{{ route('admin.articles.show', $article->id) }}" 
+                                    <a href="{{ route('admin.articles.show', [$article->id, $article->slug]) }}" 
                                        class="text-gray-800 dark:text-gray-100 hover:text-violet-500">
                                         {{ $article->title }}
                                     </a>
@@ -112,7 +112,7 @@
                                     <span class="text-sm text-gray-500 dark:text-gray-400">{{ $article->likes_count ?? 0 }}</span>
                                 </button>
                                 <!-- Attach button -->
-                                <button class="casia cz0f0 cmpw7 cdqku">
+                                <button onclick="copyArticleLink({{ $article->id }}, '{{ $article->slug }}')" class="casia cz0f0 cmpw7 cdqku" title="Share on Website">
                                     <svg class="cbm9w coqgc ci53t" width="16" height="16" viewBox="0 0 16 16">
                                         <path d="M11 0c1.3 0 2.6.5 3.5 1.5 1 .9 1.5 2.2 1.5 3.5 0 1.3-.5 2.6-1.4 3.5l-1.2 1.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l1.1-1.2c.6-.5.9-1.3.9-2.1s-.3-1.6-.9-2.2C12 1.7 10 1.7 8.9 2.8L7.7 4c-.4.4-1 .4-1.4 0-.4-.4-.4-1 0-1.4l1.2-1.1C8.4.5 9.7 0 11 0zM8.3 12c.4-.4 1-.5 1.4-.1.4.4.4 1 0 1.4l-1.2 1.2C7.6 15.5 6.3 16 5 16c-1.3 0-2.6-.5-3.5-1.5C.5 13.6 0 12.3 0 11c0-1.3.5-2.6 1.5-3.5l1.1-1.2c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4L2.9 8.9c-.6.5-.9 1.3-.9 2.1s.3 1.6.9 2.2c1.1 1.1 3.1 1.1 4.2 0L8.3 12zm1.1-6.8c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-4.2 4.2c-.2.2-.5.3-.7.3-.2 0-.5-.1-.7-.3-.4-.4-.4-1 0-1.4l4.2-4.2z"></path>
                                     </svg>
@@ -130,3 +130,89 @@
 </div>
 
 @endsection
+
+<script>
+function copyArticleLink(articleId, articleSlug) {
+    // Construct the public article URL
+    const baseUrl = window.location.origin;
+    const articleUrl = `${baseUrl}/detail_articles/${articleId}/${articleSlug}`;
+    
+    // Copy to clipboard
+    navigator.clipboard.writeText(articleUrl).then(() => {
+        // Show success notification
+        showNotification('Article link copied to clipboard!', 'success');
+    }).catch(err => {
+        console.error('Failed to copy:', err);
+        showNotification('Failed to copy link', 'error');
+    });
+}
+
+function showNotification(message, type = 'success') {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = 'admin-notification';
+    notification.innerHTML = `
+        <div style="display: flex; align-items: center; gap: 8px;">
+            ${type === 'success' ? 
+                '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm-2 15l-5-5 1.41-1.41L8 12.17l7.59-7.59L17 6l-9 9z" fill="white"/></svg>' :
+                '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9v-2h2v2zm0-4H9V5h2v6z" fill="white"/></svg>'
+            }
+            <span>${message}</span>
+        </div>
+    `;
+    
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: ${type === 'success' ? '#10b981' : '#ef4444'};
+        color: white;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        z-index: 99999;
+        font-size: 14px;
+        font-weight: 500;
+        animation: slideInRight 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOutRight 0.3s ease';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 300);
+    }, 3000);
+}
+</script>
+
+<style>
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.casia.cz0f0:hover {
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+</style>
