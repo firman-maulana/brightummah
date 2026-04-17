@@ -233,13 +233,19 @@
                                         
                                         @forelse($notifications as $notification)
                                         <li class="border-gray-200 cghq3 cmtlz ctv3r">
-                                            <a class="block chfxh csd0k clbq0 cuvgf" href="#0" @click="open = false" @focus="open = true" @focusout="open = false">
+                                            <div class="block chfxh csd0k clbq0 cuvgf hover:bg-gray-100 cursor-default">
                                                 <span class="block text-sm c6f83">
-                                                    <span class="text-gray-800 dark:text-gray-100 c1k3n">{{ $notification->user->name }}</span> 
-                                                    <span class="dark:text-gray-400">{{ $notification->message }}</span>
+                                                    <span class="text-gray-800 dark:text-gray-100 c1k3n">
+                                                        {{ $notification->user->name }}
+                                                    </span> 
+                                                    <span class="dark:text-gray-400">
+                                                        {{ $notification->message }}
+                                                    </span>
                                                 </span>
-                                                <span class="block cmpw7 cdqku c1k3n c1iho">{{ $notification->created_at->format('M d, Y') }}</span>
-                                            </a>
+                                                <span class="block cmpw7 cdqku c1k3n c1iho">
+                                                {{ $notification->created_at->format('M d, Y') }}
+                                                </span>
+                                            </div>
                                         </li>
                                         @empty
                                         <li class="border-gray-200 cghq3 cmtlz ctv3r">
