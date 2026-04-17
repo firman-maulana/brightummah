@@ -286,7 +286,7 @@
                                                         <!-- Modal content -->
                                                         <div class="cx3hp cz8qb">
                                                             <div class="text-sm">
-                                                                <div class="text-gray-800 dark:text-gray-100 c1k3n cxg65">Bantu kami meningkatkan Bright Ummah Academy. Laporkan bug atau berikan saran fitur baru.</div>
+                                                                <div class="text-gray-800 dark:text-gray-100 c1k3n cxg65">Bantu kami meningkatkan dashboard Bright Ummah Academy. Laporkan bug atau berikan saran fitur baru.</div>
                                                             </div>
                                                             <div class="cjav5">
                                                                 <div>
@@ -367,7 +367,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="https://wa.me/62895378059606?text=Selamat%20datang%20di%20Bright%20Ummah%20Academy%0AAda%20yang%20bisa%20kami%20bantu%3F" @click="open = false" @focus="open = true" @focusout="open = false">
+                                            <a class="text-sm text-violet-500 flex items-center c5ylh ceetm c1k3n cb2br cwn3v" href="https://wa.me/62895378059606" @click="open = false" @focus="open = true" @focusout="open = false">
                                                 <svg class="w-3 h-3 text-violet-500 mr-2 cbm9w coqgc" viewBox="0 0 12 12">
                                                     <path d="M11.854.146a.5.5 0 00-.525-.116l-11 4a.5.5 0 00-.015.934l4.8 1.921 1.921 4.8A.5.5 0 007.5 12h.008a.5.5 0 00.462-.329l4-11a.5.5 0 00-.116-.525z"></path>
                                                 </svg>
