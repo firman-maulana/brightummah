@@ -160,7 +160,7 @@
                         <h4 class="it-footer-widget-title">Get Contact</h4>
                         <div class="it-footer-widget-contact mb-25">
                            <ul>
-                              <li><span>Phone:</span><a href="tel:+91123456789">(+91) 123-456-789</a></li>
+                              <li><span>Phone:</span><a href="https://wa.me/62895378059606">+62 895-3780-59606</a></li>
                               <li><span>Email:</span><a href="mailto:brightummah@gmail.com">brightummah@gmail.com</a></li>
                               <li><span>Location:</span><a target="_blank" href="https://www.google.com/maps/dir///@24.4503253,17.1644279,4.17z?entry=ttu&g_ep=EgoyMDI0MTAwOS4wIKXMDSoASAFQAw%3D%3D">Surabaya, Jawa Timur</a></li>
                            </ul>
