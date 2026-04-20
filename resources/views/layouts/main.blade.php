@@ -93,10 +93,7 @@
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
          <div class="itoffcanvas__social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/brightummahacademy?igsh=ZGdwdGQzOG1oY3Nu"><i class="fab fa-instagram"></i></a>
          </div>
       </div>
    </div>
