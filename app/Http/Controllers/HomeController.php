@@ -12,13 +12,11 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // Mengambil 4 program terbaru
-        $latestPrograms = Program::latest()->take(4)->get();
 
         $teachers = Teacher::latest()->take(4)->get();
         $postedTestimonials = Testimonial::where('status', 'posted')->latest()->take(6)->get();
         $articles = Article::with('user')->latest()->take(3)->get();
         
-        return view('pages.home', compact('latestPrograms', 'teachers', 'postedTestimonials', 'articles'));
+        return view('pages.home', compact('teachers', 'postedTestimonials', 'articles'));
     }
 }

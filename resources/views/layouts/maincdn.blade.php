@@ -38,7 +38,7 @@
                <div class="it-loading-stroke">
                   <img class="it-loading-icon" src="{{ asset('assets/img/logo/pencil.png') }}" alt="">
                </div>
-               <span>"Memuat Ilmu... Mohon Tunggu dengan Sabar!"</span>
+               <span>"Please wait... Something good is coming"</span>
             </div>
          </div>
       </div>  
@@ -86,7 +86,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Email</span>
-                  <a href="mailto:info@brightummah.com">brightummah@gmail.com</a>
+                  <a href="mailto:brightummahacademy@gmail.com">brightummahacademy@gmail.com</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -95,7 +95,7 @@
                </div>
                <div class="itoffcanvas__info-address">
                   <span>Telepon</span>
-                  <a href="tel:+6281234567890">+62 812 3456 7890</a>
+                  <a href="tel:+6281235040959">+62 812 3504 0959</a>
                </div>
             </div>
             <div class="it-info-wrapper mb-20 d-flex align-items-center">
@@ -196,8 +196,8 @@
                         <h4 class="it-footer-widget-title">Hubungi</h4>
                         <div class="it-footer-widget-contact mb-25">
                            <ul>
-                              <li><span>Telepon:</span><a href="tel:+6281234567890">+62 812 3456 7890</a></li>
-                              <li><span>Email:</span><a href="mailto:info@brightummah.com">brightummah@gmail.com</a></li>
+                              <li><span>Telepon:</span><a href="tel:+6281235040959">+62 812 3504 0959</a></li>
+                              <li><span>Email:</span><a href="mailto:brightummahacademy@gmail.com">brightummahacademy@gmail.com</a></li>
                               <li><span>Lokasi:</span><a href="#">Surabaya, Indonesia</a></li>
                            </ul>
                         </div>

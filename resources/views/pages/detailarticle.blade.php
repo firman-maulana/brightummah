@@ -173,10 +173,10 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="https://wa.me/62895378059606?text=Halo%20Bright%20Ummah%20Academy%0A%0ATerima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih" class="it-btn-yellow white-bg">
+                     <a    href="https://wa.me/6281235040959?text=Halo%20Bright%20Ummah%20Academy%0A%0ATerima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih" class="it-btn-yellow white-bg">
                         <span>
-                           <span class="text-1">Start Learning Now</span>
-                           <span class="text-2">Start Learning Now</span>
+                           <span class="text-1">Contact us now!</span>
+                           <span class="text-2">Contact us now!</span>
                         </span>
                      </a>
                   </div>

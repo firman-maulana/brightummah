@@ -77,23 +77,18 @@
                         <h4 class="filter-title">Categories</h4>
                         <div class="filter-tags sort-options">
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="Academic & School Program" class="category-filter">
+                              <input type="checkbox" name="category" value="Academic & School Program" class="category-filter" {{ is_array(request('categories')) && in_array('Academic & School Program', request('categories')) ? 'checked' : '' }}>
                               <span>Academic & School Program <i class="count">({{ $categoryCounts['Academic & School Program'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="Quran & Islamic Studies Program" class="category-filter">
+                              <input type="checkbox" name="category" value="Quran & Islamic Studies Program" class="category-filter" {{ is_array(request('categories')) && in_array('Quran & Islamic Studies Program', request('categories')) ? 'checked' : '' }}>
                               <span>Quran & Islamic Studies Program <i class="count">({{ $categoryCounts['Quran & Islamic Studies Program'] ?? 0 }})</i></span>
                            </label>
 
                            <label class="category-option">
-                              <input type="checkbox" name="category" value="Language & Skill Program" class="category-filter">
+                              <input type="checkbox" name="category" value="Language & Skill Program" class="category-filter" {{ is_array(request('categories')) && in_array('Language & Skill Program', request('categories')) ? 'checked' : '' }}>
                               <span>Language & Skill Program <i class="count">({{ $categoryCounts['Language & Skill Program'] ?? 0 }})</i></span>
-                           </label>
-
-                           <label class="category-option">
-                              <input type="checkbox" name="category" value="Program Options" class="category-filter">
-                              <span>Program Options <i class="count">({{ $categoryCounts['Program Options'] ?? 0 }})</i></span>
                            </label>
                         </div>
                      </div>
@@ -256,10 +251,10 @@
                         </span>
                      </h4>
                      <p>Enhance your knowledge and grow professionally by learning new skills anytime, anywhere. Access expert-led courses designed to help you </p>
-                     <a href="https://wa.me/62895378059606?text=Halo%20Bright%20Ummah%20Academy%0A%0ATerima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih" class="it-btn-yellow white-bg">
+                     <a href="https://wa.me/6281235040959?text=Halo%20Bright%20Ummah%20Academy%0A%0ATerima%20kasih%20atas%20informasi%20yang%20telah%20disediakan.%0A%0ASaya%20ingin%20memperoleh%20informasi%20lebih%20lanjut%20terkait%20layanan%20yang%20tersedia.%0A%0ATerima%20kasih" class="it-btn-yellow white-bg">
                         <span>
-                           <span class="text-1">Start Learning Now</span>
-                           <span class="text-2">Start Learning Now</span>
+                           <span class="text-1">Contact us now!</span>
+                           <span class="text-2">Contact us now!</span>
                         </span>
                      </a>
                   </div>
@@ -302,6 +297,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('searchForm').addEventListener('submit', function(e) {
         e.preventDefault();
     });
+    // Initial filter on load
+    filterPrograms();
 
     function filterPrograms() {
         const searchTerm = searchInput.value.toLowerCase().trim();
