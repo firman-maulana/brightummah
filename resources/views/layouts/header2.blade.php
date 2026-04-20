@@ -122,9 +122,15 @@
                                     <li><a href="{{ route('home') }}#whychoose">Why Choose BUA</a></li>
                                     <li><a href="{{ route('home') }}#learningsystem">Learning System</a></li>
                                     <li><a href="{{ route('home') }}#categories">Categories</a></li>
+                                    @if($hasTeachers)
                                     <li><a href="{{ route('home') }}#teacher">Teachers</a></li>
+                                    @endif
+                                    @if($hasArticles)
                                     <li><a href="{{ route('home') }}#articles">Articles</a></li>
+                                    @endif
+                                    @if($hasTestimonials)
                                     <li><a href="{{ route('home') }}#testimonial">Testimonial</a></li>
+                                    @endif
                                     <li><a href="{{ route('home') }}#contact">Contact</a></li>
                                  </ul>
                               </li>

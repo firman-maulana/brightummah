@@ -58,9 +58,15 @@
                                     <li><a href="#whychoose">Why Choose BUA</a></li>
                                     <li><a href="#learningsystem">Learning System</a></li>
                                     <li><a href="#categories">Categories</a></li>
+                                    @if($hasTeachers)
                                     <li><a href="#teacher">Teachers</a></li>
+                                    @endif
+                                    @if($hasArticles)
                                     <li><a href="#articles">Articles</a></li>
+                                    @endif
+                                    @if($hasTestimonials)
                                     <li><a href="#testimonial">Testimonial</a></li>
+                                    @endif
                                     <li><a href="#contact">Contact</a></li>
                                  </ul>
                               </li>

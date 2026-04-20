@@ -12,11 +12,15 @@ class HomeController extends Controller
 {
     public function index()
     {
-
         $teachers = Teacher::latest()->take(4)->get();
         $postedTestimonials = Testimonial::where('status', 'posted')->latest()->take(6)->get();
         $articles = Article::with('user')->latest()->take(3)->get();
         
-        return view('pages.home', compact('teachers', 'postedTestimonials', 'articles'));
+        // Check if data exists for navbar
+        $hasTeachers = Teacher::exists();
+        $hasTestimonials = Testimonial::where('status', 'posted')->exists();
+        $hasArticles = Article::exists();
+        
+        return view('pages.home', compact('teachers', 'postedTestimonials', 'articles', 'hasTeachers', 'hasTestimonials', 'hasArticles'));
     }
 }
