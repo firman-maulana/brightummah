@@ -173,44 +173,42 @@
                           data-name="{{ strtolower($program->name) }}" 
                           data-teacher="{{ strtolower($program->teacher) }}" 
                           data-description="{{ strtolower($program->tujuan_program) }}">
-                        <div class="it-course-item mb-35">
-                           <div class="row gx-0">
-                              <div class="col-xl-5 col-lg-12 col-md-12 col-sm-5">
-                                 <div class="it-course-thumb z-index-1 border-radius-20">
-                                    <a href="{{ route('detailprogram.show', [$program->id, $program->slug]) }}">
+                        <a href="{{ route('detailprogram.show', [$program->id, $program->slug]) }}" class="card-link-wrapper">
+                           <div class="it-course-item mb-35">
+                              <div class="row gx-0">
+                                 <div class="col-xl-5 col-lg-12 col-md-12 col-sm-5">
+                                    <div class="it-course-thumb z-index-1 border-radius-20">
                                        <img class="w-100" src="{{ $program->image }}" alt="{{ $program->name }}" style="height: 200px; object-fit: cover;">
-                                    </a>
-                                 </div>                                 
-                              </div>
-                              <div class="col-xl-7 col-lg-12 col-md-12 col-sm-7">
-                                 <div class="it-course-content p-relative">
-                                    <div class="d-flex justify-content-between align-items-center mb-20">
-                                       <div class="it-course-author">
-                                          <span>{{ $program->category }}</span>
+                                    </div>                                 
+                                 </div>
+                                 <div class="col-xl-7 col-lg-12 col-md-12 col-sm-7">
+                                    <div class="it-course-content p-relative">
+                                       <div class="d-flex justify-content-between align-items-center mb-20">
+                                          <div class="it-course-author">
+                                             <span>{{ $program->category }}</span>
+                                          </div>
                                        </div>
-                                    </div>
-                                    <h5 class="it-course-title mb-20">
-                                       <a class="border-line" href="{{ route('detailprogram.show', [$program->id, $program->slug]) }}">
-                                          {{ $program->name }}
-                                       </a>
-                                    </h5>
-                                    <div class="it-course-rating mb-10">
-                                       <div>
-                                          <span>{{ $program->mode }}</span>
+                                       <h5 class="it-course-title mb-20">
+                                          <span class="border-line">{{ $program->name }}</span>
+                                       </h5>
+                                       <div class="it-course-rating mb-10">
+                                          <div>
+                                             <span>{{ $program->mode }}</span>
+                                          </div>
                                        </div>
-                                    </div>
-                                    <div class="it-course-meta d-flex justify-content-between">
-                                       <span>
-                                          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                             <path d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM6.66667 17.6367V17.5C6.66667 15.6617 8.16167 14.1667 10 14.1667C11.8383 14.1667 13.3333 15.6617 13.3333 17.5V17.6367C12.3117 18.0842 11.185 18.3333 10 18.3333C8.815 18.3333 7.68833 18.0842 6.66667 17.6367ZM14.9375 16.7092C14.5575 14.3267 12.4883 12.5 10 12.5C7.51167 12.5 5.44333 14.3267 5.0625 16.7092C3.00417 15.19 1.66667 12.7483 1.66667 10C1.66667 5.405 5.405 1.66667 10 1.66667C14.595 1.66667 18.3333 5.405 18.3333 10C18.3333 12.7483 16.9958 15.19 14.9375 16.7092ZM10 4.16667C8.16167 4.16667 6.66667 5.66167 6.66667 7.5C6.66667 9.33833 8.16167 10.8333 10 10.8333C11.8383 10.8333 13.3333 9.33833 13.3333 7.5C13.3333 5.66167 11.8383 4.16667 10 4.16667ZM10 9.16667C9.08083 9.16667 8.33333 8.41917 8.33333 7.5C8.33333 6.58083 9.08083 5.83333 10 5.83333C10.9192 5.83333 11.6667 6.58083 11.6667 7.5C11.6667 8.41917 10.9192 9.16667 10 9.16667Z" fill="#6C757D" />
-                                          </svg>
-                                          {{ $program->level }}
-                                       </span>
+                                       <div class="it-course-meta d-flex justify-content-between">
+                                          <span>
+                                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 0C4.48583 0 0 4.48583 0 10C0 15.5142 4.48583 20 10 20C15.5142 20 20 15.5142 20 10C20 4.48583 15.5142 0 10 0ZM6.66667 17.6367V17.5C6.66667 15.6617 8.16167 14.1667 10 14.1667C11.8383 14.1667 13.3333 15.6617 13.3333 17.5V17.6367C12.3117 18.0842 11.185 18.3333 10 18.3333C8.815 18.3333 7.68833 18.0842 6.66667 17.6367ZM14.9375 16.7092C14.5575 14.3267 12.4883 12.5 10 12.5C7.51167 12.5 5.44333 14.3267 5.0625 16.7092C3.00417 15.19 1.66667 12.7483 1.66667 10C1.66667 5.405 5.405 1.66667 10 1.66667C14.595 1.66667 18.3333 5.405 18.3333 10C18.3333 12.7483 16.9958 15.19 14.9375 16.7092ZM10 4.16667C8.16167 4.16667 6.66667 5.66167 6.66667 7.5C6.66667 9.33833 8.16167 10.8333 10 10.8333C11.8383 10.8333 13.3333 9.33833 13.3333 7.5C13.3333 5.66167 11.8383 4.16667 10 4.16667ZM10 9.16667C9.08083 9.16667 8.33333 8.41917 8.33333 7.5C8.33333 6.58083 9.08083 5.83333 10 5.83333C10.9192 5.83333 11.6667 6.58083 11.6667 7.5C11.6667 8.41917 10.9192 9.16667 10 9.16667Z" fill="#6C757D" />
+                                             </svg>
+                                             {{ $program->level }}
+                                          </span>
+                                       </div>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                        </div>
+                        </a>
                      </div>
                      @empty
                      <div class="col-12">
@@ -353,5 +351,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+
+<style>
+/* Clickable Card Styles */
+.card-link-wrapper {
+   text-decoration: none;
+   color: inherit;
+   display: block;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+</style>
 
 @endsection
