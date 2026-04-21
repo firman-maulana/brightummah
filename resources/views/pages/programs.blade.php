@@ -358,7 +358,6 @@ document.addEventListener('DOMContentLoaded', function() {
    text-decoration: none;
    color: inherit;
    display: block;
-   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 </style>
 
