@@ -56,6 +56,7 @@
                                     <li><a href="#about">About</a></li>
                                     <li><a href="#visimisi">Vission & Mission</a></li>
                                     <li><a href="#whychoose">Why Choose BUA</a></li>
+                                    <li><a href="#howitworks">How It Works</a></li>
                                     <li><a href="#learningsystem">Learning System</a></li>
                                     <li><a href="#categories">Categories</a></li>
                                     @if($hasTeachers)
@@ -76,6 +77,9 @@
                            <li>
                               <a href="{{ route('valuebasedroutine') }}">Value Based Routine</a>
                            </li>
+                           <li>
+                              <a href="{{ route('faqs') }}">FAQs</a>
+                           </li>
                         </ul>
                      </nav>
                   </div>
@@ -84,8 +88,8 @@
                   <div class="it-header-right-action d-flex justify-content-end align-items-center">
                      <a href="{{ route('programs.index') }}" class="it-btn-yellow d-none d-xl-flex">
                         <span>
-                           <span class="text-1">Apply Now</span>
-                           <span class="text-2">Apply Now</span>
+                           <span class="text-1">Free Consultation</span>
+                           <span class="text-2">Free Consultation</span>
                         </span>
                         <i>
                            <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
