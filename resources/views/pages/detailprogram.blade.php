@@ -42,87 +42,8 @@
          <div class="row gx-35">
             <div class="col-lg-5">
                <div class="it-career-details-left">
-                  <h4 class="it-details-title">Kualitas Pembelajaran</h4>
-                  <div class="it-details-list mb-50">
-                     <ul>
-                        <li>
-                           <p style="color: var(--it-common-black);">Apapun sistem yang Anda pilih offline atau online BUA memastikan:</p>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                              Tutor yang secara rutin dibina
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Materi pembelajaran terstruktur dan berkualitas
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                              Metode pengajaran yang disesuaikan dengan kebutuhan siswa
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                             Laporan perkembangan berkala kepada orang tua
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Komunikasi terbuka antara tutor, siswa, dan orang tua
-                           </span>
-                        </li>
-                        <li>
-                           <p style="color: var(--it-common-black);">Anda juga dapat mengkombinasikan kedua sistem pembelajaran sesuai kebutuhan, misalnya:</p>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Offline untuk mata pelajaran tertentu, online untuk yang lain
-                           </span>
-                        </li>
-                        <li>
-                           <span>
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Offline saat di rumah, online saat traveling
-                           </span>
-                        </li>
-                        <li>
-                           <span style="margin-bottom: 15px;">
-                              <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.71195 16C5.58634 16 5.48163 15.9144 5.43976 15.8073C5.41885 15.7644 3.618 11.0101 0.833023 9.21113C0.288584 8.86848 -0.130124 8.50439 0.0373593 7.69056C0.204843 6.89818 0.728376 6.44844 1.67062 6.23426C3.34575 5.87017 5.14655 8.52577 5.81666 9.61804C8.16184 6.12724 12.8523 0.644689 19.6786 0.00221658C20.0079 -0.037266 20.1297 0.461976 19.8252 0.601865C19.7205 0.644689 9.96258 5.20638 6.00505 15.8287C5.94227 15.9357 5.83756 16 5.71195 16Z" fill="currentcolor" />
-                              </svg>
-                            Disesuaikan dengan kondisi dan preferensi keluarga
-                           </span>
-                           <p style="color: var(--it-common-black);">Kami siap membantu Anda menemukan sistem pembelajaran yang paling sesuai untuk anak Anda.</p>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-            <div class="col-lg-7">
-               <div class="it-career-details-right">
-                  <div class="postbox-dsc">
-                     <p class="mb-40" style="word-break: break-word">{!! nl2br(e($program->tujuan_program)) !!}</p>
-                  </div>
                   <h4 class="it-details-title">Fokus Pembelajaran</h4>
-                  <div class="it-details-list mb-50">
+                     <div class="it-details-list mb-50">
                      @if($program->fokus_pembelajaran)
 <ul>
     @foreach (explode("\n", $program->fokus_pembelajaran) as $item)
@@ -143,6 +64,13 @@
 @endif
 
                   </div>
+               </div>
+            </div>
+            <div class="col-lg-7">
+               <div class="it-career-details-right">
+                  <div class="postbox-dsc">
+                     <p class="mb-40" style="word-break: break-word">{!! nl2br(e($program->tujuan_program)) !!}</p>
+                  </div>                  
                   <h4 class="it-details-title">Manfaat untuk Siswa</h4>
                   <div class="it-details-list mb-50">
                      @if($program->manfaat_program)

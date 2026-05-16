@@ -40,7 +40,15 @@ class ProgramController extends Controller
             });
         }
         
-        $programs = $query->latest()->get();
+        // Order by category first, then by name
+        $programs = $query->orderByRaw("
+            CASE category
+                WHEN 'Academic & School Program' THEN 1
+                WHEN 'Quran & Islamic Studies Program' THEN 2
+                WHEN 'Language & Skill Program' THEN 3
+                ELSE 4
+            END
+        ")->orderBy('name', 'asc')->get();
         
         // Get counts for filters
         $categoryCounts = [

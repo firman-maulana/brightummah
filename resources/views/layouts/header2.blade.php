@@ -120,8 +120,8 @@
                                     <li><a href="{{ route('home') }}#about">About</a></li>
                                     <li><a href="{{ route('home') }}#visimisi">Vission & Mission</a></li>
                                     <li><a href="{{ route('home') }}#whychoose">Why Choose BUA</a></li>
-                                    <li><a href="{{ route('home') }}#howitworks">How It Works</a></li>
                                     <li><a href="{{ route('home') }}#learningsystem">Learning System</a></li>
+                                    <li><a href="{{ route('home') }}#howitworks">How It Works</a></li>
                                     <li><a href="{{ route('home') }}#categories">Categories</a></li>
                                     @if($hasTeachers)
                                     <li><a href="{{ route('home') }}#teacher">Teachers</a></li>
@@ -152,8 +152,8 @@
                     <div class="it-header-right-action d-flex justify-content-end align-items-center">
                         <a href="{{ route('programs.index') }}" class="it-btn-yellow d-none d-md-flex">
                             <span>
-                                <span class="text-1">Free Consultation</span>
-                                <span class="text-2">Free Consultation</span>
+                                <span class="text-1">Get Started</span>
+                                <span class="text-2">Get Started</span>
                             </span>
                             <i>
                                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
