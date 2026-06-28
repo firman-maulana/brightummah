@@ -31,7 +31,7 @@
                   <h1 class="it-hero-title text-black wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".3s">Growing Bright<br> 
                      <span class="z-index-1">
-                        Every Day
+                        Character Every Day
                         <span class="it-title-shape">
                            <svg width="322" height="31" viewBox="0 0 322 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M3.98535 0.887111C5.78321 0.673958 8.14182 0.85961 9.93879 1.12865C10.5016 1.21203 10.221 1.61239 10.6097 1.68785C11.3699 1.83493 12.0746 1.63298 12.8258 1.80971C13.0748 1.87023 12.7719 2.50299 13.0328 2.55203C14.4631 2.81623 15.8089 2.64254 17.2583 2.7621C24.384 3.35225 31.395 3.51948 38.5991 3.73537C40.9832 3.80593 43.8763 4.34894 46.3251 4.07486C46.6121 4.04228 46.4354 3.49125 46.4896 3.44515C47.3399 2.7393 47.0659 3.85794 47.6268 4.00068C49.8547 4.56413 52.3084 4.59087 54.4439 4.3565C55.3524 4.25517 54.4299 3.1663 55.3513 3.77349C55.4153 3.8145 55.1905 4.40373 55.4403 4.46387C56.0071 4.5991 57.0773 4.48364 57.5149 4.52584C58.3583 4.61014 58.4975 4.60286 59.2934 4.60171C60.3791 4.60527 61.6815 4.88424 62.8522 4.73971C63.1019 4.70712 62.765 4.10868 63.1627 4.00237C63.5608 3.89621 64.6158 3.93685 64.9722 4.07519C65.3289 4.21361 65.1823 4.68802 65.2462 4.7958C65.7725 5.70564 66.9767 4.42648 67.1326 4.39361C69.9853 3.83152 72.4586 4.52912 75.1303 4.5008C77.1739 4.47761 79.3566 4.21782 81.2894 4.23151C83.5886 4.25019 85.5737 4.55678 87.8083 4.47879C88.0446 4.47124 87.7607 3.76651 88.0492 3.75587C91.1112 3.64348 94.1859 3.69045 97.2373 4.13818C97.5464 4.18367 97.1548 4.80871 97.4639 4.8913C99.358 5.38325 102.335 6.58046 103.416 3.86524C104.691 3.95837 106.246 4.05227 107.387 4.5863C108.123 4.92999 107.419 5.61361 108.315 5.31608C108.517 5.24977 108.248 4.65975 108.551 4.60512C109.826 4.37569 111.229 4.55462 112.504 4.23596C112.762 4.16976 112.686 3.63947 112.758 3.54313C113.368 2.76274 114.404 4.03281 114.627 4.12366C116.33 4.80071 117.557 4.51575 119.153 4.51711C119.522 4.51774 119.079 3.80876 119.434 3.78375C121.277 3.66353 123.146 3.70662 124.959 4.00546C125.362 4.07366 124.998 4.6848 125.191 4.74847C126.039 5.02185 126.215 3.87253 127.025 4.1126C127.196 4.16174 127.105 4.68277 127.137 4.73959C127.632 5.63153 128.04 4.35692 128.165 4.32765C129.736 3.92905 130.749 5.24567 132.287 5.04289C132.47 5.0173 132.05 4.36323 132.566 4.33153C135.976 4.11669 139.622 4.2621 142.982 4.75597C143.504 4.83187 143.137 5.32984 143.17 5.39047C143.721 6.33743 144.064 5.05814 144.235 5.00843C145.596 4.64935 146.87 5.70707 147.771 4.17859C153.527 4.65034 159.186 3.74237 164.914 5.04896C164.986 5.06404 164.863 5.69364 165.007 5.72101C166.742 6.05723 166.382 5.08401 167.53 3.87852C167.82 3.57579 168.722 5.00931 168.801 5.11427C169.09 5.50105 168.803 6.43871 168.899 6.51323C169.695 7.09802 169.538 4.00771 170.596 3.99659C170.63 4.00143 170.496 4.57179 170.585 4.62752C170.863 4.80251 171.133 4.57379 171.404 4.7671C172.028 5.21444 172.24 6.71476 173.194 5.8313C173.314 5.71668 173.114 3.96477 174.07 4.0385C174.453 4.06936 176.126 4.02336 176.591 4.1326C177.056 4.24169 176.743 4.80983 176.776 4.83399C178.033 5.56936 177.558 5.88361 178.197 6.98396C178.849 8.08001 178.646 5.45298 178.904 5.1571C179.163 4.86204 180.099 5.46974 180.329 5.68192C180.558 5.89419 180.278 6.25597 180.481 6.37539C181.827 7.15547 181.056 5.06501 181.492 4.64362C182.521 3.64588 183.321 5.58795 184.299 5.76974C184.56 5.81887 184.343 5.37687 184.575 5.33316C185.489 5.16592 186.043 5.76904 187.064 5.20162C187.233 5.10912 188.039 3.92934 188.591 4.78437C188.67 4.90767 188.454 5.39556 188.848 5.50067C189.438 5.65844 190.49 5.75475 191.108 5.58655C191.565 5.46211 191.033 4.66654 191.61 4.90981C191.867 5.01845 191.398 5.49118 191.879 5.65622C192.359 5.82122 193.561 5.78938 194.047 5.76866C194.52 5.74772 194.255 5.14292 194.293 5.10166C194.523 4.86516 195.42 4.56396 195.498 4.56395C199.349 4.45542 203.055 5.40048 206.781 5.08977C206.865 5.08305 206.949 5.07576 207.032 5.06786C207.344 5.0393 207.13 4.40088 207.178 4.38992C208.237 4.11192 207.417 5.82201 208.16 6.3851C208.041 5.0867 208.481 5.31797 209.211 5.1688C209.562 5.09587 209.366 4.59448 209.398 4.54268C209.912 3.77374 210.278 4.75755 210.372 4.95863C210.716 5.69835 211.09 4.81724 211.338 5.31151C211.584 5.8021 211.036 6.53764 211.753 6.52179C211.949 6.05484 211.408 4.84412 211.949 4.6422C213.964 3.87868 217.719 4.79891 219.359 4.88359C221.006 4.96809 221.454 4.87839 222.442 5.03792C224.168 5.32696 223.528 4.43059 224.57 4.00881C225.602 3.58721 225.129 5.81039 225.281 6.28614C225.439 6.76163 225.602 6.26939 225.793 6.5299C225.984 6.79035 225.579 7.11815 226.023 7.21279C226.47 7.30729 227.645 6.44911 227.789 5.9491C228.11 4.88966 227.532 3.78534 228.725 4.16513C228.793 4.1877 228.578 4.77299 228.838 4.82981C230.872 5.26218 232.938 5.27339 234.995 5.65489C235.272 5.70831 235.03 6.3593 235.191 6.39773C236.844 6.80036 236.263 5.71027 237.181 4.48758C236.983 6.10712 237.51 7.09305 238.767 7.09362C239.554 7.09435 239.411 6.38868 239.905 5.88718C240.053 5.736 240.589 6.21757 240.682 5.88461C240.989 4.79618 240.482 3.58333 241.815 4.05882C241.873 4.08146 241.693 4.6773 241.892 4.71202C243.147 4.93971 243.361 3.802 244.712 3.65657C245.847 3.54201 247.745 4.22535 249.019 4.33338C248.997 6.15253 250.172 5.73176 250.647 4.47636C251.445 4.52552 252.314 4.45305 253.113 4.62612C253.379 4.68514 253.204 5.21188 253.238 5.26878C253.73 6.16138 254.122 4.94152 254.286 4.89387C256.167 4.43174 257.71 5.36261 259.54 4.48792C259.598 4.45643 259.741 3.19449 260.203 4.12656C260.235 4.19091 259.623 4.75318 260.477 4.81555C261.045 4.85763 261.951 5.19475 262.837 5.2606C263.274 5.29291 263.719 5.25633 264.118 5.07874C264.412 4.95015 265.181 3.95696 265.721 4.78375C265.794 4.89596 265.693 5.25417 265.795 5.46069C266.13 6.11913 266.379 4.85193 266.755 5.95552C267.126 7.05883 267.968 7.91159 269.19 7.22037C269.23 7.20045 269.559 6.20268 269.931 6.23646C270.529 6.29147 271.362 6.54242 271.986 6.56549C272.285 6.57622 272.123 5.93922 272.176 5.93021C274.194 5.67325 275.596 6.3002 277.731 6.63757C278.125 6.7008 279.288 5.89292 280.025 6.60137C280.828 7.37644 279.845 10.4264 281.804 9.76767C282.596 9.5039 283.723 5.62876 285.045 7.70335C287.766 7.29238 290.245 8.39889 292.979 7.73287C293.101 7.70341 293.506 6.61795 293.792 6.63768C293.93 6.64789 294.048 6.70899 294.153 6.78818C294.377 6.95296 294.547 7.19647 294.751 7.22343C296.021 7.40412 297.204 7.00903 298.431 7.14021C298.897 7.18964 298.711 7.70793 299.257 7.76932C299.813 7.83209 300.229 7.16179 300.956 7.55313C301.507 7.85198 301.95 9.31459 302.668 9.5493C302.829 8.15689 303.341 8.23179 304.297 7.96489C304.482 7.91325 304.346 7.40712 304.437 7.35771C304.804 7.14562 305.078 7.58486 305.43 7.35189C305.518 7.29635 305.58 6.82159 305.655 6.74945C306.294 6.1167 307.062 7.30671 307.19 7.51422C307.68 8.30095 308.047 7.72515 308.456 8.06805C308.869 8.4119 308.143 8.65972 308.643 8.9052C309.68 9.4118 311.094 9.5566 312.235 9.69128C312.691 9.74036 312.437 9.07432 312.503 9.06662C312.52 9.06519 312.537 9.06402 312.553 9.06308C313.474 9.06148 314.255 9.83673 314.974 8.69687C315.008 12.0514 315.582 8.47655 316.766 9.39374C316.859 9.46807 316.658 11.0162 316.23 11.1598C315.805 11.304 315.316 10.7108 314.718 10.9638C314.573 11.021 313.61 12.3334 313.504 12.4064C312.647 12.9649 312.893 10.6538 312.869 10.52C312.79 10.0831 312.628 9.91145 312.436 9.88719L312.48 9.89232C312.021 9.85904 311.423 10.5739 311.238 10.6265C310.033 10.9741 309.143 10.5021 308.187 10.7222C307.56 10.8626 307.289 12.3631 306.835 12.252C305.352 11.8918 305.057 9.71328 303.426 11.3902C303.076 11.7498 303.217 13.4343 302.258 12.0266C302.202 11.9378 301.487 10.6704 300.955 11.3896C300.889 11.4802 300.853 11.9642 300.772 11.9988C300.231 12.2217 299.911 11.8114 299.335 11.9604C298.753 12.1092 298.066 12.3482 297.42 12.1547C297.041 12.0389 296.563 11.116 296.385 10.8884C295.864 10.2319 295.267 11.262 294.948 10.4823C294.63 9.69909 295.322 8.53431 294.436 8.01479C294.379 9.27487 294.28 10.5675 294.205 11.8345C294.161 11.8327 294.116 11.8307 294.071 11.8286C292.118 11.7375 290.208 11.3061 288.252 11.3056C288.003 11.3068 288.238 11.9916 287.971 12.0102C286.845 12.0857 285.878 11.5717 284.709 11.7244C283.807 11.8452 282.788 12.5263 281.842 12.6708C281.319 11.207 279.91 11.6409 278.902 11.4659C278.549 11.4054 278.588 11.0213 278.342 10.8849C277.414 10.3794 277.802 11.6724 277.532 11.8615C276.376 12.6678 276.41 9.78051 275.091 9.79154C275.024 9.79133 274.096 11.2884 273.976 11.3787C273.2 11.9678 273.877 10.838 273.416 10.7026C272.576 10.4552 271.999 10.06 270.982 10.4626C270.683 10.5819 269.941 11.5063 269.413 10.7387C269.343 10.6381 269.408 10.1322 269.351 10.0996C268.291 9.5522 268.187 11.1468 267.547 11.6584C266.903 12.1696 266.004 11.0241 265.827 10.6979C265.356 9.85331 266.23 10.3644 266.261 10.2852C266.626 9.34066 265.928 9.47389 265.398 9.36887C265.393 7.80038 264.645 7.86128 264.853 9.26661C264.878 9.42017 265.295 9.29256 265.398 9.36887C264.867 10.8835 264.044 11.0439 263.208 9.57169C262.93 9.08388 263.063 8.55704 262.712 8.37339C262.57 8.2975 262.336 8.2802 261.968 8.35162C261.391 8.46218 261.576 9.54727 261.07 9.82691C259.91 10.4652 258.428 9.4392 257.231 9.58932C256.8 9.64379 257.218 10.2372 256.919 10.2948C256.124 10.45 255.445 10.0046 254.629 10.23C254.559 10.2512 254.729 10.8696 254.489 10.8771C252.622 10.9464 250.976 10.5545 249.009 10.5508C248.026 10.5494 246.359 10.8983 245.37 10.8353C243.669 10.7294 241.54 9.8443 240.092 10.0727C239.143 10.219 239.351 10.8358 238.939 11.26C238.155 12.082 236.767 10.6297 236.56 10.4048C236.556 10.3973 237.388 10.2454 236.941 9.93137C236.678 9.27207 236.57 10.4019 236.56 10.4048C236.408 10.2596 234.825 10.1313 234.479 10.2522C234.3 10.3182 234.405 10.9031 234.311 10.9264C232.133 11.4675 229.945 11.6342 227.7 11.3791C227.662 11.3676 227.714 10.712 227.624 10.6931C226.37 10.4123 225.475 11.2214 224.46 11.7059C223.421 12.1905 222.563 12.0386 221.906 10.9195C221.128 11.0679 219.983 10.5807 219.306 10.2849C218.632 9.98917 218.545 11.2653 218.486 11.2911C216.736 12.1136 215.595 11.3937 213.757 11.2967C212.893 11.2482 211.032 11.4501 210.115 11.5979C209.362 11.7171 208.898 11.4224 208.188 11.62C208.092 11.6464 208.195 12.2134 208.165 12.2355C207.374 12.9222 207.744 11.5305 207.577 11.2841C207.309 10.8894 207.085 10.576 206.83 10.386C206.522 10.1446 206.166 10.1021 205.61 10.3445C205.381 10.4437 204.725 12.4486 204.299 12.5695C203.745 12.7229 203.949 12.0045 203.365 12.1835C203.315 12.1981 203.33 12.64 202.967 12.6239C201.321 12.5544 199.526 12.3139 197.783 12.3744C197.552 12.3809 197.854 13.0792 197.521 13.1001C195.965 13.1977 194.165 13.1886 192.631 12.8748C192.254 12.7954 192.485 12.3023 192.402 12.1573C191.891 11.2802 191.184 12.5682 191.065 12.5938C188.188 13.2366 186.072 12.0969 183.137 12.6768C182.983 12.7106 181.796 14.0956 181.244 12.9227C181.206 12.8447 180.66 11.6445 180.193 12.473C180.164 12.5249 180.505 13.1422 179.919 13.0845C179.34 13.0269 178.369 13.4505 177.585 12.7762C177.333 12.5638 176.729 11.3671 175.985 12.3327C175.937 12.4 174.791 14.5782 174.356 13.0871C174.286 12.8416 174.343 11.2587 173.44 12.0786C173.267 12.2375 173.587 12.5874 173.129 12.8122C172.425 13.1586 171.525 12.7434 170.676 13.4564C170.529 13.5826 169.905 14.6625 169.386 13.8523C169.305 13.7254 169.452 13.1958 169.182 13.1392C167.889 12.868 166.55 13.2342 165.261 12.8811C164.801 12.757 165.028 11.9009 164.547 11.6766C164.066 11.4524 163.095 11.2417 162.592 11.6368C162.09 12.032 162.656 13.3877 161.898 13.5039C158.663 14.008 155.376 13.2412 152.135 13.1557C151.65 13.1429 152.057 13.626 151.341 13.6422C148.691 13.704 144.164 14.2045 141.88 13.1917C140.051 12.3805 142.337 11.7273 140.941 11.4035C140.267 11.2492 139.552 12.8385 139.389 12.8899C137.797 13.4114 136.676 12.7213 135.26 12.9501C134.966 12.9976 135.261 13.6361 135.011 13.6694C134.156 13.789 133.249 13.5115 132.425 13.5719C132.056 13.6005 132.129 14.0896 131.787 14.0551C130.968 13.9782 130.249 13.7793 129.461 13.3279C129.389 13.2867 129.866 12.6727 129.269 12.6559C128.303 12.6303 127.095 12.1892 125.978 12.6678C125.647 12.8117 125.645 13.9313 124.921 13.1652C124.768 13.0052 124.948 11.6591 124.122 12.8287C123.984 13.0231 122.616 14.6031 121.923 13.6C121.741 13.336 121.27 12.2405 120.873 12.4172C120.819 12.4454 121.042 13.0445 120.712 13.1064C119.551 13.314 118.319 13.2619 117.124 13.4619C116.807 13.5165 117.286 14.1341 116.813 14.1955C115.514 14.3655 113.881 14.223 112.594 14.0408C112.12 13.9725 112.442 13.4538 112.407 13.3981C111.844 12.4912 111.528 13.7258 111.344 13.7994C110.197 14.2406 109.342 13.6705 108.292 13.8338C108.003 13.8774 108.214 14.4625 108.157 14.5154C107.564 15.0328 107.999 13.974 107.62 13.8615C106.556 13.5427 105.37 13.6015 104.291 13.6871C103.895 13.7194 104.347 14.3959 103.991 14.417C101.907 14.5548 99.7349 14.5109 97.6766 14.1557C97.2891 14.0876 97.5273 13.5609 97.4455 13.442C96.8781 12.6097 96.0868 13.7603 95.9014 13.8709C95.0622 14.3762 94.7291 13.9158 93.9824 14.0097C90.3184 14.4765 85.8207 14.2136 82.35 14.058C77.8653 13.8579 74.3576 13.3936 70.0709 13.5652C69.7978 13.5755 70.0801 14.2702 69.8447 14.288C66.8024 14.4861 63.8318 14.2428 60.7798 14.4743C60.5312 14.492 60.8962 15.1497 60.4975 15.2004C59.6797 15.309 58.6408 15.2833 57.8086 15.0804C57.4027 14.9826 57.9402 14.41 57.5317 14.3232C56.5806 14.1198 55.5614 14.0828 54.585 14.1984C54.1695 14.249 54.8038 14.919 54.2632 14.9322C50.5981 15.0354 46.9734 15.1876 43.2635 14.3484C43.0085 14.2908 42.7717 12.9187 42.2331 13.1876C42.1961 13.5694 42.2027 14.018 42.189 14.4259C36.8354 14.6983 31.5412 14.274 26.1779 14.2533C25.9516 14.2526 26.3499 14.9769 25.9118 14.9792C23.3727 14.9935 20.9208 15.2194 18.3194 14.5213C18.0613 14.453 18.1808 13.1707 17.4243 13.3719C17.2911 13.4086 16.1496 13.5907 15.858 13.8717C15.8183 13.914 16.0324 14.5099 15.665 14.531C13.5297 14.6429 11.2882 14.5285 9.14978 14.1842C8.80464 14.1275 9.16527 13.4871 8.91939 13.4412C7.17619 13.1204 5.28891 13.6231 3.62042 13.0614C2.50363 12.6831 2.90481 11.5783 2.3027 10.5007C2.21754 10.3487 1.5281 10.3313 1.48624 9.70125C1.37909 8.11702 1.69578 6.37802 1.54212 4.68978C1.50959 4.32615 0.590445 4.72723 1.12825 3.84239C1.16585 3.78316 1.83215 3.48467 1.99403 3.18471C2.10675 2.97731 1.89363 2.33826 2.12515 2.07191C2.35666 1.80581 2.61923 2.34066 3.00432 2.02661C3.38919 1.70872 3.2114 0.981092 3.98535 0.887111ZM216.322 8.96279C215.7 8.35586 215.629 10.5998 216.292 10.0572C216.324 10.0283 216.354 8.99255 216.322 8.96279ZM290.307 9.61114C289.529 8.6025 288.939 10.0418 289.489 10.8206C290.037 11.5983 290.546 9.91686 290.307 9.61114ZM298.58 9.12009C297.696 8.29317 297.41 11.4646 298.406 10.8711C298.464 10.8378 298.631 9.16825 298.58 9.12009ZM5.04224 10.1651C5.03349 10.1354 4.53783 10.1113 4.52628 10.1409C4.26954 10.8559 5.26065 10.9037 5.04224 10.1651ZM306.754 9.1068C306.527 8.64067 305.631 9.02607 305.921 9.603C306.145 10.0651 307.039 9.68576 306.754 9.1068ZM184.335 6.86441C184.326 6.83108 183.966 6.80438 183.975 6.99326C184.005 7.60158 184.503 7.4251 184.335 6.86441ZM320.556 11.4197C318.339 10.9664 318.039 8.05747 319.923 8.83532C320.28 8.96465 318.963 9.48696 319.379 9.81975C320.213 10.4394 321.035 8.8738 321.869 9.8517C322.032 10.0337 320.69 11.4562 320.552 11.4229C320.553 11.4218 320.555 11.4208 320.556 11.4197ZM215.943 6.27168C215.931 6.24213 215.432 6.21846 215.42 6.24798C215.156 6.96252 216.161 7.01061 215.943 6.27168ZM163.604 5.67496C163.577 5.61201 162.429 5.56391 162.391 5.62251C161.804 6.79277 164.125 6.89346 163.604 5.67496ZM249.038 4.38183C249.556 3.6634 250.221 3.5769 250.644 4.47545C250.116 4.42912 249.56 4.42393 249.038 4.38183Z" fill="#F8C62F" />
@@ -40,9 +40,10 @@
                         </span>
                      </span>
                   </h1>
+                  <p class="mb-45 fst-italic" data-wow-duration=".6s"><em>"Niscaya Allah akan mengangkat (derajat) orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu beberapa derajat"</em> QS. Al-Mujadilah: 11</p>
                   <div class="it-hero-text wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".5s">
-                     <p>Bright Ummah Academy menyediakan bimbingan belajar privat berkualitas dengan pendampingan personal dan fleksibel untuk meningkatkan prestasi dan karakter positif anak.</p>
+                     <p>Bright Ummah Academy adalah Islamic Tutoring Hub yang menghadirkan pendampingan belajar privat (Online & Offline) secara personal. Kami memadukan keunggulan akademik dengan pembentukan karakter islami dan pembiasaan ibadah harian anak.</p>
                   </div>
                   <div class="it-hero-btn wow itfadeUp" data-wow-duration=".9s"
                   data-wow-delay=".7s">
@@ -158,8 +159,9 @@
                         Anywhere,
                      </span> Anytime</h4>                
                   </div>
+                  <p class="mb-45 fst-italic"><em>"Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga."</em> (HR. Muslim)</p>
                   <div class="it-about-text">
-                    <p class="mb-45">Bright Ummah Academy hadir sebagai mitra terpercaya dalam perjalanan pendidikan anak Anda. Kami menyediakan layanan bimbingan belajar privat yang dirancang untuk memenuhi kebutuhan setiap anak baik secara akademik maupun pengembangan karakter. Kami berkomitmen menciptakan pengalaman belajar yang menyenangkan, efektif, dan bermakna. BUA melayani berbagai jenjang mulai dari PAUD hingga Sekolah Dasar, dengan program yang dapat disesuaikan dengan kebutuhan keluarga Anda.</p>
+                    <p class="mb-45">Bright Ummah Academy hadir sebagai Islamic Tutoring Hub terpercaya yang mengelola pendampingan belajar privat secara terpadu. Kami berkomitmen memfasilitasi kebutuhan akademik anak Anda sekaligus membangun fondasi pendidikan karakter melalui ekosistem pembelajaran one-on-one yang terpantau dan terarah. Fokus kami pada integrasi nilai keislaman, pengembangan pengetahuan, dan pembentukan karakter.</p>
                   </div>
                   <div class="row">
                      <div class="col-md-6 col-sm-6">
@@ -342,7 +344,10 @@
          <div class="row">
             <div class="col-12">
                <div class="it-choose-2-section-title-box text-center mb-35">
-                  <span class="it-section-subtitle yellow-style">Why Choose Bright Ummah Academy</span>              
+                  <span class="it-section-subtitle yellow-style">Why Choose Bright Ummah Academy</span>
+                  <div class="it-about-text">
+                    <p class="mb-45 fst-italic"><em>"Demi masa. Sungguh, manusia berada dalam kerugian, kecuali orang-orang yang beriman dan mengerjakan kebajikan serta saling menasihati untuk kebenaran dan saling menasihati untuk kesabaran."</em> (QS Al-Ashr: 1-3)</p>
+                  </div>           
                </div>
             </div>
          </div>
@@ -357,7 +362,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">Murajaah First</h6>
-                     <p>Setiap sesi belajar BUA wajib dibuka dengan 15 menit murajaah dan setoran hafalan pendek, serta ditutup 5 menit sebelum sesi berakhir dengan refleksi karakter dan adab bersama tutor.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Dan sesungguhnya telah Kami mudahkan Al-Qur'an untuk pelajaran, maka adakah orang yang mengambil pelajaran?"</em> (QS Al-Qamar: 17)</p>
+                     <p>Setiap sesi pembelajaran bidang studi apa pun selalu diawali dengan 5-10 menit murojaah hafalan bersama tutor untuk menanamkan keberkahan sebelum menuntut ilmu.</p>
                   </div>
                </div>
             </div>
@@ -371,7 +377,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">Halaqah Ilmu Online</h6>
-                     <p>Kajian daring eksklusif dua kali sebulan khusus untuk seluruh siswa BUA. Materi berputar antara akidah dasar, fiqih ibadah sehari-hari, adab & akhlak, serta sirah nabawiyah.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Maka tanyakanlah kepada orang yang berilmu, jika kamu tidak mengetahui."</em> (QS An-Nahl: 43)</p>
+                     <p>Fasilitas kajian daring keislaman rutin 2 kali dalam sebulan bagi siswa BUA untuk memperdalam pemahaman fikih ibadah dasar, akidah, dan adab harian.</p>
                   </div>
                </div>
             </div>
@@ -385,7 +392,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">Muhafadzoh Check</h6>
-                     <p>Tes setoran hafalan bulanan secara daring di hadapan penguji. Hasil dicatat dalam rapor hafalan bulanan yang dikirimkan ke orang tua. Progres anak yang bisa dipantau setiap bulan.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Bacalah, dan Tuhanmulah Yang Mahamulia, Yang mengajar (manusia) dengan pena"</em> (QS Al-Alaq: 3-4)</p>
+                     <p>Evaluasi dan tes setoran hafalan mandiri secara berkala setiap bulan oleh manajemen untuk memantau kelancaran serta perkembangan hafalan anak.</p>
                   </div>
                </div>
             </div>
@@ -399,7 +407,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">BUA Daily Feed</h6>
-                     <p>Grup eksklusif siswa BUA (WhatsApp) yang diisi konten harian: reminder sholat, dakwah Islami, hadis pendek, dan motivasi belajar. Grup dikelola oleh admin BUA, bukan grup bebas.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Dan tetaplah memberi peringatan, karena sesungguhnya peringatan itu bermanfaat bagi orang-orang yang beriman."</em> (QS Adz-Dzariyat: 55)</p>
+                     <p>Grup komunikasi eksklusif siswa di WhatsApp yang dikelola pusat untuk menyajikan konten pengingat amal saleh harian, doa, dan motivasi islami terarah.</p>
                   </div>
                </div>
             </div>
@@ -413,7 +422,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">Sunnah Weekend</h6>
-                     <p>Setiap akhir pekan, BUA mengirimkan tantangan sunnah mingguan kepada siswa: reminder sholat dhuha, laporan tahajud, atau amalan ringan lainnya (shodaqoh, baca Al-Kahfi di Jumat, dll.). Siswa melaporkan via pesan di grup.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Apa yang diberikan Rasul kepadamu maka terimalah ia. Dan apa yang dilarangnya bagimu maka tinggalkanlah."</em> (QS Al-Hasyr: 7)</p>
+                     <p>Tantangan mingguan yang seru di akhir pekan untuk mendorong siswa mempraktikkan sunnah-sunnah harian Nabi SAW secara konsisten di rumah.</p>
                   </div>
                </div>
             </div>
@@ -427,7 +437,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">BUA Star of the Month</h6>
-                     <p>Apresiasi bulanan untuk siswa dengan pencapaian karakter terbaik. BUA Star dinilai dari konsistensi ibadah dan perkembangan hafalan.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Tidak ada balasan untuk kebaikan selain kebaikan (pula)."</em> (QS Ar-Rahman: 60)</p>
+                     <p>Apresiasi bulanan dari manajemen untuk siswa dengan pencapaian hafalan terbaik atau perkembangan karakter (akhlak) paling positif.</p>
                   </div>
                </div>
             </div>
@@ -441,7 +452,8 @@
                   </div>
                   <div class="it-choose-2-content">
                      <h6 class="it-choose-2-title">Tutor Quality Control (TQC)</h6>
-                     <p>Evaluasi dan pembinaan tutor secara berkala setiap bulan, baik daring maupun luring. Memastikan kualitas pengajaran BUA tidak turun seiring berjalannya waktu.</p>
+                     <p class="fst-italic" style="padding-bottom: 10px;"><em>"Sesungguhnya Allah menyukai orang yang berperang di jalan-Nya dalam barisan yang teratur seakan-akan mereka seperti suatu bangunan yang tersusun kokoh."</em> (QS Ash-Shaff: 4)</p>
+                     <p>Program pembinaan, evaluasi, dan standarisasi mutu pengajar secara berkala setiap bulan demi menjaga kualitas bimbingan yang optimal bagi anak Anda.</p>
                   </div>
                </div>
             </div>
@@ -616,7 +628,8 @@
                         <span>01</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>Hubungi BUA via WhatsApp. Konsultasi kebutuhan siswa (mata pelajaran, jadwal, lokasi)</h5>
+                        <h5>Konsultasi Kebutuhan Belajar (via WhatsApp)</h5>
+                        <p>Orang tua mendiskusikan target akademik, karakteristik anak, serta jadwal belajar yang diinginkan bersama tim kurator BUA.</p>
                      </div>
                   </div>
 
@@ -626,7 +639,8 @@
                         <span>02</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>BUA membuat flyer rekrutmen tutor yang disesuaikan spesifik untuk anak Anda</h5>
+                        <h5>Analisis Pemetaan Profil Tutor</h5>
+                        <p>Manajemen BUA merumuskan kriteria pengajar dan merancang publikasi kebutuhan instruktur spesifik yang sesuai dengan hasil konsultasi.</p>
                      </div>
                   </div>
 
@@ -636,7 +650,8 @@
                         <span>03</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>Tutor melamar dan diseleksi ketat oleh tim BUA </h5>
+                        <h5>Kurasi & Validasi Kompetensi</h5>
+                        <p>Kami menyeleksi ketat para pelamar secara mandiri melalui uji kompetensi akademik, pemahaman keislaman, dan kesiapan karakter.</p>
                      </div>
                   </div>
 
@@ -646,7 +661,8 @@
                         <span>04</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>Profil 1–2 kandidat tutor terpilih dikirimkan ke orang tua untuk dipilih</h5>
+                        <h5>Sesi Penempatan & Orientasi</h5>
+                        <p>Manajemen mengirimkan profil instruktur terbaik yang telah lolos kualifikasi untuk memulai pendampingan kepada siswa.</p>
                      </div>
                   </div>
 
@@ -656,7 +672,8 @@
                         <span>05</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>Sesi trial dilakukan. Jika belum cocok, kami carikan pengganti tanpa biaya tambahan.</h5>
+                        <h5>Masa Adaptasi & Evaluasi (Trial 1 Bulan)</h5>
+                        <p>Proses belajar dimulai selama satu bulan pertama untuk memastikan keselarasan metode mengajar dengan kenyamanan siswa.</p>
                      </div>
                   </div>
 
@@ -666,7 +683,8 @@
                         <span>06</span>
                      </div>
                      <div class="it-timeline-content">
-                        <h5>Sesi rutin dimulai dengan laporan perkembangan bulanan dari BUA.</h5>
+                        <h5>Pelaporan Progres & Perkembangan Berkala</h5>
+                        <p>Manajemen BUA memberikan laporan transparan mengenai capaian akademik serta perkembangan karakter anak secara berkala kepada orang tua.</p>
                      </div>
                   </div>
                </div>

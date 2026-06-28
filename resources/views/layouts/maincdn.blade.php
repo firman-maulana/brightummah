@@ -38,7 +38,7 @@
                <div class="it-loading-stroke">
                   <img class="it-loading-icon" src="{{ asset('assets/img/logo/pencil.png') }}" alt="">
                </div>
-               <span>"Please wait... Something good is coming"</span>
+               <span>“Bismillah.. Something good is Coming”</span>
             </div>
          </div>
       </div>  

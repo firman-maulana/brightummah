@@ -38,7 +38,7 @@
                <div class="it-loading-stroke">
                   <img class="it-loading-icon" src="{{ asset('assets/img/logo/pencil.png') }}" alt="">
                </div>
-               <span>"Please wait... Something good is coming"</span>
+               <span>“Bismillah.. Something good is Coming”</span>
             </div>
          </div>
       </div>  
@@ -89,7 +89,7 @@
             </a>
          </div>
          <div class="itoffcanvas__text">
-            <p>Bimbingan belajar privat berkualitas dengan pendampinga personal dan fleksibel untuk meningkatkan prestasi dan karakter positif anak.</p>
+            <p>Bright Ummah Academy adalah Islamic Tutoring Hub yang menyelenggarakan pendampingan belajar privat terpadu dengan pendekatan personal dan fleksibel untuk mengoptimalkan prestasi serta karakter islami anak.</p>
          </div>
          <div class="it-menu-mobile d-xl-none"></div>
          <div class="itoffcanvas__social">
@@ -123,7 +123,7 @@
                         <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo/logo.png') }}" style="height:90px;" alt=""></a>
                      </div>
                      <div class="it-footer-widget-text">
-                        <p>Bimbingan belajar privat berkualitas dengan pendampinga personal dan fleksibel untuk meningkatkan prestasi dan karakter positif anak.</p>
+                        <p>Bright Ummah Academy adalah Islamic Tutoring Hub yang menyelenggarakan pendampingan belajar privat terpadu dengan pendekatan personal dan fleksibel untuk mengoptimalkan prestasi serta karakter islami anak.</p>
                      </div>
                   </div>
                </div>
